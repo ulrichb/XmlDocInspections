@@ -1,0 +1,12 @@
+shallow_clone: true
+version: 1.0.0.{build}
+environment:
+  NugetPushKey:
+    secure: Fr6Et35ii82/P5ZjfsKoIomda8gim+SKJkklwChGm5Jm2+wd/5uyQYbwAP4M7UTv
+cache: packages
+
+build_script:
+  - powershell -Command "& Build\Build.ps1 -Configuration Release -Version %APPVEYOR_BUILD_VERSION% -NugetPushKey %NugetPushKey%"
+
+test: off
+deploy: off

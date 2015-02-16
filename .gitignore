@@ -1,0 +1,20 @@
+*.tmp
+
+# User-specific files
+*.suo
+*.user
+*.sln.docstates
+
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# NuGet Packages
+packages/*
+*.nupkg
+
+# custom ignores
+
+/Build/Output/
+bin.R??/
+obj.R??/
