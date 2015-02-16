@@ -1,0 +1,10 @@
+shallow_clone: true
+version: 1.0.0.{build}
+build_script:
+- powershell Build\Build.ps1 -Configuration Release -Version %APPVEYOR_BUILD_VERSION%
+artifacts:
+- path: Build/Output/*.nupkg
+cache: packages
+
+test: off
+deploy: off

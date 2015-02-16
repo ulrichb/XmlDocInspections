@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocInspections.Plugin.R82", "XmlDocInspections.Plugin\XmlDocInspections.Plugin.R82.csproj", "{71478F9F-1AAA-40DA-9C0C-6043C972558C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocInspections.Sample", "XmlDocInspections.Sample\XmlDocInspections.Sample.csproj", "{4AF4FFEC-2FAC-426A-B8B2-06F4D9F52392}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9AB948A1-F5D7-4E06-8915-0E26E84D68EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocInspections.Plugin.Tests.R82", "XmlDocInspections.Plugin.Tests\XmlDocInspections.Plugin.Tests.R82.csproj", "{3C27B37B-9889-48E9-A61D-D129CB14D527}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4998CFBC-6ECF-4D29-954C-CF020091308E}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{71E8A124-D55F-464E-AAB2-82C8C02D9A38}"
+	ProjectSection(SolutionItems) = preProject
+		Build-NugetPackages.ps1 = Build-NugetPackages.ps1
+		README.md = README.md
+		XmlDocInspections.nuspec = XmlDocInspections.nuspec
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocInspections.Plugin.R90", "XmlDocInspections.Plugin\XmlDocInspections.Plugin.R90.csproj", "{CDB42CAA-C42A-4343-9067-C9B766CAEFA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71478F9F-1AAA-40DA-9C0C-6043C972558C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71478F9F-1AAA-40DA-9C0C-6043C972558C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71478F9F-1AAA-40DA-9C0C-6043C972558C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71478F9F-1AAA-40DA-9C0C-6043C972558C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AF4FFEC-2FAC-426A-B8B2-06F4D9F52392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AF4FFEC-2FAC-426A-B8B2-06F4D9F52392}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AF4FFEC-2FAC-426A-B8B2-06F4D9F52392}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AF4FFEC-2FAC-426A-B8B2-06F4D9F52392}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C27B37B-9889-48E9-A61D-D129CB14D527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C27B37B-9889-48E9-A61D-D129CB14D527}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C27B37B-9889-48E9-A61D-D129CB14D527}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C27B37B-9889-48E9-A61D-D129CB14D527}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDB42CAA-C42A-4343-9067-C9B766CAEFA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDB42CAA-C42A-4343-9067-C9B766CAEFA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDB42CAA-C42A-4343-9067-C9B766CAEFA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDB42CAA-C42A-4343-9067-C9B766CAEFA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4AF4FFEC-2FAC-426A-B8B2-06F4D9F52392} = {9AB948A1-F5D7-4E06-8915-0E26E84D68EF}
+		{3C27B37B-9889-48E9-A61D-D129CB14D527} = {9AB948A1-F5D7-4E06-8915-0E26E84D68EF}
+	EndGlobalSection
+EndGlobal

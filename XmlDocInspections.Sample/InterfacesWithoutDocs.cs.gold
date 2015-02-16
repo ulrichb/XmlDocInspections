@@ -1,0 +1,34 @@
+﻿namespace XmlDocInspections.Sample
+{
+    public interface |IPublicInterfacesWithoutDocs|(0)
+    {
+    }
+
+    internal interface IInternalInterfacesWithoutDocs
+    {
+    }
+
+    // ReSharper disable once MissingPublicTypeXmlDocHighlighting
+    public class PublicClassWithNestedInterfaces
+    {
+        public interface |IPublicNested|(1)
+        {
+        }
+
+        internal interface IInternalNested
+        {
+        }
+
+        protected interface |IProtectedNested|(2)
+        {
+        }
+
+        private interface IPrivateNested
+        {
+        }
+    }
+}
+---------------------------------------------------------
+(0): ReSharper Warning: Missing XML Doc comment for types with public visibility
+(1): ReSharper Warning: Missing XML Doc comment for types with public visibility
+(2): ReSharper Warning: Missing XML Doc comment for types with protected visibility
