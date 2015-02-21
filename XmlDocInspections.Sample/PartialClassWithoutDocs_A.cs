@@ -2,6 +2,6 @@
 {
     public partial class PartialClassWithoutDocs
     {
-        partial void PartialMethod();    
+        partial void PartialMethod();
     }
 }

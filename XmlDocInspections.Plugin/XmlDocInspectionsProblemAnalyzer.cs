@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Text.RegularExpressions;
 using JetBrains.Annotations;
+using JetBrains.Application.Settings;
 using JetBrains.ReSharper.Daemon.CSharp.Stages;
 using JetBrains.ReSharper.Daemon.Stages.Dispatcher;
 using JetBrains.ReSharper.Psi;
@@ -11,6 +13,7 @@ using JetBrains.Util;
 using JetBrains.Util.Logging;
 using XmlDocInspections.Plugin.Highlighting;
 using XmlDocInspections.Plugin.Infrastructure;
+using XmlDocInspections.Plugin.Settings;
 #if RESHARPER8
 using JetBrains.ReSharper.Daemon.Stages;
 
@@ -24,19 +27,17 @@ namespace XmlDocInspections.Plugin
     /// <summary>
     /// A problem analyzer for the XML Doc inspections.
     /// </summary>
-    [ElementProblemAnalyzer(typeof (ITypeMemberDeclaration), HighlightingTypes =
-        new[]
-        {
-            typeof (MissingPublicTypeXmlDocHighlighting),
-            typeof (MissingPublicTypeMemberXmlDocHighlighting)
-        })]
+    [ElementProblemAnalyzer(typeof(ITypeMemberDeclaration), HighlightingTypes = new[] { typeof(MissingXmlDocHighlighting) })]
     public class XmlDocInspectionsProblemAnalyzer : ElementProblemAnalyzer<ITypeMemberDeclaration>
     {
-        private static readonly ILogger Log = Logger.GetLogger(typeof (XmlDocInspectionsProblemAnalyzer));
+        private static readonly ILogger Log = Logger.GetLogger(typeof(XmlDocInspectionsProblemAnalyzer));
 
-        public XmlDocInspectionsProblemAnalyzer()
+        private readonly ISettingsStore _settingsStore;
+
+        public XmlDocInspectionsProblemAnalyzer(ISettingsStore settingsStore)
         {
             Log.LogMessage(LoggingLevel.INFO, ".ctor");
+            _settingsStore = settingsStore;
         }
 
         protected override void Run(ITypeMemberDeclaration element, ElementProblemAnalyzerData data, IHighlightingConsumer consumer)
@@ -63,27 +64,31 @@ namespace XmlDocInspections.Plugin
             // We ignore inherited XML Docs.
             if (typeMember != null && typeMember.GetXMLDoc(inherit: false) == null)
             {
-                // Note that types are also type members.
+                var module = typeMember.Module;
+                var contextRange = ContextRange.Smart(module.ToDataContext());
 
-                // Note that AccessibilityDomain also take containing type's visibility into account.
-                var accessibilityDomainType = typeMember.AccessibilityDomain.DomainType;
+                var exclusionRegex = _settingsStore.BindToContextTransient(contextRange).GetValue((XmlDocInspectionsSettings s) => s.ExclusionRegex);
+                if (string.IsNullOrWhiteSpace(exclusionRegex) || !Regex.IsMatch(module.Name, exclusionRegex))
+                {
+                    // Note that AccessibilityDomain also take containing type's accessibility into account.
+                    var accessibilityDomainType = typeMember.AccessibilityDomain.DomainType;
 
-                if (accessibilityDomainType == AccessibilityDomain.AccessibilityDomainType.PUBLIC)
-                {
-                    if (typeMember is ITypeElement)
-                        yield return new MissingPublicTypeXmlDocHighlighting(declaration);
-                    else
-                        yield return new MissingPublicTypeMemberXmlDocHighlighting(declaration);
-                }
-                else if (accessibilityDomainType == AccessibilityDomain.AccessibilityDomainType.PROTECTED ||
-                         accessibilityDomainType == AccessibilityDomain.AccessibilityDomainType.PROTECTED_OR_INTERNAL)
-                {
-                    if (typeMember is ITypeElement)
-                        yield return new MissingProtectedTypeXmlDocHighlighting(declaration);
-                    else
-                        yield return new MissingProtectedTypeMemberXmlDocHighlighting(declaration);
+                    // Note that types are also type members.
+                    var isTypeMember = !(typeMember is ITypeElement);
+
+                    if (IsConfigured(isTypeMember, accessibilityDomainType, contextRange))
+                        yield return new MissingXmlDocHighlighting(isTypeMember, accessibilityDomainType, declaration);
                 }
             }
+        }
+
+        private bool IsConfigured(bool isTypeMember, AccessibilityDomain.AccessibilityDomainType accessibility, [NotNull] ContextRange contextRange)
+        {
+            var accessibilitySettingFlags = isTypeMember
+                ? _settingsStore.BindToContextTransient(contextRange).GetValue((XmlDocInspectionsSettings s) => s.TypeMemberAccessibility)
+                : _settingsStore.BindToContextTransient(contextRange).GetValue((XmlDocInspectionsSettings s) => s.TypeAccessibility);
+
+            return AccessibilityUtilities.IsAccessibilityConfigured(accessibility, accessibilitySettingFlags);
         }
     }
 }

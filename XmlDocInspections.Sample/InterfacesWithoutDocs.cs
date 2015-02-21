@@ -8,7 +8,7 @@
     {
     }
 
-    // ReSharper disable once MissingPublicTypeXmlDocHighlighting
+    // ReSharper disable once MissingXmlDoc
     public class PublicClassWithNestedInterfaces
     {
         public interface IPublicNested

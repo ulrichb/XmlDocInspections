@@ -4,31 +4,34 @@
     {
     }
 
-    internal interface IInternalInterfacesWithoutDocs
+    internal interface |IInternalInterfacesWithoutDocs|(1)
     {
     }
 
-    // ReSharper disable once MissingPublicTypeXmlDocHighlighting
+    // ReSharper disable once MissingXmlDoc
     public class PublicClassWithNestedInterfaces
     {
-        public interface |IPublicNested|(1)
+        public interface |IPublicNested|(2)
         {
         }
 
-        internal interface IInternalNested
+        internal interface |IInternalNested|(3)
         {
         }
 
-        protected interface |IProtectedNested|(2)
+        protected interface |IProtectedNested|(4)
         {
         }
 
-        private interface IPrivateNested
+        private interface |IPrivateNested|(5)
         {
         }
     }
 }
 ---------------------------------------------------------
-(0): ReSharper Warning: Missing XML Doc comment for types with public visibility
-(1): ReSharper Warning: Missing XML Doc comment for types with public visibility
-(2): ReSharper Warning: Missing XML Doc comment for types with protected visibility
+(0): ReSharper Warning: Missing XML Doc comment for public type
+(1): ReSharper Warning: Missing XML Doc comment for internal type
+(2): ReSharper Warning: Missing XML Doc comment for public type
+(3): ReSharper Warning: Missing XML Doc comment for internal type
+(4): ReSharper Warning: Missing XML Doc comment for protected type
+(5): ReSharper Warning: Missing XML Doc comment for private type

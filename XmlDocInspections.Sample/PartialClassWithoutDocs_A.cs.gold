@@ -2,8 +2,9 @@
 {
     public partial class |PartialClassWithoutDocs|(0)
     {
-        partial void PartialMethod();    
+        partial void |PartialMethod|(1)();
     }
 }
 ---------------------------------------------------------
-(0): ReSharper Warning: Missing XML Doc comment for types with public visibility
+(0): ReSharper Warning: Missing XML Doc comment for public type
+(1): ReSharper Warning: Missing XML Doc comment for private type member
