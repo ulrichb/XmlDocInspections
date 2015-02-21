@@ -135,11 +135,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Highlighting\MissingProtectedTypeMemberXmlDocHighlighting.cs" />
-    <Compile Include="Highlighting\MissingPublicTypeMemberXmlDocHighlighting.cs" />
-    <Compile Include="Highlighting\MissingProtectedTypeXmlDocHighlighting.cs" />
-    <Compile Include="Highlighting\MissingPublicTypeXmlDocHighlighting.cs" />
+    <Compile Include="Highlighting\MissingXmlDocHighlighting.cs" />
     <Compile Include="Highlighting\XmlDocHighlightingBase.cs" />
+    <Compile Include="Settings\XmlDocInspectionsOptionsPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Settings\AccessibilitySettingFlags.cs" />
+    <Compile Include="Settings\XmlDocInspectionsSettings.cs" />
+    <Compile Include="AccessibilityUtilities.cs" />
     <Compile Include="ZoneMarker.cs" />
     <Compile Include="XmlDocInspectionsProblemAnalyzer.cs" />
     <Compile Include="Infrastructure\DebugUtilities.cs" />

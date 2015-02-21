@@ -15,4 +15,4 @@ namespace XmlDocInspections.Sample
     }
 }
 ---------------------------------------------------------
-(0): ReSharper Warning: Missing XML Doc comment for types with public visibility
+(0): ReSharper Warning: Missing XML Doc comment for public type

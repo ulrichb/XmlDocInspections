@@ -11,6 +11,9 @@ using JetBrains.ReSharper.Feature.Services.Daemon;
 
 namespace XmlDocInspections.Plugin.Highlighting
 {
+    /// <summary>
+    /// Base class for Xml Doc inspections.
+    /// </summary>
     public abstract class XmlDocHighlightingBase : IHighlighting
     {
         private readonly IDeclaration _declaration;

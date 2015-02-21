@@ -8,8 +8,8 @@
     <owners>ulrich</owners>
     <projectUrl>https://github.com/ulrichb/XmlDocInspections#readme</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>TDB</description>
-    <!--<tags></tags>-->
+    <description>Configurable warnings for missing XML Doc comments</description>
+    <tags>xml doc xmldoc inspection warning</tags>
     <dependencies>
       <dependency id="$DependencyId$" version="$DependencyVer$" />
     </dependencies>
