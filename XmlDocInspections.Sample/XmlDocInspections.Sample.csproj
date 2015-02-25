@@ -68,17 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassesAndMembersWithDocs.cs.gold" />
-    <None Include="ClassesAndMembersWithoutDocs.cs.gold" />
-    <None Include="DerivedClassWithoutDocs.cs.gold" />
-    <None Include="InterfacesWithoutDocs.cs.gold" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="PartialClassWithDocsInOneFile_A.cs.gold" />
-    <None Include="PartialClassWithDocsInOneFile_B.cs.gold" />
-    <None Include="PartialClassWithoutDocs_A.cs.gold" />
-    <None Include="PartialClassWithoutDocs_B.cs.gold" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
