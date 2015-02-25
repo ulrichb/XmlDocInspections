@@ -53,6 +53,7 @@
     <Compile Include="IntegrationTests\BasicTests.cs" />
     <Compile Include="IntegrationTests\MissingXmlDocHighlightingTestsBase.cs" />
     <Compile Include="IntegrationTests\DefaultSettingsTests.cs" />
+    <None Include="IntegrationTests\BasicTests\SimpleClassWithoutDocs.cs.gold" />
     <None Include="TestData\XmlDocInspections.Sample\ClassesAndMembersWithDocs.cs" />
     <None Include="TestData\XmlDocInspections.Sample\ClassesAndMembersWithoutDocs.cs" />
     <None Include="TestData\XmlDocInspections.Sample\DerivedClassWithoutDocs.cs" />
@@ -61,6 +62,7 @@
     <None Include="TestData\XmlDocInspections.Sample\PartialClassWithDocsInOneFile_B.cs" />
     <None Include="TestData\XmlDocInspections.Sample\PartialClassWithoutDocs_A.cs" />
     <None Include="TestData\XmlDocInspections.Sample\PartialClassWithoutDocs_B.cs" />
+    <None Include="TestData\XmlDocInspections.Sample\SimpleClassWithoutDocs.cs" />
     <Compile Include="TestEnvironmentSetUpFixture.cs" />
   </ItemGroup>
   <ItemGroup>

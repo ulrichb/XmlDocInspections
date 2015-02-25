@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="DerivedClassWithoutDocs.cs" />
     <Compile Include="InterfacesWithoutDocs.cs" />
+    <Compile Include="SimpleClassWithoutDocs.cs" />
     <Compile Include="Utilities\IExplicitlyImplementedInterface.cs" />
     <Compile Include="ClassesAndMembersWithoutDocs.cs" />
     <Compile Include="ClassesAndMembersWithDocs.cs" />
