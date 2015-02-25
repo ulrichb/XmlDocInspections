@@ -65,10 +65,10 @@ namespace XmlDocInspections.Plugin
             if (typeMember != null && typeMember.GetXMLDoc(inherit: false) == null)
             {
                 var module = typeMember.Module;
-                var contextRange = ContextRange.Smart(module.ToDataContext());
+                var settingsStore = _settingsStore.BindToContextTransient(ContextRange.Smart(module.ToDataContext()));
 
-                var exclusionRegex = _settingsStore.BindToContextTransient(contextRange).GetValue((XmlDocInspectionsSettings s) => s.ExclusionRegex);
-                if (string.IsNullOrWhiteSpace(exclusionRegex) || !Regex.IsMatch(module.Name, exclusionRegex))
+                var projectExclusionRegex = settingsStore.GetValue((XmlDocInspectionsSettings s) => s.ProjectExclusionRegex);
+                if (string.IsNullOrWhiteSpace(projectExclusionRegex) || !Regex.IsMatch(module.Name, projectExclusionRegex))
                 {
                     // Note that AccessibilityDomain also take containing type's accessibility into account.
                     var accessibilityDomainType = typeMember.AccessibilityDomain.DomainType;
@@ -76,17 +76,17 @@ namespace XmlDocInspections.Plugin
                     // Note that types are also type members.
                     var isTypeMember = !(typeMember is ITypeElement);
 
-                    if (IsConfigured(isTypeMember, accessibilityDomainType, contextRange))
+                    if (IsConfigured(settingsStore, isTypeMember, accessibilityDomainType))
                         yield return new MissingXmlDocHighlighting(isTypeMember, accessibilityDomainType, declaration);
                 }
             }
         }
 
-        private bool IsConfigured(bool isTypeMember, AccessibilityDomain.AccessibilityDomainType accessibility, [NotNull] ContextRange contextRange)
+        private bool IsConfigured(IContextBoundSettingsStore settingsStore, bool isTypeMember, AccessibilityDomain.AccessibilityDomainType accessibility)
         {
             var accessibilitySettingFlags = isTypeMember
-                ? _settingsStore.BindToContextTransient(contextRange).GetValue((XmlDocInspectionsSettings s) => s.TypeMemberAccessibility)
-                : _settingsStore.BindToContextTransient(contextRange).GetValue((XmlDocInspectionsSettings s) => s.TypeAccessibility);
+                ? settingsStore.GetValue((XmlDocInspectionsSettings s) => s.TypeMemberAccessibility)
+                : settingsStore.GetValue((XmlDocInspectionsSettings s) => s.TypeAccessibility);
 
             return AccessibilityUtilities.IsAccessibilityConfigured(accessibility, accessibilitySettingFlags);
         }

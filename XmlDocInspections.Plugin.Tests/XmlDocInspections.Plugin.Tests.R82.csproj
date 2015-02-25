@@ -51,9 +51,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IntegrationTests\BasicTests.cs" />
+    <Compile Include="IntegrationTests\ProjectExclusionTests.cs" />
     <Compile Include="IntegrationTests\MissingXmlDocHighlightingTestsBase.cs" />
     <Compile Include="IntegrationTests\DefaultSettingsTests.cs" />
     <None Include="IntegrationTests\BasicTests\SimpleClassWithoutDocs.cs.gold" />
+    <None Include="IntegrationTests\ProjectExclusionTests\SimpleClassWithoutDocs.cs.gold" />
     <None Include="TestData\XmlDocInspections.Sample\ClassesAndMembersWithDocs.cs" />
     <None Include="TestData\XmlDocInspections.Sample\ClassesAndMembersWithoutDocs.cs" />
     <None Include="TestData\XmlDocInspections.Sample\DerivedClassWithoutDocs.cs" />
