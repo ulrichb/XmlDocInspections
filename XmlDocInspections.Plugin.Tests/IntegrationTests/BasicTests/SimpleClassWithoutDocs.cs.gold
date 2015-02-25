@@ -1,0 +1,8 @@
+﻿namespace XmlDocInspections.Sample
+{
+    public class |SimpleClassWithoutDocs|(0)
+    {
+    }
+}
+---------------------------------------------------------
+(0): ReSharper Warning: Missing XML Doc comment for public type

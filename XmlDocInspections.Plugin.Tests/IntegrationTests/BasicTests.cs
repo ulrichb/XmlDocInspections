@@ -62,5 +62,11 @@ namespace XmlDocInspections.Plugin.Tests.IntegrationTests
         {
             DoNamedTest2();
         }
+
+        [Test]
+        public void TestSimpleClassWithoutDocs()
+        {
+            DoNamedTest2();
+        }
     }
 }
