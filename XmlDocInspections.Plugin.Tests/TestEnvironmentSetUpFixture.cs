@@ -7,7 +7,7 @@ using JetBrains.Util;
 using NUnit.Framework;
 using XmlDocInspections.Plugin;
 
-[assembly: TestDataPathBase(@"..\XmlDocInspections.Sample")]
+[assembly: TestDataPathBase(@"TestData")]
 
 /// <summary>
 /// Test environment. Must be in the global namespace.

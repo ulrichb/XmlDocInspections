@@ -5,8 +5,6 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocInspections.Plugin.R82", "XmlDocInspections.Plugin\XmlDocInspections.Plugin.R82.csproj", "{71478F9F-1AAA-40DA-9C0C-6043C972558C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocInspections.Sample", "XmlDocInspections.Sample\XmlDocInspections.Sample.csproj", "{4AF4FFEC-2FAC-426A-B8B2-06F4D9F52392}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9AB948A1-F5D7-4E06-8915-0E26E84D68EF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocInspections.Plugin.Tests.R82", "XmlDocInspections.Plugin.Tests\XmlDocInspections.Plugin.Tests.R82.csproj", "{3C27B37B-9889-48E9-A61D-D129CB14D527}"
@@ -37,10 +35,6 @@ Global
 		{71478F9F-1AAA-40DA-9C0C-6043C972558C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71478F9F-1AAA-40DA-9C0C-6043C972558C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71478F9F-1AAA-40DA-9C0C-6043C972558C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4AF4FFEC-2FAC-426A-B8B2-06F4D9F52392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4AF4FFEC-2FAC-426A-B8B2-06F4D9F52392}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4AF4FFEC-2FAC-426A-B8B2-06F4D9F52392}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4AF4FFEC-2FAC-426A-B8B2-06F4D9F52392}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3C27B37B-9889-48E9-A61D-D129CB14D527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3C27B37B-9889-48E9-A61D-D129CB14D527}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C27B37B-9889-48E9-A61D-D129CB14D527}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -54,7 +48,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{4AF4FFEC-2FAC-426A-B8B2-06F4D9F52392} = {9AB948A1-F5D7-4E06-8915-0E26E84D68EF}
 		{3C27B37B-9889-48E9-A61D-D129CB14D527} = {9AB948A1-F5D7-4E06-8915-0E26E84D68EF}
 	EndGlobalSection
 EndGlobal
