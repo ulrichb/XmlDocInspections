@@ -50,10 +50,21 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MissingXmlDocHighlightingTest.cs" />
+    <Compile Include="IntegrationTests\BasicTests.cs" />
+    <Compile Include="IntegrationTests\MissingXmlDocHighlightingTestsBase.cs" />
+    <Compile Include="IntegrationTests\DefaultSettingsTests.cs" />
     <Compile Include="TestEnvironmentSetUpFixture.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="IntegrationTests\BasicTests\ClassesAndMembersWithDocs.cs.gold" />
+    <None Include="IntegrationTests\BasicTests\ClassesAndMembersWithoutDocs.cs.gold" />
+    <None Include="IntegrationTests\BasicTests\DerivedClassWithoutDocs.cs.gold" />
+    <None Include="IntegrationTests\BasicTests\InterfacesWithoutDocs.cs.gold" />
+    <None Include="IntegrationTests\BasicTests\PartialClassWithDocsInOneFile_A.cs.gold" />
+    <None Include="IntegrationTests\BasicTests\PartialClassWithDocsInOneFile_B.cs.gold" />
+    <None Include="IntegrationTests\BasicTests\PartialClassWithoutDocs_A.cs.gold" />
+    <None Include="IntegrationTests\BasicTests\PartialClassWithoutDocs_B.cs.gold" />
+    <None Include="IntegrationTests\DefaultSettingsTests\ClassesAndMembersWithoutDocs.cs.gold" />
     <None Include="packages.XmlDocInspections.Plugin.Tests.R82.config" />
   </ItemGroup>
   <ItemGroup>

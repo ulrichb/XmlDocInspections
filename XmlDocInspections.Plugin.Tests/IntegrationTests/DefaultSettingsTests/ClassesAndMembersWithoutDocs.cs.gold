@@ -1,0 +1,146 @@
+﻿using System;
+using XmlDocInspections.Sample.Utilities;
+
+namespace XmlDocInspections.Sample
+{
+    public class |PublicClassWithoutDocs|(0) : IExplicitlyImplementedInterface
+    {
+        public string |PublicField|(1);
+
+        internal string InternalField;
+
+        protected internal string |ProtectedInternalField|(2);
+
+        protected string |ProtectedField|(3);
+
+        private string PrivateField;
+
+        //
+
+        public string |PublicProperty|(4) { get; set; }
+
+        internal string InternalProperty { get; set; }
+
+        protected internal string |ProtectedInternalProperty|(5) { get; set; }
+
+        protected string |ProtectedProperty|(6) { get; set; }
+
+        private string PrivateProperty { get; set; }
+
+        //
+
+        public void |PublicMethod|(7)(string a)
+        {
+        }
+
+        void IExplicitlyImplementedInterface.Method()
+        {
+        }
+
+        internal void InternalMethod()
+        {
+        }
+
+        protected void |ProtectedMethod|(8)()
+        {
+        }
+
+        protected internal void |ProtectedInternalMethod|(9)()
+        {
+        }
+
+        private void PrivateMethod()
+        {
+        }
+
+        public class |PublicNestedClass|(10)
+        {
+        }
+
+        internal class InternalNestedClass
+        {
+        }
+
+        protected internal class |ProtectedInternalNestedClass|(11)
+        {
+        }
+
+        protected class |ProtectedNestedClass|(12)
+        {
+        }
+
+        private class PrivateNestedClass
+        {
+        }
+
+        //
+
+        public event EventHandler |PublicEvent|(13);
+
+        internal event EventHandler InternalEvent;
+
+        protected internal event EventHandler |ProtectedInternalEvent|(14);
+
+        protected event EventHandler |ProtectedEvent|(15);
+
+        private event EventHandler PrivateEvent;
+
+        //
+
+        public static PublicClassWithoutDocs |operator +|(16)(PublicClassWithoutDocs left, PublicClassWithoutDocs right)
+        {
+            return null;
+        }
+    }
+
+    internal class InternalClassWithoutDocs
+    {
+        public string PublicProperty { get; set; }
+
+        internal string InternalProperty { get; set; }
+
+        protected internal string ProtectedInternalProperty { get; set; }
+
+        protected string ProtectedProperty { get; set; }
+
+        private string PrivateProperty { get; set; }
+
+        public class PublicNestedClass
+        {
+        }
+
+        internal class InternalNestedClass
+        {
+        }
+
+        protected internal class ProtectedInternalNestedClass
+        {
+        }
+
+        protected class ProtectedNestedClass
+        {
+        }
+
+        private class PrivateNestedClass
+        {
+        }
+    }
+}
+---------------------------------------------------------
+(0): ReSharper Warning: Missing XML Doc comment for public type
+(1): ReSharper Warning: Missing XML Doc comment for public type member
+(2): ReSharper Warning: Missing XML Doc comment for protected internal type member
+(3): ReSharper Warning: Missing XML Doc comment for protected type member
+(4): ReSharper Warning: Missing XML Doc comment for public type member
+(5): ReSharper Warning: Missing XML Doc comment for protected internal type member
+(6): ReSharper Warning: Missing XML Doc comment for protected type member
+(7): ReSharper Warning: Missing XML Doc comment for public type member
+(8): ReSharper Warning: Missing XML Doc comment for protected type member
+(9): ReSharper Warning: Missing XML Doc comment for protected internal type member
+(10): ReSharper Warning: Missing XML Doc comment for public type
+(11): ReSharper Warning: Missing XML Doc comment for protected internal type
+(12): ReSharper Warning: Missing XML Doc comment for protected type
+(13): ReSharper Warning: Missing XML Doc comment for public type member
+(14): ReSharper Warning: Missing XML Doc comment for protected internal type member
+(15): ReSharper Warning: Missing XML Doc comment for protected type member
+(16): ReSharper Warning: Missing XML Doc comment for public type member
