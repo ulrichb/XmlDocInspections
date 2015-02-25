@@ -18,6 +18,9 @@ namespace XmlDocInspections.Plugin
                     return settingFlags.HasFlag(AccessibilitySettingFlags.Internal);
                 case AccessibilityDomain.AccessibilityDomainType.PROTECTED_OR_INTERNAL:
                     return settingFlags.HasFlag(AccessibilitySettingFlags.ProtectedOrInternal);
+                // PROTECTED_AND_INTERNAL is used e.g. for protected members/types *within* an internal class.
+                case AccessibilityDomain.AccessibilityDomainType.PROTECTED_AND_INTERNAL:
+                    return settingFlags.HasFlag(AccessibilitySettingFlags.Protected) && settingFlags.HasFlag(AccessibilitySettingFlags.Internal);
                 case AccessibilityDomain.AccessibilityDomainType.PROTECTED:
                     return settingFlags.HasFlag(AccessibilitySettingFlags.Protected);
                 case AccessibilityDomain.AccessibilityDomainType.PRIVATE:
@@ -37,6 +40,7 @@ namespace XmlDocInspections.Plugin
                     return "internal";
                 case AccessibilityDomain.AccessibilityDomainType.PROTECTED_OR_INTERNAL:
                     return "protected internal";
+                case AccessibilityDomain.AccessibilityDomainType.PROTECTED_AND_INTERNAL:
                 case AccessibilityDomain.AccessibilityDomainType.PROTECTED:
                     return "protected";
                 case AccessibilityDomain.AccessibilityDomainType.PRIVATE:
