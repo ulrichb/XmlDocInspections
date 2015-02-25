@@ -101,27 +101,27 @@ namespace XmlDocInspections.Sample
 
         protected internal string |ProtectedInternalProperty|(31) { get; set; }
 
-        protected string ProtectedProperty { get; set; }
+        protected string |ProtectedProperty|(32) { get; set; }
 
-        private string |PrivateProperty|(32) { get; set; }
+        private string |PrivateProperty|(33) { get; set; }
 
-        public class |PublicNestedClass|(33)
+        public class |PublicNestedClass|(34)
         {
         }
 
-        internal class |InternalNestedClass|(34)
+        internal class |InternalNestedClass|(35)
         {
         }
 
-        protected internal class |ProtectedInternalNestedClass|(35)
+        protected internal class |ProtectedInternalNestedClass|(36)
         {
         }
 
-        protected class ProtectedNestedClass
+        protected class |ProtectedNestedClass|(37)
         {
         }
 
-        private class |PrivateNestedClass|(36)
+        private class |PrivateNestedClass|(38)
         {
         }
     }
@@ -159,8 +159,10 @@ namespace XmlDocInspections.Sample
 (29): ReSharper Warning: Missing XML Doc comment for internal type member
 (30): ReSharper Warning: Missing XML Doc comment for internal type member
 (31): ReSharper Warning: Missing XML Doc comment for internal type member
-(32): ReSharper Warning: Missing XML Doc comment for private type member
-(33): ReSharper Warning: Missing XML Doc comment for internal type
+(32): ReSharper Warning: Missing XML Doc comment for protected type member
+(33): ReSharper Warning: Missing XML Doc comment for private type member
 (34): ReSharper Warning: Missing XML Doc comment for internal type
 (35): ReSharper Warning: Missing XML Doc comment for internal type
-(36): ReSharper Warning: Missing XML Doc comment for private type
+(36): ReSharper Warning: Missing XML Doc comment for internal type
+(37): ReSharper Warning: Missing XML Doc comment for protected type
+(38): ReSharper Warning: Missing XML Doc comment for private type
