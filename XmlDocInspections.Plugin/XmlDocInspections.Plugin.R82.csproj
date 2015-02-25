@@ -37,7 +37,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <StartAction>Program</StartAction>
     <StartProgram>$(DevEnvDir)devenv.exe</StartProgram>
-    <StartArguments>/ReSharper.Plugin $(AssemblyName).dll /ReSharper.Internal ..\..\..\XmlDocInspections.PluginTest.sln</StartArguments>
+    <StartArguments>/ReSharper.Plugin $(AssemblyName).dll /ReSharper.Internal $(SolutionDir)XmlDocInspections.Plugin.Tests\TestData\XmlDocInspections.Sample.sln</StartArguments>
     <StartWorkingDirectory>$(MSBuildProjectDirectory)\$(OutputPath)</StartWorkingDirectory>
   </PropertyGroup>
   <ItemGroup>

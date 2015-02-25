@@ -2,11 +2,8 @@
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.CompilerServices;
-using System.Text.RegularExpressions;
 using JetBrains.Annotations;
 using JetBrains.Application.Settings;
-using JetBrains.ProjectModel;
-using JetBrains.ProjectModel.DataContext;
 using JetBrains.ReSharper.Daemon;
 using JetBrains.ReSharper.Daemon.CSharp;
 using JetBrains.Util;
@@ -18,7 +15,7 @@ namespace XmlDocInspections.Plugin.Tests.IntegrationTests
     {
         protected override string RelativeTestDataPath
         {
-            get { return "."; }
+            get { return "XmlDocInspections.Sample"; }
         }
 
         protected override string GetGoldTestDataPath(string fileName)

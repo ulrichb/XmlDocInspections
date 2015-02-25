@@ -1,5 +1,4 @@
 ﻿using System;
-using XmlDocInspections.Sample.Utilities;
 
 namespace XmlDocInspections.Sample
 {
