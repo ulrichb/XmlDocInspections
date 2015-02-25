@@ -18,8 +18,8 @@ namespace XmlDocInspections.Plugin.Settings
         private const AccessibilitySettingFlags DefaultAccessibilityFlags =
             AccessibilitySettingFlags.Public | AccessibilitySettingFlags.Protected | AccessibilitySettingFlags.ProtectedOrInternal;
 
-        [SettingsEntry("Tests$", "ExclusionRegex")]
-        public string ExclusionRegex { get; set; }
+        [SettingsEntry("Tests$", "ProjectExclusionRegex")]
+        public string ProjectExclusionRegex;
 
         [SettingsEntry(DefaultAccessibilityFlags, "TypeAccessibility")]
         public AccessibilitySettingFlags TypeAccessibility;

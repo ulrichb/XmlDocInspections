@@ -47,18 +47,18 @@ namespace XmlDocInspections.Plugin.Settings
 
         private void InitControls()
         {
-            Controls.Add(CreateExclusionEdit((XmlDocInspectionsSettings s) => s.ExclusionRegex));
+            Controls.Add(CreateExclusionEdit("Project exclusion regex:", (XmlDocInspectionsSettings s) => s.ProjectExclusionRegex));
 
             Controls.Add(CreateAccessibilityCheckBoxes("Types with accessibility", (XmlDocInspectionsSettings s) => s.TypeAccessibility));
             Controls.Add(CreateAccessibilityCheckBoxes("Type members with accessibility", (XmlDocInspectionsSettings s) => s.TypeMemberAccessibility));
         }
 
-        private Control CreateExclusionEdit<T>([NotNull] Expression<Func<T, string>> settingsExpression)
+        private Control CreateExclusionEdit<T>(string text, [NotNull] Expression<Func<T, string>> settingsExpression)
         {
             var tableLayoutPanel = new TableLayoutPanel { AutoSize = true };
             tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize)); // left column
 
-            var label = new Controls.Label("Exclusion regex:");
+            var label = new Controls.Label(text);
             tableLayoutPanel.Controls.Add(label, 0, 0);
 
             var editBox = new Controls.EditBox();
