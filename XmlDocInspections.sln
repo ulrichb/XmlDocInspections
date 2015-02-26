@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocInspections.Plugin.R82", "XmlDocInspections.Plugin\XmlDocInspections.Plugin.R82.csproj", "{71478F9F-1AAA-40DA-9C0C-6043C972558C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocInspections.Plugin.R82", "Src\XmlDocInspections.Plugin\XmlDocInspections.Plugin.R82.csproj", "{71478F9F-1AAA-40DA-9C0C-6043C972558C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9AB948A1-F5D7-4E06-8915-0E26E84D68EF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocInspections.Plugin.Tests.R82", "XmlDocInspections.Plugin.Tests\XmlDocInspections.Plugin.Tests.R82.csproj", "{3C27B37B-9889-48E9-A61D-D129CB14D527}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocInspections.Plugin.Tests.R82", "Src\XmlDocInspections.Plugin.Tests\XmlDocInspections.Plugin.Tests.R82.csproj", "{3C27B37B-9889-48E9-A61D-D129CB14D527}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4998CFBC-6ECF-4D29-954C-CF020091308E}"
 	ProjectSection(SolutionItems) = preProject
@@ -19,10 +17,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		LICENSE = LICENSE
 		README.md = README.md
-		XmlDocInspections.nuspec = XmlDocInspections.nuspec
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocInspections.Plugin.R90", "XmlDocInspections.Plugin\XmlDocInspections.Plugin.R90.csproj", "{CDB42CAA-C42A-4343-9067-C9B766CAEFA6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocInspections.Plugin.R90", "Src\XmlDocInspections.Plugin\XmlDocInspections.Plugin.R90.csproj", "{CDB42CAA-C42A-4343-9067-C9B766CAEFA6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{26B55A35-CCB1-4635-871A-EE770850A5F2}"
+	ProjectSection(SolutionItems) = preProject
+		Src\XmlDocInspections.nuspec = Src\XmlDocInspections.nuspec
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{2159E662-A9C1-47BC-BD63-6255559D54A0}"
 	ProjectSection(SolutionItems) = preProject
@@ -52,6 +54,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{3C27B37B-9889-48E9-A61D-D129CB14D527} = {9AB948A1-F5D7-4E06-8915-0E26E84D68EF}
+		{71478F9F-1AAA-40DA-9C0C-6043C972558C} = {26B55A35-CCB1-4635-871A-EE770850A5F2}
+		{3C27B37B-9889-48E9-A61D-D129CB14D527} = {26B55A35-CCB1-4635-871A-EE770850A5F2}
+		{CDB42CAA-C42A-4343-9067-C9B766CAEFA6} = {26B55A35-CCB1-4635-871A-EE770850A5F2}
 	EndGlobalSection
 EndGlobal
