@@ -10,9 +10,9 @@ Set-StrictMode -Version 2.0; $ErrorActionPreference = "Stop"; $ConfirmPreference
 
 $BuildOutputPath = Join-Path "Build" "Output"
 $SolutionFile = "XmlDocInspections.sln"
-$AssemblyVersionFilePath = "XmlDocInspections.Plugin\Properties\AssemblyInfo.cs"
+$AssemblyVersionFilePath = "Src\XmlDocInspections.Plugin\Properties\AssemblyInfo.cs"
 $NUnitExecutable = "nunit-console-x86.exe"
-$NUnitTestAssemblyPaths = @("XmlDocInspections.Plugin.Tests\bin.R82\$Configuration\XmlDocInspections.Plugin.Tests.dll")
+$NUnitTestAssemblyPaths = @("Src\XmlDocInspections.Plugin.Tests\bin.R82\$Configuration\XmlDocInspections.Plugin.Tests.dll")
 $NUnitFrameworkVersion = "net-4.5"
 $NuspecPath = "XmlDocInspections.nuspec"
 $NugetPackProperties = @(

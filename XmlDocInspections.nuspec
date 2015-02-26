@@ -15,6 +15,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="XmlDocInspections.Plugin\$BinDirInclude$\$Configuration$\XmlDocInspections.Plugin.*" target="$TargetDir$" />
+    <file src="Src\XmlDocInspections.Plugin\$BinDirInclude$\$Configuration$\XmlDocInspections.Plugin.*" target="$TargetDir$" />
   </files>
 </package>
