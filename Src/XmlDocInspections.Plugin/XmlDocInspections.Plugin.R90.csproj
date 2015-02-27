@@ -158,6 +158,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\Shared\Src\Infrastructure\DebugUtilities.cs">
+      <Link>Shared\Infrastructure\DebugUtilities.cs</Link>
+    </Compile>
     <Compile Include="Highlighting\MissingXmlDocHighlighting.cs" />
     <Compile Include="Highlighting\XmlDocHighlightingBase.cs" />
     <Compile Include="Settings\XmlDocInspectionsOptionsPage.cs">
@@ -168,7 +171,6 @@
     <Compile Include="AccessibilityUtilities.cs" />
     <Compile Include="ZoneMarker.cs" />
     <Compile Include="XmlDocInspectionsProblemAnalyzer.cs" />
-    <Compile Include="Infrastructure\DebugUtilities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

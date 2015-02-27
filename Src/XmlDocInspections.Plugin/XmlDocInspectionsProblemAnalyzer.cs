@@ -1,4 +1,4 @@
-﻿using JetBrains.ReSharper.Daemon;
+﻿using Infrastructure;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -12,9 +12,9 @@ using JetBrains.ReSharper.Psi.Tree;
 using JetBrains.Util;
 using JetBrains.Util.Logging;
 using XmlDocInspections.Plugin.Highlighting;
-using XmlDocInspections.Plugin.Infrastructure;
 using XmlDocInspections.Plugin.Settings;
 #if RESHARPER8
+using JetBrains.ReSharper.Daemon;
 using JetBrains.ReSharper.Daemon.Stages;
 
 #else
