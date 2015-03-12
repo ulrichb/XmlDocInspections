@@ -4,6 +4,7 @@ using XmlDocInspections.Plugin.Settings;
 
 namespace XmlDocInspections.Plugin.Tests.IntegrationTests
 {
+    [TestFixture]
     public class ProjectExclusionTests : MissingXmlDocHighlightingTestsBase
     {
         protected override void MutateSettings(IContextBoundSettingsStore settingsStore)
@@ -17,7 +18,7 @@ namespace XmlDocInspections.Plugin.Tests.IntegrationTests
         }
 
         [Test]
-        public void TestSimpleClassWithoutDocs()
+        public void TestStructWithoutDocs()
         {
             DoNamedTest2();
         }

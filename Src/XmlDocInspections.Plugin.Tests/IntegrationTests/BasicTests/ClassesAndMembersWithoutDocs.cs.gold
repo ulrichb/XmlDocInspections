@@ -92,39 +92,6 @@ namespace XmlDocInspections.Sample
             return null;
         }
     }
-
-    internal class |InternalClassWithoutDocs|(28)
-    {
-        public string |PublicProperty|(29) { get; set; }
-
-        internal string |InternalProperty|(30) { get; set; }
-
-        protected internal string |ProtectedInternalProperty|(31) { get; set; }
-
-        protected string |ProtectedProperty|(32) { get; set; }
-
-        private string |PrivateProperty|(33) { get; set; }
-
-        public class |PublicNestedClass|(34)
-        {
-        }
-
-        internal class |InternalNestedClass|(35)
-        {
-        }
-
-        protected internal class |ProtectedInternalNestedClass|(36)
-        {
-        }
-
-        protected class |ProtectedNestedClass|(37)
-        {
-        }
-
-        private class |PrivateNestedClass|(38)
-        {
-        }
-    }
 }
 ---------------------------------------------------------
 (0): ReSharper Warning: Missing XML Doc comment for public type
@@ -155,14 +122,3 @@ namespace XmlDocInspections.Sample
 (25): ReSharper Warning: Missing XML Doc comment for protected type member
 (26): ReSharper Warning: Missing XML Doc comment for private type member
 (27): ReSharper Warning: Missing XML Doc comment for public type member
-(28): ReSharper Warning: Missing XML Doc comment for internal type
-(29): ReSharper Warning: Missing XML Doc comment for internal type member
-(30): ReSharper Warning: Missing XML Doc comment for internal type member
-(31): ReSharper Warning: Missing XML Doc comment for internal type member
-(32): ReSharper Warning: Missing XML Doc comment for protected type member
-(33): ReSharper Warning: Missing XML Doc comment for private type member
-(34): ReSharper Warning: Missing XML Doc comment for internal type
-(35): ReSharper Warning: Missing XML Doc comment for internal type
-(36): ReSharper Warning: Missing XML Doc comment for internal type
-(37): ReSharper Warning: Missing XML Doc comment for protected type
-(38): ReSharper Warning: Missing XML Doc comment for private type

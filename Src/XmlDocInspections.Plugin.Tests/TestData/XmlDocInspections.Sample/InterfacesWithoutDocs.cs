@@ -2,28 +2,34 @@
 {
     public interface IPublicInterfacesWithoutDocs
     {
+        string Property { get; }
+
+        void Method();
     }
 
     internal interface IInternalInterfacesWithoutDocs
     {
+        string Property { get; }
+        
+        void Method();
     }
 
     // ReSharper disable once MissingXmlDoc
-    public class PublicClassWithNestedInterfaces
+    public class ClassWithNestedInterfacesWithoutDocs
     {
-        public interface IPublicNested
+        public interface IPublicNestednterface
         {
         }
 
-        internal interface IInternalNested
+        internal interface IInternalNestednterface
         {
         }
 
-        protected interface IProtectedNested
+        protected interface IProtectedNestednterface
         {
         }
 
-        private interface IPrivateNested
+        private interface IPrivateNestednterface
         {
         }
     }

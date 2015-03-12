@@ -27,7 +27,7 @@ namespace XmlDocInspections.Plugin.Highlighting
     /// </summary>
     [ConfigurableSeverityHighlighting(
         SeverityId,
-        "CSHARP", // VB_SUPPORT
+        "CSHARP",
         OverlapResolve = OverlapResolveKind.NONE,
         ToolTipFormatString = Message)]
     public class MissingXmlDocHighlighting : XmlDocHighlightingBase

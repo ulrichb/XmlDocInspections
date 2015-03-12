@@ -53,9 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DelegateWithoutDocs.cs" />
     <Compile Include="DerivedClassWithoutDocs.cs" />
+    <Compile Include="StructWithoutDocs.cs" />
     <Compile Include="InterfacesWithoutDocs.cs" />
-    <Compile Include="SimpleClassWithoutDocs.cs" />
+    <Compile Include="InternalClassWithoutDocs.cs" />
     <Compile Include="Utilities\IExplicitlyImplementedInterface.cs" />
     <Compile Include="ClassesAndMembersWithoutDocs.cs" />
     <Compile Include="ClassesAndMembersWithDocs.cs" />

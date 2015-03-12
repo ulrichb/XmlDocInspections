@@ -1,0 +1,43 @@
+﻿namespace XmlDocInspections.Sample
+{
+    public struct |PublicStructWithoutDocs|(0)
+    {
+        public string |PublicProperty|(1) { get; set; }
+
+        internal string |InternalProperty|(2) { get; set; }
+
+        private string |PrivateProperty|(3) { get; set; }
+
+        //
+
+        public void |PublicMethod|(4)(string a)
+        {
+        }
+
+        internal void |InternalMethod|(5)()
+        {
+        }
+
+        private void |PrivateMethod|(6)()
+        {
+        }
+    }
+
+    internal struct |InternalStructWithoutDocs|(7)
+    {
+        public string |PublicProperty|(8) { get; set; }
+
+        internal string |InternalProperty|(9) { get; set; }
+    }
+}
+---------------------------------------------------------
+(0): ReSharper Warning: Missing XML Doc comment for public type
+(1): ReSharper Warning: Missing XML Doc comment for public type member
+(2): ReSharper Warning: Missing XML Doc comment for internal type member
+(3): ReSharper Warning: Missing XML Doc comment for private type member
+(4): ReSharper Warning: Missing XML Doc comment for public type member
+(5): ReSharper Warning: Missing XML Doc comment for internal type member
+(6): ReSharper Warning: Missing XML Doc comment for private type member
+(7): ReSharper Warning: Missing XML Doc comment for internal type
+(8): ReSharper Warning: Missing XML Doc comment for internal type member
+(9): ReSharper Warning: Missing XML Doc comment for internal type member

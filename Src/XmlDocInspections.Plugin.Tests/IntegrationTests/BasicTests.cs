@@ -5,6 +5,7 @@ using XmlDocInspections.Plugin.Settings;
 
 namespace XmlDocInspections.Plugin.Tests.IntegrationTests
 {
+    [TestFixture]
     public class BasicTests : MissingXmlDocHighlightingTestsBase
     {
         protected override void MutateSettings(IContextBoundSettingsStore settingsStore)
@@ -12,8 +13,6 @@ namespace XmlDocInspections.Plugin.Tests.IntegrationTests
             settingsStore.SetValue((XmlDocInspectionsSettings s) => s.TypeAccessibility, AccessibilitySettingFlags.All);
             settingsStore.SetValue((XmlDocInspectionsSettings s) => s.TypeMemberAccessibility, AccessibilitySettingFlags.All);
         }
-
-        // TODO: delegates, invalid files
 
         [Test]
         public void TestClassesAndMembersWithDocs()
@@ -23,6 +22,12 @@ namespace XmlDocInspections.Plugin.Tests.IntegrationTests
 
         [Test]
         public void TestClassesAndMembersWithoutDocs()
+        {
+            DoNamedTest2();
+        }
+
+        [Test]
+        public void TestInternalClassWithoutDocs()
         {
             DoNamedTest2();
         }
@@ -64,7 +69,13 @@ namespace XmlDocInspections.Plugin.Tests.IntegrationTests
         }
 
         [Test]
-        public void TestSimpleClassWithoutDocs()
+        public void TestStructWithoutDocs()
+        {
+            DoNamedTest2();
+        }
+
+        [Test]
+        public void TestDelegateWithoutDocs()
         {
             DoNamedTest2();
         }

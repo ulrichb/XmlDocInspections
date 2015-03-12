@@ -2,36 +2,46 @@
 {
     public interface |IPublicInterfacesWithoutDocs|(0)
     {
+        string |Property|(1) { get; }
+
+        void |Method|(2)();
     }
 
-    internal interface |IInternalInterfacesWithoutDocs|(1)
+    internal interface |IInternalInterfacesWithoutDocs|(3)
     {
+        string |Property|(4) { get; }
+        
+        void |Method|(5)();
     }
 
     // ReSharper disable once MissingXmlDoc
-    public class PublicClassWithNestedInterfaces
+    public class ClassWithNestedInterfacesWithoutDocs
     {
-        public interface |IPublicNested|(2)
+        public interface |IPublicNestednterface|(6)
         {
         }
 
-        internal interface |IInternalNested|(3)
+        internal interface |IInternalNestednterface|(7)
         {
         }
 
-        protected interface |IProtectedNested|(4)
+        protected interface |IProtectedNestednterface|(8)
         {
         }
 
-        private interface |IPrivateNested|(5)
+        private interface |IPrivateNestednterface|(9)
         {
         }
     }
 }
 ---------------------------------------------------------
 (0): ReSharper Warning: Missing XML Doc comment for public type
-(1): ReSharper Warning: Missing XML Doc comment for internal type
-(2): ReSharper Warning: Missing XML Doc comment for public type
+(1): ReSharper Warning: Missing XML Doc comment for public type member
+(2): ReSharper Warning: Missing XML Doc comment for public type member
 (3): ReSharper Warning: Missing XML Doc comment for internal type
-(4): ReSharper Warning: Missing XML Doc comment for protected type
-(5): ReSharper Warning: Missing XML Doc comment for private type
+(4): ReSharper Warning: Missing XML Doc comment for internal type member
+(5): ReSharper Warning: Missing XML Doc comment for internal type member
+(6): ReSharper Warning: Missing XML Doc comment for public type
+(7): ReSharper Warning: Missing XML Doc comment for internal type
+(8): ReSharper Warning: Missing XML Doc comment for protected type
+(9): ReSharper Warning: Missing XML Doc comment for private type
