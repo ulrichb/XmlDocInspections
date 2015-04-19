@@ -61,7 +61,6 @@
     <Compile Include="Settings\AccessibilitySettingFlags.cs" />
     <Compile Include="Settings\XmlDocInspectionsSettings.cs" />
     <Compile Include="AccessibilityUtilities.cs" />
-    <Compile Include="ZoneMarker.cs" />
     <Compile Include="XmlDocInspectionsProblemAnalyzer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

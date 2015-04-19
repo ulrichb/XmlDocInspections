@@ -31,6 +31,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{2159E662
 		Build\Build.ps1 = Build\Build.ps1
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocInspections.Plugin.Tests.R91", "Src\XmlDocInspections.Plugin.Tests\XmlDocInspections.Plugin.Tests.R91.csproj", "{38AC079E-AEFC-4502-AEE9-DF489F9FBA2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{CDB42CAA-C42A-4343-9067-C9B766CAEFA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDB42CAA-C42A-4343-9067-C9B766CAEFA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDB42CAA-C42A-4343-9067-C9B766CAEFA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38AC079E-AEFC-4502-AEE9-DF489F9FBA2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38AC079E-AEFC-4502-AEE9-DF489F9FBA2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38AC079E-AEFC-4502-AEE9-DF489F9FBA2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38AC079E-AEFC-4502-AEE9-DF489F9FBA2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,5 +63,6 @@ Global
 		{71478F9F-1AAA-40DA-9C0C-6043C972558C} = {26B55A35-CCB1-4635-871A-EE770850A5F2}
 		{3C27B37B-9889-48E9-A61D-D129CB14D527} = {26B55A35-CCB1-4635-871A-EE770850A5F2}
 		{CDB42CAA-C42A-4343-9067-C9B766CAEFA6} = {26B55A35-CCB1-4635-871A-EE770850A5F2}
+		{38AC079E-AEFC-4502-AEE9-DF489F9FBA2F} = {26B55A35-CCB1-4635-871A-EE770850A5F2}
 	EndGlobalSection
 EndGlobal

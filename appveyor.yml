@@ -2,7 +2,9 @@ version: 1.0.0.{build}
 environment:
   NugetPushKey:
     secure: Fr6Et35ii82/P5ZjfsKoIomda8gim+SKJkklwChGm5Jm2+wd/5uyQYbwAP4M7UTv
-cache: packages
+cache:
+  - packages
+  - Src\XmlDocInspections.Plugin.Tests\Packages
 
 install:
   - git submodule update --init --recursive

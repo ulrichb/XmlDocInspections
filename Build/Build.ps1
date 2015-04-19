@@ -13,7 +13,10 @@ $SolutionFile = "XmlDocInspections.sln"
 $AssemblyVersionFilePath = "Src\XmlDocInspections.Plugin\Properties\AssemblyInfo.cs"
 $MSBuildPath = "${env:ProgramFiles(x86)}\MSBuild\12.0\Bin\MSBuild.exe"
 $NUnitExecutable = "nunit-console-x86.exe"
-$NUnitTestAssemblyPaths = @("Src\XmlDocInspections.Plugin.Tests\bin.R82\$Configuration\XmlDocInspections.Plugin.Tests.dll")
+$NUnitTestAssemblyPaths = @(
+  "Src\XmlDocInspections.Plugin.Tests\bin.R82\$Configuration\XmlDocInspections.Plugin.Tests.dll"
+  "Src\XmlDocInspections.Plugin.Tests\bin.R91\$Configuration\XmlDocInspections.Plugin.Tests.dll"
+)
 $NUnitFrameworkVersion = "net-4.5"
 $NuspecPath = "Src\XmlDocInspections.nuspec"
 $NugetPackProperties = @(

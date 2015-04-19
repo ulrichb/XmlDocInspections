@@ -18,3 +18,5 @@ packages/*
 /Build/Output/
 bin.R??/
 obj.R??/
+
+/Src/XmlDocInspections.Plugin.Tests/Packages/
