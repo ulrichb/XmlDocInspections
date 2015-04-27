@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocInspections.Plugin.R90", "Src\XmlDocInspections.Plugin\XmlDocInspections.Plugin.R90.csproj", "{CDB42CAA-C42A-4343-9067-C9B766CAEFA6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocInspections.Plugin.R91", "Src\XmlDocInspections.Plugin\XmlDocInspections.Plugin.R91.csproj", "{CDB42CAA-C42A-4343-9067-C9B766CAEFA6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{26B55A35-CCB1-4635-871A-EE770850A5F2}"
 	ProjectSection(SolutionItems) = preProject
