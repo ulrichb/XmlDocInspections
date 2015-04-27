@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>ReSharper.XmlDocInspections$PackageIdPostfix$</id>
+    <id>ReSharper.XmlDocInspections</id>
     <version>$Version$</version>
-    <title>XML Doc Inspections$TitlePostfix$</title>
+    <title>XML Doc Inspections</title>
     <authors>ulrichb</authors>
     <projectUrl>https://github.com/ulrichb/XmlDocInspections#readme</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
