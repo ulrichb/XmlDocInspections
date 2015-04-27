@@ -1,12 +1,10 @@
 ﻿namespace XmlDocInspections.Sample
 {
-    public partial class |PartialClassWithDocsInOneFile|(0)
+    public partial class PartialClassWithDocsInOneFile
     {
-        partial void |PartialMethod|(1)()
+        partial void PartialMethod()
         {
         }
     }
 }
 ---------------------------------------------------------
-(0): ReSharper Warning: Missing XML Doc comment for public type
-(1): ReSharper Warning: Missing XML Doc comment for private type member

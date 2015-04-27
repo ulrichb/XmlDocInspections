@@ -47,25 +47,25 @@ namespace XmlDocInspections.Plugin.Tests.IntegrationTests
         [Test]
         public void TestPartialClassWithDocsInOneFile_A()
         {
-            DoNamedTest2();
+            DoNamedTest2("PartialClassWithDocsInOneFile_B.cs");
         }
 
         [Test]
         public void TestPartialClassWithDocsInOneFile_B()
         {
-            DoNamedTest2();
+            DoNamedTest2("PartialClassWithDocsInOneFile_A.cs");
         }
 
         [Test]
         public void TestPartialClassWithoutDocs_A()
         {
-            DoNamedTest2();
+            DoNamedTest2("PartialClassWithoutDocs_B.cs");
         }
 
         [Test]
         public void TestPartialClassWithoutDocs_B()
         {
-            DoNamedTest2();
+            DoNamedTest2("PartialClassWithoutDocs_A.cs");
         }
 
         [Test]
