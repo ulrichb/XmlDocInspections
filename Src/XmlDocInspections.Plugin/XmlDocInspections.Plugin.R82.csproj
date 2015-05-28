@@ -12,7 +12,6 @@
     <AssemblyName>XmlDocInspections.Plugin</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
     <BaseIntermediateOutputPath>obj.R82\</BaseIntermediateOutputPath>
     <NuGetPackageImportStamp>da5905b0</NuGetPackageImportStamp>
   </PropertyGroup>
@@ -32,12 +31,14 @@
     <DefineConstants>TRACE;RESHARPER8</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <NoWarn>1685</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <StartAction>Program</StartAction>
     <StartProgram>$(DevEnvDir)devenv.exe</StartProgram>
     <StartArguments>/ReSharper.Plugin $(AssemblyName).dll /ReSharper.Internal $(SolutionDir)Src\XmlDocInspections.Plugin.Tests\TestData\XmlDocInspections.Sample.sln</StartArguments>
     <StartWorkingDirectory>$(MSBuildProjectDirectory)\$(OutputPath)</StartWorkingDirectory>
+    <NoWarn>1685</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
