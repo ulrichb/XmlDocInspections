@@ -136,8 +136,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Shared\Src\Infrastructure\DebugUtilities.cs">
-      <Link>Shared\Infrastructure\DebugUtilities.cs</Link>
+    <Compile Include="..\..\Shared\Src\ReSharperExtensionsShared\DebugUtilities.cs">
+      <Link>ReSharperExtensionsShared\DebugUtilities.cs</Link>
     </Compile>
     <Compile Include="Highlighting\MissingXmlDocHighlighting.cs" />
     <Compile Include="Highlighting\XmlDocHighlightingBase.cs" />

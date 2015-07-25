@@ -5,7 +5,8 @@ environment:
 cache:
   - packages
   - Src\XmlDocInspections.Plugin.Tests\Packages
-
+artifacts:
+  - path: Build\Output\TestCoverage
 install:
   - git submodule update --init --recursive
   - rmdir /S /Q "%ProgramFiles(x86)%\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6" # Workaround for the "Unsupported FrameworkVersion 4.6" error of the R# 8.2 Test SDK

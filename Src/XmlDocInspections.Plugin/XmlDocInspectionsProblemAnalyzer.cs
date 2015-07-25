@@ -1,5 +1,4 @@
-﻿using Infrastructure;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -11,6 +10,7 @@ using JetBrains.ReSharper.Psi;
 using JetBrains.ReSharper.Psi.Tree;
 using JetBrains.Util;
 using JetBrains.Util.Logging;
+using ReSharperExtensionsShared;
 using XmlDocInspections.Plugin.Highlighting;
 using XmlDocInspections.Plugin.Settings;
 #if RESHARPER8

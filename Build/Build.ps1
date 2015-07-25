@@ -20,6 +20,7 @@ $NUnitTestAssemblyPaths = @(
   "Src\XmlDocInspections.Plugin.Tests\bin.R91\$Configuration\XmlDocInspections.Plugin.Tests.dll"
 )
 $NUnitFrameworkVersion = "net-4.5"
+$TestCoverageFilter = "+[XmlDocInspections*]* -[XmlDocInspections*]ReSharperExtensionsShared.*"
 $NuspecPath = "Src\XmlDocInspections.nuspec"
 $PackageBaseVersion = StripLastPartFromVersion $Version
 $NugetPackProperties = @(
