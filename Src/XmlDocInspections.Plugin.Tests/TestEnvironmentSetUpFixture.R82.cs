@@ -13,6 +13,7 @@ using XmlDocInspections.Plugin;
 /// Test environment. Must be in the global namespace.
 /// </summary>
 [SetUpFixture]
+// ReSharper disable once CheckNamespace
 public class TestEnvironmentSetUpFixture : ReSharperTestEnvironmentAssembly
 {
     /// <summary>
