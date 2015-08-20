@@ -5,10 +5,11 @@
     <version>$Version$</version>
     <title>XML Doc Inspections</title>
     <authors>ulrichb</authors>
-    <projectUrl>https://github.com/ulrichb/XmlDocInspections#readme</projectUrl>
     <licenseUrl>https://github.com/ulrichb/XmlDocInspections/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/ulrichb/XmlDocInspections#readme</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Configurable warnings for missing XML Doc comments</description>
+    <releaseNotes>$ReleaseNotes$</releaseNotes>
     <tags>xml doc xmldoc inspection warning</tags>
     <dependencies>
       <dependency id="$DependencyId$" version="$DependencyVer$" />
