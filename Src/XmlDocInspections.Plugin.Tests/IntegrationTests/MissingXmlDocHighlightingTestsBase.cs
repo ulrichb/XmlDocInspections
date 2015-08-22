@@ -53,6 +53,6 @@ namespace XmlDocInspections.Plugin.Tests.IntegrationTests
             });
         }
 
-        protected abstract void MutateSettings([NotNull]IContextBoundSettingsStore settingsStore);
+        protected abstract void MutateSettings([NotNull] IContextBoundSettingsStore settingsStore);
     }
 }
