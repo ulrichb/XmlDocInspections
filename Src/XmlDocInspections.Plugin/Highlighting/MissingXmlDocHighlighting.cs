@@ -1,7 +1,8 @@
 ﻿using XmlDocInspections.Plugin.Settings;
 using JetBrains.ReSharper.Psi;
-using JetBrains.Annotations;
+using JetBrains.DocumentModel;
 using JetBrains.ReSharper.Psi.Tree;
+using ReSharperExtensionsShared.Highlighting;
 using XmlDocInspections.Plugin.Highlighting;
 #if RESHARPER8
 using JetBrains.ReSharper.Daemon;
@@ -30,13 +31,11 @@ namespace XmlDocInspections.Plugin.Highlighting
         "CSHARP",
         OverlapResolve = OverlapResolveKind.NONE,
         ToolTipFormatString = Message)]
-    public class MissingXmlDocHighlighting : XmlDocHighlightingBase
+    public class MissingXmlDocHighlighting : SimpleTreeNodeHighlightingBase<IDeclaration>
     {
         public const string SeverityId = "MissingXmlDoc";
-
-        private const string Message = "Missing XML Doc comment for {0} {1}";
-
         public const string Title = "Missing XML Doc comment for type / type member";
+        private const string Message = "Missing XML Doc comment for {0} {1}";
 
         public const string Description =
             "Missing XML Doc comment for type / type member. " +
@@ -54,6 +53,11 @@ namespace XmlDocInspections.Plugin.Highlighting
                 Message,
                 AccessibilityUtility.FormatAccessibilityDomainType(accessibilityDomainType),
                 isTypeMember ? "type member" : "type");
+        }
+
+        public override DocumentRange CalculateRange()
+        {
+            return TreeNode.GetNameDocumentRange();
         }
     }
 }

@@ -41,7 +41,7 @@ namespace XmlDocInspections.Plugin.Tests.Integrative
         protected override bool HighlightingPredicate(IHighlighting highlighting, IPsiSourceFile sourceFile)
 #endif
         {
-            return highlighting is XmlDocHighlightingBase;
+            return highlighting is MissingXmlDocHighlighting;
         }
 
         protected override void DoNamedTest2(params string[] auxFiles)

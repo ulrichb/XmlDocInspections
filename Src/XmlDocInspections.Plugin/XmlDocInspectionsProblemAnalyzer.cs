@@ -10,7 +10,7 @@ using JetBrains.ReSharper.Psi;
 using JetBrains.ReSharper.Psi.Tree;
 using JetBrains.Util;
 using JetBrains.Util.Logging;
-using ReSharperExtensionsShared;
+using ReSharperExtensionsShared.Debugging;
 using XmlDocInspections.Plugin.Highlighting;
 using XmlDocInspections.Plugin.Settings;
 #if RESHARPER8
@@ -52,10 +52,10 @@ namespace XmlDocInspections.Plugin
             highlightingResults.ForEach(x => consumer.AddHighlighting(x));
 
 #if DEBUG
-            var message = DebugUtilities.FormatIncludingContext(typeMember) + " => ["
+            var message = DebugUtility.FormatIncludingContext(typeMember) + " => ["
                           + string.Join(", ", highlightingResults.Select(x => x.GetType().Name)) + "]";
 
-            Log.LogMessage(LoggingLevel.VERBOSE, DebugUtilities.FormatWithElapsed(message, stopwatch));
+            Log.LogMessage(LoggingLevel.VERBOSE, DebugUtility.FormatWithElapsed(message, stopwatch));
 #endif
         }
 
