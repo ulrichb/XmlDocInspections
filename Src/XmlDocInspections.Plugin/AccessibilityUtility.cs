@@ -6,7 +6,7 @@ namespace XmlDocInspections.Plugin
     /// <summary>
     /// Utilities for <see cref="AccessibilityDomain.AccessibilityDomainType"/>.
     /// </summary>
-    public static class AccessibilityUtilities
+    public static class AccessibilityUtility
     {
         public static bool IsAccessibilityConfigured(AccessibilityDomain.AccessibilityDomainType accessibility, AccessibilitySettingFlags settingFlags)
         {

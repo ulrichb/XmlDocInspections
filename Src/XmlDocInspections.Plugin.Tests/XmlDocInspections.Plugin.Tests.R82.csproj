@@ -48,6 +48,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessibilityUtilityTest.cs" />
     <Compile Include="Integrative\BasicTests.cs" />
     <Compile Include="Integrative\ProjectExclusionTests.cs" />
     <Compile Include="Integrative\MissingXmlDocHighlightingTestsBase.cs" />

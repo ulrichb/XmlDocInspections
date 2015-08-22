@@ -52,7 +52,7 @@ namespace XmlDocInspections.Plugin.Highlighting
         {
             return string.Format(
                 Message,
-                AccessibilityUtilities.FormatAccessibilityDomainType(accessibilityDomainType),
+                AccessibilityUtility.FormatAccessibilityDomainType(accessibilityDomainType),
                 isTypeMember ? "type member" : "type");
         }
     }

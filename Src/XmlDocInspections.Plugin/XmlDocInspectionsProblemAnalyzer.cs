@@ -88,7 +88,7 @@ namespace XmlDocInspections.Plugin
                 ? settingsStore.GetValue((XmlDocInspectionsSettings s) => s.TypeMemberAccessibility)
                 : settingsStore.GetValue((XmlDocInspectionsSettings s) => s.TypeAccessibility);
 
-            return AccessibilityUtilities.IsAccessibilityConfigured(accessibility, accessibilitySettingFlags);
+            return AccessibilityUtility.IsAccessibilityConfigured(accessibility, accessibilitySettingFlags);
         }
     }
 }
