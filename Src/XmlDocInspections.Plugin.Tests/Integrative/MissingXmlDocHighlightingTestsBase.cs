@@ -5,7 +5,6 @@ using JetBrains.Annotations;
 using JetBrains.Application.Settings;
 using JetBrains.Util;
 using XmlDocInspections.Plugin.Highlighting;
-
 #if RESHARPER8
 using JetBrains.ReSharper.Daemon;
 using JetBrains.ReSharper.Daemon.CSharp;
@@ -14,9 +13,10 @@ using JetBrains.ReSharper.Daemon.CSharp;
 using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.ReSharper.FeaturesTestFramework.Daemon;
 using JetBrains.ReSharper.Psi;
+
 #endif
 
-namespace XmlDocInspections.Plugin.Tests.IntegrationTests
+namespace XmlDocInspections.Plugin.Tests.Integrative
 {
     public abstract class MissingXmlDocHighlightingTestsBase : CSharpHighlightingTestNet4Base
     {

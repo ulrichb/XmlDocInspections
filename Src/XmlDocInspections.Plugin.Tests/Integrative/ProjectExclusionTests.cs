@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using XmlDocInspections.Plugin.Settings;
 
-namespace XmlDocInspections.Plugin.Tests.IntegrationTests
+namespace XmlDocInspections.Plugin.Tests.Integrative
 {
     [TestFixture]
     public class ProjectExclusionTests : MissingXmlDocHighlightingTestsBase

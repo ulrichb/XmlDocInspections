@@ -1,7 +1,7 @@
 ﻿using JetBrains.Application.Settings;
 using NUnit.Framework;
 
-namespace XmlDocInspections.Plugin.Tests.IntegrationTests
+namespace XmlDocInspections.Plugin.Tests.Integrative
 {
     [TestFixture]
     public class DefaultSettingsTests : MissingXmlDocHighlightingTestsBase

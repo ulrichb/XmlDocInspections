@@ -1,6 +1,7 @@
 using XmlDocInspections.Plugin.Highlighting;
 using JetBrains.Annotations;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.Linq.Expressions;
 using System.Windows.Forms;
@@ -23,11 +24,8 @@ namespace XmlDocInspections.Plugin.Settings
     /// <summary>
     /// An options page for XML Doc inspections.
     /// </summary>
-    [OptionsPage(
-        CPageId,
-        PageTitle,
-        typeof(CommonThemedIcons.Bulb),
-        ParentId = CodeInspectionPage.PID)]
+    [ExcludeFromCodeCoverage /* options page user interface is tested manually */]
+    [OptionsPage(CPageId, PageTitle, typeof(CommonThemedIcons.Bulb), ParentId = CodeInspectionPage.PID)]
     public class XmlDocInspectionsOptionsPage : AStackPanelOptionsPage // REVIEW: R#9 ISearchablePage ??
     {
         private readonly Lifetime _lifetime;
@@ -49,7 +47,8 @@ namespace XmlDocInspections.Plugin.Settings
         private void InitControls()
         {
             Controls.Add(new Controls.Label(
-                "Types / type members with the following accessibility are included in the inspection for \"" + MissingXmlDocHighlighting.Title + "\". " +
+                "Types / type members with the following accessibility are included in the inspection for \"" + MissingXmlDocHighlighting.Title +
+                "\". " +
                 "Note that the severity level can be configured on the \"Inspection Severity\" page."));
 
             Controls.Add(CreateAccessibilityCheckBoxes("Types accessibility", (XmlDocInspectionsSettings s) => s.TypeAccessibility));
