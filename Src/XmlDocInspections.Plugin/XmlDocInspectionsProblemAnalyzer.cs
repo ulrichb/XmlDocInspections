@@ -27,16 +27,16 @@ namespace XmlDocInspections.Plugin
     /// <summary>
     /// A problem analyzer for the XML Doc inspections.
     /// </summary>
-    [ElementProblemAnalyzer(typeof(ITypeMemberDeclaration), HighlightingTypes = new[] { typeof(MissingXmlDocHighlighting) })]
+    [ElementProblemAnalyzer(typeof (ITypeMemberDeclaration), HighlightingTypes = new[] {typeof (MissingXmlDocHighlighting)})]
     public class XmlDocInspectionsProblemAnalyzer : ElementProblemAnalyzer<ITypeMemberDeclaration>
     {
-        private static readonly ILogger Log = Logger.GetLogger(typeof(XmlDocInspectionsProblemAnalyzer));
+        private static readonly ILogger Log = Logger.GetLogger(typeof (XmlDocInspectionsProblemAnalyzer));
 
         private readonly ISettingsStore _settingsStore;
 
         public XmlDocInspectionsProblemAnalyzer(ISettingsStore settingsStore)
         {
-            Log.LogMessage(LoggingLevel.INFO, ".ctor");
+            Log.Verbose(".ctor");
             _settingsStore = settingsStore;
         }
 
@@ -55,7 +55,7 @@ namespace XmlDocInspections.Plugin
             var message = DebugUtility.FormatIncludingContext(typeMember) + " => ["
                           + string.Join(", ", highlightingResults.Select(x => x.GetType().Name)) + "]";
 
-            Log.LogMessage(LoggingLevel.VERBOSE, DebugUtility.FormatWithElapsed(message, stopwatch));
+            Log.Verbose(DebugUtility.FormatWithElapsed(message, stopwatch));
 #endif
         }
 
@@ -82,7 +82,8 @@ namespace XmlDocInspections.Plugin
             }
         }
 
-        private bool IsConfigured(IContextBoundSettingsStore settingsStore, bool isTypeMember, AccessibilityDomain.AccessibilityDomainType accessibility)
+        private bool IsConfigured(IContextBoundSettingsStore settingsStore, bool isTypeMember,
+            AccessibilityDomain.AccessibilityDomainType accessibility)
         {
             var accessibilitySettingFlags = isTypeMember
                 ? settingsStore.GetValue((XmlDocInspectionsSettings s) => s.TypeMemberAccessibility)
