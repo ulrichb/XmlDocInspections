@@ -1,7 +1,7 @@
 ﻿using System;
 using XmlDocInspections.Sample.Utilities;
 
-namespace XmlDocInspections.Sample
+namespace XmlDocInspections.Sample.Highlighting
 {
     public class PublicClassWithoutDocs : IExplicitlyImplementedInterface
     {

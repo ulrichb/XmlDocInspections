@@ -53,21 +53,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DelegateWithoutDocs.cs" />
-    <Compile Include="DerivedClassWithoutDocs.cs" />
-    <Compile Include="StructWithoutDocs.cs" />
-    <Compile Include="InterfacesWithoutDocs.cs" />
-    <Compile Include="InternalClassWithoutDocs.cs" />
+    <Compile Include="Highlighting\DelegateWithoutDocs.cs" />
+    <Compile Include="Highlighting\DerivedClassWithoutDocs.cs" />
+    <Compile Include="Highlighting\StructWithoutDocs.cs" />
+    <Compile Include="Highlighting\InterfacesWithoutDocs.cs" />
+    <Compile Include="Highlighting\InternalClassWithoutDocs.cs" />
     <Compile Include="Utilities\IExplicitlyImplementedInterface.cs" />
-    <Compile Include="ClassesAndMembersWithoutDocs.cs" />
-    <Compile Include="ClassesAndMembersWithDocs.cs" />
-    <Compile Include="PartialClassWithDocsInOneFile_B.cs" />
-    <Compile Include="PartialClassWithDocsInOneFile_A.cs" />
-    <Compile Include="PartialClassWithoutDocs_B.cs" />
-    <Compile Include="PartialClassWithoutDocs_A.cs" />
+    <Compile Include="Highlighting\ClassesAndMembersWithoutDocs.cs" />
+    <Compile Include="Highlighting\ClassesAndMembersWithDocs.cs" />
+    <Compile Include="Highlighting\PartialClassWithDocsInOneFile_B.cs" />
+    <Compile Include="Highlighting\PartialClassWithDocsInOneFile_A.cs" />
+    <Compile Include="Highlighting\PartialClassWithoutDocs_B.cs" />
+    <Compile Include="Highlighting\PartialClassWithoutDocs_A.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Highlighting\BasicTests\ClassesAndMembersWithDocs.cs.gold" />
+    <None Include="Highlighting\BasicTests\ClassesAndMembersWithoutDocs.cs.gold" />
+    <None Include="Highlighting\BasicTests\DelegateWithoutDocs.cs.gold" />
+    <None Include="Highlighting\BasicTests\DerivedClassWithoutDocs.cs.gold" />
+    <None Include="Highlighting\BasicTests\InterfacesWithoutDocs.cs.gold" />
+    <None Include="Highlighting\BasicTests\InternalClassWithoutDocs.cs.gold" />
+    <None Include="Highlighting\BasicTests\PartialClassWithDocsInOneFile_A.cs.gold" />
+    <None Include="Highlighting\BasicTests\PartialClassWithDocsInOneFile_B.cs.gold" />
+    <None Include="Highlighting\BasicTests\PartialClassWithoutDocs_A.cs.gold" />
+    <None Include="Highlighting\BasicTests\PartialClassWithoutDocs_B.cs.gold" />
+    <None Include="Highlighting\BasicTests\StructWithoutDocs.cs.gold" />
+    <None Include="Highlighting\DefaultSettingsTests\ClassesAndMembersWithoutDocs.cs.gold" />
+    <None Include="nuget.config" />
+    <None Include="Highlighting\ProjectExclusionTests\StructWithoutDocs.cs.gold" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

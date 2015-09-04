@@ -1,9 +1,6 @@
-﻿using System;
-using System.IO;
-using System.Runtime.CompilerServices;
+﻿using System.IO;
 using JetBrains.Annotations;
 using JetBrains.Application.Settings;
-using JetBrains.Util;
 using XmlDocInspections.Plugin.Highlighting;
 #if RESHARPER8
 using JetBrains.ReSharper.Daemon;
@@ -22,17 +19,12 @@ namespace XmlDocInspections.Plugin.Tests.Integrative
     {
         protected override string RelativeTestDataPath
         {
-            get { return "XmlDocInspections.Sample"; }
+            get { return "Highlighting"; }
         }
 
         protected override string GetGoldTestDataPath(string fileName)
         {
-            return Path.Combine(GetCodeFileDirectoryPath(), GetType().Name, fileName + ".gold");
-        }
-
-        private static string GetCodeFileDirectoryPath([CallerFilePath] string callerFilePath = null)
-        {
-            return Path.GetDirectoryName(callerFilePath.NotNull());
+            return base.GetGoldTestDataPath(Path.Combine(GetType().Name, fileName));
         }
 
 #if RESHARPER8

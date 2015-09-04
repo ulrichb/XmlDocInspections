@@ -162,34 +162,9 @@
     <Compile Include="Integrative\ProjectExclusionTests.cs" />
     <Compile Include="Integrative\MissingXmlDocHighlightingTestsBase.cs" />
     <Compile Include="Integrative\DefaultSettingsTests.cs" />
-    <None Include="Integrative\BasicTests\DelegateWithoutDocs.cs.gold" />
-    <None Include="Integrative\BasicTests\InternalClassWithoutDocs.cs.gold" />
-    <None Include="Integrative\BasicTests\StructWithoutDocs.cs.gold" />
-    <None Include="Integrative\ProjectExclusionTests\StructWithoutDocs.cs.gold" />
-    <None Include="TestData\nuget.config" />
-    <None Include="TestData\XmlDocInspections.Sample\ClassesAndMembersWithDocs.cs" />
-    <None Include="TestData\XmlDocInspections.Sample\ClassesAndMembersWithoutDocs.cs" />
-    <None Include="TestData\XmlDocInspections.Sample\DerivedClassWithoutDocs.cs" />
-    <None Include="TestData\XmlDocInspections.Sample\InterfacesWithoutDocs.cs" />
-    <None Include="TestData\XmlDocInspections.Sample\PartialClassWithDocsInOneFile_A.cs" />
-    <None Include="TestData\XmlDocInspections.Sample\PartialClassWithDocsInOneFile_B.cs" />
-    <None Include="TestData\XmlDocInspections.Sample\PartialClassWithoutDocs_A.cs" />
-    <None Include="TestData\XmlDocInspections.Sample\PartialClassWithoutDocs_B.cs" />
-    <None Include="TestData\XmlDocInspections.Sample\DelegateWithoutDocs.cs" />
-    <None Include="TestData\XmlDocInspections.Sample\InternalClassWithoutDocs.cs" />
-    <None Include="TestData\XmlDocInspections.Sample\StructWithoutDocs.cs" />
     <Compile Include="ZoneMarker.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Integrative\BasicTests\ClassesAndMembersWithDocs.cs.gold" />
-    <None Include="Integrative\BasicTests\ClassesAndMembersWithoutDocs.cs.gold" />
-    <None Include="Integrative\BasicTests\DerivedClassWithoutDocs.cs.gold" />
-    <None Include="Integrative\BasicTests\InterfacesWithoutDocs.cs.gold" />
-    <None Include="Integrative\BasicTests\PartialClassWithDocsInOneFile_A.cs.gold" />
-    <None Include="Integrative\BasicTests\PartialClassWithDocsInOneFile_B.cs.gold" />
-    <None Include="Integrative\BasicTests\PartialClassWithoutDocs_A.cs.gold" />
-    <None Include="Integrative\BasicTests\PartialClassWithoutDocs_B.cs.gold" />
-    <None Include="Integrative\DefaultSettingsTests\ClassesAndMembersWithoutDocs.cs.gold" />
     <None Include="packages.XmlDocInspections.Plugin.Tests.R92.config" />
   </ItemGroup>
   <ItemGroup>

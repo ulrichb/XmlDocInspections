@@ -1,4 +1,4 @@
-﻿namespace XmlDocInspections.Sample
+﻿namespace XmlDocInspections.Sample.Highlighting
 {
     public interface |IPublicInterfacesWithoutDocs|(0)
     {

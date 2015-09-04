@@ -5,8 +5,6 @@ using JetBrains.TestFramework.Application.Zones;
 using NUnit.Framework;
 using XmlDocInspections.Plugin.Tests;
 
-[assembly: TestDataPathBase(@"TestData")]
-
 namespace XmlDocInspections.Plugin.Tests
 {
     [ZoneDefinition]

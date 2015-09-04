@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace XmlDocInspections.Sample
+namespace XmlDocInspections.Sample.Highlighting
 {
     /// <summary>
     /// Some doc.
