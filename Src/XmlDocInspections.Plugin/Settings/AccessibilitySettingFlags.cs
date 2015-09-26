@@ -8,6 +8,7 @@ namespace XmlDocInspections.Plugin.Settings
     [Flags]
     public enum AccessibilitySettingFlags
     {
+        // ReSharper disable once UnusedMember.Global
         None = 0,
 
         Public = 0x1,

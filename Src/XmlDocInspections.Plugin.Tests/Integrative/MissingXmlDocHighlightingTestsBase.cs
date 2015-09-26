@@ -17,10 +17,7 @@ namespace XmlDocInspections.Plugin.Tests.Integrative
 {
     public abstract class MissingXmlDocHighlightingTestsBase : CSharpHighlightingTestNet4Base
     {
-        protected override string RelativeTestDataPath
-        {
-            get { return "Highlighting"; }
-        }
+        protected override string RelativeTestDataPath => "Highlighting";
 
         protected override string GetGoldTestDataPath(string fileName)
         {

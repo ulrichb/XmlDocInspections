@@ -12,10 +12,7 @@ namespace XmlDocInspections.Plugin.Tests.Integrative
             settingsStore.SetValue((XmlDocInspectionsSettings s) => s.ProjectExclusionRegex, "^Excl.*ject$");
         }
 
-        protected override string ProjectName
-        {
-            get { return "ExcludedProject"; }
-        }
+        protected override string ProjectName => "ExcludedProject";
 
         [Test]
         public void TestStructWithoutDocs()
