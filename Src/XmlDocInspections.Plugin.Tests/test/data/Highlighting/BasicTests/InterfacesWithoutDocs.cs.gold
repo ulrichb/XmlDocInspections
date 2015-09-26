@@ -17,19 +17,19 @@
     // ReSharper disable once MissingXmlDoc
     public class ClassWithNestedInterfacesWithoutDocs
     {
-        public interface |IPublicNestednterface|(6)
+        public interface |IPublicNestedInterface|(6)
         {
         }
 
-        internal interface |IInternalNestednterface|(7)
+        internal interface |IInternalNestedInterface|(7)
         {
         }
 
-        protected interface |IProtectedNestednterface|(8)
+        protected interface |IProtectedNestedInterface|(8)
         {
         }
 
-        private interface |IPrivateNestednterface|(9)
+        private interface |IPrivateNestedInterface|(9)
         {
         }
     }
