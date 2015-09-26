@@ -13,7 +13,7 @@ using static JetBrains.ReSharper.Psi.AccessibilityDomain;
     MissingXmlDocHighlighting.Title,
     MissingXmlDocHighlighting.Description,
     Severity.WARNING,
-    solutionAnalysisRequired: false)]
+    /*SolutionAnalysisRequired:*/ false)]
 
 namespace XmlDocInspections.Plugin.Highlighting
 {

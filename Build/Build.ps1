@@ -18,6 +18,7 @@ $NUnitExecutable = "nunit-console-x86.exe"
 $NUnitTestAssemblyPaths = @(
   "Src\XmlDocInspections.Plugin.Tests\bin\R91\$Configuration\XmlDocInspections.Plugin.Tests.R91.dll"
   "Src\XmlDocInspections.Plugin.Tests\bin\R92\$Configuration\XmlDocInspections.Plugin.Tests.R92.dll"
+  "Src\XmlDocInspections.Plugin.Tests\bin\R100\$Configuration\XmlDocInspections.Plugin.Tests.R100.dll"
 )
 $NUnitFrameworkVersion = "net-4.5"
 $TestCoverageFilter = "+[XmlDocInspections*]* -[XmlDocInspections*]ReSharperExtensionsShared.*"
@@ -25,6 +26,7 @@ $NuspecPath = "Src\XmlDocInspections.nuspec"
 $NugetPackProperties = @(
     "Version=$(CalcNuGetPackageVersion 91);Configuration=$Configuration;DependencyVer=[2.0];BinDirInclude=bin\R91"
     "Version=$(CalcNuGetPackageVersion 92);Configuration=$Configuration;DependencyVer=[3.0];BinDirInclude=bin\R92"
+    "Version=$(CalcNuGetPackageVersion 100);Configuration=$Configuration;DependencyVer=[4.0];BinDirInclude=bin\R100"
 )
 $NugetPushServer = "https://www.myget.org/F/ulrichb/api/v2/package"
 
