@@ -1,4 +1,4 @@
-### vNext ###
+### 1.2.1 ###
 - Fixed extension meta data to enable running it in InspectCode (ReSharper Command Line Tools)
 
 ### 1.2 ###
