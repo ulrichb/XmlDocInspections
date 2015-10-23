@@ -9,6 +9,7 @@ using JetBrains.Application.PluginSupport;
 [assembly: AssemblyTitle(AssemblyConsts.Title)]
 [assembly: AssemblyVersion("0.0.0.1")]
 [assembly: AssemblyFileVersion("0.0.0.1")]
+[assembly: AssemblyInformationalVersion("0.0.0.1-dev")]
 
 #if RESHARPER8
 // The following information is displayed by ReSharper in the Plugins dialog
