@@ -12,10 +12,10 @@
     <releaseNotes>$ReleaseNotes$</releaseNotes>
     <tags>xml doc xmldoc inspection warning</tags>
     <dependencies>
-      <dependency id="$DependencyId$" version="$DependencyVer$" />
+      <dependency id="Wave" version="$DependencyVer$" />
     </dependencies>
   </metadata>
   <files>
-    <file src="XmlDocInspections.Plugin\$BinDirInclude$\$Configuration$\XmlDocInspections.Plugin.*" target="$TargetDir$" />
+    <file src="XmlDocInspections.Plugin\$BinDirInclude$\$Configuration$\XmlDocInspections.Plugin.*" target="dotFiles" />
   </files>
 </package>

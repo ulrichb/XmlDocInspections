@@ -1,16 +1,10 @@
-﻿using XmlDocInspections.Plugin.Settings;
+﻿using JetBrains.DocumentModel;
+using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.ReSharper.Psi;
-using JetBrains.DocumentModel;
 using JetBrains.ReSharper.Psi.Tree;
 using ReSharperExtensionsShared.Highlighting;
 using XmlDocInspections.Plugin.Highlighting;
-#if RESHARPER8
-using JetBrains.ReSharper.Daemon;
-
-#else
-using JetBrains.ReSharper.Feature.Services.Daemon;
-
-#endif
+using XmlDocInspections.Plugin.Settings;
 
 [assembly: RegisterConfigurableSeverity(
     MissingXmlDocHighlighting.SeverityId,
@@ -41,7 +35,9 @@ namespace XmlDocInspections.Plugin.Highlighting
             "Missing XML Doc comment for type / type member. " +
             "See the '" + XmlDocInspectionsOptionsPage.PageTitle + "' options page for further configuration settings.";
 
-        public MissingXmlDocHighlighting(bool isTypeMember, AccessibilityDomain.AccessibilityDomainType accessibilityDomainType,
+        public MissingXmlDocHighlighting(
+            bool isTypeMember,
+            AccessibilityDomain.AccessibilityDomainType accessibilityDomainType, // TODO: static import ?
             IDeclaration declaration)
             : base(declaration, FormatMessage(isTypeMember, accessibilityDomainType))
         {

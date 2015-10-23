@@ -1,3 +1,6 @@
+### vNext ####
+- Dropped ReSharper 8.2 support
+
 ### 1.2.1 ###
 - Fixed extension meta data to enable running it in InspectCode (ReSharper Command Line Tools)
 

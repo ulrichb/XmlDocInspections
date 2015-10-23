@@ -16,17 +16,15 @@ $AssemblyVersionFilePath = "Src\XmlDocInspections.Plugin\Properties\AssemblyInfo
 $MSBuildPath = "${env:ProgramFiles(x86)}\MSBuild\14.0\Bin\MSBuild.exe"
 $NUnitExecutable = "nunit-console-x86.exe"
 $NUnitTestAssemblyPaths = @(
-  "Src\XmlDocInspections.Plugin.Tests\bin.R82\$Configuration\XmlDocInspections.Plugin.Tests.R82.dll"
-  "Src\XmlDocInspections.Plugin.Tests\bin.R91\$Configuration\XmlDocInspections.Plugin.Tests.R91.dll"
-  "Src\XmlDocInspections.Plugin.Tests\bin.R92\$Configuration\XmlDocInspections.Plugin.Tests.R92.dll"
+  "Src\XmlDocInspections.Plugin.Tests\bin\R91\$Configuration\XmlDocInspections.Plugin.Tests.R91.dll"
+  "Src\XmlDocInspections.Plugin.Tests\bin\R92\$Configuration\XmlDocInspections.Plugin.Tests.R92.dll"
 )
 $NUnitFrameworkVersion = "net-4.5"
 $TestCoverageFilter = "+[XmlDocInspections*]* -[XmlDocInspections*]ReSharperExtensionsShared.*"
 $NuspecPath = "Src\XmlDocInspections.nuspec"
 $NugetPackProperties = @(
-    "Version=$(CalcNuGetPackageVersion 82);Configuration=$Configuration;DependencyId=ReSharper;DependencyVer=[8.2,8.3);BinDirInclude=bin.R82;TargetDir=ReSharper\v8.2\plugins"
-    "Version=$(CalcNuGetPackageVersion 91);Configuration=$Configuration;DependencyId=Wave;DependencyVer=[2.0];BinDirInclude=bin.R91;TargetDir=dotFiles"
-    "Version=$(CalcNuGetPackageVersion 92);Configuration=$Configuration;DependencyId=Wave;DependencyVer=[3.0];BinDirInclude=bin.R92;TargetDir=dotFiles"
+    "Version=$(CalcNuGetPackageVersion 91);Configuration=$Configuration;DependencyVer=[2.0];BinDirInclude=bin\R91"
+    "Version=$(CalcNuGetPackageVersion 92);Configuration=$Configuration;DependencyVer=[3.0];BinDirInclude=bin\R92"
 )
 $NugetPushServer = "https://www.myget.org/F/ulrichb/api/v2/package"
 

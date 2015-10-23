@@ -11,15 +11,15 @@
     <AssemblyName>XmlDocInspections.Plugin.R92</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <BaseIntermediateOutputPath>obj.R92\</BaseIntermediateOutputPath>
+    <BaseIntermediateOutputPath>obj\R92\</BaseIntermediateOutputPath>
     <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
-    <NuGetPackageImportStamp>ec3e4efa</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>bd72ae56</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin.R92\Debug\</OutputPath>
+    <OutputPath>bin\R92\Debug\</OutputPath>
     <DefineConstants>JET_MODE_ASSERT;DEBUG;TRACE;RESHARPER92</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -27,7 +27,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin.R92\Release\</OutputPath>
+    <OutputPath>bin\R92\Release\</OutputPath>
     <DefineConstants>TRACE;RESHARPER92</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>

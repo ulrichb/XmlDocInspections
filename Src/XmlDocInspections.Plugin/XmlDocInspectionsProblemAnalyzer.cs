@@ -6,6 +6,7 @@ using JetBrains.Annotations;
 using JetBrains.Application.Settings;
 using JetBrains.ReSharper.Daemon.CSharp.Stages;
 using JetBrains.ReSharper.Daemon.Stages.Dispatcher;
+using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.ReSharper.Psi;
 using JetBrains.ReSharper.Psi.Tree;
 using JetBrains.Util;
@@ -13,14 +14,6 @@ using JetBrains.Util.Logging;
 using ReSharperExtensionsShared.Debugging;
 using XmlDocInspections.Plugin.Highlighting;
 using XmlDocInspections.Plugin.Settings;
-#if RESHARPER8
-using JetBrains.ReSharper.Daemon;
-using JetBrains.ReSharper.Daemon.Stages;
-
-#else
-using JetBrains.ReSharper.Feature.Services.Daemon;
-
-#endif
 
 namespace XmlDocInspections.Plugin
 {

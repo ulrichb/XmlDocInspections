@@ -1,17 +1,10 @@
 ﻿using System.IO;
 using JetBrains.Annotations;
 using JetBrains.Application.Settings;
-using XmlDocInspections.Plugin.Highlighting;
-#if RESHARPER8
-using JetBrains.ReSharper.Daemon;
-using JetBrains.ReSharper.Daemon.CSharp;
-
-#else
 using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.ReSharper.FeaturesTestFramework.Daemon;
 using JetBrains.ReSharper.Psi;
-
-#endif
+using XmlDocInspections.Plugin.Highlighting;
 
 namespace XmlDocInspections.Plugin.Tests.Integrative
 {
@@ -24,11 +17,7 @@ namespace XmlDocInspections.Plugin.Tests.Integrative
             return base.GetGoldTestDataPath(Path.Combine(GetType().Name, fileName));
         }
 
-#if RESHARPER8
-        protected override bool HighlightingPredicate(IHighlighting highlighting, IContextBoundSettingsStore settingsStore)
-#else
         protected override bool HighlightingPredicate(IHighlighting highlighting, IPsiSourceFile sourceFile)
-#endif
         {
             return highlighting is MissingXmlDocHighlighting;
         }

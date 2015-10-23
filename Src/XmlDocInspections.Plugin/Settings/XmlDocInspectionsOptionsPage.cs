@@ -1,23 +1,17 @@
-using XmlDocInspections.Plugin.Highlighting;
-using JetBrains.Annotations;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.Linq.Expressions;
 using System.Windows.Forms;
+using JetBrains.Annotations;
 using JetBrains.Application.Settings;
 using JetBrains.DataFlow;
+using JetBrains.ReSharper.Feature.Services.Daemon.OptionPages;
 using JetBrains.UI.Application;
 using JetBrains.UI.Options;
 using JetBrains.UI.Options.Helpers;
 using JetBrains.UI.Resources;
-#if RESHARPER8
-using JetBrains.ReSharper.Features.Environment.Options.Inspections;
-
-#else
-using JetBrains.ReSharper.Feature.Services.Daemon.OptionPages;
-
-#endif
+using XmlDocInspections.Plugin.Highlighting;
 
 namespace XmlDocInspections.Plugin.Settings
 {
@@ -25,9 +19,11 @@ namespace XmlDocInspections.Plugin.Settings
     /// An options page for XML Doc inspections.
     /// </summary>
     [ExcludeFromCodeCoverage /* options page user interface is tested manually */]
-    [OptionsPage(CPageId, PageTitle, typeof(CommonThemedIcons.Bulb), ParentId = CodeInspectionPage.PID)]
-    public class XmlDocInspectionsOptionsPage : AStackPanelOptionsPage // REVIEW: R#9 ISearchablePage ??
+    [OptionsPage(CPageId, PageTitle, typeof (CommonThemedIcons.Bulb), ParentId = CodeInspectionPage.PID)]
+    public class XmlDocInspectionsOptionsPage : AStackPanelOptionsPage
     {
+        // IDEA: Now, as we dropped R# 8.2, derive from SimpleOptionsPage to implement ISearchablePage?
+
         private readonly Lifetime _lifetime;
         private readonly IUIApplication _environment;
         private readonly OptionsSettingsSmartContext _settings;

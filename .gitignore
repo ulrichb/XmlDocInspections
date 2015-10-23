@@ -1,6 +1,7 @@
 *.tmp
 
 # User-specific files
+.vs/
 *.suo
 *.user
 *.sln.docstates
@@ -16,5 +17,3 @@
 # custom ignores
 
 /Build/Output/
-bin.R??/
-obj.R??/
