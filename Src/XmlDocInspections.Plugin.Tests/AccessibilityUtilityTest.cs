@@ -1,6 +1,6 @@
-﻿using JetBrains.ReSharper.Psi;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using XmlDocInspections.Plugin.Settings;
+using static JetBrains.ReSharper.Psi.AccessibilityDomain;
 
 namespace XmlDocInspections.Plugin.Tests
 {
@@ -13,7 +13,7 @@ namespace XmlDocInspections.Plugin.Tests
         public void IsAccessibilityConfigured_WithUnknownAccessibility()
         {
             var doNotCare = AccessibilitySettingFlags.All;
-            var result = AccessibilityUtility.IsAccessibilityConfigured(AccessibilityDomain.AccessibilityDomainType.NONE, doNotCare);
+            var result = AccessibilityUtility.IsAccessibilityConfigured(AccessibilityDomainType.NONE, doNotCare);
 
             Assert.That(result, Is.EqualTo(false));
         }
@@ -21,7 +21,7 @@ namespace XmlDocInspections.Plugin.Tests
         [Test]
         public void FormatAccessibilityDomainType_WithUnknownAccessibility()
         {
-            var result = AccessibilityUtility.FormatAccessibilityDomainType(AccessibilityDomain.AccessibilityDomainType.NONE);
+            var result = AccessibilityUtility.FormatAccessibilityDomainType(AccessibilityDomainType.NONE);
 
             Assert.That(result, Is.EqualTo("<unknown>"));
         }

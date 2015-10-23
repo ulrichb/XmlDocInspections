@@ -14,6 +14,7 @@ using JetBrains.Util.Logging;
 using ReSharperExtensionsShared.Debugging;
 using XmlDocInspections.Plugin.Highlighting;
 using XmlDocInspections.Plugin.Settings;
+using static JetBrains.ReSharper.Psi.AccessibilityDomain;
 
 namespace XmlDocInspections.Plugin
 {
@@ -75,8 +76,7 @@ namespace XmlDocInspections.Plugin
             }
         }
 
-        private bool IsConfigured(IContextBoundSettingsStore settingsStore, bool isTypeMember,
-            AccessibilityDomain.AccessibilityDomainType accessibility)
+        private bool IsConfigured(IContextBoundSettingsStore settingsStore, bool isTypeMember, AccessibilityDomainType accessibility)
         {
             var accessibilitySettingFlags = isTypeMember
                 ? settingsStore.GetValue((XmlDocInspectionsSettings s) => s.TypeMemberAccessibility)
