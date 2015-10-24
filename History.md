@@ -1,4 +1,4 @@
-### vNext ###
+### 1.3.0 ###
 - ReSharper 10.0 support
 - Dropped ReSharper 8.2 support
 
