@@ -7,6 +7,7 @@ using JetBrains.Application.Settings;
 using JetBrains.ReSharper.Daemon.Stages.Dispatcher;
 using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.ReSharper.Psi;
+using JetBrains.ReSharper.Psi.Modules;
 using JetBrains.ReSharper.Psi.Tree;
 using JetBrains.ReSharper.Psi.Xaml;
 using JetBrains.Util;
@@ -32,11 +33,13 @@ namespace XmlDocInspections.Plugin
         private static readonly ILogger Log = Logger.GetLogger(typeof(XmlDocInspectionsProblemAnalyzer));
 
         private readonly ISettingsStore _settingsStore;
+        private readonly ISettingsOptimization _settingsOptimization;
 
-        public XmlDocInspectionsProblemAnalyzer(ISettingsStore settingsStore)
+        public XmlDocInspectionsProblemAnalyzer(ISettingsStore settingsStore, ISettingsOptimization settingsOptimization)
         {
             Log.Verbose(".ctor");
             _settingsStore = settingsStore;
+            _settingsOptimization = settingsOptimization;
         }
 
         protected override void Run(ITypeMemberDeclaration element, ElementProblemAnalyzerData data, IHighlightingConsumer consumer)
@@ -60,7 +63,6 @@ namespace XmlDocInspections.Plugin
 
         private IEnumerable<IHighlighting> HandleTypeMember([NotNull] IDeclaration declaration, [CanBeNull] ITypeMember typeMember)
         {
-            // We ignore inherited XML Docs.
             if (typeMember != null && typeMember.GetXMLDoc(inherit: false) == null)
             {
                 if (!declaration.Language.Is<XamlLanguage>())
@@ -68,27 +70,42 @@ namespace XmlDocInspections.Plugin
                     var module = typeMember.Module;
                     var settingsStore = _settingsStore.BindToContextTransient(ContextRange.Smart(module.ToDataContext()));
 
-                    var projectExclusionRegex = settingsStore.GetValue((XmlDocInspectionsSettings s) => s.ProjectExclusionRegex);
-                    if (string.IsNullOrWhiteSpace(projectExclusionRegex) || !Regex.IsMatch(module.Name, projectExclusionRegex))
+                    var settings = settingsStore.GetKey<XmlDocInspectionsSettings>(_settingsOptimization);
+
+                    if (IsModuleNotExcluded(module, settingsStore))
                     {
-                        // Note that AccessibilityDomain also take containing type's accessibility into account.
-                        var accessibilityDomainType = typeMember.AccessibilityDomain.DomainType;
+                        if (!IsOverridingMember(typeMember) || settings.RequireDocsOnOverridingMember)
+                        {
+                            // Note that AccessibilityDomain also take containing type's accessibility into account.
+                            var accessibilityDomainType = typeMember.AccessibilityDomain.DomainType;
 
-                        // Note that types are also type members.
-                        var isTypeMember = !(typeMember is ITypeElement);
+                            // Note that types are also type members.
+                            var isTypeMember = !(typeMember is ITypeElement);
 
-                        if (IsConfigured(settingsStore, isTypeMember, accessibilityDomainType))
-                            yield return new MissingXmlDocHighlighting(isTypeMember, accessibilityDomainType, declaration);
+                            if (IsConfigured(settings, isTypeMember, accessibilityDomainType))
+                                yield return new MissingXmlDocHighlighting(isTypeMember, accessibilityDomainType, declaration);
+                        }
                     }
                 }
             }
         }
 
-        private bool IsConfigured(IContextBoundSettingsStore settingsStore, bool isTypeMember, AccessibilityDomainType accessibility)
+        private bool IsOverridingMember(ITypeMember typeMember)
         {
-            var accessibilitySettingFlags = isTypeMember
-                ? settingsStore.GetValue((XmlDocInspectionsSettings s) => s.TypeMemberAccessibility)
-                : settingsStore.GetValue((XmlDocInspectionsSettings s) => s.TypeAccessibility);
+            var overridableMember = typeMember as IOverridableMember;
+
+            return overridableMember != null && overridableMember.HasImmediateSuperMembers();
+        }
+
+        private static bool IsModuleNotExcluded(IPsiModule module, IContextBoundSettingsStore settingsStore)
+        {
+            var projectExclusionRegex = settingsStore.GetValue((XmlDocInspectionsSettings s) => s.ProjectExclusionRegex);
+            return string.IsNullOrWhiteSpace(projectExclusionRegex) || !Regex.IsMatch(module.Name, projectExclusionRegex);
+        }
+
+        private static bool IsConfigured(XmlDocInspectionsSettings settings, bool isTypeMember, AccessibilityDomainType accessibility)
+        {
+            var accessibilitySettingFlags = isTypeMember ? settings.TypeMemberAccessibility : settings.TypeAccessibility;
 
             return AccessibilityUtility.IsAccessibilityConfigured(accessibility, accessibilitySettingFlags);
         }

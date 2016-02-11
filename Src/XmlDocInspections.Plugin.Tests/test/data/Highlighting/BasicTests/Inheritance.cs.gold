@@ -1,0 +1,87 @@
+﻿// ReSharper disable UnusedParameter.Local
+
+namespace XmlDocInspections.Sample.Highlighting
+{
+    /// <summary>Some doc.</summary>
+    public class BaseClassWithDocs
+    {
+        /// <summary>Some doc.</summary>
+        public BaseClassWithDocs(string param)
+        {
+        }
+
+        /// <summary>Some doc.</summary>
+        public string Method() => "";
+
+        /// <summary>Some doc.</summary>
+        public virtual string OverridableMethod() => "";
+    }
+
+    public class |IntermediateDerivedFromBaseClassWithDocs|(0) : BaseClassWithDocs
+    {
+        public |IntermediateDerivedFromBaseClassWithDocs|(1)(string param) : base(param)
+        {
+        }
+    }
+
+    public class |DerivedFromBaseClassWithDocs|(2) : IntermediateDerivedFromBaseClassWithDocs
+    {
+        public |DerivedFromBaseClassWithDocs|(3)(string param) : base(param)
+        {
+        }
+
+        public new string |Method|(4)() => "";
+
+        public override string |OverridableMethod|(5)() => "";
+    }
+
+    //
+
+    public class |BaseClassWithoutDocs|(6)
+    {
+        public virtual string |OverridableMethod|(7)() => "";
+    }
+
+    public class |DerivedFromBaseClassWithoutDocs|(8) : BaseClassWithoutDocs
+    {
+        // Here we also expect no warning because it would get out of date, when the docs are added to the base member:
+        public override string |OverridableMethod|(9)() => "";
+    }
+
+    //
+
+    public interface |IInterfaceWithoutDocs|(10)
+    {
+        string |Method|(11)();
+    }
+
+    public interface |IInterfaceWithoutDocsToBeExplicitlyImplemented|(12)
+    {
+        string |Method|(13)();
+    }
+
+    public class |DerivedFromInterfaceWithoutDocs|(14) : IInterfaceWithoutDocs, IInterfaceWithoutDocsToBeExplicitlyImplemented
+    {
+        public string |Method|(15)() => "";
+
+        string IInterfaceWithoutDocsToBeExplicitlyImplemented.|Method|(16)() => "";
+    }
+}
+---------------------------------------------------------
+(0): ReSharper Warning: Missing XML Doc comment for public type
+(1): ReSharper Warning: Missing XML Doc comment for public type member
+(2): ReSharper Warning: Missing XML Doc comment for public type
+(3): ReSharper Warning: Missing XML Doc comment for public type member
+(4): ReSharper Warning: Missing XML Doc comment for public type member
+(5): ReSharper Warning: Missing XML Doc comment for public type member
+(6): ReSharper Warning: Missing XML Doc comment for public type
+(7): ReSharper Warning: Missing XML Doc comment for public type member
+(8): ReSharper Warning: Missing XML Doc comment for public type
+(9): ReSharper Warning: Missing XML Doc comment for public type member
+(10): ReSharper Warning: Missing XML Doc comment for public type
+(11): ReSharper Warning: Missing XML Doc comment for public type member
+(12): ReSharper Warning: Missing XML Doc comment for public type
+(13): ReSharper Warning: Missing XML Doc comment for public type member
+(14): ReSharper Warning: Missing XML Doc comment for public type
+(15): ReSharper Warning: Missing XML Doc comment for public type member
+(16): ReSharper Warning: Missing XML Doc comment for private type member

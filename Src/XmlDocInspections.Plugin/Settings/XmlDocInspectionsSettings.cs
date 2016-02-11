@@ -20,5 +20,8 @@ namespace XmlDocInspections.Plugin.Settings
 
         [SettingsEntry(DefaultAccessibilityFlags, "TypeMemberAccessibility")]
         public AccessibilitySettingFlags TypeMemberAccessibility;
+
+        [SettingsEntry(true, "RequireDocsOnOverridingMember")]
+        public bool RequireDocsOnOverridingMember;
     }
 }

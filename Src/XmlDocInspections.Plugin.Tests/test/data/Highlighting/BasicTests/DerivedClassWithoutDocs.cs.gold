@@ -1,17 +1,2 @@
-﻿using System;
-
-namespace XmlDocInspections.Sample.Highlighting
-{
-    /// <summary>
-    /// Some doc.
-    /// </summary>
-    public class BaseClassWithDocs
-    {
-    }
-
-    public class |DerivedClassWithoutDocs|(0) : BaseClassWithDocs
-    {
-    }
-}
+﻿
 ---------------------------------------------------------
-(0): ReSharper Warning: Missing XML Doc comment for public type

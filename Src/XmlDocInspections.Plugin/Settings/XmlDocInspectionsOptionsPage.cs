@@ -1,6 +1,5 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
-using System.Drawing;
 using System.Linq.Expressions;
 using JetBrains.Annotations;
 using JetBrains.Application.Settings;
@@ -9,7 +8,6 @@ using JetBrains.ReSharper.Feature.Services.Daemon.OptionPages;
 using JetBrains.UI.Options;
 using JetBrains.UI.Options.OptionsDialog2.SimpleOptions;
 using JetBrains.UI.Resources;
-using JetBrains.UI.RichText;
 
 namespace XmlDocInspections.Plugin.Settings
 {
@@ -32,13 +30,20 @@ namespace XmlDocInspections.Plugin.Settings
             _lifetime = lifetime;
             _settings = settings;
 
-            AddRichText(new RichText("Enable inspection for the following ").Append("types", new TextStyle(FontStyle.Bold)));
+            AddText("Inspections are enabled for the following code elements. " +
+                    "Note that the severity level can be configured on the \"Inspection Severity\" page.");
+
+            AddHeader("Types");
             AddAccessibilityBoolOption((XmlDocInspectionsSettings s) => s.TypeAccessibility);
 
-            AddRichText(new RichText("Enable inspection for the following ").Append("type members", new TextStyle(FontStyle.Bold)));
+            AddHeader("Type members");
             AddAccessibilityBoolOption((XmlDocInspectionsSettings s) => s.TypeMemberAccessibility);
 
-            AddText("Note that the severity level can be configured on the \"Inspection Severity\" page.");
+            AddBoolOption(
+                (XmlDocInspectionsSettings s) => s.RequireDocsOnOverridingMember,
+                "Members which override base members");
+
+            AddText("");
 
             AddStringOption((XmlDocInspectionsSettings s) => s.ProjectExclusionRegex, "Project exclusion regex: ");
 
@@ -53,6 +58,7 @@ namespace XmlDocInspections.Plugin.Settings
 
         private void AddAccessibilityBoolOption<T>([NotNull] Expression<Func<T, AccessibilitySettingFlags>> settingsExpression)
         {
+            //AddText("Show inspection accessibility:");
             var flagsProperty = new Property<AccessibilitySettingFlags>(_lifetime, "AccessibilitySettingFlags");
             _settings.SetBinding(_lifetime, settingsExpression, flagsProperty);
 

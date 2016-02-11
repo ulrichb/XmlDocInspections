@@ -33,7 +33,7 @@ namespace XmlDocInspections.Plugin.Tests.Integrative
         }
 
         [Test]
-        public void TestDerivedClassWithoutDocs()
+        public void TestInheritance()
         {
             DoNamedTest2();
         }
