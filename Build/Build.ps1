@@ -14,7 +14,7 @@ $BuildOutputPath = "Build\Output"
 $SolutionFilePath = "XmlDocInspections.sln"
 $AssemblyVersionFilePath = "Src\XmlDocInspections.Plugin\Properties\AssemblyInfo.cs"
 $MSBuildPath = "${env:ProgramFiles(x86)}\MSBuild\14.0\Bin\MSBuild.exe"
-$NUnitExecutable = "nunit-console-x86.exe"
+$NUnitAdditionalArgs = "--x86 --labels=All"
 $NUnitTestAssemblyPaths = @(
   "Src\XmlDocInspections.Plugin.Tests\bin\R91\$Configuration\XmlDocInspections.Plugin.Tests.R91.dll"
   "Src\XmlDocInspections.Plugin.Tests\bin\R92\$Configuration\XmlDocInspections.Plugin.Tests.R92.dll"
