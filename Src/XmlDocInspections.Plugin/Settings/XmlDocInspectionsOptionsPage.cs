@@ -2,16 +2,14 @@ using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.Linq.Expressions;
-using System.Windows.Forms;
 using JetBrains.Annotations;
 using JetBrains.Application.Settings;
 using JetBrains.DataFlow;
 using JetBrains.ReSharper.Feature.Services.Daemon.OptionPages;
-using JetBrains.UI.Application;
 using JetBrains.UI.Options;
-using JetBrains.UI.Options.Helpers;
+using JetBrains.UI.Options.OptionsDialog2.SimpleOptions;
 using JetBrains.UI.Resources;
-using XmlDocInspections.Plugin.Highlighting;
+using JetBrains.UI.RichText;
 
 namespace XmlDocInspections.Plugin.Settings
 {
@@ -20,96 +18,71 @@ namespace XmlDocInspections.Plugin.Settings
     /// </summary>
     [ExcludeFromCodeCoverage /* options page user interface is tested manually */]
     [OptionsPage(CPageId, PageTitle, typeof (CommonThemedIcons.Bulb), ParentId = CodeInspectionPage.PID)]
-    public class XmlDocInspectionsOptionsPage : AStackPanelOptionsPage
+    public class XmlDocInspectionsOptionsPage : SimpleOptionsPage
     {
-        // IDEA: Now, as we dropped R# 8.2, derive from SimpleOptionsPage to implement ISearchablePage?
-
         private readonly Lifetime _lifetime;
-        private readonly IUIApplication _environment;
         private readonly OptionsSettingsSmartContext _settings;
 
-        public const string PageTitle = "Xml Doc Inspections";
+        public const string PageTitle = "XML Doc Inspections";
         private const string CPageId = "XmlDocInspectionsOptions";
 
-        public XmlDocInspectionsOptionsPage(Lifetime lifetime, IUIApplication environment, OptionsSettingsSmartContext settings)
-            : base(lifetime, environment, CPageId)
+        public XmlDocInspectionsOptionsPage(Lifetime lifetime, OptionsSettingsSmartContext settings)
+            : base(lifetime, settings)
         {
             _lifetime = lifetime;
-            _environment = environment;
             _settings = settings;
-            InitControls();
+
+            AddRichText(new RichText("Enable inspection for the following ").Append("types", new TextStyle(FontStyle.Bold)));
+            AddAccessibilityBoolOption((XmlDocInspectionsSettings s) => s.TypeAccessibility);
+
+            AddRichText(new RichText("Enable inspection for the following ").Append("type members", new TextStyle(FontStyle.Bold)));
+            AddAccessibilityBoolOption((XmlDocInspectionsSettings s) => s.TypeMemberAccessibility);
+
+            AddText("Note that the severity level can be configured on the \"Inspection Severity\" page.");
+
+            AddStringOption((XmlDocInspectionsSettings s) => s.ProjectExclusionRegex, "Project exclusion regex: ");
+
+            var cacheInfoText =
+                "\nWarning: After changing these settings, " +
+                "cleaning the solution cache (see \"General\" options page) " +
+                "is necessary to update already analyzed code.";
+            AddText(cacheInfoText);
+
+            FinishPage();
         }
 
-        private void InitControls()
+        private void AddAccessibilityBoolOption<T>([NotNull] Expression<Func<T, AccessibilitySettingFlags>> settingsExpression)
         {
-            Controls.Add(new Controls.Label(
-                "Types / type members with the following accessibility are included in the inspection for \"" + MissingXmlDocHighlighting.Title +
-                "\". " +
-                "Note that the severity level can be configured on the \"Inspection Severity\" page."));
+            var flagsProperty = new Property<AccessibilitySettingFlags>(_lifetime, "AccessibilitySettingFlags");
+            _settings.SetBinding(_lifetime, settingsExpression, flagsProperty);
 
-            Controls.Add(CreateAccessibilityCheckBoxes("Types accessibility", (XmlDocInspectionsSettings s) => s.TypeAccessibility));
-            Controls.Add(CreateAccessibilityCheckBoxes("Type members accessibility", (XmlDocInspectionsSettings s) => s.TypeMemberAccessibility));
-
-            Controls.Add(CreateExclusionEdit("Project exclusion regex:", (XmlDocInspectionsSettings s) => s.ProjectExclusionRegex));
+            AddAccessibilityBoolOption(flagsProperty, "public", AccessibilitySettingFlags.Public);
+            AddAccessibilityBoolOption(flagsProperty, "internal", AccessibilitySettingFlags.Internal);
+            AddAccessibilityBoolOption(flagsProperty, "protected internal", AccessibilitySettingFlags.ProtectedOrInternal);
+            AddAccessibilityBoolOption(flagsProperty, "protected", AccessibilitySettingFlags.Protected);
+            AddAccessibilityBoolOption(flagsProperty, "private", AccessibilitySettingFlags.Private);
         }
 
-        private Control CreateExclusionEdit<T>(string text, [NotNull] Expression<Func<T, string>> settingsExpression)
-        {
-            var tableLayoutPanel = new TableLayoutPanel { AutoSize = true };
-            tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize)); // left column
-
-            var label = new Controls.Label(text);
-            tableLayoutPanel.Controls.Add(label, 0, 0);
-
-            var editBox = new Controls.EditBox();
-            editBox.Size = new Size(350, editBox.Size.Height);
-            tableLayoutPanel.Controls.Add(editBox, 1, 0);
-
-            _settings.SetBinding(_lifetime, settingsExpression, editBox.Text);
-
-            return tableLayoutPanel;
-        }
-
-        private Control CreateAccessibilityCheckBoxes<T>(
+        private void AddAccessibilityBoolOption(
+            [NotNull] IProperty<AccessibilitySettingFlags> flagsProperty,
             [NotNull] string text,
-            [NotNull] Expression<Func<T, AccessibilitySettingFlags>> settingsExpression)
+            AccessibilitySettingFlags accessibilitySettingFlag)
         {
-            var result = new GroupBox { Text = text, AutoSize = true, MinimumSize = new Size(250, 0) };
+            var optionBoolProperty = new Property<bool>(_lifetime, text);
+            BindBoolPropertyToAccessibilitySettingFlag(optionBoolProperty, flagsProperty, accessibilitySettingFlag);
 
-            var panel = new Controls.VertStackPanel(_environment) { Dock = DockStyle.Fill };
-            result.Controls.Add(panel);
-
-            var accessSettingFlags = new Property<AccessibilitySettingFlags>(_lifetime, "AccessibilitySettingFlags");
-            _settings.SetBinding(_lifetime, settingsExpression, accessSettingFlags);
-
-            var accessibilityEntries = new[]
-            {
-                new {Text = "public", AccessibilitySettingFlag = AccessibilitySettingFlags.Public},
-                new {Text = "internal", AccessibilitySettingFlag = AccessibilitySettingFlags.Internal},
-                new {Text = "protected internal", AccessibilitySettingFlag = AccessibilitySettingFlags.ProtectedOrInternal},
-                new {Text = "protected", AccessibilitySettingFlag = AccessibilitySettingFlags.Protected},
-                new {Text = "private", AccessibilitySettingFlag = AccessibilitySettingFlags.Private}
-            };
-
-            foreach (var entry in accessibilityEntries)
-            {
-                var checkBox = new Controls.CheckBox { Text = entry.Text, AutoSize = true, Margin = new Padding(3, 1, 3, 1) };
-                panel.Controls.Add(checkBox);
-
-                BindToAccessibilitySettingFlag(checkBox, accessSettingFlags, entry.AccessibilitySettingFlag);
-            }
-
-            return result;
+            var boolOption = AddBoolOption(optionBoolProperty, text);
+            SetIndent(boolOption, 1);
         }
 
-        private void BindToAccessibilitySettingFlag(
-            [NotNull] Controls.CheckBox checkBox,
+        private void BindBoolPropertyToAccessibilitySettingFlag(
+            [NotNull] IProperty<bool> property,
             [NotNull] IProperty<AccessibilitySettingFlags> flagsProperty,
             AccessibilitySettingFlags flagToBindTo)
         {
-            checkBox.Checked.Value = flagsProperty.Value.HasFlag(flagToBindTo);
+            property.Value = flagsProperty.Value.HasFlag(flagToBindTo);
 
-            checkBox.Checked.Change.Advise_HasNew(
+            property.Change.Advise_HasNew(
                 _lifetime,
                 x => flagsProperty.Value = x.New ? flagsProperty.Value | flagToBindTo : flagsProperty.Value & ~flagToBindTo);
         }
