@@ -155,7 +155,7 @@
     <Compile Include="Integrative\ProjectExclusionTests.cs" />
     <Compile Include="Integrative\MissingXmlDocHighlightingTestsBase.cs" />
     <Compile Include="Integrative\DefaultSettingsTests.cs" />
-    <Compile Include="ZoneMarker.cs" />
+    <Compile Include="ZoneMarkerAndSetUpFixture.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XmlDocInspections.Plugin\XmlDocInspections.Plugin.R100.csproj">
