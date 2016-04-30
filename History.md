@@ -1,4 +1,4 @@
-### vNext ###
+### 1.4.0 ###
 - ReSharper 2016.1 support
 - "XML Doc Inspections" page in ReSharper options is now searchable
 
