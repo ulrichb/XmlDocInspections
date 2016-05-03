@@ -79,5 +79,11 @@ namespace XmlDocInspections.Plugin.Tests.Integrative
         {
             DoNamedTest2();
         }
+
+        [Test]
+        public void TestXamlUserControl()
+        {
+            DoTestSolution("XamlUserControl.xaml");
+        }
     }
 }

@@ -1,3 +1,6 @@
+### vNext ###
+- Added suppression for member declarations in XAML files (fixes issue #6)
+
 ### 1.4.0 ###
 - ReSharper 2016.1 support
 - "XML Doc Inspections" page in ReSharper options is now searchable

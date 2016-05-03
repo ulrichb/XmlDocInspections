@@ -42,15 +42,17 @@
     </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Highlighting\DelegateWithoutDocs.cs" />
@@ -79,9 +81,16 @@
     <None Include="Highlighting\BasicTests\PartialClassWithoutDocs_A.cs.gold" />
     <None Include="Highlighting\BasicTests\PartialClassWithoutDocs_B.cs.gold" />
     <None Include="Highlighting\BasicTests\StructWithoutDocs.cs.gold" />
+    <None Include="Highlighting\BasicTests\XamlUserControl.xaml.gold" />
     <None Include="Highlighting\DefaultSettingsTests\ClassesAndMembersWithoutDocs.cs.gold" />
     <None Include="nuget.config" />
     <None Include="Highlighting\ProjectExclusionTests\StructWithoutDocs.cs.gold" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Highlighting\XamlUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

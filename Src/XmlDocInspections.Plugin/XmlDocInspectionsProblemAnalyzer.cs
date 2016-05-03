@@ -8,6 +8,7 @@ using JetBrains.ReSharper.Daemon.Stages.Dispatcher;
 using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.ReSharper.Psi;
 using JetBrains.ReSharper.Psi.Tree;
+using JetBrains.ReSharper.Psi.Xaml;
 using JetBrains.Util;
 using JetBrains.Util.Logging;
 using ReSharperExtensionsShared.Debugging;
@@ -17,6 +18,7 @@ using static JetBrains.ReSharper.Psi.AccessibilityDomain;
 
 #if RESHARPER92 || RESHARPER100
 using JetBrains.ReSharper.Daemon.CSharp.Stages;
+
 #endif
 
 namespace XmlDocInspections.Plugin
@@ -61,20 +63,23 @@ namespace XmlDocInspections.Plugin
             // We ignore inherited XML Docs.
             if (typeMember != null && typeMember.GetXMLDoc(inherit: false) == null)
             {
-                var module = typeMember.Module;
-                var settingsStore = _settingsStore.BindToContextTransient(ContextRange.Smart(module.ToDataContext()));
-
-                var projectExclusionRegex = settingsStore.GetValue((XmlDocInspectionsSettings s) => s.ProjectExclusionRegex);
-                if (string.IsNullOrWhiteSpace(projectExclusionRegex) || !Regex.IsMatch(module.Name, projectExclusionRegex))
+                if (!declaration.Language.Is<XamlLanguage>())
                 {
-                    // Note that AccessibilityDomain also take containing type's accessibility into account.
-                    var accessibilityDomainType = typeMember.AccessibilityDomain.DomainType;
+                    var module = typeMember.Module;
+                    var settingsStore = _settingsStore.BindToContextTransient(ContextRange.Smart(module.ToDataContext()));
 
-                    // Note that types are also type members.
-                    var isTypeMember = !(typeMember is ITypeElement);
+                    var projectExclusionRegex = settingsStore.GetValue((XmlDocInspectionsSettings s) => s.ProjectExclusionRegex);
+                    if (string.IsNullOrWhiteSpace(projectExclusionRegex) || !Regex.IsMatch(module.Name, projectExclusionRegex))
+                    {
+                        // Note that AccessibilityDomain also take containing type's accessibility into account.
+                        var accessibilityDomainType = typeMember.AccessibilityDomain.DomainType;
 
-                    if (IsConfigured(settingsStore, isTypeMember, accessibilityDomainType))
-                        yield return new MissingXmlDocHighlighting(isTypeMember, accessibilityDomainType, declaration);
+                        // Note that types are also type members.
+                        var isTypeMember = !(typeMember is ITypeElement);
+
+                        if (IsConfigured(settingsStore, isTypeMember, accessibilityDomainType))
+                            yield return new MissingXmlDocHighlighting(isTypeMember, accessibilityDomainType, declaration);
+                    }
                 }
             }
         }
