@@ -22,12 +22,12 @@ namespace XmlDocInspections.Plugin.Tests.Integrative
             return highlighting is MissingXmlDocHighlighting;
         }
 
-        protected override void DoNamedTest2(params string[] auxFiles)
+        protected override void DoTestSolution(params string[] fileSet)
         {
             ExecuteWithinSettingsTransaction(settingsStore =>
             {
                 RunGuarded(() => MutateSettings(settingsStore));
-                base.DoNamedTest2(auxFiles);
+                base.DoTestSolution(fileSet);
             });
         }
 
