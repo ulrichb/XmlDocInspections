@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using JetBrains.Annotations;
 using JetBrains.Application.Settings;
-using JetBrains.ReSharper.Daemon.CSharp.Stages;
 using JetBrains.ReSharper.Daemon.Stages.Dispatcher;
 using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.ReSharper.Psi;
@@ -15,6 +14,10 @@ using ReSharperExtensionsShared.Debugging;
 using XmlDocInspections.Plugin.Highlighting;
 using XmlDocInspections.Plugin.Settings;
 using static JetBrains.ReSharper.Psi.AccessibilityDomain;
+
+#if RESHARPER92 || RESHARPER100
+using JetBrains.ReSharper.Daemon.CSharp.Stages;
+#endif
 
 namespace XmlDocInspections.Plugin
 {
