@@ -1,4 +1,6 @@
-﻿namespace XmlDocInspections.Sample.Highlighting
+﻿// ReSharper disable UnusedMember.Local
+
+namespace XmlDocInspections.Sample.Highlighting
 {
     internal class InternalClassWithoutDocs
     {

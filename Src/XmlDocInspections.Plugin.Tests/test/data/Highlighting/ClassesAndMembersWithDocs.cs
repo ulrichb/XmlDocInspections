@@ -1,6 +1,10 @@
 ﻿using System;
 using XmlDocInspections.Sample.Utilities;
 
+// ReSharper disable UnusedMember.Local
+// ReSharper disable InconsistentNaming
+// ReSharper disable EventNeverSubscribedTo.Local
+
 namespace XmlDocInspections.Sample.Highlighting
 {
     /// <summary>

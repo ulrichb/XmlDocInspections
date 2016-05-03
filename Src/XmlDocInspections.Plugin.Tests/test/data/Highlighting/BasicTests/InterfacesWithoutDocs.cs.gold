@@ -1,4 +1,6 @@
-﻿namespace XmlDocInspections.Sample.Highlighting
+﻿// ReSharper disable UnusedMember.Local
+
+namespace XmlDocInspections.Sample.Highlighting
 {
     public interface |IPublicInterfacesWithoutDocs|(0)
     {
@@ -10,7 +12,7 @@
     internal interface |IInternalInterfacesWithoutDocs|(3)
     {
         string |Property|(4) { get; }
-        
+
         void |Method|(5)();
     }
 
