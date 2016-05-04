@@ -6,7 +6,7 @@ namespace XmlDocInspections.Plugin.Settings
     /// <summary>
     /// Settings class for Xml Doc inspections.
     /// </summary>
-    [SettingsKey(typeof (CodeInspectionSettings), "Xml Doc Inspections")]
+    [SettingsKey(typeof(CodeInspectionSettings), "Xml Doc Inspections")]
     public class XmlDocInspectionsSettings
     {
         private const AccessibilitySettingFlags DefaultAccessibilityFlags =

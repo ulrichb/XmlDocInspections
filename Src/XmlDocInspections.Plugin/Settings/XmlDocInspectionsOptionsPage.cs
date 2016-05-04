@@ -17,7 +17,7 @@ namespace XmlDocInspections.Plugin.Settings
     /// An options page for XML Doc inspections.
     /// </summary>
     [ExcludeFromCodeCoverage /* options page user interface is tested manually */]
-    [OptionsPage(CPageId, PageTitle, typeof (CommonThemedIcons.Bulb), ParentId = CodeInspectionPage.PID)]
+    [OptionsPage(CPageId, PageTitle, typeof(CommonThemedIcons.Bulb), ParentId = CodeInspectionPage.PID)]
     public class XmlDocInspectionsOptionsPage : SimpleOptionsPage
     {
         private readonly Lifetime _lifetime;

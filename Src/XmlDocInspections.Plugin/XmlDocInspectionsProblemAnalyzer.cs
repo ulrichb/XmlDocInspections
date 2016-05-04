@@ -26,10 +26,10 @@ namespace XmlDocInspections.Plugin
     /// <summary>
     /// A problem analyzer for the XML Doc inspections.
     /// </summary>
-    [ElementProblemAnalyzer(typeof (ITypeMemberDeclaration), HighlightingTypes = new[] {typeof (MissingXmlDocHighlighting)})]
+    [ElementProblemAnalyzer(typeof(ITypeMemberDeclaration), HighlightingTypes = new[] { typeof(MissingXmlDocHighlighting) })]
     public class XmlDocInspectionsProblemAnalyzer : ElementProblemAnalyzer<ITypeMemberDeclaration>
     {
-        private static readonly ILogger Log = Logger.GetLogger(typeof (XmlDocInspectionsProblemAnalyzer));
+        private static readonly ILogger Log = Logger.GetLogger(typeof(XmlDocInspectionsProblemAnalyzer));
 
         private readonly ISettingsStore _settingsStore;
 
