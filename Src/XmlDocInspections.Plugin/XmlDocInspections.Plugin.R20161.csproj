@@ -172,16 +172,7 @@
     <Compile Include="..\..\Shared\Src\ReSharperExtensionsShared\Highlighting\SimpleTreeNodeHighlightingBase.cs">
       <Link>ReSharperExtensionsShared\SimpleTreeNodeHighlightingBase.cs</Link>
     </Compile>
-    <Compile Include="Highlighting\MissingXmlDocHighlighting.cs" />
-    <Compile Include="Settings\XmlDocInspectionsOptionsPage.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Settings\AccessibilitySettingFlags.cs" />
-    <Compile Include="Settings\XmlDocInspectionsSettings.cs" />
-    <Compile Include="AccessibilityUtility.cs" />
-    <Compile Include="ZoneMarker.cs" />
-    <Compile Include="XmlDocInspectionsProblemAnalyzer.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="**\*.cs" Exclude="obj\**" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.XmlDocInspections.Plugin.R20161.config" />

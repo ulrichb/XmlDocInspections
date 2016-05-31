@@ -150,13 +150,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccessibilityUtilityTest.cs" />
-    <Compile Include="Integrative\BasicTests.cs" />
-    <Compile Include="Integrative\DisabledRequireDocsOnOverridingMemberTests.cs" />
-    <Compile Include="Integrative\ProjectExclusionTests.cs" />
-    <Compile Include="Integrative\MissingXmlDocHighlightingTestsBase.cs" />
-    <Compile Include="Integrative\DefaultSettingsTests.cs" />
-    <Compile Include="ZoneMarkerAndSetUpFixture.cs" />
+    <Compile Include="**\*.cs" Exclude="obj\**;Packages\**;test\data\**" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XmlDocInspections.Plugin\XmlDocInspections.Plugin.R100.csproj">
