@@ -1,3 +1,6 @@
+### 1.6.0 ###
+- ReSharper 2016.2 support
+
 ### 1.5.0 ###
 - Added suppression for member declarations in XAML files (fixes issue #6)
 - Added new setting to allow to ignore overriding type members (implements #3)
