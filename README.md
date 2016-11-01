@@ -2,8 +2,8 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/6n2wy4xt1ctq36wq/branch/master?svg=true)](https://ci.appveyor.com/project/ulrichb/xmldocinspections/branch/master)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ulrichb/XmlDocInspections?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![Line Coverage](https://dl.dropbox.com/s/8p9d03ycoy4nf06/master-linecoverage.svg)](https://ci.appveyor.com/api/projects/ulrichb/xmldocinspections/artifacts/Build/Output/TestCoverage.zip?branch=master)
-[![Branch Coverage](https://dl.dropbox.com/s/ywhaxs30rto3ezm/master-branchcoverage.svg)](https://ci.appveyor.com/api/projects/ulrichb/xmldocinspections/artifacts/Build/Output/TestCoverage.zip?branch=master)
+<a href="https://ci.appveyor.com/api/projects/ulrichb/xmldocinspections/artifacts/Build/Output/TestCoverage.zip?branch=master"><img src="https://dl.dropbox.com/s/8p9d03ycoy4nf06/master-linecoverage.svg" alt="Line Coverage" title="Line Coverage"></a>
+<a href="https://ci.appveyor.com/api/projects/ulrichb/xmldocinspections/artifacts/Build/Output/TestCoverage.zip?branch=master"><img src="https://dl.dropbox.com/s/ywhaxs30rto3ezm/master-branchcoverage.svg" alt="Branch Coverage" title="Branch Coverage"></a>
 
 [ReSharper Gallery Page](https://resharper-plugins.jetbrains.com/packages/ReSharper.XmlDocInspections/)
 
