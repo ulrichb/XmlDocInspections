@@ -17,11 +17,6 @@ using XmlDocInspections.Plugin.Highlighting;
 using XmlDocInspections.Plugin.Settings;
 using static JetBrains.ReSharper.Psi.AccessibilityDomain;
 
-#if RESHARPER92 || RESHARPER100
-using JetBrains.ReSharper.Daemon.CSharp.Stages;
-
-#endif
-
 namespace XmlDocInspections.Plugin
 {
     /// <summary>
