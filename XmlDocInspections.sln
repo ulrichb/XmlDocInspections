@@ -20,6 +20,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocInspections.Plugin.R2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocInspections.Plugin.Tests.R20162", "Src\XmlDocInspections.Plugin.Tests\XmlDocInspections.Plugin.Tests.R20162.csproj", "{24C5E916-1DF6-416A-9793-63DB29809A65}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocInspections.Plugin.R20163", "Src\XmlDocInspections.Plugin\XmlDocInspections.Plugin.R20163.csproj", "{EFE558C3-9D33-42F6-B6B4-BF9CB4638613}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocInspections.Plugin.Tests.R20163", "Src\XmlDocInspections.Plugin.Tests\XmlDocInspections.Plugin.Tests.R20163.csproj", "{6AE81319-A85D-464B-8A87-B968B82D42E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +52,14 @@ Global
 		{24C5E916-1DF6-416A-9793-63DB29809A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24C5E916-1DF6-416A-9793-63DB29809A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24C5E916-1DF6-416A-9793-63DB29809A65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFE558C3-9D33-42F6-B6B4-BF9CB4638613}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFE558C3-9D33-42F6-B6B4-BF9CB4638613}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFE558C3-9D33-42F6-B6B4-BF9CB4638613}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFE558C3-9D33-42F6-B6B4-BF9CB4638613}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AE81319-A85D-464B-8A87-B968B82D42E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AE81319-A85D-464B-8A87-B968B82D42E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AE81319-A85D-464B-8A87-B968B82D42E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AE81319-A85D-464B-8A87-B968B82D42E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,5 +70,7 @@ Global
 		{6E0ED115-CB61-4EFF-B833-B18AE605F47A} = {26B55A35-CCB1-4635-871A-EE770850A5F2}
 		{D682CFB1-5B8E-4533-9C25-FD5FF67737AF} = {26B55A35-CCB1-4635-871A-EE770850A5F2}
 		{24C5E916-1DF6-416A-9793-63DB29809A65} = {26B55A35-CCB1-4635-871A-EE770850A5F2}
+		{EFE558C3-9D33-42F6-B6B4-BF9CB4638613} = {26B55A35-CCB1-4635-871A-EE770850A5F2}
+		{6AE81319-A85D-464B-8A87-B968B82D42E6} = {26B55A35-CCB1-4635-871A-EE770850A5F2}
 	EndGlobalSection
 EndGlobal
