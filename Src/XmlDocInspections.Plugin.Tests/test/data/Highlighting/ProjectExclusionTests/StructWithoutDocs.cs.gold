@@ -32,4 +32,5 @@ namespace XmlDocInspections.Sample.Highlighting
         internal string InternalProperty { get; set; }
     }
 }
+
 ---------------------------------------------------------

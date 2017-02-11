@@ -35,6 +35,7 @@ namespace XmlDocInspections.Sample.Highlighting
         }
     }
 }
+
 ---------------------------------------------------------
 (0): ReSharper Warning: Missing XML Doc comment for internal type
 (1): ReSharper Warning: Missing XML Doc comment for internal type member

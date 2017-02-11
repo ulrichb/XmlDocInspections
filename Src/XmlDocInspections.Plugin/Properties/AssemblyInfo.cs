@@ -11,9 +11,9 @@ using System.Reflection;
 internal static class AssemblyConsts
 {
     public const string Title =
-        "XML Doc Inspections ReSharper Plugin"
+            "XML Doc Inspections ReSharper Plugin"
 #if DEBUG
-        + " (Debug Build)"
+            + " (Debug Build)"
 #endif
         ;
 }

@@ -4,6 +4,7 @@
 
     internal delegate void |InternalDelegateWithoutDocs|(1)();
 }
+
 ---------------------------------------------------------
 (0): ReSharper Warning: Missing XML Doc comment for public type
 (1): ReSharper Warning: Missing XML Doc comment for internal type
