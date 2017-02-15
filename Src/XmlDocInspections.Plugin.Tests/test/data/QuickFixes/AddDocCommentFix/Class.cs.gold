@@ -1,0 +1,9 @@
+﻿namespace XmlDocInspections.Sample.QuickFixes.AddDocCommentFix
+{
+    /// <summary>
+    /// {caret}
+    /// </summary>
+    public class Class
+    {
+    }
+}

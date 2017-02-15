@@ -1,3 +1,6 @@
+### vNext ###
+- Added a quick fix action on XML Doc warnings to generate doc templates
+
 ### 1.7.0 ###
 - ReSharper 2016.3 support
 

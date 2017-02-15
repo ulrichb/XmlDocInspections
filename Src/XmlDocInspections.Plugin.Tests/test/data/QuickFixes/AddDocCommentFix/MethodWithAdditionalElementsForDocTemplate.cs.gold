@@ -1,0 +1,17 @@
+﻿namespace XmlDocInspections.Sample.QuickFixes.AddDocCommentFix
+{
+    public class MethodWithAdditionalElementsForDocTemplate
+    {
+        /// <summary>
+        /// {caret}
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="p"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public string Method<T>(string a, params object[] p)
+        {
+            return "";
+        }
+    }
+}

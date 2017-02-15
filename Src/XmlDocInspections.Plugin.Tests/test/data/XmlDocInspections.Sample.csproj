@@ -57,9 +57,15 @@
   <ItemGroup>
     <Compile Include="Highlighting\DelegateWithoutDocs.cs" />
     <Compile Include="Highlighting\Inheritance.cs" />
+    <None Include="QuickFixes\AddDocCommentFix\Class.cs" />
     <Compile Include="Highlighting\StructWithoutDocs.cs" />
     <Compile Include="Highlighting\InterfacesWithoutDocs.cs" />
     <Compile Include="Highlighting\InternalClassWithoutDocs.cs" />
+    <None Include="QuickFixes\AddDocCommentFix\MethodWithAdditionalElementsForDocTemplate.cs" />
+    <None Include="QuickFixes\AddDocCommentFix\MethodWithAdditionalElementsForDocTemplate.cs.gold" />
+    <None Include="QuickFixes\AddDocCommentFix\SimpleMethod.cs" />
+    <None Include="QuickFixes\AddDocCommentFix\Field.cs" />
+    <None Include="QuickFixes\AddDocCommentFix\Property.cs" />
     <Compile Include="Utilities\IExplicitlyImplementedInterface.cs" />
     <Compile Include="Highlighting\ClassesAndMembersWithoutDocs.cs" />
     <Compile Include="Highlighting\ClassesAndMembersWithDocs.cs" />
@@ -68,6 +74,8 @@
     <Compile Include="Highlighting\PartialClassWithoutDocs_B.cs" />
     <Compile Include="Highlighting\PartialClassWithoutDocs_A.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="QuickFixes\AddDocCommentFix\Class.cs.gold" />
+    <None Include="QuickFixes\AddDocCommentFix\SimpleMethod.cs.gold" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Highlighting\BasicTests\ClassesAndMembersWithDocs.cs.gold" />

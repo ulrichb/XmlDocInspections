@@ -11,6 +11,8 @@
 
 ## Description
 
-A simple ReSharper extension which enables to show warnings for missing XML Doc comments for types and type members. In contrast to the C# compiler's [CS1591 warning](https://msdn.microsoft.com/en-us/library/zk18c1w9.aspx) which emits a warning for all public or protected types and members, this extension provides configuration options (see the following screen shot).
+A simple ReSharper extension which enables to show warnings for missing XML Doc comments for types and type members. In contrast to the C# compiler's [CS1591 warning](https://msdn.microsoft.com/en-us/library/zk18c1w9.aspx) which emits a warning for all public or protected types and members, this extension provides configuration options and a quick fix action to generate doc comment templates (see the following screenshots).
 
 <img src="/Doc/OptionsPage.png" alt="Options Page" width="780" />
+
+<img src="/Doc/QuickFix.gif" alt="QuickFix" width="480" />

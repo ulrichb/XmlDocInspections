@@ -1,5 +1,4 @@
-﻿using System;
-using JetBrains.Application.Settings;
+﻿using JetBrains.Application.Settings;
 using NUnit.Framework;
 using XmlDocInspections.Plugin.Settings;
 
