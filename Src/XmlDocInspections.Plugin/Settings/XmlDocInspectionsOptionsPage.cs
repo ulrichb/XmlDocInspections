@@ -41,7 +41,7 @@ namespace XmlDocInspections.Plugin.Settings
 
             AddBoolOption(
                 (XmlDocInspectionsSettings s) => s.RequireDocsOnOverridingMember,
-                "Members which override base members");
+                "Members which override base members (i.e. do not exclude override-members)");
 
             AddText("");
 
