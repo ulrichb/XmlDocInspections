@@ -7,7 +7,6 @@ using JetBrains.Application.Settings;
 using JetBrains.ReSharper.Daemon.Stages.Dispatcher;
 using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.ReSharper.Psi;
-using JetBrains.ReSharper.Psi.Modules;
 using JetBrains.ReSharper.Psi.Tree;
 using JetBrains.ReSharper.Psi.Xaml;
 using JetBrains.Util;
@@ -58,31 +57,43 @@ namespace XmlDocInspections.Plugin
 
         private IEnumerable<IHighlighting> HandleTypeMember(IDeclaration declaration, [CanBeNull] ITypeMember typeMember)
         {
-            if (typeMember != null && typeMember.GetXMLDoc(inherit: false) == null)
+            if (typeMember != null && !declaration.Language.Is<XamlLanguage>())
             {
-                if (!declaration.Language.Is<XamlLanguage>())
+                var settingsStore = _settingsStore.BindToContextTransient(ContextRange.Smart(typeMember.Module.ToDataContext()));
+                var settings = settingsStore.GetKey<XmlDocInspectionsSettings>(_settingsOptimization);
+
+                if (IsProjectIncludedByConfiguration(declaration, settings) && IsTypeMemberRequiredByConfiguration(typeMember, settings))
                 {
-                    var module = typeMember.Module;
-                    var settingsStore = _settingsStore.BindToContextTransient(ContextRange.Smart(module.ToDataContext()));
+                    // Note that AccessibilityDomain also take containing type's accessibility into account.
+                    var accessibilityDomainType = typeMember.AccessibilityDomain.DomainType;
 
-                    var settings = settingsStore.GetKey<XmlDocInspectionsSettings>(_settingsOptimization);
+                    // Note that types are also type members.
+                    var isJustTypeMember = !(typeMember is ITypeElement);
 
-                    if (IsModuleNotExcluded(module, settingsStore))
+                    if (IsAccessibilityMatchingWithConfiguration(isJustTypeMember, accessibilityDomainType, settings))
                     {
-                        if (!IsOverridingMember(typeMember) || settings.RequireDocsOnOverridingMember)
-                        {
-                            // Note that AccessibilityDomain also take containing type's accessibility into account.
-                            var accessibilityDomainType = typeMember.AccessibilityDomain.DomainType;
-
-                            // Note that types are also type members.
-                            var isTypeMember = !(typeMember is ITypeElement);
-
-                            if (IsConfigured(settings, isTypeMember, accessibilityDomainType))
-                                yield return new MissingXmlDocHighlighting(isTypeMember, accessibilityDomainType, declaration);
-                        }
+                        if (typeMember.GetXMLDoc(inherit: false) == null)
+                            yield return new MissingXmlDocHighlighting(isJustTypeMember, accessibilityDomainType, declaration);
                     }
                 }
             }
+        }
+
+        private static bool IsProjectIncludedByConfiguration(IDeclaration declaration, XmlDocInspectionsSettings settings)
+        {
+            var projectExclusionRegex = settings.ProjectExclusionRegex;
+
+            if (string.IsNullOrWhiteSpace(projectExclusionRegex))
+                return true;
+
+            var project = declaration.GetProject().NotNull();
+            return !Regex.IsMatch(project.Name, projectExclusionRegex);
+        }
+
+        private bool IsTypeMemberRequiredByConfiguration(ITypeMember typeMember, XmlDocInspectionsSettings settings)
+        {
+            return (settings.RequireDocsOnOverridingMember || !IsOverridingMember(typeMember)) &&
+                   (settings.RequireDocsOnConstructors || !(typeMember is IConstructor));
         }
 
         private bool IsOverridingMember(ITypeMember typeMember)
@@ -92,15 +103,12 @@ namespace XmlDocInspections.Plugin
             return overridableMember != null && overridableMember.HasImmediateSuperMembers();
         }
 
-        private static bool IsModuleNotExcluded(IPsiModule module, IContextBoundSettingsStore settingsStore)
+        private static bool IsAccessibilityMatchingWithConfiguration(
+            bool isJustTypeMember,
+            AccessibilityDomainType accessibility,
+            XmlDocInspectionsSettings settings)
         {
-            var projectExclusionRegex = settingsStore.GetValue((XmlDocInspectionsSettings s) => s.ProjectExclusionRegex);
-            return string.IsNullOrWhiteSpace(projectExclusionRegex) || !Regex.IsMatch(module.Name, projectExclusionRegex);
-        }
-
-        private static bool IsConfigured(XmlDocInspectionsSettings settings, bool isTypeMember, AccessibilityDomainType accessibility)
-        {
-            var accessibilitySettingFlags = isTypeMember ? settings.TypeMemberAccessibility : settings.TypeAccessibility;
+            var accessibilitySettingFlags = isJustTypeMember ? settings.TypeMemberAccessibility : settings.TypeAccessibility;
 
             return AccessibilityUtility.IsAccessibilityConfigured(accessibility, accessibilitySettingFlags);
         }

@@ -21,6 +21,9 @@ namespace XmlDocInspections.Plugin.Settings
         [SettingsEntry(DefaultAccessibilityFlags, "Type member accessibility")]
         public AccessibilitySettingFlags TypeMemberAccessibility;
 
+        [SettingsEntry(true, "Require XML Docs on constructors")]
+        public bool RequireDocsOnConstructors;
+
         [SettingsEntry(true, "Require XML Docs on overriding members")]
         public bool RequireDocsOnOverridingMember;
     }

@@ -38,6 +38,8 @@ namespace XmlDocInspections.Plugin.Settings
             AddHeader("Type members");
             AddAccessibilityBoolOption((XmlDocInspectionsSettings s) => s.TypeMemberAccessibility);
 
+            AddBoolOption((XmlDocInspectionsSettings s) => s.RequireDocsOnConstructors, "Constructors");
+
             AddBoolOption(
                 (XmlDocInspectionsSettings s) => s.RequireDocsOnOverridingMember,
                 "Members which override base members (i.e. do not exclude override-members)");

@@ -15,7 +15,7 @@ namespace XmlDocInspections.Plugin.Tests.Integrative
         protected override string ProjectName => "ExcludedProject";
 
         [Test]
-        public void TestStructWithoutDocs()
+        public void TestClassesAndMembersWithoutDocs()
         {
             DoNamedTest2();
         }

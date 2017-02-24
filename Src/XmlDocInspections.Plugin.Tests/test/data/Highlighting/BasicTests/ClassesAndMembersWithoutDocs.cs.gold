@@ -4,6 +4,7 @@ using XmlDocInspections.Sample.Utilities;
 // ReSharper disable UnusedMember.Local
 // ReSharper disable InconsistentNaming
 // ReSharper disable EventNeverSubscribedTo.Local
+// ReSharper disable UnusedParameter.Local
 
 namespace XmlDocInspections.Sample.Highlighting
 {
@@ -21,77 +22,87 @@ namespace XmlDocInspections.Sample.Highlighting
 
         //
 
-        public string |PublicProperty|(6) { get; set; }
-
-        internal string |InternalProperty|(7) { get; set; }
-
-        protected internal string |ProtectedInternalProperty|(8) { get; set; }
-
-        protected string |ProtectedProperty|(9) { get; set; }
-
-        private string |PrivateProperty|(10) { get; set; }
-
-        //
-
-        public void |PublicMethod|(11)(string a)
+        public |PublicClassWithoutDocs|(6)()
         {
         }
 
-        void IExplicitlyImplementedInterface.|Method|(12)()
-        {
-        }
-
-        internal void |InternalMethod|(13)()
-        {
-        }
-
-        protected void |ProtectedMethod|(14)()
-        {
-        }
-
-        protected internal void |ProtectedInternalMethod|(15)()
-        {
-        }
-
-        private void |PrivateMethod|(16)()
-        {
-        }
-
-        public class |PublicNestedClass|(17)
-        {
-        }
-
-        internal class |InternalNestedClass|(18)
-        {
-        }
-
-        protected internal class |ProtectedInternalNestedClass|(19)
-        {
-        }
-
-        protected class |ProtectedNestedClass|(20)
-        {
-        }
-
-        private class |PrivateNestedClass|(21)
+        public |PublicClassWithoutDocs|(7)(string a)
         {
         }
 
         //
 
-        public event EventHandler |PublicEvent|(22);
+        public string |PublicProperty|(8) { get; set; }
 
-        internal event EventHandler |InternalEvent|(23);
+        internal string |InternalProperty|(9) { get; set; }
 
-        protected internal event EventHandler |ProtectedInternalEvent|(24);
+        protected internal string |ProtectedInternalProperty|(10) { get; set; }
 
-        protected event EventHandler |ProtectedEvent|(25);
+        protected string |ProtectedProperty|(11) { get; set; }
 
-        private event EventHandler |PrivateEvent|(26);
+        private string |PrivateProperty|(12) { get; set; }
 
         //
 
-        public static PublicClassWithoutDocs |operator +|(27)(PublicClassWithoutDocs left, PublicClassWithoutDocs right)
+        public void |PublicMethod|(13)(string a)
+        {
+        }
+
+        void IExplicitlyImplementedInterface.|Method|(14)()
+        {
+        }
+
+        internal void |InternalMethod|(15)()
+        {
+        }
+
+        protected void |ProtectedMethod|(16)()
+        {
+        }
+
+        protected internal void |ProtectedInternalMethod|(17)()
+        {
+        }
+
+        private void |PrivateMethod|(18)()
+        {
+        }
+
+        public class |PublicNestedClass|(19)
+        {
+        }
+
+        internal class |InternalNestedClass|(20)
+        {
+        }
+
+        protected internal class |ProtectedInternalNestedClass|(21)
+        {
+        }
+
+        protected class |ProtectedNestedClass|(22)
+        {
+        }
+
+        private class |PrivateNestedClass|(23)
+        {
+        }
+
+        //
+
+        public event EventHandler |PublicEvent|(24);
+
+        internal event EventHandler |InternalEvent|(25);
+
+        protected internal event EventHandler |ProtectedInternalEvent|(26);
+
+        protected event EventHandler |ProtectedEvent|(27);
+
+        private event EventHandler |PrivateEvent|(28);
+
+        //
+
+        public static PublicClassWithoutDocs |operator +|(29)(PublicClassWithoutDocs left, PublicClassWithoutDocs right)
         {
             return new PublicClassWithoutDocs();
         }
@@ -106,24 +117,26 @@ namespace XmlDocInspections.Sample.Highlighting
 (4): ReSharper Warning: Missing XML Doc comment for protected type member
 (5): ReSharper Warning: Missing XML Doc comment for private type member
 (6): ReSharper Warning: Missing XML Doc comment for public type member
-(7): ReSharper Warning: Missing XML Doc comment for internal type member
-(8): ReSharper Warning: Missing XML Doc comment for protected internal type member
-(9): ReSharper Warning: Missing XML Doc comment for protected type member
-(10): ReSharper Warning: Missing XML Doc comment for private type member
-(11): ReSharper Warning: Missing XML Doc comment for public type member
+(7): ReSharper Warning: Missing XML Doc comment for public type member
+(8): ReSharper Warning: Missing XML Doc comment for public type member
+(9): ReSharper Warning: Missing XML Doc comment for internal type member
+(10): ReSharper Warning: Missing XML Doc comment for protected internal type member
+(11): ReSharper Warning: Missing XML Doc comment for protected type member
 (12): ReSharper Warning: Missing XML Doc comment for private type member
-(13): ReSharper Warning: Missing XML Doc comment for internal type member
-(14): ReSharper Warning: Missing XML Doc comment for protected type member
-(15): ReSharper Warning: Missing XML Doc comment for protected internal type member
-(16): ReSharper Warning: Missing XML Doc comment for private type member
-(17): ReSharper Warning: Missing XML Doc comment for public type
-(18): ReSharper Warning: Missing XML Doc comment for internal type
-(19): ReSharper Warning: Missing XML Doc comment for protected internal type
-(20): ReSharper Warning: Missing XML Doc comment for protected type
-(21): ReSharper Warning: Missing XML Doc comment for private type
-(22): ReSharper Warning: Missing XML Doc comment for public type member
-(23): ReSharper Warning: Missing XML Doc comment for internal type member
-(24): ReSharper Warning: Missing XML Doc comment for protected internal type member
-(25): ReSharper Warning: Missing XML Doc comment for protected type member
-(26): ReSharper Warning: Missing XML Doc comment for private type member
-(27): ReSharper Warning: Missing XML Doc comment for public type member
+(13): ReSharper Warning: Missing XML Doc comment for public type member
+(14): ReSharper Warning: Missing XML Doc comment for private type member
+(15): ReSharper Warning: Missing XML Doc comment for internal type member
+(16): ReSharper Warning: Missing XML Doc comment for protected type member
+(17): ReSharper Warning: Missing XML Doc comment for protected internal type member
+(18): ReSharper Warning: Missing XML Doc comment for private type member
+(19): ReSharper Warning: Missing XML Doc comment for public type
+(20): ReSharper Warning: Missing XML Doc comment for internal type
+(21): ReSharper Warning: Missing XML Doc comment for protected internal type
+(22): ReSharper Warning: Missing XML Doc comment for protected type
+(23): ReSharper Warning: Missing XML Doc comment for private type
+(24): ReSharper Warning: Missing XML Doc comment for public type member
+(25): ReSharper Warning: Missing XML Doc comment for internal type member
+(26): ReSharper Warning: Missing XML Doc comment for protected internal type member
+(27): ReSharper Warning: Missing XML Doc comment for protected type member
+(28): ReSharper Warning: Missing XML Doc comment for private type member
+(29): ReSharper Warning: Missing XML Doc comment for public type member

@@ -1,5 +1,6 @@
 ### vNext ###
 - Added a quick fix action on XML Doc warnings to generate doc templates
+- Added a configuration option to include/exclude constructors
 
 ### 1.7.0 ###
 - ReSharper 2016.3 support

@@ -57,6 +57,8 @@
   <ItemGroup>
     <Compile Include="Highlighting\DelegateWithoutDocs.cs" />
     <Compile Include="Highlighting\Inheritance.cs" />
+    <None Include="Highlighting\DisabledRequireDocsOnConstructorsTests\ClassesAndMembersWithoutDocs.cs.gold" />
+    <None Include="Highlighting\ProjectExclusionTests\ClassesAndMembersWithoutDocs.cs.gold" />
     <None Include="QuickFixes\AddDocCommentFix\Class.cs" />
     <Compile Include="Highlighting\StructWithoutDocs.cs" />
     <Compile Include="Highlighting\InterfacesWithoutDocs.cs" />
@@ -94,7 +96,6 @@
     <None Include="Highlighting\DefaultSettingsTests\ClassesAndMembersWithoutDocs.cs.gold" />
     <None Include="Highlighting\DisabledRequireDocsOnOverridingMemberTests\Inheritance.cs.gold" />
     <None Include="nuget.config" />
-    <None Include="Highlighting\ProjectExclusionTests\StructWithoutDocs.cs.gold" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Highlighting\XamlUserControl.xaml">

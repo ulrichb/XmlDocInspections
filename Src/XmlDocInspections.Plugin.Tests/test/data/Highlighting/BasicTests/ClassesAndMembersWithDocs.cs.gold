@@ -4,6 +4,7 @@ using XmlDocInspections.Sample.Utilities;
 // ReSharper disable UnusedMember.Local
 // ReSharper disable InconsistentNaming
 // ReSharper disable EventNeverSubscribedTo.Local
+// ReSharper disable UnusedParameter.Local
 
 namespace XmlDocInspections.Sample.Highlighting
 {
@@ -36,6 +37,23 @@ namespace XmlDocInspections.Sample.Highlighting
         /// Some doc.
         /// </summary>
         private string PrivateField;
+
+        //
+
+        /// <summary>
+        /// Some doc.
+        /// </summary>
+        public PublicClassWithDocs()
+        {
+        }
+
+        /// <summary>
+        /// Some doc.
+        /// </summary>
+        /// <param name="a"></param>
+        public PublicClassWithDocs(string a)
+        {
+        }
 
         //
 

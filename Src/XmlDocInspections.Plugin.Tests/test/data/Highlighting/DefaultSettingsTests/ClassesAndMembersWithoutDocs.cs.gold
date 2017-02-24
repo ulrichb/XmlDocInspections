@@ -4,6 +4,7 @@ using XmlDocInspections.Sample.Utilities;
 // ReSharper disable UnusedMember.Local
 // ReSharper disable InconsistentNaming
 // ReSharper disable EventNeverSubscribedTo.Local
+// ReSharper disable UnusedParameter.Local
 
 namespace XmlDocInspections.Sample.Highlighting
 {
@@ -21,19 +22,29 @@ namespace XmlDocInspections.Sample.Highlighting
 
         //
 
-        public string |PublicProperty|(4) { get; set; }
+        public |PublicClassWithoutDocs|(4)()
+        {
+        }
+
+        public |PublicClassWithoutDocs|(5)(string a)
+        {
+        }
+
+        //
+
+        public string |PublicProperty|(6) { get; set; }
 
         internal string InternalProperty { get; set; }
 
-        protected internal string |ProtectedInternalProperty|(5) { get; set; }
+        protected internal string |ProtectedInternalProperty|(7) { get; set; }
 
-        protected string |ProtectedProperty|(6) { get; set; }
+        protected string |ProtectedProperty|(8) { get; set; }
 
         private string PrivateProperty { get; set; }
 
         //
 
-        public void |PublicMethod|(7)(string a)
+        public void |PublicMethod|(9)(string a)
         {
         }
 
@@ -45,11 +56,11 @@ namespace XmlDocInspections.Sample.Highlighting
         {
         }
 
-        protected void |ProtectedMethod|(8)()
+        protected void |ProtectedMethod|(10)()
         {
         }
 
-        protected internal void |ProtectedInternalMethod|(9)()
+        protected internal void |ProtectedInternalMethod|(11)()
         {
         }
 
@@ -57,7 +68,7 @@ namespace XmlDocInspections.Sample.Highlighting
         {
         }
 
-        public class |PublicNestedClass|(10)
+        public class |PublicNestedClass|(12)
         {
         }
 
@@ -65,11 +76,11 @@ namespace XmlDocInspections.Sample.Highlighting
         {
         }
 
-        protected internal class |ProtectedInternalNestedClass|(11)
+        protected internal class |ProtectedInternalNestedClass|(13)
         {
         }
 
-        protected class |ProtectedNestedClass|(12)
+        protected class |ProtectedNestedClass|(14)
         {
         }
 
@@ -79,19 +90,19 @@ namespace XmlDocInspections.Sample.Highlighting
 
         //
 
-        public event EventHandler |PublicEvent|(13);
+        public event EventHandler |PublicEvent|(15);
 
         internal event EventHandler InternalEvent;
 
-        protected internal event EventHandler |ProtectedInternalEvent|(14);
+        protected internal event EventHandler |ProtectedInternalEvent|(16);
 
-        protected event EventHandler |ProtectedEvent|(15);
+        protected event EventHandler |ProtectedEvent|(17);
 
         private event EventHandler PrivateEvent;
 
         //
 
-        public static PublicClassWithoutDocs |operator +|(16)(PublicClassWithoutDocs left, PublicClassWithoutDocs right)
+        public static PublicClassWithoutDocs |operator +|(18)(PublicClassWithoutDocs left, PublicClassWithoutDocs right)
         {
             return new PublicClassWithoutDocs();
         }
@@ -104,15 +115,17 @@ namespace XmlDocInspections.Sample.Highlighting
 (2): ReSharper Warning: Missing XML Doc comment for protected internal type member
 (3): ReSharper Warning: Missing XML Doc comment for protected type member
 (4): ReSharper Warning: Missing XML Doc comment for public type member
-(5): ReSharper Warning: Missing XML Doc comment for protected internal type member
-(6): ReSharper Warning: Missing XML Doc comment for protected type member
-(7): ReSharper Warning: Missing XML Doc comment for public type member
+(5): ReSharper Warning: Missing XML Doc comment for public type member
+(6): ReSharper Warning: Missing XML Doc comment for public type member
+(7): ReSharper Warning: Missing XML Doc comment for protected internal type member
 (8): ReSharper Warning: Missing XML Doc comment for protected type member
-(9): ReSharper Warning: Missing XML Doc comment for protected internal type member
-(10): ReSharper Warning: Missing XML Doc comment for public type
-(11): ReSharper Warning: Missing XML Doc comment for protected internal type
-(12): ReSharper Warning: Missing XML Doc comment for protected type
-(13): ReSharper Warning: Missing XML Doc comment for public type member
-(14): ReSharper Warning: Missing XML Doc comment for protected internal type member
-(15): ReSharper Warning: Missing XML Doc comment for protected type member
-(16): ReSharper Warning: Missing XML Doc comment for public type member
+(9): ReSharper Warning: Missing XML Doc comment for public type member
+(10): ReSharper Warning: Missing XML Doc comment for protected type member
+(11): ReSharper Warning: Missing XML Doc comment for protected internal type member
+(12): ReSharper Warning: Missing XML Doc comment for public type
+(13): ReSharper Warning: Missing XML Doc comment for protected internal type
+(14): ReSharper Warning: Missing XML Doc comment for protected type
+(15): ReSharper Warning: Missing XML Doc comment for public type member
+(16): ReSharper Warning: Missing XML Doc comment for protected internal type member
+(17): ReSharper Warning: Missing XML Doc comment for protected type member
+(18): ReSharper Warning: Missing XML Doc comment for public type member
