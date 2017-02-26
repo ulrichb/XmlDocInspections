@@ -1,7 +1,6 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq.Expressions;
-using JetBrains.Annotations;
 using JetBrains.Application.Settings;
 using JetBrains.DataFlow;
 using JetBrains.ReSharper.Feature.Services.Daemon.OptionPages;
@@ -56,7 +55,7 @@ namespace XmlDocInspections.Plugin.Settings
             FinishPage();
         }
 
-        private void AddAccessibilityBoolOption<T>([NotNull] Expression<Func<T, AccessibilitySettingFlags>> settingsExpression)
+        private void AddAccessibilityBoolOption<T>(Expression<Func<T, AccessibilitySettingFlags>> settingsExpression)
         {
             //AddText("Show inspection accessibility:");
             var flagsProperty = new Property<AccessibilitySettingFlags>(_lifetime, "AccessibilitySettingFlags");
@@ -70,8 +69,8 @@ namespace XmlDocInspections.Plugin.Settings
         }
 
         private void AddAccessibilityBoolOption(
-            [NotNull] IProperty<AccessibilitySettingFlags> flagsProperty,
-            [NotNull] string text,
+            IProperty<AccessibilitySettingFlags> flagsProperty,
+            string text,
             AccessibilitySettingFlags accessibilitySettingFlag)
         {
             var optionBoolProperty = new Property<bool>(_lifetime, text);
@@ -82,8 +81,8 @@ namespace XmlDocInspections.Plugin.Settings
         }
 
         private void BindBoolPropertyToAccessibilitySettingFlag(
-            [NotNull] IProperty<bool> property,
-            [NotNull] IProperty<AccessibilitySettingFlags> flagsProperty,
+            IProperty<bool> property,
+            IProperty<AccessibilitySettingFlags> flagsProperty,
             AccessibilitySettingFlags flagToBindTo)
         {
             property.Value = flagsProperty.Value.HasFlag(flagToBindTo);

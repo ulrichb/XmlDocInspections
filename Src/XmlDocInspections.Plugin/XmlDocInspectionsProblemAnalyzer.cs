@@ -56,7 +56,7 @@ namespace XmlDocInspections.Plugin
 #endif
         }
 
-        private IEnumerable<IHighlighting> HandleTypeMember([NotNull] IDeclaration declaration, [CanBeNull] ITypeMember typeMember)
+        private IEnumerable<IHighlighting> HandleTypeMember(IDeclaration declaration, [CanBeNull] ITypeMember typeMember)
         {
             if (typeMember != null && typeMember.GetXMLDoc(inherit: false) == null)
             {

@@ -14,17 +14,17 @@ namespace XmlDocInspections.Plugin.Tests.Integrative
     {
         protected override string RelativeTestDataPath => "Highlighting";
 
-        protected override string GetGoldTestDataPath(string fileName)
+        protected override string GetGoldTestDataPath([NotNull] string fileName)
         {
             return base.GetGoldTestDataPath(Path.Combine(GetType().Name, fileName));
         }
 
-        protected override bool HighlightingPredicate(IHighlighting highlighting, IPsiSourceFile sourceFile)
+        protected override bool HighlightingPredicate([NotNull] IHighlighting highlighting, [NotNull] IPsiSourceFile sourceFile)
         {
             return highlighting is MissingXmlDocHighlighting;
         }
 
-        protected override void DoTestSolution(params string[] fileSet)
+        protected override void DoTestSolution([NotNull] params string[] fileSet)
         {
             ExecuteWithinSettingsTransaction(settingsStore =>
             {

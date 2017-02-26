@@ -93,7 +93,7 @@ namespace XmlDocInspections.Sample.Highlighting
 
         public static PublicClassWithoutDocs |operator +|(16)(PublicClassWithoutDocs left, PublicClassWithoutDocs right)
         {
-            return null;
+            return new PublicClassWithoutDocs();
         }
     }
 }

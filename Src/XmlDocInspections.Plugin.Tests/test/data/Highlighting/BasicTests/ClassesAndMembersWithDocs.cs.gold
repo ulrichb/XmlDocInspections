@@ -185,7 +185,7 @@ namespace XmlDocInspections.Sample.Highlighting
         /// </summary>
         public static PublicClassWithDocs operator +(PublicClassWithDocs left, PublicClassWithDocs right)
         {
-            return null;
+            return new PublicClassWithDocs();
         }
     }
 }
