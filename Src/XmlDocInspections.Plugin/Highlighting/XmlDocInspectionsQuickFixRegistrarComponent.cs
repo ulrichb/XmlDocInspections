@@ -3,33 +3,14 @@ using JetBrains.ReSharper.Daemon.CSharp.Errors;
 using JetBrains.ReSharper.Feature.Services.QuickFixes;
 using JetBrains.ReSharper.Intentions.CSharp.QuickFixes;
 
-#if RESHARPER20161
-using JetBrains.DataFlow;
-using JetBrains.Util;
-#endif
-
 namespace XmlDocInspections.Plugin.Highlighting
 {
     [ShellComponent]
     internal class XmlDocInspectionsQuickFixRegistrarComponent
     {
-        public XmlDocInspectionsQuickFixRegistrarComponent(
-#if RESHARPER20161
-            Lifetime lifetime, 
-#endif
-            IQuickFixes table)
+        public XmlDocInspectionsQuickFixRegistrarComponent(IQuickFixes table)
         {
-            table.RegisterQuickFix<MissingXmlDocHighlighting>(
-#if RESHARPER20161
-                lifetime,
-#else
-                null,
-#endif
-                h => new AddDocCommentFix(Wrap(h)), typeof(AddDocCommentFix)
-#if RESHARPER20161
-                , null, BeforeOrAfter.Before
-#endif
-            );
+            table.RegisterQuickFix<MissingXmlDocHighlighting>(null, h => new AddDocCommentFix(Wrap(h)), typeof(AddDocCommentFix));
         }
 
         private static PublicOrProtectedMemberNotDocumentedWarning Wrap(MissingXmlDocHighlighting highlighting)

@@ -273,7 +273,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XmlDocInspections.Plugin\XmlDocInspections.Plugin.R20162.csproj">
-      <Project>{7ce821db-7301-4702-a8f5-9bcd594c086c}</Project>
+      <Project>{d682cfb1-5b8e-4533-9c25-fd5ff67737af}</Project>
       <Name>XmlDocInspections.Plugin.R20162</Name>
     </ProjectReference>
   </ItemGroup>

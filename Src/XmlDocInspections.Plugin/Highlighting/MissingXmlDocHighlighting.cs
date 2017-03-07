@@ -13,7 +13,7 @@ using static JetBrains.ReSharper.Psi.AccessibilityDomain;
     MissingXmlDocHighlighting.Title,
     MissingXmlDocHighlighting.Description,
     Severity.WARNING
-#if RESHARPER20161 || RESHARPER20162
+#if RESHARPER20162
     , /*SolutionAnalysisRequired:*/ false
 #endif
 )]
