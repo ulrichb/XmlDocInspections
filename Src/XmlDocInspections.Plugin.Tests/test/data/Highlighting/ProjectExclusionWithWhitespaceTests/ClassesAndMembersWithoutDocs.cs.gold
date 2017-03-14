@@ -1,0 +1,131 @@
+﻿using System;
+using XmlDocInspections.Sample.Utilities;
+
+// ReSharper disable UnusedMember.Local
+// ReSharper disable InconsistentNaming
+// ReSharper disable EventNeverSubscribedTo.Local
+// ReSharper disable UnusedParameter.Local
+
+namespace XmlDocInspections.Sample.Highlighting
+{
+    public class |PublicClassWithoutDocs|(0) : IExplicitlyImplementedInterface
+    {
+        public string |PublicField|(1);
+
+        internal string InternalField;
+
+        protected internal string |ProtectedInternalField|(2);
+
+        protected string |ProtectedField|(3);
+
+        private string PrivateField;
+
+        //
+
+        public |PublicClassWithoutDocs|(4)()
+        {
+        }
+
+        public |PublicClassWithoutDocs|(5)(string a)
+        {
+        }
+
+        //
+
+        public string |PublicProperty|(6) { get; set; }
+
+        internal string InternalProperty { get; set; }
+
+        protected internal string |ProtectedInternalProperty|(7) { get; set; }
+
+        protected string |ProtectedProperty|(8) { get; set; }
+
+        private string PrivateProperty { get; set; }
+
+        //
+
+        public void |PublicMethod|(9)(string a)
+        {
+        }
+
+        void IExplicitlyImplementedInterface.Method()
+        {
+        }
+
+        internal void InternalMethod()
+        {
+        }
+
+        protected void |ProtectedMethod|(10)()
+        {
+        }
+
+        protected internal void |ProtectedInternalMethod|(11)()
+        {
+        }
+
+        private void PrivateMethod()
+        {
+        }
+
+        public class |PublicNestedClass|(12)
+        {
+        }
+
+        internal class InternalNestedClass
+        {
+        }
+
+        protected internal class |ProtectedInternalNestedClass|(13)
+        {
+        }
+
+        protected class |ProtectedNestedClass|(14)
+        {
+        }
+
+        private class PrivateNestedClass
+        {
+        }
+
+        //
+
+        public event EventHandler |PublicEvent|(15);
+
+        internal event EventHandler InternalEvent;
+
+        protected internal event EventHandler |ProtectedInternalEvent|(16);
+
+        protected event EventHandler |ProtectedEvent|(17);
+
+        private event EventHandler PrivateEvent;
+
+        //
+
+        public static PublicClassWithoutDocs |operator +|(18)(PublicClassWithoutDocs left, PublicClassWithoutDocs right)
+        {
+            return new PublicClassWithoutDocs();
+        }
+    }
+}
+
+---------------------------------------------------------
+(0): ReSharper Warning: Missing XML Doc comment for public type
+(1): ReSharper Warning: Missing XML Doc comment for public type member
+(2): ReSharper Warning: Missing XML Doc comment for protected internal type member
+(3): ReSharper Warning: Missing XML Doc comment for protected type member
+(4): ReSharper Warning: Missing XML Doc comment for public type member
+(5): ReSharper Warning: Missing XML Doc comment for public type member
+(6): ReSharper Warning: Missing XML Doc comment for public type member
+(7): ReSharper Warning: Missing XML Doc comment for protected internal type member
+(8): ReSharper Warning: Missing XML Doc comment for protected type member
+(9): ReSharper Warning: Missing XML Doc comment for public type member
+(10): ReSharper Warning: Missing XML Doc comment for protected type member
+(11): ReSharper Warning: Missing XML Doc comment for protected internal type member
+(12): ReSharper Warning: Missing XML Doc comment for public type
+(13): ReSharper Warning: Missing XML Doc comment for protected internal type
+(14): ReSharper Warning: Missing XML Doc comment for protected type
+(15): ReSharper Warning: Missing XML Doc comment for public type member
+(16): ReSharper Warning: Missing XML Doc comment for protected internal type member
+(17): ReSharper Warning: Missing XML Doc comment for protected type member
+(18): ReSharper Warning: Missing XML Doc comment for public type member

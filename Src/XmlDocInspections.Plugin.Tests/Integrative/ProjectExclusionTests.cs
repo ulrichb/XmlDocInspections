@@ -4,20 +4,37 @@ using XmlDocInspections.Plugin.Settings;
 
 namespace XmlDocInspections.Plugin.Tests.Integrative
 {
-    [TestFixture]
-    public class ProjectExclusionTests : MissingXmlDocHighlightingTestsBase
+    public abstract class ProjectExclusionTests : MissingXmlDocHighlightingTestsBase
     {
-        protected override void MutateSettings(IContextBoundSettingsStore settingsStore)
+        public class ProjectExclusionWithMatchingRegexTests : ProjectExclusionTests
         {
-            settingsStore.SetValue((XmlDocInspectionsSettings s) => s.ProjectExclusionRegex, "^Excl.*ject$");
+            protected override string ProjectExclusionRegexValue => "^Excl.*ject$";
+
+            [Test]
+            public void TestClassesAndMembersWithoutDocs()
+            {
+                DoNamedTest2();
+            }
+        }
+
+        public class ProjectExclusionWithWhitespaceTests : ProjectExclusionTests
+        {
+            protected override string ProjectExclusionRegexValue => " \t ";
+
+            [Test]
+            public void TestClassesAndMembersWithoutDocs()
+            {
+                DoNamedTest2();
+            }
         }
 
         protected override string ProjectName => "ExcludedProject";
 
-        [Test]
-        public void TestClassesAndMembersWithoutDocs()
+        protected abstract string ProjectExclusionRegexValue { get; }
+
+        protected override void MutateSettings(IContextBoundSettingsStore settingsStore)
         {
-            DoNamedTest2();
+            settingsStore.SetValue((XmlDocInspectionsSettings s) => s.ProjectExclusionRegex, ProjectExclusionRegexValue);
         }
     }
 }
