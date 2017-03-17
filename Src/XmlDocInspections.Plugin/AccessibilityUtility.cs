@@ -1,11 +1,10 @@
-using JetBrains.ReSharper.Psi;
 using XmlDocInspections.Plugin.Settings;
 using static JetBrains.ReSharper.Psi.AccessibilityDomain;
 
 namespace XmlDocInspections.Plugin
 {
     /// <summary>
-    /// Utilities for <see cref="AccessibilityDomain.AccessibilityDomainType"/>.
+    /// Utilities for <see cref="AccessibilityDomainType"/>.
     /// </summary>
     public static class AccessibilityUtility
     {
