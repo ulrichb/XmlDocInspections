@@ -34,9 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <ReSharperInstallationsDirectoryInstancePart>ExpRS20162</ReSharperInstallationsDirectoryInstancePart>
     <StartAction>Program</StartAction>
     <StartProgram>$(DevEnvDir)devenv.exe</StartProgram>
-    <StartArguments>/RootSuffix ExpRS20162 /ReSharper.Internal $(SolutionDir)Src\XmlDocInspections.Plugin.Tests\test\data\XmlDocInspections.Sample.sln</StartArguments>
+    <StartArguments>/RootSuffix $(ReSharperInstallationsDirectoryInstancePart) /ReSharper.Internal $(SolutionDir)Src\XmlDocInspections.Plugin.Tests\test\data\XmlDocInspections.Sample.sln</StartArguments>
     <StartWorkingDirectory>$(MSBuildProjectDirectory)\$(OutputPath)</StartWorkingDirectory>
   </PropertyGroup>
   <ItemGroup>
@@ -284,6 +285,7 @@
   <ItemGroup>
     <None Include="packages.XmlDocInspections.Plugin.R20162.config" />
   </ItemGroup>
+  <Import Project="$(SolutionDir)\Shared\Build\CopyToReSharperInstallationsDirectory.targets" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
