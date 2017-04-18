@@ -14,75 +14,39 @@ namespace XmlDocInspections.Plugin.Tests.Integrative
         }
 
         [Test]
-        public void TestClassesAndMembersWithDocs()
-        {
-            DoNamedTest2();
-        }
+        public void TestClassesAndMembersWithDocs() => DoNamedTest2();
 
         [Test]
-        public void TestClassesAndMembersWithoutDocs()
-        {
-            DoNamedTest2();
-        }
+        public void TestClassesAndMembersWithoutDocs() => DoNamedTest2();
 
         [Test]
-        public void TestInternalClassWithoutDocs()
-        {
-            DoNamedTest2();
-        }
+        public void TestInternalClassWithoutDocs() => DoNamedTest2();
 
         [Test]
-        public void TestInheritance()
-        {
-            DoNamedTest2();
-        }
+        public void TestInheritance() => DoNamedTest2();
 
         [Test]
-        public void TestInterfacesWithoutDocs()
-        {
-            DoNamedTest2();
-        }
+        public void TestInterfacesWithoutDocs() => DoNamedTest2();
 
         [Test]
-        public void TestPartialClassWithDocsInOneFile_A()
-        {
-            DoNamedTest2("PartialClassWithDocsInOneFile_B.cs");
-        }
+        public void TestPartialClassWithDocsInOneFile_A() => DoNamedTest2("PartialClassWithDocsInOneFile_B.cs");
 
         [Test]
-        public void TestPartialClassWithDocsInOneFile_B()
-        {
-            DoNamedTest2("PartialClassWithDocsInOneFile_A.cs");
-        }
+        public void TestPartialClassWithDocsInOneFile_B() => DoNamedTest2("PartialClassWithDocsInOneFile_A.cs");
 
         [Test]
-        public void TestPartialClassWithoutDocs_A()
-        {
-            DoNamedTest2("PartialClassWithoutDocs_B.cs");
-        }
+        public void TestPartialClassWithoutDocs_A() => DoNamedTest2("PartialClassWithoutDocs_B.cs");
 
         [Test]
-        public void TestPartialClassWithoutDocs_B()
-        {
-            DoNamedTest2("PartialClassWithoutDocs_A.cs");
-        }
+        public void TestPartialClassWithoutDocs_B() => DoNamedTest2("PartialClassWithoutDocs_A.cs");
 
         [Test]
-        public void TestStructWithoutDocs()
-        {
-            DoNamedTest2();
-        }
+        public void TestStructWithoutDocs() => DoNamedTest2();
 
         [Test]
-        public void TestDelegateWithoutDocs()
-        {
-            DoNamedTest2();
-        }
+        public void TestDelegateWithoutDocs() => DoNamedTest2();
 
         [Test]
-        public void TestXamlUserControl()
-        {
-            DoTestSolution("XamlUserControl.xaml");
-        }
+        public void TestXamlUserControl() => DoTestSolution("XamlUserControl.xaml");
     }
 }

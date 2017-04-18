@@ -15,9 +15,6 @@ namespace XmlDocInspections.Plugin.Tests.Integrative
         }
 
         [Test]
-        public void TestClassesAndMembersWithoutDocs()
-        {
-            DoNamedTest2();
-        }
+        public void TestClassesAndMembersWithoutDocs() => DoNamedTest2();
     }
 }

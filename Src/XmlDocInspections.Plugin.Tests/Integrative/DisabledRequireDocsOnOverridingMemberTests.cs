@@ -15,9 +15,6 @@ namespace XmlDocInspections.Plugin.Tests.Integrative
         }
 
         [Test]
-        public void TestInheritance()
-        {
-            DoNamedTest2();
-        }
+        public void TestInheritance() => DoNamedTest2();
     }
 }
