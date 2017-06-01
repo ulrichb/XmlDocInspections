@@ -12,11 +12,7 @@ using static JetBrains.ReSharper.Psi.AccessibilityDomain;
     Group: HighlightingGroupIds.CodeSmell,
     Title: MissingXmlDocHighlighting.Title,
     Description: MissingXmlDocHighlighting.Description,
-    DefaultSeverity: Severity.WARNING
-#if RESHARPER20162
-    , SolutionAnalysisRequired: false
-#endif
-)]
+    DefaultSeverity: Severity.WARNING)]
 
 namespace XmlDocInspections.Plugin.Highlighting
 {

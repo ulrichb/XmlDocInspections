@@ -1,6 +1,6 @@
 ﻿<Project>
   <PropertyGroup>
-    <ReSharperVersionIdentifier>20162</ReSharperVersionIdentifier>
+    <ReSharperVersionIdentifier>20172</ReSharperVersionIdentifier>
 
     <!-- This is a workaround for https://github.com/dotnet/sdk/issues/980: -->
     <BaseIntermediateOutputPath>obj\R$(ReSharperVersionIdentifier)\</BaseIntermediateOutputPath>
@@ -9,7 +9,7 @@
 
   <PropertyGroup>
     <TargetFramework>net45</TargetFramework>
-    <RootNamespace>XmlDocInspections.Plugin</RootNamespace>
+    <RootNamespace>XmlDocInspections.Plugin.Tests</RootNamespace>
     <EnableDefaultItems>false</EnableDefaultItems>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
@@ -28,19 +28,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\..\Shared\Src\ReSharperExtensionsShared\Debugging\DebugUtility.cs" Link="ReSharperExtensionsShared\DebugUtility.cs" />
-    <Compile Include="..\..\Shared\Src\ReSharperExtensionsShared\Highlighting\SimpleTreeNodeHighlightingBase.cs" Link="ReSharperExtensionsShared\SimpleTreeNodeHighlightingBase.cs" />
-    <Compile Include="**\*.cs" Exclude="obj\**" />
+    <Compile Include="**\*.cs" Exclude="obj\**;test\data\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="JetBrains.ReSharper.SDK" Version="2016.2.20160912.115159" />
+    <PackageReference Include="JetBrains.ReSharper.SDK.Tests" Version="2017.2.0-eap08" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\XmlDocInspections.Plugin\XmlDocInspections.Plugin.R$(ReSharperVersionIdentifier).csproj" />
   </ItemGroup>
 
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
 
-  <PropertyGroup>
-    <ReSharperInstallationsDirectoryInstancePart>ExpRS$(ReSharperVersionIdentifier)</ReSharperInstallationsDirectoryInstancePart>
-  </PropertyGroup>
-  <Import Project="$(SolutionDir)\Shared\Build\CopyToReSharperInstallationsDirectory.targets" />
 </Project>
