@@ -8,13 +8,13 @@ using static JetBrains.ReSharper.Psi.AccessibilityDomain;
 
 [assembly: RegisterConfigurableSeverity(
     MissingXmlDocHighlighting.SeverityId,
-    null,
-    HighlightingGroupIds.CodeSmell,
-    MissingXmlDocHighlighting.Title,
-    MissingXmlDocHighlighting.Description,
-    Severity.WARNING
+    CompoundItemName: null,
+    Group: HighlightingGroupIds.CodeSmell,
+    Title: MissingXmlDocHighlighting.Title,
+    Description: MissingXmlDocHighlighting.Description,
+    DefaultSeverity: Severity.WARNING
 #if RESHARPER20162
-    , /*SolutionAnalysisRequired:*/ false
+    , SolutionAnalysisRequired: false
 #endif
 )]
 
