@@ -1,5 +1,6 @@
 ﻿using JetBrains.DocumentModel;
 using JetBrains.ReSharper.Feature.Services.Daemon;
+using JetBrains.ReSharper.Psi.CSharp.Tree;
 using JetBrains.ReSharper.Psi.Tree;
 using ReSharperExtensionsShared.Highlighting;
 using XmlDocInspections.Plugin.Highlighting;
@@ -24,7 +25,7 @@ namespace XmlDocInspections.Plugin.Highlighting
         "CSHARP",
         OverlapResolve = OverlapResolveKind.NONE,
         ToolTipFormatString = Message)]
-    public class MissingXmlDocHighlighting : SimpleTreeNodeHighlightingBase<IDeclaration>
+    public class MissingXmlDocHighlighting : SimpleTreeNodeHighlightingBase<ICSharpDeclaration>
     {
         public const string SeverityId = "MissingXmlDoc";
         public const string Title = "Missing XML Doc comment for type / type member";
@@ -34,7 +35,7 @@ namespace XmlDocInspections.Plugin.Highlighting
             "Missing XML Doc comment for type / type member. " +
             "See the '" + XmlDocInspectionsOptionsPage.PageTitle + "' options page for further configuration settings.";
 
-        public MissingXmlDocHighlighting(bool isTypeMember, AccessibilityDomainType accessibilityDomainType, IDeclaration declaration)
+        public MissingXmlDocHighlighting(bool isTypeMember, AccessibilityDomainType accessibilityDomainType, ICSharpDeclaration declaration)
             : base(declaration, FormatMessage(isTypeMember, accessibilityDomainType))
         {
         }

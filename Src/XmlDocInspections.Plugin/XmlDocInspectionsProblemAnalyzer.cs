@@ -7,6 +7,7 @@ using JetBrains.Application.Settings;
 using JetBrains.ReSharper.Daemon.Stages.Dispatcher;
 using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.ReSharper.Psi;
+using JetBrains.ReSharper.Psi.CSharp.Tree;
 using JetBrains.ReSharper.Psi.Tree;
 using JetBrains.ReSharper.Psi.Xaml;
 using JetBrains.Util;
@@ -21,8 +22,8 @@ namespace XmlDocInspections.Plugin
     /// <summary>
     /// A problem analyzer for the XML Doc inspections.
     /// </summary>
-    [ElementProblemAnalyzer(typeof(ITypeMemberDeclaration), HighlightingTypes = new[] { typeof(MissingXmlDocHighlighting) })]
-    public class XmlDocInspectionsProblemAnalyzer : ElementProblemAnalyzer<ITypeMemberDeclaration>
+    [ElementProblemAnalyzer(typeof(ICSharpTypeMemberDeclaration), HighlightingTypes = new[] { typeof(MissingXmlDocHighlighting) })]
+    public class XmlDocInspectionsProblemAnalyzer : ElementProblemAnalyzer<ICSharpTypeMemberDeclaration>
     {
         private static readonly ILogger Log = Logger.GetLogger(typeof(XmlDocInspectionsProblemAnalyzer));
 
@@ -36,7 +37,7 @@ namespace XmlDocInspections.Plugin
             _settingsOptimization = settingsOptimization;
         }
 
-        protected override void Run(ITypeMemberDeclaration element, ElementProblemAnalyzerData data, IHighlightingConsumer consumer)
+        protected override void Run(ICSharpTypeMemberDeclaration element, ElementProblemAnalyzerData data, IHighlightingConsumer consumer)
         {
 #if DEBUG
             var stopwatch = Stopwatch.StartNew();
@@ -55,7 +56,7 @@ namespace XmlDocInspections.Plugin
 #endif
         }
 
-        private IEnumerable<IHighlighting> HandleTypeMember(IDeclaration declaration, [CanBeNull] ITypeMember typeMember)
+        private IEnumerable<IHighlighting> HandleTypeMember(ICSharpDeclaration declaration, [CanBeNull] ITypeMember typeMember)
         {
             if (typeMember != null && !declaration.Language.Is<XamlLanguage>())
             {
