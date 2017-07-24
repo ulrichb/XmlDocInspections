@@ -20,3 +20,9 @@ A simple ReSharper extension which enables to show warnings for missing XML Doc 
 ### Quick Fix
 
 <img src="/Doc/QuickFix.gif" alt="QuickFix" width="520" />
+
+### Prerelease versions
+
+Running EAP versions of R# and want to test the latest Doc Inspections ReSharper Extension? Add https://www.myget.org/F/ulrichb to the top of your R# extension manager sources.
+
+<img src="/Doc/Prerelease.png" alt="Prerelease" width="765" />
