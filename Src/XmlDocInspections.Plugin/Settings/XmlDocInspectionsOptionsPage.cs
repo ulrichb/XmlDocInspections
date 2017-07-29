@@ -7,9 +7,9 @@ using JetBrains.ReSharper.Feature.Services.Daemon.OptionPages;
 #if RESHARPER20163 || RESHARPER20171
 using JetBrains.UI.Options;
 using JetBrains.UI.Options.OptionsDialog2.SimpleOptions;
-using JetBrains.UI.Resources;
+using JetBrains.Ide.Resources;
 #else
-using JetBrains.Application.UI.Icons.CommonThemedIcons;
+using JetBrains.Application.Resources;
 using JetBrains.Application.UI.Options;
 using JetBrains.Application.UI.Options.OptionsDialog;
 
@@ -21,7 +21,7 @@ namespace XmlDocInspections.Plugin.Settings
     /// An options page for XML Doc inspections.
     /// </summary>
     [ExcludeFromCodeCoverage /* options page user interface is tested manually */]
-    [OptionsPage(CPageId, PageTitle, typeof(CommonThemedIcons.Bulb), ParentId = CodeInspectionPage.PID)]
+    [OptionsPage(CPageId, PageTitle, typeof(IdeThemedIcons.XmlDocument), ParentId = CodeInspectionPage.PID)]
     public class XmlDocInspectionsOptionsPage : SimpleOptionsPage
     {
         private readonly Lifetime _lifetime;
@@ -36,7 +36,7 @@ namespace XmlDocInspections.Plugin.Settings
             _lifetime = lifetime;
             _settings = settings;
 
-            AddText("The following rules are used for warning about missing XML Doc comments. " +
+            AddText("The following rules are applied when warning about missing XML Doc comments. " +
                     "Note that the severity level for the warning can be configured on the \"Inspection Severity\" page.");
 
             AddHeader("Inclusion rules");
@@ -48,6 +48,8 @@ namespace XmlDocInspections.Plugin.Settings
             AddAccessibilityBoolOption((XmlDocInspectionsSettings s) => s.TypeMemberAccessibility);
 
             AddText();
+            AddStringOption((XmlDocInspectionsSettings s) => s.IncludeAttributeFullNames, "Types/members with attributes:\t");
+
             AddHeader("Exclusion rules");
 
             AddBoolOption((XmlDocInspectionsSettings s) => s.ExcludeConstructors, "Exclude constructors");

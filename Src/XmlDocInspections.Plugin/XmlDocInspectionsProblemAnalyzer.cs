@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using JetBrains.Application.Settings;
 using JetBrains.ReSharper.Daemon.Stages.Dispatcher;
 using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.ReSharper.Psi;
@@ -10,7 +9,6 @@ using JetBrains.ReSharper.Psi.Tree;
 using JetBrains.Util;
 using ReSharperExtensionsShared.ProblemAnalyzers;
 using XmlDocInspections.Plugin.Highlighting;
-using XmlDocInspections.Plugin.Settings;
 
 namespace XmlDocInspections.Plugin
 {
@@ -20,13 +18,11 @@ namespace XmlDocInspections.Plugin
     [ElementProblemAnalyzer(typeof(ICSharpTypeMemberDeclaration), HighlightingTypes = new[] { typeof(MissingXmlDocHighlighting) })]
     public class XmlDocInspectionsProblemAnalyzer : SimpleElementProblemAnalyzer<ICSharpTypeMemberDeclaration, ITypeMember>
     {
-        private readonly ISettingsStore _settingsStore;
-        private readonly ISettingsOptimization _settingsOptimization;
+        private readonly XmlDocInspectionsSettingsCache _xmlDocInspectionsSettingsCache;
 
-        public XmlDocInspectionsProblemAnalyzer(ISettingsStore settingsStore, ISettingsOptimization settingsOptimization)
+        public XmlDocInspectionsProblemAnalyzer(XmlDocInspectionsSettingsCache xmlDocInspectionsSettingsCache)
         {
-            _settingsStore = settingsStore;
-            _settingsOptimization = settingsOptimization;
+            _xmlDocInspectionsSettingsCache = xmlDocInspectionsSettingsCache;
         }
 
         protected override void Run(
@@ -42,12 +38,11 @@ namespace XmlDocInspections.Plugin
 
         private IEnumerable<IHighlighting> HandleTypeMember(ICSharpTypeMemberDeclaration declaration, ITypeMember typeMember)
         {
-            var settingsStore = _settingsStore.BindToContextTransient(ContextRange.Smart(typeMember.Module.ToDataContext()));
-            var settings = settingsStore.GetKey<XmlDocInspectionsSettings>(_settingsOptimization);
+            var settings = _xmlDocInspectionsSettingsCache.GetCachedSettings(declaration.ToDataContext());
 
             if (!(IsProjectExcluded(declaration, settings) || IsTypeMemberExcluded(typeMember, settings)))
             {
-                if (IsAccessibilityMatchingWithConfiguration(typeMember, settings))
+                if (IsAccessibilityIncluded(typeMember, settings) || IsIncludedByAttribute(typeMember, settings))
                 {
                     if (typeMember.GetXMLDoc(inherit: false) == null)
                         yield return new MissingXmlDocHighlighting(declaration);
@@ -55,9 +50,9 @@ namespace XmlDocInspections.Plugin
             }
         }
 
-        private static bool IsProjectExcluded(IDeclaration declaration, XmlDocInspectionsSettings settings)
+        private static bool IsProjectExcluded(IDeclaration declaration, CachedXmlDocInspectionsSettings settings)
         {
-            var projectExclusionRegex = settings.ProjectExclusionRegex;
+            var projectExclusionRegex = settings.Value.ProjectExclusionRegex;
 
             if (string.IsNullOrWhiteSpace(projectExclusionRegex))
                 return false;
@@ -66,10 +61,10 @@ namespace XmlDocInspections.Plugin
             return Regex.IsMatch(project.Name, projectExclusionRegex);
         }
 
-        private bool IsTypeMemberExcluded(ITypeMember typeMember, XmlDocInspectionsSettings settings)
+        private bool IsTypeMemberExcluded(ITypeMember typeMember, CachedXmlDocInspectionsSettings settings)
         {
-            return settings.ExcludeMembersOverridingSuperMember && IsOverridingSuperMember(typeMember) ||
-                   settings.ExcludeConstructors && typeMember is IConstructor;
+            return settings.Value.ExcludeMembersOverridingSuperMember && IsOverridingSuperMember(typeMember) ||
+                   settings.Value.ExcludeConstructors && typeMember is IConstructor;
         }
 
         private bool IsOverridingSuperMember(ITypeMember typeMember)
@@ -77,7 +72,7 @@ namespace XmlDocInspections.Plugin
             return typeMember is IOverridableMember overridableMember && overridableMember.HasImmediateSuperMembers();
         }
 
-        private static bool IsAccessibilityMatchingWithConfiguration(ITypeMember typeMember, XmlDocInspectionsSettings settings)
+        private static bool IsAccessibilityIncluded(ITypeMember typeMember, CachedXmlDocInspectionsSettings settings)
         {
             // Note that types are also type members.
             var isJustTypeMember = !(typeMember is ITypeElement);
@@ -85,9 +80,12 @@ namespace XmlDocInspections.Plugin
             // Note that AccessibilityDomain also take containing type's accessibility into account.
             var accessibilityDomainType = typeMember.AccessibilityDomain.DomainType;
 
-            var accessibilitySettingFlags = isJustTypeMember ? settings.TypeMemberAccessibility : settings.TypeAccessibility;
+            var accessibilitySettingFlags = isJustTypeMember ? settings.Value.TypeMemberAccessibility : settings.Value.TypeAccessibility;
 
             return AccessibilityUtility.IsAccessibilityConfigured(accessibilityDomainType, accessibilitySettingFlags);
         }
+
+        private bool IsIncludedByAttribute(ITypeMember typeMember, CachedXmlDocInspectionsSettings settings) =>
+            settings.IncludeAttributeClrTypeNames.Any(x => typeMember.HasAttributeInstance(x, inherit: true));
     }
 }

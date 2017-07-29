@@ -1,4 +1,6 @@
 ### vNext ###
+- Improved options page (added clear distinction between inclusion and exclusion rules) => this means a breaking change for "Exclude constructors" and "Exclude members which override super/base members" settings
+- Add attributes inclusion setting (configured by default to `[PublicAPI]`)
 - ReSharper 2017.2 support
 
 ### 1.8.0 ###

@@ -1,0 +1,41 @@
+﻿using JetBrains.Annotations;
+
+namespace XmlDocInspections.Sample.Highlighting
+{
+    public class ClassWithoutPublicApiAttribute
+    {
+    }
+
+    [PublicAPI]
+    public class |ClassWithPublicApiAttribute|(0)
+    {
+        [PublicAPI]
+        public void |MethodWithAttribute|(1)()
+        {
+        }
+
+        public void MethodWithoutAttribute()
+        {
+        }
+    }
+
+    public abstract class BaseClassWithPublicApiAttribute
+    {
+        [PublicAPI]
+        public abstract void |MethodWithAttributeOnlyInBase|(2)();
+    }
+
+    public class DeribedClassWithPublicApiAttribute : BaseClassWithPublicApiAttribute
+    {
+        // Prove that the attribute-rule works with inherited attributes.
+
+        public override void MethodWithAttributeOnlyInBase()
+        {
+        }
+    }
+}
+
+---------------------------------------------------------
+(0): ReSharper Warning: Missing XML Doc comment for public type
+(1): ReSharper Warning: Missing XML Doc comment for public type member
+(2): ReSharper Warning: Missing XML Doc comment for public type member

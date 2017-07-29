@@ -14,10 +14,10 @@ namespace XmlDocInspections.Plugin.Tests.Integrative
     {
         protected override string RelativeTestDataPath => "Highlighting";
 
-        protected override string GetGoldTestDataPath([NotNull] string fileName)
-        {
-            return base.GetGoldTestDataPath(Path.Combine(GetType().Name, fileName));
-        }
+        protected override string GetGoldTestDataPath([NotNull] string fileName) =>
+            base.GetGoldTestDataPath(GetRelativeGoldFilePath(fileName));
+
+        protected virtual string GetRelativeGoldFilePath(string fileName) => Path.Combine(GetType().Name, fileName);
 
         protected override bool HighlightingPredicate([NotNull] IHighlighting highlighting, [NotNull] IPsiSourceFile sourceFile)
         {
