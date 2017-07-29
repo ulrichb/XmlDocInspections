@@ -46,7 +46,7 @@ namespace XmlDocInspections.Plugin.Tests.Integrative
         [Test]
         public void TestDelegateWithoutDocs() => DoNamedTest2();
 
-        [Test]
+        [Test(Description = "Regression test for https://github.com/ulrichb/XmlDocInspections/issues/6")]
         public void TestXamlUserControl() => DoTestSolution("XamlUserControl.xaml");
     }
 }

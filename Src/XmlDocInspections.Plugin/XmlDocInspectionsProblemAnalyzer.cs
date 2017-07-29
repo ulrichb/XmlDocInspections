@@ -9,7 +9,6 @@ using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.ReSharper.Psi;
 using JetBrains.ReSharper.Psi.CSharp.Tree;
 using JetBrains.ReSharper.Psi.Tree;
-using JetBrains.ReSharper.Psi.Xaml;
 using JetBrains.Util;
 using JetBrains.Util.Logging;
 using ReSharperExtensionsShared.Debugging;
@@ -58,7 +57,7 @@ namespace XmlDocInspections.Plugin
 
         private IEnumerable<IHighlighting> HandleTypeMember(ICSharpDeclaration declaration, [CanBeNull] ITypeMember typeMember)
         {
-            if (typeMember != null && !declaration.Language.Is<XamlLanguage>())
+            if (typeMember != null)
             {
                 var settingsStore = _settingsStore.BindToContextTransient(ContextRange.Smart(typeMember.Module.ToDataContext()));
                 var settings = settingsStore.GetKey<XmlDocInspectionsSettings>(_settingsOptimization);
