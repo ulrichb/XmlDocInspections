@@ -36,30 +36,35 @@ namespace XmlDocInspections.Plugin.Settings
             _lifetime = lifetime;
             _settings = settings;
 
-            AddText("Inspections are enabled for the following code elements. " +
-                    "Note that the severity level can be configured on the \"Inspection Severity\" page.");
+            AddText("The following rules are used for warning about missing XML Doc comments. " +
+                    "Note that the severity level for the warning can be configured on the \"Inspection Severity\" page.");
 
-            AddHeader("Types");
+            AddHeader("Inclusion rules");
+
+            AddText("Types");
             AddAccessibilityBoolOption((XmlDocInspectionsSettings s) => s.TypeAccessibility);
 
-            AddHeader("Type members");
+            AddText("Type members");
             AddAccessibilityBoolOption((XmlDocInspectionsSettings s) => s.TypeMemberAccessibility);
 
-            AddBoolOption((XmlDocInspectionsSettings s) => s.RequireDocsOnConstructors, "Constructors");
+            AddText();
+            AddHeader("Exclusion rules");
+
+            AddBoolOption((XmlDocInspectionsSettings s) => s.ExcludeConstructors, "Exclude constructors");
 
             AddBoolOption(
-                (XmlDocInspectionsSettings s) => s.RequireDocsOnOverridingMember,
-                "Members which override base members (i.e. do not exclude override-members)");
+                (XmlDocInspectionsSettings s) => s.ExcludeMembersOverridingSuperMember,
+                "Exclude members which override base members");
 
             AddText("");
 
-            AddStringOption((XmlDocInspectionsSettings s) => s.ProjectExclusionRegex, "Project exclusion regex: ");
+            AddStringOption((XmlDocInspectionsSettings s) => s.ProjectExclusionRegex, "Project exclusion regex:\t");
 
-            var cacheInfoText =
-                "\nWarning: After changing these settings, " +
+            AddText(
+                "\n" +
+                "Warning: After changing these settings, " +
                 "cleaning the solution cache (see \"General\" options page) " +
-                "is necessary to update already analyzed code.";
-            AddText(cacheInfoText);
+                "is necessary to update already analyzed code.");
 
             FinishPage();
         }

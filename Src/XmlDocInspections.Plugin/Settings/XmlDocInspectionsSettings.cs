@@ -12,19 +12,19 @@ namespace XmlDocInspections.Plugin.Settings
         private const AccessibilitySettingFlags DefaultAccessibilityFlags =
             AccessibilitySettingFlags.Public | AccessibilitySettingFlags.Protected | AccessibilitySettingFlags.ProtectedOrInternal;
 
-        [SettingsEntry("Tests$", "Project exclusion regex")]
-        public string ProjectExclusionRegex;
-
         [SettingsEntry(DefaultAccessibilityFlags, "Type accessibility")]
         public AccessibilitySettingFlags TypeAccessibility;
 
         [SettingsEntry(DefaultAccessibilityFlags, "Type member accessibility")]
         public AccessibilitySettingFlags TypeMemberAccessibility;
 
-        [SettingsEntry(true, "Require XML Docs on constructors")]
-        public bool RequireDocsOnConstructors;
+        [SettingsEntry(false, "Exclude constructors")]
+        public bool ExcludeConstructors;
 
-        [SettingsEntry(true, "Require XML Docs on overriding members")]
-        public bool RequireDocsOnOverridingMember;
+        [SettingsEntry(false, "Exclude members which override super/base members")]
+        public bool ExcludeMembersOverridingSuperMember;
+
+        [SettingsEntry("Tests$", "Project exclusion regex")]
+        public string ProjectExclusionRegex;
     }
 }

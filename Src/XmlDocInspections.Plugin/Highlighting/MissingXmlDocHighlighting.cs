@@ -1,12 +1,13 @@
 ﻿using JetBrains.DocumentModel;
 using JetBrains.ReSharper.Feature.Services.Daemon;
+using JetBrains.ReSharper.Psi;
 using JetBrains.ReSharper.Psi.CSharp;
 using JetBrains.ReSharper.Psi.CSharp.Tree;
 using JetBrains.ReSharper.Psi.Tree;
+using JetBrains.Util;
 using ReSharperExtensionsShared.Highlighting;
 using XmlDocInspections.Plugin.Highlighting;
 using XmlDocInspections.Plugin.Settings;
-using static JetBrains.ReSharper.Psi.AccessibilityDomain;
 
 [assembly: RegisterConfigurableSeverity(
     MissingXmlDocHighlighting.SeverityId,
@@ -36,17 +37,17 @@ namespace XmlDocInspections.Plugin.Highlighting
             "Missing XML Doc comment for type / type member. " +
             "See the '" + XmlDocInspectionsOptionsPage.PageTitle + "' options page for further configuration settings.";
 
-        public MissingXmlDocHighlighting(bool isTypeMember, AccessibilityDomainType accessibilityDomainType, ICSharpDeclaration declaration)
-            : base(declaration, FormatMessage(isTypeMember, accessibilityDomainType))
+        public MissingXmlDocHighlighting(ICSharpTypeMemberDeclaration declaration)
+            : base(declaration, FormatMessage(declaration.DeclaredElement.NotNull()))
         {
         }
 
-        private static string FormatMessage(bool isTypeMember, AccessibilityDomainType accessibilityDomainType)
+        private static string FormatMessage(ITypeMember typeMember)
         {
             return string.Format(
                 Message,
-                AccessibilityUtility.FormatAccessibilityDomainType(accessibilityDomainType),
-                isTypeMember ? "type member" : "type");
+                AccessibilityUtility.FormatAccessibilityDomainType(typeMember.AccessibilityDomain.DomainType),
+                typeMember is ITypeElement ? "type" : "type member");
         }
 
         public override DocumentRange CalculateRange()

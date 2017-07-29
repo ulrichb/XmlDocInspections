@@ -11,7 +11,6 @@ using JetBrains.Util;
 using ReSharperExtensionsShared.ProblemAnalyzers;
 using XmlDocInspections.Plugin.Highlighting;
 using XmlDocInspections.Plugin.Settings;
-using static JetBrains.ReSharper.Psi.AccessibilityDomain;
 
 namespace XmlDocInspections.Plugin
 {
@@ -46,52 +45,49 @@ namespace XmlDocInspections.Plugin
             var settingsStore = _settingsStore.BindToContextTransient(ContextRange.Smart(typeMember.Module.ToDataContext()));
             var settings = settingsStore.GetKey<XmlDocInspectionsSettings>(_settingsOptimization);
 
-            if (IsProjectIncludedByConfiguration(declaration, settings) && IsTypeMemberRequiredByConfiguration(typeMember, settings))
+            if (!(IsProjectExcluded(declaration, settings) || IsTypeMemberExcluded(typeMember, settings)))
             {
-                // Note that AccessibilityDomain also take containing type's accessibility into account.
-                var accessibilityDomainType = typeMember.AccessibilityDomain.DomainType;
-
-                // Note that types are also type members.
-                var isJustTypeMember = !(typeMember is ITypeElement);
-
-                if (IsAccessibilityMatchingWithConfiguration(isJustTypeMember, accessibilityDomainType, settings))
+                if (IsAccessibilityMatchingWithConfiguration(typeMember, settings))
                 {
                     if (typeMember.GetXMLDoc(inherit: false) == null)
-                        yield return new MissingXmlDocHighlighting(isJustTypeMember, accessibilityDomainType, declaration);
+                        yield return new MissingXmlDocHighlighting(declaration);
                 }
             }
         }
 
-        private static bool IsProjectIncludedByConfiguration(IDeclaration declaration, XmlDocInspectionsSettings settings)
+        private static bool IsProjectExcluded(IDeclaration declaration, XmlDocInspectionsSettings settings)
         {
             var projectExclusionRegex = settings.ProjectExclusionRegex;
 
             if (string.IsNullOrWhiteSpace(projectExclusionRegex))
-                return true;
+                return false;
 
             var project = declaration.GetProject().NotNull();
-            return !Regex.IsMatch(project.Name, projectExclusionRegex);
+            return Regex.IsMatch(project.Name, projectExclusionRegex);
         }
 
-        private bool IsTypeMemberRequiredByConfiguration(ITypeMember typeMember, XmlDocInspectionsSettings settings)
+        private bool IsTypeMemberExcluded(ITypeMember typeMember, XmlDocInspectionsSettings settings)
         {
-            return (settings.RequireDocsOnOverridingMember || !IsOverridingMember(typeMember)) &&
-                   (settings.RequireDocsOnConstructors || !(typeMember is IConstructor));
+            return settings.ExcludeMembersOverridingSuperMember && IsOverridingSuperMember(typeMember) ||
+                   settings.ExcludeConstructors && typeMember is IConstructor;
         }
 
-        private bool IsOverridingMember(ITypeMember typeMember)
+        private bool IsOverridingSuperMember(ITypeMember typeMember)
         {
             return typeMember is IOverridableMember overridableMember && overridableMember.HasImmediateSuperMembers();
         }
 
-        private static bool IsAccessibilityMatchingWithConfiguration(
-            bool isJustTypeMember,
-            AccessibilityDomainType accessibility,
-            XmlDocInspectionsSettings settings)
+        private static bool IsAccessibilityMatchingWithConfiguration(ITypeMember typeMember, XmlDocInspectionsSettings settings)
         {
+            // Note that types are also type members.
+            var isJustTypeMember = !(typeMember is ITypeElement);
+
+            // Note that AccessibilityDomain also take containing type's accessibility into account.
+            var accessibilityDomainType = typeMember.AccessibilityDomain.DomainType;
+
             var accessibilitySettingFlags = isJustTypeMember ? settings.TypeMemberAccessibility : settings.TypeAccessibility;
 
-            return AccessibilityUtility.IsAccessibilityConfigured(accessibility, accessibilitySettingFlags);
+            return AccessibilityUtility.IsAccessibilityConfigured(accessibilityDomainType, accessibilitySettingFlags);
         }
     }
 }

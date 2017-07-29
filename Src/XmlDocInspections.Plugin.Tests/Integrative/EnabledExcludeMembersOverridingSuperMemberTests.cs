@@ -5,13 +5,13 @@ using XmlDocInspections.Plugin.Settings;
 namespace XmlDocInspections.Plugin.Tests.Integrative
 {
     [TestFixture]
-    public class DisabledRequireDocsOnOverridingMemberTests : MissingXmlDocHighlightingTestsBase
+    public class EnabledExcludeMembersOverridingSuperMemberTests : MissingXmlDocHighlightingTestsBase
     {
         protected override void MutateSettings(IContextBoundSettingsStore settingsStore)
         {
             settingsStore.SetValue((XmlDocInspectionsSettings s) => s.TypeAccessibility, AccessibilitySettingFlags.All);
             settingsStore.SetValue((XmlDocInspectionsSettings s) => s.TypeMemberAccessibility, AccessibilitySettingFlags.All);
-            settingsStore.SetValue((XmlDocInspectionsSettings s) => s.RequireDocsOnOverridingMember, false);
+            settingsStore.SetValue((XmlDocInspectionsSettings s) => s.ExcludeMembersOverridingSuperMember, true);
         }
 
         [Test]
