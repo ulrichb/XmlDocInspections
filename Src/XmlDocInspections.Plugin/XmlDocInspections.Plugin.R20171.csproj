@@ -30,6 +30,7 @@
   <ItemGroup>
     <Compile Include="..\..\Shared\Src\ReSharperExtensionsShared\Debugging\DebugUtility.cs" Link="ReSharperExtensionsShared\DebugUtility.cs" />
     <Compile Include="..\..\Shared\Src\ReSharperExtensionsShared\Highlighting\SimpleTreeNodeHighlightingBase.cs" Link="ReSharperExtensionsShared\SimpleTreeNodeHighlightingBase.cs" />
+    <Compile Include="..\..\Shared\Src\ReSharperExtensionsShared\ProblemAnalyzers\SimpleElementProblemAnalyzer.cs" Link="ReSharperExtensionsShared\SimpleElementProblemAnalyzer.cs" />
     <Compile Include="**\*.cs" Exclude="obj\**" />
   </ItemGroup>
 
