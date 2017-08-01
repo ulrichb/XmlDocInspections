@@ -1,5 +1,6 @@
 ﻿using JetBrains.DocumentModel;
 using JetBrains.ReSharper.Feature.Services.Daemon;
+using JetBrains.ReSharper.Psi.CSharp;
 using JetBrains.ReSharper.Psi.CSharp.Tree;
 using JetBrains.ReSharper.Psi.Tree;
 using ReSharperExtensionsShared.Highlighting;
@@ -22,7 +23,7 @@ namespace XmlDocInspections.Plugin.Highlighting
     /// </summary>
     [ConfigurableSeverityHighlighting(
         SeverityId,
-        "CSHARP",
+        CSharpLanguage.Name,
         OverlapResolve = OverlapResolveKind.NONE,
         ToolTipFormatString = Message)]
     public class MissingXmlDocHighlighting : SimpleTreeNodeHighlightingBase<ICSharpDeclaration>
