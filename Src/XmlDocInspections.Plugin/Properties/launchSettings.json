@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "ImplicitNullability.Plugin": {
+    "XmlDocInspections.Plugin": {
       "commandName": "Executable",
       "executablePath": "$(DevEnvDir)devenv.exe",
       "commandLineArgs": "/RootSuffix ExpRS$(ReSharperVersionIdentifier) /ReSharper.Internal $(SolutionDir)Src\\XmlDocInspections.Plugin.Tests\\test\\data\\XmlDocInspections.Sample.sln"
