@@ -11,7 +11,8 @@
     <TargetFramework>net45</TargetFramework>
     <RootNamespace>XmlDocInspections.Plugin</RootNamespace>
     <EnableDefaultItems>false</EnableDefaultItems>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyVersion>0.0.0.1</AssemblyVersion>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
     <DebugType>full</DebugType> <!-- necessary for OpenCover -->
@@ -44,4 +45,5 @@
     <ReSharperInstallationsDirectoryInstancePart>ExpRS$(ReSharperVersionIdentifier)</ReSharperInstallationsDirectoryInstancePart>
   </PropertyGroup>
   <Import Project="$(SolutionDir)\Shared\Build\CopyToReSharperInstallationsDirectory.targets" />
+
 </Project>
