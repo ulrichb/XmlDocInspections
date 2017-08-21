@@ -10,7 +10,6 @@
   <PropertyGroup>
     <TargetFramework>net45</TargetFramework>
     <RootNamespace>XmlDocInspections.Plugin</RootNamespace>
-    <EnableDefaultItems>false</EnableDefaultItems>
     <AssemblyVersion>0.0.0.1</AssemblyVersion>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
@@ -32,7 +31,8 @@
     <Compile Include="..\..\Shared\Src\ReSharperExtensionsShared\Debugging\DebugUtility.cs" Link="ReSharperExtensionsShared\DebugUtility.cs" />
     <Compile Include="..\..\Shared\Src\ReSharperExtensionsShared\Highlighting\SimpleTreeNodeHighlightingBase.cs" Link="ReSharperExtensionsShared\SimpleTreeNodeHighlightingBase.cs" />
     <Compile Include="..\..\Shared\Src\ReSharperExtensionsShared\ProblemAnalyzers\SimpleElementProblemAnalyzer.cs" Link="ReSharperExtensionsShared\SimpleElementProblemAnalyzer.cs" />
-    <Compile Include="**\*.cs" Exclude="obj\**" />
+    <Compile Remove="obj\**" />
+    <None Remove="obj\**" />
   </ItemGroup>
 
   <ItemGroup>

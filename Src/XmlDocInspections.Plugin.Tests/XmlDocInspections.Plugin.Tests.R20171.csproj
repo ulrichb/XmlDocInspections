@@ -10,7 +10,6 @@
   <PropertyGroup>
     <TargetFramework>net45</TargetFramework>
     <RootNamespace>XmlDocInspections.Plugin.Tests</RootNamespace>
-    <EnableDefaultItems>false</EnableDefaultItems>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
     <DebugType>full</DebugType> <!-- necessary for OpenCover -->
@@ -27,11 +26,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="**\*.cs" Exclude="obj\**;test\data\**" />
+    <Compile Remove="obj\**;test\data\**" />
+    <None Remove="obj\**;test\data\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="JetBrains.ReSharper.SDK.Tests" Version="2017.1.20170613.162448" />
+    <PackageReference Include="JetBrains.ReSharper.SDK.Tests" Version="2017.1.*" />
   </ItemGroup>
 
   <ItemGroup>
