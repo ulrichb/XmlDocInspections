@@ -24,7 +24,7 @@ $NUnitTestAssemblyPaths = @(
 )
 $NUnitFrameworkVersion = "net-4.5"
 $TestCoverageFilter = "+[XmlDocInspections*]* -[XmlDocInspections*]ReSharperExtensionsShared.*"
-$NuspecPath = "Src\XmlDocInspections.nuspec"
+$NuspecPath = "Src\XmlDocInspections.Plugin\XmlDocInspections.nuspec"
 $NugetPackProperties = @(
     "Version=$(CalcNuGetPackageVersion 20163);Configuration=$Configuration;DependencyVer=[7.0];BinDirInclude=bin\R20163"
     "Version=$(CalcNuGetPackageVersion 20171);Configuration=$Configuration;DependencyVer=[8.0];BinDirInclude=bin\R20171"
