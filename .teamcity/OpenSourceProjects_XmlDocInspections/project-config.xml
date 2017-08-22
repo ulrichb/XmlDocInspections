@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="OpenSourceProjects" uuid="a9f78ac4-a16b-4078-88e0-213c76d329a1" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
+  <name>ReSharper XML Doc Inspections</name>
+  <description>https://github.com/ulrichb/XmlDocInspections/</description>
+  <parameters>
+    <param name="BranchSpecification" value="+:refs/heads/*" />
+    <param name="teamcity.activeBuildBranch.age.hours" value="672" spec="text display='hidden' validationMode='any'" />
+  </parameters>
+  <project-extensions>
+    <extension id="PROJECT_EXT_152" type="versionedSettings">
+      <parameters>
+        <param name="buildSettings" value="ALWAYS_USE_CURRENT" />
+        <param name="credentialsStorageType" value="credentialsJSON" />
+        <param name="enabled" value="true" />
+        <param name="rootId" value="OpenSourceProjects_XmlDocInspections_HttpsGithubComUlrichbXmlDocInspections" />
+        <param name="showChanges" value="true" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_72" type="ReportTab">
+      <parameters>
+        <param name="startPage" value="coverage.zip!index.htm" />
+        <param name="title" value="Code Coverage" />
+        <param name="type" value="BuildReportTab" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+  <buildTypesOrder order="OpenSourceProjects_XmlDocInspections_BuildVersion,OpenSourceProjects_XmlDocInspections_Ci,OpenSourceProjects_XmlDocInspections_Release" />
+</project>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="ef534925-49d7-4102-b342-96302cf628ed" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
+  <name>BuildVersion</name>
+  <description />
+  <settings>
+    <options>
+      <option name="buildNumberPattern" value="%Version%.%build.counter%" />
+    </options>
+    <parameters>
+      <param name="Version" value="1.8.0" />
+    </parameters>
+    <build-runners />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

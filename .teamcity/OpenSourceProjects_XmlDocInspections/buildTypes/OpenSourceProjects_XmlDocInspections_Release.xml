@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="17a9cbb6-bf92-4f0b-af31-e0ec1bd726cb" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
+  <name>Release</name>
+  <description />
+  <settings ref="OpenSourceProjects_XmlDocInspections_Build">
+    <parameters>
+      <param name="BranchSpecification"><![CDATA[+:refs/heads/(dev)
++:refs/heads/(master)]]></param>
+      <param name="Configuration" value="Release" />
+      <param name="NugetPushKey" value="credentialsJSON:cae235e1-6527-4f72-b457-ec3cc2273c07" />
+    </parameters>
+    <build-runners order="RUNNER_1394" />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

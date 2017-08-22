@@ -1,9 +1,9 @@
 # XML Doc Inspections ReSharper Extension
 
-[![Build status](https://ci.appveyor.com/api/projects/status/6n2wy4xt1ctq36wq/branch/master?svg=true)](https://ci.appveyor.com/project/ulrichb/xmldocinspections/branch/master)
+[![Build status](https://teamcity.jetbrains.com/app/rest/builds/buildType:(id:OpenSourceProjects_XmlDocInspections_Ci),branch:master,running:any/statusIcon.svg)](https://teamcity.jetbrains.com/viewType.html?buildTypeId=OpenSourceProjects_XmlDocInspections_Ci)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ulrichb/XmlDocInspections?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-<a href="https://ci.appveyor.com/api/projects/ulrichb/xmldocinspections/artifacts/Build/Output/TestCoverage.zip?branch=master"><img src="https://dl.dropbox.com/s/8p9d03ycoy4nf06/master-linecoverage.svg" alt="Line Coverage" title="Line Coverage"></a>
-<a href="https://ci.appveyor.com/api/projects/ulrichb/xmldocinspections/artifacts/Build/Output/TestCoverage.zip?branch=master"><img src="https://dl.dropbox.com/s/ywhaxs30rto3ezm/master-branchcoverage.svg" alt="Branch Coverage" title="Branch Coverage"></a>
+<a href="https://teamcity.jetbrains.com/viewType.html?buildTypeId=OpenSourceProjects_XmlDocInspections_Ci&branch=master"><img src="https://dl.dropbox.com/s/8p9d03ycoy4nf06/master-linecoverage.svg" alt="Line Coverage" title="Line Coverage"></a>
+<a href="https://teamcity.jetbrains.com/viewType.html?buildTypeId=OpenSourceProjects_XmlDocInspections_Ci&branch=master"><img src="https://dl.dropbox.com/s/ywhaxs30rto3ezm/master-branchcoverage.svg" alt="Branch Coverage" title="Branch Coverage"></a>
 
 [ReSharper Gallery Page](https://resharper-plugins.jetbrains.com/packages/ReSharper.XmlDocInspections/)
 
