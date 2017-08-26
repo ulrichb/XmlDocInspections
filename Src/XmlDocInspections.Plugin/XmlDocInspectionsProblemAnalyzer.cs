@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text.RegularExpressions;
 using JetBrains.Application.Settings;
@@ -9,8 +8,6 @@ using JetBrains.ReSharper.Psi;
 using JetBrains.ReSharper.Psi.CSharp.Tree;
 using JetBrains.ReSharper.Psi.Tree;
 using JetBrains.Util;
-using JetBrains.Util.Logging;
-using ReSharperExtensionsShared.Debugging;
 using ReSharperExtensionsShared.ProblemAnalyzers;
 using XmlDocInspections.Plugin.Highlighting;
 using XmlDocInspections.Plugin.Settings;
@@ -24,14 +21,11 @@ namespace XmlDocInspections.Plugin
     [ElementProblemAnalyzer(typeof(ICSharpTypeMemberDeclaration), HighlightingTypes = new[] { typeof(MissingXmlDocHighlighting) })]
     public class XmlDocInspectionsProblemAnalyzer : SimpleElementProblemAnalyzer<ICSharpTypeMemberDeclaration, ITypeMember>
     {
-        private static readonly ILogger Log = Logger.GetLogger(typeof(XmlDocInspectionsProblemAnalyzer));
-
         private readonly ISettingsStore _settingsStore;
         private readonly ISettingsOptimization _settingsOptimization;
 
         public XmlDocInspectionsProblemAnalyzer(ISettingsStore settingsStore, ISettingsOptimization settingsOptimization)
         {
-            Log.Verbose(".ctor");
             _settingsStore = settingsStore;
             _settingsOptimization = settingsOptimization;
         }
@@ -42,20 +36,9 @@ namespace XmlDocInspections.Plugin
             ElementProblemAnalyzerData data,
             IHighlightingConsumer consumer)
         {
-#if DEBUG
-            var stopwatch = Stopwatch.StartNew();
-#endif
-
             var highlightingResults = HandleTypeMember(declaration, typeMember).ToList();
 
             highlightingResults.ForEach(x => consumer.AddHighlighting(x));
-
-#if DEBUG
-            var message = DebugUtility.FormatIncludingContext(typeMember) + " => ["
-                          + string.Join(", ", highlightingResults.Select(x => x.GetType().Name)) + "]";
-
-            Log.Verbose(DebugUtility.FormatWithElapsed(message, stopwatch));
-#endif
         }
 
         private IEnumerable<IHighlighting> HandleTypeMember(ICSharpTypeMemberDeclaration declaration, ITypeMember typeMember)
