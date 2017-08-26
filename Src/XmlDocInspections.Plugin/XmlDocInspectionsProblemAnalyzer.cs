@@ -98,9 +98,7 @@ namespace XmlDocInspections.Plugin
 
         private bool IsOverridingMember(ITypeMember typeMember)
         {
-            var overridableMember = typeMember as IOverridableMember;
-
-            return overridableMember != null && overridableMember.HasImmediateSuperMembers();
+            return typeMember is IOverridableMember overridableMember && overridableMember.HasImmediateSuperMembers();
         }
 
         private static bool IsAccessibilityMatchingWithConfiguration(
