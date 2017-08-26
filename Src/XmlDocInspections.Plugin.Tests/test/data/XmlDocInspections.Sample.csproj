@@ -1,115 +1,30 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4AF4FFEC-2FAC-426A-B8B2-06F4D9F52392}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>XmlDocInspections.Sample</RootNamespace>
-    <AssemblyName>XmlDocInspections.Sample</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <NuGetPackageImportStamp>b8dcf047</NuGetPackageImportStamp>
+    <TargetFramework>net46</TargetFramework>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <NoWarn>0067,0169,0649</NoWarn>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>0067;0169;0649</NoWarn>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <NoWarn>0067,0169,0649</NoWarn>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>0067;0169;0649</NoWarn>
   </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>
-    </AssemblyOriginatorKeyFile>
-  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="QuickFixes/**/*.cs" />
+    <None Include="QuickFixes/**/*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="11.*" />
+  </ItemGroup>
+
   <ItemGroup>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Xaml" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Highlighting\DelegateWithoutDocs.cs" />
-    <Compile Include="Highlighting\Inheritance.cs" />
-    <None Include="Highlighting\DisabledRequireDocsOnConstructorsTests\ClassesAndMembersWithoutDocs.cs.gold" />
-    <None Include="Highlighting\ProjectExclusionWithMatchingRegexTests\ClassesAndMembersWithoutDocs.cs.gold" />
-    <None Include="Highlighting\ProjectExclusionWithWhitespaceTests\ClassesAndMembersWithoutDocs.cs.gold" />
-    <None Include="QuickFixes\AddDocCommentFix\Class.cs" />
-    <Compile Include="Highlighting\StructWithoutDocs.cs" />
-    <Compile Include="Highlighting\InterfacesWithoutDocs.cs" />
-    <Compile Include="Highlighting\InternalClassWithoutDocs.cs" />
-    <None Include="QuickFixes\AddDocCommentFix\MethodWithAdditionalElementsForDocTemplate.cs" />
-    <None Include="QuickFixes\AddDocCommentFix\MethodWithAdditionalElementsForDocTemplate.cs.gold" />
-    <None Include="QuickFixes\AddDocCommentFix\SimpleMethod.cs" />
-    <None Include="QuickFixes\AddDocCommentFix\Field.cs" />
-    <None Include="QuickFixes\AddDocCommentFix\Property.cs" />
-    <Compile Include="Utilities\IExplicitlyImplementedInterface.cs" />
-    <Compile Include="Highlighting\ClassesAndMembersWithoutDocs.cs" />
-    <Compile Include="Highlighting\ClassesAndMembersWithDocs.cs" />
-    <Compile Include="Highlighting\PartialClassWithDocsInOneFile_B.cs" />
-    <Compile Include="Highlighting\PartialClassWithDocsInOneFile_A.cs" />
-    <Compile Include="Highlighting\PartialClassWithoutDocs_B.cs" />
-    <Compile Include="Highlighting\PartialClassWithoutDocs_A.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="QuickFixes\AddDocCommentFix\Class.cs.gold" />
-    <None Include="QuickFixes\AddDocCommentFix\SimpleMethod.cs.gold" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Highlighting\BasicTests\ClassesAndMembersWithDocs.cs.gold" />
-    <None Include="Highlighting\BasicTests\ClassesAndMembersWithoutDocs.cs.gold" />
-    <None Include="Highlighting\BasicTests\DelegateWithoutDocs.cs.gold" />
-    <None Include="Highlighting\BasicTests\DerivedClassWithoutDocs.cs.gold" />
-    <None Include="Highlighting\BasicTests\Inheritance.cs.gold" />
-    <None Include="Highlighting\BasicTests\InterfacesWithoutDocs.cs.gold" />
-    <None Include="Highlighting\BasicTests\InternalClassWithoutDocs.cs.gold" />
-    <None Include="Highlighting\BasicTests\PartialClassWithDocsInOneFile_A.cs.gold" />
-    <None Include="Highlighting\BasicTests\PartialClassWithDocsInOneFile_B.cs.gold" />
-    <None Include="Highlighting\BasicTests\PartialClassWithoutDocs_A.cs.gold" />
-    <None Include="Highlighting\BasicTests\PartialClassWithoutDocs_B.cs.gold" />
-    <None Include="Highlighting\BasicTests\StructWithoutDocs.cs.gold" />
-    <None Include="Highlighting\BasicTests\XamlUserControl.xaml.gold" />
-    <None Include="Highlighting\DefaultSettingsTests\ClassesAndMembersWithoutDocs.cs.gold" />
-    <None Include="Highlighting\DisabledRequireDocsOnOverridingMemberTests\Inheritance.cs.gold" />
-    <None Include="nuget.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="Highlighting\XamlUserControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
 </Project>
