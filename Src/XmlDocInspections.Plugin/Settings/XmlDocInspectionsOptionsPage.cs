@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 using JetBrains.Application.Settings;
 using JetBrains.DataFlow;
 using JetBrains.ReSharper.Feature.Services.Daemon.OptionPages;
-#if RESHARPER20163 || RESHARPER20171
+#if RESHARPER20171
 using JetBrains.UI.Options;
 using JetBrains.UI.Options.OptionsDialog2.SimpleOptions;
 using JetBrains.Ide.Resources;
