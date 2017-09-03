@@ -9,7 +9,6 @@ using JetBrains.UI.Options;
 using JetBrains.UI.Options.OptionsDialog2.SimpleOptions;
 using JetBrains.Ide.Resources;
 #else
-using JetBrains.Application.Resources;
 using JetBrains.Application.UI.Options;
 using JetBrains.Application.UI.Options.OptionsDialog;
 
@@ -21,7 +20,13 @@ namespace XmlDocInspections.Plugin.Settings
     /// An options page for XML Doc inspections.
     /// </summary>
     [ExcludeFromCodeCoverage /* options page user interface is tested manually */]
-    [OptionsPage(CPageId, PageTitle, typeof(IdeThemedIcons.XmlDocument), ParentId = CodeInspectionPage.PID)]
+    [OptionsPage(CPageId, PageTitle,
+#if RESHARPER20171
+        typeof(IdeThemedIcons.XmlDocument),
+#else
+        typeof(XmlDocInspectionsIcons.Xml16),
+#endif
+        ParentId = CodeInspectionPage.PID)]
     public class XmlDocInspectionsOptionsPage : SimpleOptionsPage
     {
         private readonly Lifetime _lifetime;
