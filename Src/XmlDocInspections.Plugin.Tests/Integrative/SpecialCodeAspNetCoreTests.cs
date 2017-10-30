@@ -1,5 +1,4 @@
-﻿#if !RS20171
-using JetBrains.Application.Settings;
+﻿using JetBrains.Application.Settings;
 using JetBrains.ReSharper.TestFramework;
 using JetBrains.ReSharper.TestFramework.Web;
 using NUnit.Framework;
@@ -20,4 +19,3 @@ namespace XmlDocInspections.Plugin.Tests.Integrative
         public void InjectDirective() => DoNamedTest();
     }
 }
-#endif

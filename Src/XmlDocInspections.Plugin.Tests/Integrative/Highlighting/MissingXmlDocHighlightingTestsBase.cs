@@ -22,7 +22,7 @@ namespace XmlDocInspections.Plugin.Tests.Integrative.Highlighting
             });
         }
 
-        protected abstract void MutateSettings([NotNull] IContextBoundSettingsStore settingsStore);
+        protected abstract void MutateSettings(IContextBoundSettingsStore settingsStore);
 
         protected static void EnableAllXmlDocOptions(IContextBoundSettingsStore settingsStore)
         {

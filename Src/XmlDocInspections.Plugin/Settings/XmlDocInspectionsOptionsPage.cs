@@ -3,18 +3,11 @@ using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.Linq.Expressions;
 using JetBrains.Application.Settings;
-using JetBrains.DataFlow;
-using JetBrains.ReSharper.Feature.Services.Daemon.OptionPages;
 using JetBrains.UI.RichText;
-#if RS20171
-using JetBrains.UI.Options;
-using JetBrains.UI.Options.OptionsDialog2.SimpleOptions;
-using JetBrains.Ide.Resources;
-#else
 using JetBrains.Application.UI.Options;
 using JetBrains.Application.UI.Options.OptionsDialog;
-
-#endif
+using JetBrains.DataFlow;
+using JetBrains.ReSharper.Feature.Services.Daemon.OptionPages;
 
 namespace XmlDocInspections.Plugin.Settings
 {
@@ -22,13 +15,7 @@ namespace XmlDocInspections.Plugin.Settings
     /// An options page for XML Doc inspections.
     /// </summary>
     [ExcludeFromCodeCoverage /* options page user interface is tested manually */]
-    [OptionsPage(CPageId, PageTitle,
-#if RS20171
-        typeof(IdeThemedIcons.XmlDocument),
-#else
-        typeof(XmlDocInspectionsIcons.Xml16),
-#endif
-        ParentId = CodeInspectionPage.PID)]
+    [OptionsPage(CPageId, PageTitle, typeof(XmlDocInspectionsIcons.Xml16), ParentId = CodeInspectionPage.PID)]
     public class XmlDocInspectionsOptionsPage : SimpleOptionsPage
     {
         public const string PageTitle = "XML Doc Inspections";

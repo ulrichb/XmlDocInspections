@@ -13,9 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDocInspections.Plugin.RS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDocInspections.Plugin.Tests.RS20172", "Src\XmlDocInspections.Plugin.Tests\XmlDocInspections.Plugin.Tests.RS20172.csproj", "{24C5E916-1DF6-416A-9793-63DB29809A65}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDocInspections.Plugin.RS20171", "Src\XmlDocInspections.Plugin\XmlDocInspections.Plugin.RS20171.csproj", "{B911381A-0D32-4D8C-A47A-D1E684FD7589}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDocInspections.Plugin.RS20173", "Src\XmlDocInspections.Plugin\XmlDocInspections.Plugin.RS20173.csproj", "{B911381A-0D32-4D8C-A47A-D1E684FD7589}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDocInspections.Plugin.Tests.RS20171", "Src\XmlDocInspections.Plugin.Tests\XmlDocInspections.Plugin.Tests.RS20171.csproj", "{E3DD348A-4F6B-4660-9D3F-18BFC5F2FDB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDocInspections.Plugin.Tests.RS20173", "Src\XmlDocInspections.Plugin.Tests\XmlDocInspections.Plugin.Tests.RS20173.csproj", "{E3DD348A-4F6B-4660-9D3F-18BFC5F2FDB1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDocInspections.Plugin.RD20172", "Src\XmlDocInspections.Plugin\XmlDocInspections.Plugin.RD20172.csproj", "{68FD44BA-7BD7-432C-B70F-8EA851A4FD06}"
 EndProject

@@ -1,6 +1,5 @@
 ﻿using System.Linq;
 using System.Text.RegularExpressions;
-using JetBrains.ReSharper.Daemon.Stages.Dispatcher;
 using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.ReSharper.Psi;
 using JetBrains.ReSharper.Psi.CSharp.Tree;
@@ -8,6 +7,10 @@ using JetBrains.ReSharper.Psi.Tree;
 using JetBrains.Util;
 using ReSharperExtensionsShared.ProblemAnalyzers;
 using XmlDocInspections.Plugin.Highlighting;
+
+#if RS20172 || RD20172
+using JetBrains.ReSharper.Daemon.Stages.Dispatcher;
+#endif
 
 namespace XmlDocInspections.Plugin
 {
