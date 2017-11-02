@@ -1,0 +1,3 @@
+<Project>
+  <!-- reset to default (override the outer "Tests" Directory.Build.props) -->
+</Project>
