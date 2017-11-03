@@ -1,0 +1,21 @@
+<idea-plugin url="https://github.com/ulrichb/XmlDocInspections#readme">
+  <id>XmlDocInspections</id>
+  <name>XML Doc Inspections</name>
+  <description><![CDATA[
+<p>Configurable warnings for missing XML Doc comments</p>
+
+<p>Tags: rider c# xml doc xmldoc inspection warning</p>
+]]></description>
+  <change-notes>REPLACE ME</change-notes>
+  <vendor>ulrichb</vendor>
+
+  <depends>com.intellij.modules.rider</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <applicationConfigurable
+      parentId="CodeInspectionSettingsId"
+      instance="com.jetbrains.rider.settings.XmlDocInspectionsOptionsPage"
+      id="preferences.XmlDocInspectionsOptions"/>
+  </extensions>
+
+</idea-plugin>

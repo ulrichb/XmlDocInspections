@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net451</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+    <DebugType>full</DebugType> <!-- necessary for OpenCover -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JetBrains.Rider.SDK.Tests" Version="2017.2.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\XmlDocInspections.Plugin\XmlDocInspections.Plugin.$(ReSharperVersionIdentifier).csproj" />
+  </ItemGroup>
+
+</Project>
