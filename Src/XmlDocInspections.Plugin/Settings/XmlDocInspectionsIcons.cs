@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Diagnostics.CodeAnalysis;
+
 #if !RESHARPER20171
 
 ////[assembly: global::System.Windows.Markup.XmlnsDefinitionAttribute("urn:shemas-jetbrains-com:ui-application-icons-xxx-themed-icons", "JetBrains.UI.ThemedIcons")]
@@ -18,6 +20,7 @@ namespace XmlDocInspections.Plugin.Settings
     {
         #region Xml16
         [global::JetBrains.Application.Icons.CompiledIconsCs.CompiledIconCsAttribute()]
+        [ExcludeFromCodeCoverage]
         public sealed class Xml16 : global::JetBrains.Application.Icons.CompiledIconsCs.CompiledIconCsClass
         {
 
