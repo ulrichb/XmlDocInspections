@@ -10,7 +10,7 @@
 
 using System.Diagnostics.CodeAnalysis;
 
-#if !RESHARPER20171
+#if !RS20171
 
 ////[assembly: global::System.Windows.Markup.XmlnsDefinitionAttribute("urn:shemas-jetbrains-com:ui-application-icons-xxx-themed-icons", "JetBrains.UI.ThemedIcons")]
 

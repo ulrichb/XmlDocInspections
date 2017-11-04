@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\XmlDocInspections.Plugin\XmlDocInspections.Plugin.R$(ReSharperVersionIdentifier).csproj" />
+    <ProjectReference Include="..\XmlDocInspections.Plugin\XmlDocInspections.Plugin.$(ReSharperVersionIdentifier).csproj" />
   </ItemGroup>
 
 </Project>

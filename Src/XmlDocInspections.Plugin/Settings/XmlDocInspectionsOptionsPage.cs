@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 using JetBrains.Application.Settings;
 using JetBrains.DataFlow;
 using JetBrains.ReSharper.Feature.Services.Daemon.OptionPages;
-#if RESHARPER20171
+#if RS20171
 using JetBrains.UI.Options;
 using JetBrains.UI.Options.OptionsDialog2.SimpleOptions;
 using JetBrains.Ide.Resources;
@@ -21,7 +21,7 @@ namespace XmlDocInspections.Plugin.Settings
     /// </summary>
     [ExcludeFromCodeCoverage /* options page user interface is tested manually */]
     [OptionsPage(CPageId, PageTitle,
-#if RESHARPER20171
+#if RS20171
         typeof(IdeThemedIcons.XmlDocument),
 #else
         typeof(XmlDocInspectionsIcons.Xml16),
