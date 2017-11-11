@@ -1,5 +1,7 @@
 ﻿using JetBrains.Annotations;
 
+// ReSharper disable UnusedMember.Global
+
 namespace XmlDocInspections.Sample.Highlighting
 {
     public class ClassWithoutPublicApiAttribute

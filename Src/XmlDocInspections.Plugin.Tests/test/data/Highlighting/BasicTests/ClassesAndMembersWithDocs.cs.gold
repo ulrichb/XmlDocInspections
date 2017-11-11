@@ -1,17 +1,23 @@
 ﻿using System;
-using XmlDocInspections.Sample.Utilities;
 
+#pragma warning disable 67
+#pragma warning disable 169
+#pragma warning disable 649
+
+// ReSharper disable UnusedMember.Global
 // ReSharper disable UnusedMember.Local
 // ReSharper disable InconsistentNaming
 // ReSharper disable EventNeverSubscribedTo.Local
+// ReSharper disable UnusedParameter.Global
 // ReSharper disable UnusedParameter.Local
+// ReSharper disable EventNeverSubscribedTo.Global
 
 namespace XmlDocInspections.Sample.Highlighting
 {
     /// <summary>
     /// Some doc.
     /// </summary>
-    public class PublicClassWithDocs : IExplicitlyImplementedInterface
+    public class PublicClassWithDocs : IToBeExplicitlyImplementedInterface
     {
         /// <summary>
         /// Some doc.
@@ -102,7 +108,7 @@ namespace XmlDocInspections.Sample.Highlighting
         /// <summary>
         /// Some doc.
         /// </summary>
-        void IExplicitlyImplementedInterface.Method()
+        void IToBeExplicitlyImplementedInterface.Method()
         {
         }
 

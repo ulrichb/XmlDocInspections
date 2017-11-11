@@ -1,3 +1,5 @@
+// ReSharper disable UnusedMember.Global
+
 namespace XmlDocInspections.Sample.Highlighting
 {
     public delegate void PublicDelegateWithoutDocs();

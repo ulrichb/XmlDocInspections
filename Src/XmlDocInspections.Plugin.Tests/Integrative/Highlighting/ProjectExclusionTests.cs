@@ -2,16 +2,16 @@
 using NUnit.Framework;
 using XmlDocInspections.Plugin.Settings;
 
-namespace XmlDocInspections.Plugin.Tests.Integrative
+namespace XmlDocInspections.Plugin.Tests.Integrative.Highlighting
 {
-    public abstract class ProjectExclusionTests : MissingXmlDocHighlightingTestsBase
+    public abstract class ProjectExclusionTests : MissingXmlDocHighlightingDirectoryTestsBase
     {
         public class ProjectExclusionWithMatchingRegexTests : ProjectExclusionTests
         {
             protected override string ProjectExclusionRegexValue => "^Excl.*ject$";
 
             [Test]
-            public void TestClassesAndMembersWithoutDocs() => DoNamedTest2();
+            public void TestClassesAndMembersWithoutDocs() => DoNamedTest2("IToBeExplicitlyImplementedInterface.cs");
         }
 
         public class ProjectExclusionWithWhitespaceTests : ProjectExclusionTests
@@ -19,7 +19,7 @@ namespace XmlDocInspections.Plugin.Tests.Integrative
             protected override string ProjectExclusionRegexValue => " \t ";
 
             [Test]
-            public void TestClassesAndMembersWithoutDocs() => DoNamedTest2();
+            public void TestClassesAndMembersWithoutDocs() => DoNamedTest2("IToBeExplicitlyImplementedInterface.cs");
         }
 
         protected override string ProjectName => "ExcludedProject";

@@ -1,6 +1,10 @@
 ﻿using System;
-using XmlDocInspections.Sample.Utilities;
 
+#pragma warning disable 67
+#pragma warning disable 169
+#pragma warning disable 649
+
+// ReSharper disable UnusedMember.Global
 // ReSharper disable UnusedMember.Local
 // ReSharper disable InconsistentNaming
 // ReSharper disable EventNeverSubscribedTo.Local
@@ -8,7 +12,7 @@ using XmlDocInspections.Sample.Utilities;
 
 namespace XmlDocInspections.Sample.Highlighting
 {
-    public class PublicClassWithoutDocs : IExplicitlyImplementedInterface
+    public class PublicClassWithoutDocs : IToBeExplicitlyImplementedInterface
     {
         public string PublicField;
 
@@ -48,7 +52,7 @@ namespace XmlDocInspections.Sample.Highlighting
         {
         }
 
-        void IExplicitlyImplementedInterface.Method()
+        void IToBeExplicitlyImplementedInterface.Method()
         {
         }
 

@@ -5,7 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
+
+    <!--Counter sample warning (namespace alias is unnecessary):-->
+    <Grid |xmlns:d2="http://schemas.microsoft.com/expression/blend/2008"|(0)>
+
         <Button x:Name="SomeButton" Content="SomeButton" />
     </Grid>
 </UserControl>
+
+---------------------------------------------------------
+(0): ReSharper Dead Code: Namespace alias 'd2' is not required by code and can be safely removed

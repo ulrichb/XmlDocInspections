@@ -2,15 +2,14 @@
 using NUnit.Framework;
 using XmlDocInspections.Plugin.Settings;
 
-namespace XmlDocInspections.Plugin.Tests.Integrative
+namespace XmlDocInspections.Plugin.Tests.Integrative.Highlighting
 {
     [TestFixture]
-    public class EnabledExcludeMembersOverridingSuperMemberTests : MissingXmlDocHighlightingTestsBase
+    public class EnabledExcludeMembersOverridingSuperMemberTests : MissingXmlDocHighlightingDirectoryTestsBase
     {
         protected override void MutateSettings(IContextBoundSettingsStore settingsStore)
         {
-            settingsStore.SetValue((XmlDocInspectionsSettings s) => s.TypeAccessibility, AccessibilitySettingFlags.All);
-            settingsStore.SetValue((XmlDocInspectionsSettings s) => s.TypeMemberAccessibility, AccessibilitySettingFlags.All);
+            EnableAllXmlDocOptions(settingsStore);
             settingsStore.SetValue((XmlDocInspectionsSettings s) => s.ExcludeMembersOverridingSuperMember, true);
         }
 

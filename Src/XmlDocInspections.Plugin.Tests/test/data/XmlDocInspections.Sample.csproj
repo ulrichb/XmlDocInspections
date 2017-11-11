@@ -4,14 +4,6 @@
     <TargetFramework>net46</TargetFramework>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <NoWarn>0067;0169;0649</NoWarn>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <NoWarn>0067;0169;0649</NoWarn>
-  </PropertyGroup>
-
   <ItemGroup>
     <Compile Remove="QuickFixes/**/*.cs" />
     <None Include="QuickFixes/**/*.cs" />

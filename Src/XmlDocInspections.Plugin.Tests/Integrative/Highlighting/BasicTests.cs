@@ -1,23 +1,18 @@
 ﻿using JetBrains.Application.Settings;
 using NUnit.Framework;
-using XmlDocInspections.Plugin.Settings;
 
-namespace XmlDocInspections.Plugin.Tests.Integrative
+namespace XmlDocInspections.Plugin.Tests.Integrative.Highlighting
 {
     [TestFixture]
-    public class BasicTests : MissingXmlDocHighlightingTestsBase
+    public class BasicTests : MissingXmlDocHighlightingDirectoryTestsBase
     {
-        protected override void MutateSettings(IContextBoundSettingsStore settingsStore)
-        {
-            settingsStore.SetValue((XmlDocInspectionsSettings s) => s.TypeAccessibility, AccessibilitySettingFlags.All);
-            settingsStore.SetValue((XmlDocInspectionsSettings s) => s.TypeMemberAccessibility, AccessibilitySettingFlags.All);
-        }
+        protected override void MutateSettings(IContextBoundSettingsStore settingsStore) => EnableAllXmlDocOptions(settingsStore);
 
         [Test]
-        public void TestClassesAndMembersWithDocs() => DoNamedTest2();
+        public void TestClassesAndMembersWithDocs() => DoNamedTest2("IToBeExplicitlyImplementedInterface.cs");
 
         [Test]
-        public void TestClassesAndMembersWithoutDocs() => DoNamedTest2();
+        public void TestClassesAndMembersWithoutDocs() => DoNamedTest2("IToBeExplicitlyImplementedInterface.cs");
 
         [Test]
         public void TestInternalClassWithoutDocs() => DoNamedTest2();
@@ -45,8 +40,5 @@ namespace XmlDocInspections.Plugin.Tests.Integrative
 
         [Test]
         public void TestDelegateWithoutDocs() => DoNamedTest2();
-
-        [Test(Description = "Regression test for https://github.com/ulrichb/XmlDocInspections/issues/6")]
-        public void TestXamlUserControl() => DoTestSolution("XamlUserControl.xaml");
     }
 }

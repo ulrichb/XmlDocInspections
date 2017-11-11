@@ -3,10 +3,10 @@ using JetBrains.Application.Settings;
 using NUnit.Framework;
 using XmlDocInspections.Plugin.Settings;
 
-namespace XmlDocInspections.Plugin.Tests.Integrative
+namespace XmlDocInspections.Plugin.Tests.Integrative.Highlighting
 {
     [TestFixture]
-    public class AttributeInclusionTests : MissingXmlDocHighlightingTestsBase
+    public class AttributeInclusionTests : MissingXmlDocHighlightingDirectoryTestsBase
     {
         protected override void MutateSettings(IContextBoundSettingsStore settingsStore)
         {
