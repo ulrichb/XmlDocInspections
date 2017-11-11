@@ -14,6 +14,6 @@ namespace XmlDocInspections.Plugin.Tests.Integrative.Highlighting
         }
 
         [Test]
-        public void TestInheritance() => DoNamedTest2();
+        public void Inheritance() => DoNamedTest();
     }
 }

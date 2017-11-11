@@ -21,7 +21,7 @@ namespace XmlDocInspections.Plugin.Tests.Integrative.Highlighting
         }
 
         [Test]
-        public void TestAttributeInclusion() => DoNamedTest2();
+        public void AttributeInclusion() => DoNamedTest();
 
         public class WithExcludeMembersOverridingSuperMember : AttributeInclusionTests
         {

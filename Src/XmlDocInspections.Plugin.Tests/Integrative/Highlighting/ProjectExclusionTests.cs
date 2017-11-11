@@ -11,7 +11,7 @@ namespace XmlDocInspections.Plugin.Tests.Integrative.Highlighting
             protected override string ProjectExclusionRegexValue => "^Excl.*ject$";
 
             [Test]
-            public void TestClassesAndMembersWithoutDocs() => DoNamedTest2("IToBeExplicitlyImplementedInterface.cs");
+            public void ClassesAndMembersWithoutDocs() => DoNamedTest("IToBeExplicitlyImplementedInterface.cs");
         }
 
         public class ProjectExclusionWithWhitespaceTests : ProjectExclusionTests
@@ -19,7 +19,7 @@ namespace XmlDocInspections.Plugin.Tests.Integrative.Highlighting
             protected override string ProjectExclusionRegexValue => " \t ";
 
             [Test]
-            public void TestClassesAndMembersWithoutDocs() => DoNamedTest2("IToBeExplicitlyImplementedInterface.cs");
+            public void ClassesAndMembersWithoutDocs() => DoNamedTest("IToBeExplicitlyImplementedInterface.cs");
         }
 
         protected override string ProjectName => "ExcludedProject";

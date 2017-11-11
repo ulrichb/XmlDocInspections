@@ -14,6 +14,6 @@ namespace XmlDocInspections.Plugin.Tests.Integrative.Highlighting
         }
 
         [Test]
-        public void TestClassesAndMembersWithoutDocs() => DoNamedTest2("IToBeExplicitlyImplementedInterface.cs");
+        public void ClassesAndMembersWithoutDocs() => DoNamedTest("IToBeExplicitlyImplementedInterface.cs");
     }
 }

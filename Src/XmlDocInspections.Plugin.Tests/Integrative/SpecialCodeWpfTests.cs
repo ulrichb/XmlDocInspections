@@ -14,6 +14,6 @@ namespace XmlDocInspections.Plugin.Tests.Integrative
         protected override void MutateSettings(IContextBoundSettingsStore settingsStore) => EnableAllXmlDocOptions(settingsStore);
 
         [Test(Description = "Regression test for https://github.com/ulrichb/XmlDocInspections/issues/6")]
-        public void TestXamlUserControl() => DoNamedTest2();
+        public void XamlUserControl() => DoNamedTest();
     }
 }

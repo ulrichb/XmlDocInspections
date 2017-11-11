@@ -9,36 +9,36 @@ namespace XmlDocInspections.Plugin.Tests.Integrative.Highlighting
         protected override void MutateSettings(IContextBoundSettingsStore settingsStore) => EnableAllXmlDocOptions(settingsStore);
 
         [Test]
-        public void TestClassesAndMembersWithDocs() => DoNamedTest2("IToBeExplicitlyImplementedInterface.cs");
+        public void ClassesAndMembersWithDocs() => DoNamedTest("IToBeExplicitlyImplementedInterface.cs");
 
         [Test]
-        public void TestClassesAndMembersWithoutDocs() => DoNamedTest2("IToBeExplicitlyImplementedInterface.cs");
+        public void ClassesAndMembersWithoutDocs() => DoNamedTest("IToBeExplicitlyImplementedInterface.cs");
 
         [Test]
-        public void TestInternalClassWithoutDocs() => DoNamedTest2();
+        public void InternalClassWithoutDocs() => DoNamedTest();
 
         [Test]
-        public void TestInheritance() => DoNamedTest2();
+        public void Inheritance() => DoNamedTest();
 
         [Test]
-        public void TestInterfacesWithoutDocs() => DoNamedTest2();
+        public void InterfacesWithoutDocs() => DoNamedTest();
 
         [Test]
-        public void TestPartialClassWithDocsInOneFile_A() => DoNamedTest2("PartialClassWithDocsInOneFile_B.cs");
+        public void PartialClassWithDocsInOneFile_A() => DoNamedTest("PartialClassWithDocsInOneFile_B.cs");
 
         [Test]
-        public void TestPartialClassWithDocsInOneFile_B() => DoNamedTest2("PartialClassWithDocsInOneFile_A.cs");
+        public void PartialClassWithDocsInOneFile_B() => DoNamedTest("PartialClassWithDocsInOneFile_A.cs");
 
         [Test]
-        public void TestPartialClassWithoutDocs_A() => DoNamedTest2("PartialClassWithoutDocs_B.cs");
+        public void PartialClassWithoutDocs_A() => DoNamedTest("PartialClassWithoutDocs_B.cs");
 
         [Test]
-        public void TestPartialClassWithoutDocs_B() => DoNamedTest2("PartialClassWithoutDocs_A.cs");
+        public void PartialClassWithoutDocs_B() => DoNamedTest("PartialClassWithoutDocs_A.cs");
 
         [Test]
-        public void TestStructWithoutDocs() => DoNamedTest2();
+        public void StructWithoutDocs() => DoNamedTest();
 
         [Test]
-        public void TestDelegateWithoutDocs() => DoNamedTest2();
+        public void DelegateWithoutDocs() => DoNamedTest();
     }
 }
