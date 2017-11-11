@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocInspections.Sample", "XmlDocInspections.Sample.csproj", "{4AF4FFEC-2FAC-426A-B8B2-06F4D9F52392}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDocInspections.Sample", "XmlDocInspections.Sample.csproj", "{4AF4FFEC-2FAC-426A-B8B2-06F4D9F52392}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDocInspections.Sample.Special", "Special\AspNetCore\XmlDocInspections.Sample.AspNetCore.csproj", "{E02B4116-2C7A-4523-9946-3E7B1C79666D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{4AF4FFEC-2FAC-426A-B8B2-06F4D9F52392}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AF4FFEC-2FAC-426A-B8B2-06F4D9F52392}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AF4FFEC-2FAC-426A-B8B2-06F4D9F52392}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E02B4116-2C7A-4523-9946-3E7B1C79666D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E02B4116-2C7A-4523-9946-3E7B1C79666D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E02B4116-2C7A-4523-9946-3E7B1C79666D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E02B4116-2C7A-4523-9946-3E7B1C79666D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA056F45-3937-4355-A8F8-CD3BD5AC11E1}
 	EndGlobalSection
 EndGlobal

@@ -10,6 +10,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Special/AspNetCore/**" />
+    <None Remove="Special/AspNetCore/**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="JetBrains.Annotations" Version="11.*" />
   </ItemGroup>
 

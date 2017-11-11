@@ -35,6 +35,9 @@ namespace XmlDocInspections.Plugin
 
         private void HandleTypeMember(ICSharpTypeMemberDeclaration declaration, ITypeMember typeMember, IHighlightingConsumer consumer)
         {
+            if (declaration.IsSynthetic() || declaration.GetContainingTypeDeclaration()?.IsSynthetic() == true)
+                return;
+
             var settings = _xmlDocInspectionsSettingsCache.GetCachedSettings(declaration.ToDataContext());
 
             if (IsProjectExcluded(declaration, settings) || IsTypeMemberExcluded(typeMember, settings))
