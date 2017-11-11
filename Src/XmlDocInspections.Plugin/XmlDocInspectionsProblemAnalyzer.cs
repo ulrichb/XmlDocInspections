@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Text.RegularExpressions;
 using JetBrains.ReSharper.Daemon.Stages.Dispatcher;
 using JetBrains.ReSharper.Feature.Services.Daemon;
@@ -31,22 +30,20 @@ namespace XmlDocInspections.Plugin
             ElementProblemAnalyzerData data,
             IHighlightingConsumer consumer)
         {
-            var highlightingResults = HandleTypeMember(declaration, typeMember).ToList();
-
-            highlightingResults.ForEach(x => consumer.AddHighlighting(x));
+            HandleTypeMember(declaration, typeMember, consumer);
         }
 
-        private IEnumerable<IHighlighting> HandleTypeMember(ICSharpTypeMemberDeclaration declaration, ITypeMember typeMember)
+        private void HandleTypeMember(ICSharpTypeMemberDeclaration declaration, ITypeMember typeMember, IHighlightingConsumer consumer)
         {
             var settings = _xmlDocInspectionsSettingsCache.GetCachedSettings(declaration.ToDataContext());
 
-            if (!(IsProjectExcluded(declaration, settings) || IsTypeMemberExcluded(typeMember, settings)))
+            if (IsProjectExcluded(declaration, settings) || IsTypeMemberExcluded(typeMember, settings))
+                return;
+
+            if (IsAccessibilityIncluded(typeMember, settings) || IsIncludedByAttribute(typeMember, settings))
             {
-                if (IsAccessibilityIncluded(typeMember, settings) || IsIncludedByAttribute(typeMember, settings))
-                {
-                    if (typeMember.GetXMLDoc(inherit: false) == null)
-                        yield return new MissingXmlDocHighlighting(declaration);
-                }
+                if (typeMember.GetXMLDoc(inherit: false) == null)
+                    consumer.AddHighlighting(new MissingXmlDocHighlighting(declaration));
             }
         }
 
