@@ -12,33 +12,18 @@ namespace XmlDocInspections.Plugin.Tests.Integrative
         protected override string RelativeTestDataPath => @"QuickFixes\AddDocCommentFix";
 
         [Test]
-        public void TestClass()
-        {
-            DoNamedTest2();
-        }
+        public void TestClass() => DoNamedTest2();
 
         [Test]
-        public void TestSimpleMethod()
-        {
-            DoNamedTest2();
-        }
+        public void TestSimpleMethod() => DoNamedTest2();
 
         [Test]
-        public void TestMethodWithAdditionalElementsForDocTemplate()
-        {
-            DoNamedTest2();
-        }
+        public void TestMethodWithAdditionalElementsForDocTemplate() => DoNamedTest2();
 
         [Test]
-        public void TestField()
-        {
-            DoNamedTest2();
-        }
+        public void TestField() => DoNamedTest2();
 
         [Test]
-        public void TestProperty()
-        {
-            DoNamedTest2();
-        }
+        public void TestProperty() => DoNamedTest2();
     }
 }
