@@ -8,11 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="obj\**;test\data\**" />
-    <None Remove="obj\**;test\data\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="JetBrains.ReSharper.SDK.Tests" Version="2017.2.*" />
   </ItemGroup>
 
