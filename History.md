@@ -1,4 +1,4 @@
-### vNext ###
+### 2.0.1 ###
 - Added exclusion for "synthetic" code elements (fixes analyzed "fields" in Razor files, see #12)
 
 ### 2.0.0 ###
