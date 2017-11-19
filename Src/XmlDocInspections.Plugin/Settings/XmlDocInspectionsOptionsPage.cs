@@ -1,9 +1,11 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
+using System.Drawing;
 using System.Linq.Expressions;
 using JetBrains.Application.Settings;
 using JetBrains.DataFlow;
 using JetBrains.ReSharper.Feature.Services.Daemon.OptionPages;
+using JetBrains.UI.RichText;
 #if RS20171
 using JetBrains.UI.Options;
 using JetBrains.UI.Options.OptionsDialog2.SimpleOptions;
@@ -29,11 +31,14 @@ namespace XmlDocInspections.Plugin.Settings
         ParentId = CodeInspectionPage.PID)]
     public class XmlDocInspectionsOptionsPage : SimpleOptionsPage
     {
+        public const string PageTitle = "XML Doc Inspections";
+        private const string CPageId = "XmlDocInspectionsOptions";
+
+        private static readonly TextStyle Bold = new TextStyle(FontStyle.Bold);
+
         private readonly Lifetime _lifetime;
         private readonly OptionsSettingsSmartContext _settings;
 
-        public const string PageTitle = "XML Doc Inspections";
-        private const string CPageId = "XmlDocInspectionsOptions";
 
         public XmlDocInspectionsOptionsPage(Lifetime lifetime, OptionsSettingsSmartContext settings)
             : base(lifetime, settings)
@@ -67,11 +72,10 @@ namespace XmlDocInspections.Plugin.Settings
 
             AddStringOption((XmlDocInspectionsSettings s) => s.ProjectExclusionRegex, "Project exclusion regex:\t");
 
-            AddText(
-                "\n" +
-                "Warning: After changing these settings, " +
-                "cleaning the solution cache (see \"General\" options page) " +
-                "is necessary to update already analyzed code.");
+            AddEmptyLine();
+            AddRichText(
+                new RichText("Warning: ", Bold) + new RichText("After changing these settings, ") +
+                new RichText("cleaning the solution cache (see \"General\" options page) is necessary to update already analyzed code."));
 
             FinishPage();
         }

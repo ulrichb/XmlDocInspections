@@ -1,5 +1,5 @@
 ### 2.1.0 ###
-- Add support for Rider 2017.2
+- Added support for Rider 2017.2
 
 ### 2.0.1 ###
 - Added exclusion for "synthetic" code elements (fixes analyzed "fields" in Razor files, see #12)
