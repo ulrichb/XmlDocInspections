@@ -50,9 +50,6 @@ namespace XmlDocInspections.Plugin.Highlighting
                 typeMember is ITypeElement ? "type" : "type member");
         }
 
-        public override DocumentRange CalculateRange()
-        {
-            return TreeNode.GetNameDocumentRange();
-        }
+        public override DocumentRange CalculateRange() => HighlightingNode.GetNameDocumentRange();
     }
 }

@@ -15,7 +15,7 @@ namespace XmlDocInspections.Plugin.Highlighting
     {
         public XmlDocInspectionsQuickFixRegistrarComponent(IQuickFixes table)
         {
-            table.RegisterQuickFix<MissingXmlDocHighlighting>(null, h => CreateAddDocCommentFix(h.TreeNode), typeof(AddDocCommentFix));
+            table.RegisterQuickFix<MissingXmlDocHighlighting>(null, h => CreateAddDocCommentFix(h.HighlightingNode), typeof(AddDocCommentFix));
         }
 
         private static AddDocCommentFix CreateAddDocCommentFix(ICSharpDeclaration declaration)
