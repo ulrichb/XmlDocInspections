@@ -7,7 +7,9 @@
 // ReSharper disable UnusedMember.Global
 // ReSharper disable UnusedMember.Local
 // ReSharper disable InconsistentNaming
+// ReSharper disable EventNeverSubscribedTo.Global
 // ReSharper disable EventNeverSubscribedTo.Local
+// ReSharper disable UnusedParameter.Global
 // ReSharper disable UnusedParameter.Local
 
 namespace XmlDocInspections.Sample.Highlighting

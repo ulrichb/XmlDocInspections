@@ -1,5 +1,6 @@
 ﻿// ReSharper disable UnusedMember.Global
 // ReSharper disable UnusedParameter.Local
+// ReSharper disable MemberCanBeProtected.Global
 
 namespace XmlDocInspections.Sample.Highlighting
 {
