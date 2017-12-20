@@ -1,1 +1,2 @@
 rootProject.name = 'rider-XmlDocInspections'
+gradle.ext.resharperPluginProjectName = 'XmlDocInspections.Plugin'
