@@ -8,10 +8,6 @@ using JetBrains.Util;
 using ReSharperExtensionsShared.ProblemAnalyzers;
 using XmlDocInspections.Plugin.Highlighting;
 
-#if RS20172
-using JetBrains.ReSharper.Daemon.Stages.Dispatcher;
-#endif
-
 namespace XmlDocInspections.Plugin
 {
     /// <summary>

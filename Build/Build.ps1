@@ -18,16 +18,16 @@ $SolutionFilePath = "XmlDocInspections.sln"
 $MSBuildPath = (Get-ChildItem "${env:ProgramFiles(x86)}\Microsoft Visual Studio\2017\*\MSBuild\15.0\Bin\MSBuild.exe").FullName
 $NUnitAdditionalArgs = "--x86 --labels=All --agents=1"
 $NUnitTestAssemblyPaths = @(
-    "Src\XmlDocInspections.Plugin.Tests\bin\RS20172\$Configuration\XmlDocInspections.Plugin.Tests.RS20172.dll"
+    "Src\XmlDocInspections.Plugin.Tests\bin\RD20181\$Configuration\XmlDocInspections.Plugin.Tests.RD20181.dll"
     "Src\XmlDocInspections.Plugin.Tests\bin\RS20173\$Configuration\XmlDocInspections.Plugin.Tests.RS20173.dll"
-    "Src\XmlDocInspections.Plugin.Tests\bin\RD20173\$Configuration\XmlDocInspections.Plugin.Tests.RD20173.dll"
+    "Src\XmlDocInspections.Plugin.Tests\bin\RS20181\$Configuration\XmlDocInspections.Plugin.Tests.RS20181.dll"
 )
 $NUnitFrameworkVersion = "net-4.5"
 $TestCoverageFilter = "+[XmlDocInspections*]* -[XmlDocInspections*]ReSharperExtensionsShared.*"
 $NuspecPath = "Src\XmlDocInspections.Plugin\XmlDocInspections.nuspec"
 $NugetPackProperties = @(
-    "Version=$(CalcNuGetPackageVersion 20172);Configuration=$Configuration;DependencyVer=[9.0];BinDirInclude=bin\RS20172"
     "Version=$(CalcNuGetPackageVersion 20173);Configuration=$Configuration;DependencyVer=[11.0];BinDirInclude=bin\RS20173"
+    "Version=$(CalcNuGetPackageVersion 20181);Configuration=$Configuration;DependencyVer=[12.0];BinDirInclude=bin\RS20181"
 )
 $RiderPluginProject = "Src\RiderPlugin"
 $NugetPushServer = "https://www.myget.org/F/ulrichb/api/v2/package"
