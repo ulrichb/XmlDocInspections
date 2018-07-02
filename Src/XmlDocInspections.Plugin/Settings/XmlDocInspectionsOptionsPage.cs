@@ -16,7 +16,10 @@ namespace XmlDocInspections.Plugin.Settings
     /// </summary>
     [ExcludeFromCodeCoverage /* options page user interface is tested manually */]
     [OptionsPage(CPageId, PageTitle, typeof(XmlDocInspectionsIcons.Xml16), ParentId = CodeInspectionPage.PID)]
+#pragma warning disable 618
+    // TODO after dropping 20181 support: Refactor to BeSimpleOptionsPage
     public class XmlDocInspectionsOptionsPage : SimpleOptionsPage
+#pragma warning restore 618
     {
         public const string PageTitle = "XML Doc Inspections";
         private const string CPageId = "XmlDocInspectionsOptions";

@@ -30,8 +30,19 @@ namespace XmlDocInspections.Plugin.Tests.Integrative.Highlighting
             settingsStore.SetValue((XmlDocInspectionsSettings s) => s.TypeMemberAccessibility, AccessibilitySettingFlags.All);
         }
 
-        protected override bool HighlightingPredicate([NotNull] IHighlighting highlighting, [NotNull] IPsiSourceFile sourceFile) =>
-            base.HighlightingPredicate(highlighting, sourceFile) && !(highlighting is RedundantDisableWarningCommentWarning);
+        protected override bool HighlightingPredicate(
+            [NotNull] IHighlighting highlighting,
+            [NotNull] IPsiSourceFile sourceFile
+#if !RS20181
+            ,
+            [CanBeNull] IContextBoundSettingsStore settingsStore
+#endif
+        ) =>
+            base.HighlightingPredicate(highlighting, sourceFile
+#if !RS20181
+                , settingsStore
+#endif
+            ) && !(highlighting is RedundantDisableWarningCommentWarning);
     }
 
     public abstract class MissingXmlDocHighlightingDirectoryTestsBase : MissingXmlDocHighlightingTestsBase
