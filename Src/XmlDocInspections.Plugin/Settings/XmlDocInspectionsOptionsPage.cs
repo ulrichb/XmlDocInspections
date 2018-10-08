@@ -3,11 +3,11 @@ using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.Linq.Expressions;
 using JetBrains.Application.Settings;
-using JetBrains.UI.RichText;
 using JetBrains.Application.UI.Options;
 using JetBrains.Application.UI.Options.OptionsDialog;
 using JetBrains.DataFlow;
 using JetBrains.ReSharper.Feature.Services.Daemon.OptionPages;
+using JetBrains.UI.RichText;
 
 namespace XmlDocInspections.Plugin.Settings
 {
@@ -15,14 +15,14 @@ namespace XmlDocInspections.Plugin.Settings
     /// An options page for XML Doc inspections.
     /// </summary>
     [ExcludeFromCodeCoverage /* options page user interface is tested manually */]
-    [OptionsPage(CPageId, PageTitle, typeof(XmlDocInspectionsIcons.Xml16), ParentId = CodeInspectionPage.PID)]
+    [OptionsPage(PageId, PageTitle, typeof(XmlDocInspectionsIcons.Xml16), ParentId = CodeInspectionPage.PID)]
 #pragma warning disable 618
-    // TODO after dropping 20181 support: Refactor to BeSimpleOptionsPage
+    // TODO: Refactor to BeSimpleOptionsPage
     public class XmlDocInspectionsOptionsPage : SimpleOptionsPage
 #pragma warning restore 618
     {
         public const string PageTitle = "XML Doc Inspections";
-        private const string CPageId = "XmlDocInspectionsOptions";
+        private const string PageId = nameof(XmlDocInspectionsOptionsPage);
 
         private static readonly TextStyle Bold = new TextStyle(FontStyle.Bold);
 

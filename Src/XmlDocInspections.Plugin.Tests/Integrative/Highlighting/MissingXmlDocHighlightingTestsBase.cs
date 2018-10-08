@@ -32,17 +32,10 @@ namespace XmlDocInspections.Plugin.Tests.Integrative.Highlighting
 
         protected override bool HighlightingPredicate(
             [NotNull] IHighlighting highlighting,
-            [NotNull] IPsiSourceFile sourceFile
-#if !RS20181
-            ,
+            [NotNull] IPsiSourceFile sourceFile,
             [CanBeNull] IContextBoundSettingsStore settingsStore
-#endif
-        ) =>
-            base.HighlightingPredicate(highlighting, sourceFile
-#if !RS20181
-                , settingsStore
-#endif
-            ) && !(highlighting is RedundantDisableWarningCommentWarning);
+        ) => base.HighlightingPredicate(highlighting, sourceFile, settingsStore) &&
+             !(highlighting is RedundantDisableWarningCommentWarning);
     }
 
     public abstract class MissingXmlDocHighlightingDirectoryTestsBase : MissingXmlDocHighlightingTestsBase

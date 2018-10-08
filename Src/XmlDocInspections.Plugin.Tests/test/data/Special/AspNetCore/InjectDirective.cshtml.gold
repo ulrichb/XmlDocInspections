@@ -1,4 +1,4 @@
-﻿@* Counter sample warning (Using is unecessary): *@
+﻿@* Counter sample warning (Using is unnecessary): *@
 @|using System.Globalization|(0)
 
 @using Microsoft.AspNetCore.Mvc.Localization

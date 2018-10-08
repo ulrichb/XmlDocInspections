@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using JetBrains.Annotations;
 using JetBrains.Application.DataContext;
 using JetBrains.Application.Settings;
 using JetBrains.Application.Settings.Extentions;
@@ -9,10 +10,6 @@ using JetBrains.ProjectModel;
 using JetBrains.ProjectModel.Settings.Cache;
 using JetBrains.Util;
 using XmlDocInspections.Plugin.Settings;
-
-#if !RS20181
-using JetBrains.Annotations;
-#endif
 
 namespace XmlDocInspections.Plugin
 {
@@ -46,9 +43,7 @@ namespace XmlDocInspections.Plugin
         SettingsKey ICachedSettingsReader<CachedXmlDocInspectionsSettings>.KeyExposed => _settingsKey;
 
         CachedXmlDocInspectionsSettings ICachedSettingsReader<CachedXmlDocInspectionsSettings>.ReadData(
-#if !RS20181
             [CanBeNull] Lifetime _,
-#endif
             IContextBoundSettingsStore store)
         {
             var settings = store.GetKey<XmlDocInspectionsSettings>(_settingsOptimization);

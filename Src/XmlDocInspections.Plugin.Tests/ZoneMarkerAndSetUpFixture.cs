@@ -1,13 +1,9 @@
 ﻿using JetBrains.Application.BuildScript.Application.Zones;
 using JetBrains.ReSharper.TestFramework;
 using JetBrains.TestFramework;
+using JetBrains.TestFramework.Application.Zones;
 using NUnit.Framework;
 using XmlDocInspections.Plugin.Tests;
-#if RS20181
-using ITestsEnvZone = JetBrains.TestFramework.Application.Zones.ITestsZone;
-#else
-using JetBrains.TestFramework.Application.Zones;
-#endif
 
 [assembly: RequiresSTA]
 

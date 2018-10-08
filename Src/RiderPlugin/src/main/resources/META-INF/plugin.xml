@@ -15,7 +15,7 @@
     <applicationConfigurable
       parentId="CodeInspectionSettingsId"
       instance="com.jetbrains.rider.settings.XmlDocInspectionsOptionsPage"
-      id="preferences.XmlDocInspectionsOptions"/>
+      id="preferences.XmlDocInspectionsOptionsPage"/>
   </extensions>
 
 </idea-plugin>
