@@ -10,7 +10,13 @@ namespace XmlDocInspections.Plugin.Highlighting
     {
         public XmlDocInspectionsQuickFixRegistrarComponent(IQuickFixes table)
         {
-            table.RegisterQuickFix<MissingXmlDocHighlighting>(null, h => CreateAddDocCommentFix(h.HighlightingNode), typeof(AddDocCommentFix));
+            table.RegisterQuickFix<MissingXmlDocHighlighting>(
+#if RS20183
+                null,
+#else
+                default(JetBrains.Lifetimes.Lifetime),
+#endif
+                h => CreateAddDocCommentFix(h.HighlightingNode), typeof(AddDocCommentFix));
         }
 
         private static AddDocCommentFix CreateAddDocCommentFix(ICSharpDeclaration declaration) => new AddDocCommentFix(declaration);

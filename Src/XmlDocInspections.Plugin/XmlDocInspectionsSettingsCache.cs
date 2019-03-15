@@ -1,15 +1,22 @@
 using System;
 using System.Linq;
-using JetBrains.Annotations;
 using JetBrains.Application.DataContext;
 using JetBrains.Application.Settings;
 using JetBrains.Application.Settings.Extentions;
-using JetBrains.DataFlow;
 using JetBrains.Metadata.Reader.Impl;
 using JetBrains.ProjectModel;
 using JetBrains.ProjectModel.Settings.Cache;
-using JetBrains.Util;
 using XmlDocInspections.Plugin.Settings;
+
+#if RS20183
+using JetBrains.Annotations;
+using JetBrains.Util;
+using JetBrains.DataFlow;
+#else
+using JetBrains.Diagnostics;
+using JetBrains.Lifetimes;
+
+#endif
 
 namespace XmlDocInspections.Plugin
 {
@@ -43,7 +50,10 @@ namespace XmlDocInspections.Plugin
         SettingsKey ICachedSettingsReader<CachedXmlDocInspectionsSettings>.KeyExposed => _settingsKey;
 
         CachedXmlDocInspectionsSettings ICachedSettingsReader<CachedXmlDocInspectionsSettings>.ReadData(
-            [CanBeNull] Lifetime _,
+#if RS20183
+            [CanBeNull] 
+#endif
+            Lifetime _,
             IContextBoundSettingsStore store)
         {
             var settings = store.GetKey<XmlDocInspectionsSettings>(_settingsOptimization);

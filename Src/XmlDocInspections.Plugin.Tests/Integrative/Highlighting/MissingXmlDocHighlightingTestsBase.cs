@@ -31,7 +31,7 @@ namespace XmlDocInspections.Plugin.Tests.Integrative.Highlighting
         }
 
         protected override bool HighlightingPredicate(
-            [NotNull] IHighlighting highlighting,
+            IHighlighting highlighting,
             [NotNull] IPsiSourceFile sourceFile,
             [CanBeNull] IContextBoundSettingsStore settingsStore
         ) => base.HighlightingPredicate(highlighting, sourceFile, settingsStore) &&
