@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="JetBrains.ReSharper.SDK.Tests" Version="2019.1.0" />
+    <PackageReference Include="JetBrains.ReSharper.SDK.Tests" Version="2019.1.*" />
   </ItemGroup>
 
   <ItemGroup>

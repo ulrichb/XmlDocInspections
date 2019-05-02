@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="JetBrains.Rider.SDK" Version="2019.1.0" />
+    <PackageReference Include="JetBrains.Rider.SDK" Version="2019.1.*" />
   </ItemGroup>
 
 </Project>
