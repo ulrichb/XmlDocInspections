@@ -1,17 +1,12 @@
 ﻿using System.Linq;
 using System.Text.RegularExpressions;
+using JetBrains.Diagnostics;
 using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.ReSharper.Psi;
 using JetBrains.ReSharper.Psi.CSharp.Tree;
 using JetBrains.ReSharper.Psi.Tree;
 using ReSharperExtensionsShared.ProblemAnalyzers;
 using XmlDocInspections.Plugin.Highlighting;
-#if RS20183
-using JetBrains.Util;
-#else
-using JetBrains.Diagnostics;
-
-#endif
 
 namespace XmlDocInspections.Plugin
 {

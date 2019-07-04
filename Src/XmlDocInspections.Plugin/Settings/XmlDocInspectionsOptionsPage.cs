@@ -6,12 +6,9 @@ using JetBrains.Application.Settings;
 using JetBrains.Application.UI.Options;
 using JetBrains.Application.UI.Options.OptionsDialog;
 using JetBrains.DataFlow;
+using JetBrains.Lifetimes;
 using JetBrains.ReSharper.Feature.Services.Daemon.OptionPages;
 using JetBrains.UI.RichText;
-#if !RS20183
-using JetBrains.Lifetimes;
-
-#endif
 
 namespace XmlDocInspections.Plugin.Settings
 {

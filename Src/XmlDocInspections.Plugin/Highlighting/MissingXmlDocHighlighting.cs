@@ -1,4 +1,5 @@
-﻿using JetBrains.DocumentModel;
+﻿using JetBrains.Diagnostics;
+using JetBrains.DocumentModel;
 using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.ReSharper.Psi;
 using JetBrains.ReSharper.Psi.CSharp;
@@ -7,12 +8,6 @@ using JetBrains.ReSharper.Psi.Tree;
 using ReSharperExtensionsShared.Highlighting;
 using XmlDocInspections.Plugin.Highlighting;
 using XmlDocInspections.Plugin.Settings;
-#if RS20183
-using JetBrains.Util;
-#else
-using JetBrains.Diagnostics;
-
-#endif
 
 [assembly: RegisterConfigurableSeverity(
     MissingXmlDocHighlighting.SeverityId,

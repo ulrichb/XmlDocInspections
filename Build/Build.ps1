@@ -19,14 +19,12 @@ $MSBuildPath = (Get-ChildItem "${env:ProgramFiles(x86)}\Microsoft Visual Studio\
 $NUnitAdditionalArgs = "--x86 --labels=All --agents=1"
 $NUnitTestAssemblyPaths = @(
     "Src\XmlDocInspections.Plugin.Tests\bin\RD20191\$Configuration\XmlDocInspections.Plugin.Tests.RD20191.dll"
-    "Src\XmlDocInspections.Plugin.Tests\bin\RS20183\$Configuration\XmlDocInspections.Plugin.Tests.RS20183.dll"
     "Src\XmlDocInspections.Plugin.Tests\bin\RS20191\$Configuration\XmlDocInspections.Plugin.Tests.RS20191.dll"
 )
 $NUnitFrameworkVersion = "net-4.5"
 $TestCoverageFilter = "+[XmlDocInspections*]* -[XmlDocInspections*]ReSharperExtensionsShared.*"
 $NuspecPath = "Src\XmlDocInspections.Plugin\XmlDocInspections.nuspec"
 $NugetPackProperties = @(
-    "Version=$(CalcNuGetPackageVersion 20183);Configuration=$Configuration;DependencyVer=[183.0];BinDirInclude=bin\RS20183"
     "Version=$(CalcNuGetPackageVersion 20191);Configuration=$Configuration;DependencyVer=[191.0];BinDirInclude=bin\RS20191"
 )
 $RiderPluginProject = "Src\RiderPlugin"
