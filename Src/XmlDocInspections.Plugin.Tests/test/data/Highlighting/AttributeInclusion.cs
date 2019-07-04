@@ -1,4 +1,5 @@
-﻿using JetBrains.Annotations;
+﻿using System;
+using JetBrains.Annotations;
 
 // ReSharper disable UnusedMember.Global
 
@@ -21,17 +22,31 @@ namespace XmlDocInspections.Sample.Highlighting
         }
     }
 
+    //
+
+    /// <summary>A sample "RequireDocs" attribute (which is inherited).</summary>
+    public class RequireDocsAttribute : Attribute
+    {
+    }
+
     public abstract class BaseClassWithPublicApiAttribute
     {
-        [PublicAPI]
-        public abstract void MethodWithAttributeOnlyInBase();
+        [PublicAPI /* which is marked as non-inherited */]
+        public abstract void MethodWithNonInheritedAttributeOnlyInBase();
+
+        [RequireDocs]
+        public abstract void MethodWithInheritedAttributeOnlyInBase();
     }
 
     public class DeribedClassWithPublicApiAttribute : BaseClassWithPublicApiAttribute
     {
-        // Prove that the attribute-rule works with inherited attributes.
+        // Prove that the attribute-rule respects the attribute inheritance rule.
 
-        public override void MethodWithAttributeOnlyInBase()
+        public override void MethodWithNonInheritedAttributeOnlyInBase()
+        {
+        }
+
+        public override void MethodWithInheritedAttributeOnlyInBase()
         {
         }
     }

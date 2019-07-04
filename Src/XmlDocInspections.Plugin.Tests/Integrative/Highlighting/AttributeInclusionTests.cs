@@ -17,7 +17,8 @@ namespace XmlDocInspections.Plugin.Tests.Integrative.Highlighting
             Assert.IsTrue(attribute == "JetBrains.Annotations.PublicAPIAttribute"); // Fixate default value
 
             // Prove that the setting can contain spaces and duplicates:
-            settingsStore.SetValue((XmlDocInspectionsSettings s) => s.IncludeAttributeFullNames, $"{attribute}  , {attribute}  ");
+            settingsStore.SetValue((XmlDocInspectionsSettings s) => s.IncludeAttributeFullNames, 
+                $"{attribute}  , {attribute}  ,XmlDocInspections.Sample.Highlighting.RequireDocsAttribute");
         }
 
         [Test]
