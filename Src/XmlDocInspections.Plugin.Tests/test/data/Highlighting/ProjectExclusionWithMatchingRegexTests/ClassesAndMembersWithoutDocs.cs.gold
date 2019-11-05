@@ -6,6 +6,8 @@
 
 // ReSharper disable UnusedMember.Global
 // ReSharper disable UnusedMember.Local
+// ReSharper disable UnusedType.Local
+// ReSharper disable UnusedType.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable EventNeverSubscribedTo.Global
 // ReSharper disable EventNeverSubscribedTo.Local
