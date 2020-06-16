@@ -6,22 +6,20 @@ using JetBrains.ReSharper.Psi.CSharp;
 using JetBrains.ReSharper.Psi.CSharp.Tree;
 using JetBrains.ReSharper.Psi.Tree;
 using ReSharperExtensionsShared.Highlighting;
-using XmlDocInspections.Plugin.Highlighting;
 using XmlDocInspections.Plugin.Settings;
-
-[assembly: RegisterConfigurableSeverity(
-    MissingXmlDocHighlighting.SeverityId,
-    CompoundItemName: null,
-    Group: HighlightingGroupIds.CodeSmell,
-    Title: MissingXmlDocHighlighting.Title,
-    Description: MissingXmlDocHighlighting.Description,
-    DefaultSeverity: Severity.WARNING)]
 
 namespace XmlDocInspections.Plugin.Highlighting
 {
     /// <summary>
     /// Xml Doc highlighting for types / type members with specific accessibility.
     /// </summary>
+    [RegisterConfigurableSeverity(
+        SeverityId,
+        CompoundItemName: null,
+        Group: HighlightingGroupIds.CodeSmell,
+        Title: Title,
+        Description: Description,
+        DefaultSeverity: Severity.WARNING)]
     [ConfigurableSeverityHighlighting(
         SeverityId,
         CSharpLanguage.Name,
@@ -29,11 +27,11 @@ namespace XmlDocInspections.Plugin.Highlighting
         ToolTipFormatString = Message)]
     public class MissingXmlDocHighlighting : SimpleTreeNodeHighlightingBase<ICSharpDeclaration>
     {
-        public const string SeverityId = "MissingXmlDoc";
-        public const string Title = "Missing XML Doc comment for type / type member";
+        private const string SeverityId = "MissingXmlDoc";
+        private const string Title = "Missing XML Doc comment for type / type member";
         private const string Message = "Missing XML Doc comment for {0} {1}";
 
-        public const string Description =
+        private const string Description =
             "Missing XML Doc comment for type / type member. " +
             "See the '" + XmlDocInspectionsOptionsPage.PageTitle + "' options page for further configuration settings.";
 

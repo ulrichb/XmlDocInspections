@@ -24,9 +24,9 @@ namespace XmlDocInspections.Plugin.Settings
             public static global::JetBrains.UI.Icons.IconId Id = new global::JetBrains.Application.Icons.CompiledIconsCs.CompiledIconCsId(typeof(Xml16));
 
             /// <summary>Loads the image for Themed Icon Xml16 theme aspect Default.</summary>
-            public global::JetBrains.Application.UI.Icons.Images.TiImage Load_Default()
+            public global::JetBrains.Util.Icons.TiImage Load_Default()
             {
-                return global::JetBrains.Application.UI.Icons.Images.TiImageConverter.FromCanonicalSExpressionAsciiString("(7:TiImage2:v1(6:Vector(4:Size5:16,16)(7:Drawing(4:Path(4:Fill(5:Solid9:#FFA441CC" +
+                return global::JetBrains.Util.Icons.TiImageConverter.FromCanonicalSExpressionAsciiString("(7:TiImage2:v1(6:Vector(4:Size5:16,16)(7:Drawing(4:Path(4:Fill(5:Solid9:#FFA441CC" +
                         "))(8:Segments(1:F8:5.0271079:12.9053431:11:1)(1:L8:0.3205899:10.350257)(1:L8:0.3" +
                         "205898:9.300564)(1:L8:5.0271078:6.745481)(1:L8:5.0271078:8.066628)(1:L18:1.64754" +
                         "999999999998:9.830464)(1:L8:5.02710718:11.584195999999999)(1:L8:5.0271079:12.905" +
