@@ -4,7 +4,6 @@
   <description />
   <settings ref="OpenSourceProjects_XmlDocInspections_Build">
     <parameters>
-      <param name="Configuration" value="Debug" />
       <param name="CoverageBadgeUploadToken" value="credentialsJSON:efcb38e1-9912-41fd-8c39-292484816e4b" />
     </parameters>
     <build-runners order="RUNNER_1394" />
