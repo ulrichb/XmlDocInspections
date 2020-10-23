@@ -2,6 +2,7 @@
 using JetBrains.Annotations;
 
 // ReSharper disable UnusedMember.Global
+// ReSharper disable UnusedType.Global
 
 namespace XmlDocInspections.Sample.Highlighting
 {

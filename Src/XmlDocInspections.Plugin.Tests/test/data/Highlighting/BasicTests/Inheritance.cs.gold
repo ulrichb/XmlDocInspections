@@ -1,4 +1,5 @@
 ﻿// ReSharper disable UnusedMember.Global
+// ReSharper disable UnusedType.Global
 // ReSharper disable UnusedParameter.Local
 // ReSharper disable MemberCanBeProtected.Global
 
