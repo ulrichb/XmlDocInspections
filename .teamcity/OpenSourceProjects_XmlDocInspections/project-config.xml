@@ -26,6 +26,6 @@
     </extension>
   </project-extensions>
   <cleanup />
-  <buildTypesOrder order="OpenSourceProjects_XmlDocInspections_BuildVersion,OpenSourceProjects_XmlDocInspections_Ci,OpenSourceProjects_XmlDocInspections_Release" />
+  <buildTypesOrder order="OpenSourceProjects_XmlDocInspections_BuildVersion,OpenSourceProjects_XmlDocInspections_Ci" />
 </project>
 
