@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2008
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDocInspections.Sample", "XmlDocInspections.Sample.csproj", "{4AF4FFEC-2FAC-426A-B8B2-06F4D9F52392}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDocInspections.Sample.Special", "Special\AspNetCore\XmlDocInspections.Sample.AspNetCore.csproj", "{E02B4116-2C7A-4523-9946-3E7B1C79666D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDocInspections.Sample.AspNetCore", "Special\AspNetCore\XmlDocInspections.Sample.AspNetCore.csproj", "{E02B4116-2C7A-4523-9946-3E7B1C79666D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
