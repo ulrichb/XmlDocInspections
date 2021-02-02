@@ -16,7 +16,7 @@ if (!project.hasProperty('configuration')) ext.configuration = 'Debug'
 intellij {
     type = 'RD'
     // https://www.jetbrains.com/intellij-repository/releases
-    version = '2020.3'
+    version = '2021.1-SNAPSHOT'
     downloadSources = false
     instrumentCode = false
 }
@@ -26,7 +26,7 @@ compileKotlin {
 }
 
 prepareSandbox {
-    from("$projectDir/../$gradle.resharperPluginProjectName/bin/RD20203/$configuration", {
+    from("$projectDir/../$gradle.resharperPluginProjectName/bin/RD20211/$configuration", {
         into "$intellij.pluginName/dotnet"
         include "$gradle.resharperPluginProjectName*"
     })
