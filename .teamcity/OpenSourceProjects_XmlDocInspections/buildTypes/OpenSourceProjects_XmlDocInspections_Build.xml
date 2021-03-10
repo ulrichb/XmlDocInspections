@@ -6,7 +6,7 @@
       <option name="allowExternalStatus" value="true" />
       <option name="artifactRules" value="Build\Output\*.nupkg&#xA;Build\Output\*.zip&#xA;Build\Output\TestCoverage\**\* =&gt; coverage.zip" />
       <option name="buildNumberPattern" value="%dep.OpenSourceProjects_XmlDocInspections_BuildVersion.build.number%" />
-      <option name="executionTimeoutMin" value="30" />
+      <option name="executionTimeoutMin" value="60" />
     </options>
     <parameters>
       <param name="Configuration" value="Release" spec="select data_1='Debug' data_2='Release'" />
