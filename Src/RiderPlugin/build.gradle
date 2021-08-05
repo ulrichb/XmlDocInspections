@@ -1,7 +1,7 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.kotlin.jvm' version '1.3.41'
-    id 'org.jetbrains.intellij' version '0.4.9'
+    id 'org.jetbrains.kotlin.jvm' version '1.4.32'
+    id 'org.jetbrains.intellij' version '1.0'
 }
 
 repositories {
@@ -16,7 +16,7 @@ if (!project.hasProperty('configuration')) ext.configuration = 'Debug'
 intellij {
     type = 'RD'
     // https://www.jetbrains.com/intellij-repository/releases
-    version = '2021.1-SNAPSHOT'
+    version = '2021.2'
     downloadSources = false
     instrumentCode = false
 }
@@ -26,9 +26,9 @@ compileKotlin {
 }
 
 prepareSandbox {
-    from("$projectDir/../$gradle.resharperPluginProjectName/bin/RD20211/$configuration", {
-        into "$intellij.pluginName/dotnet"
-        include "$gradle.resharperPluginProjectName*"
+    from("$projectDir/../${gradle.resharperPluginProjectName}/bin/RD20212/$configuration", {
+        into "${rootProject.name}/dotnet"
+        include "${gradle.resharperPluginProjectName}*"
     })
 }
 
@@ -46,6 +46,6 @@ patchPluginXml {
 }
 
 runIde {
-    configDirectory = System.properties['user.home'] + '/.RiderPluginDev/config'
-    systemDirectory = System.properties['user.home'] + '/.RiderPluginDev/system'
+    //configDirectory = System.properties['user.home'] + '/.RiderPluginDev/config'
+    //systemDirectory = System.properties['user.home'] + '/.RiderPluginDev/system'
 }

@@ -10,6 +10,8 @@
     <DefaultItemExcludes>$(DefaultItemExcludes);obj\**</DefaultItemExcludes>
     <RootNamespace>$(ProjectNameWithoutVersion)</RootNamespace>
     <OutputPath>bin\$(ReSharperVersionIdentifier)\$(Configuration)\</OutputPath>
+
+    <MSBuildWarningsAsMessages>$(MSBuildWarningsAsMessages);MSB3277</MSBuildWarningsAsMessages>
   </PropertyGroup>
 
   <PropertyGroup>
