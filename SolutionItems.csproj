@@ -10,6 +10,7 @@
     <None Include=".teamcity\**" />
     <None Include="Build\*" />
     <None Include="Doc\**" />
+    <None Include="Src\*" />
     <None Include="Src\RiderPlugin\*" />
     <None Include="Src\RiderPlugin\src\**" />
     <None Include="Shared\Build\**" />
