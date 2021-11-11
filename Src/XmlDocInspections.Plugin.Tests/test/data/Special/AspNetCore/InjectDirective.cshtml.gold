@@ -4,9 +4,9 @@
 @using Microsoft.AspNetCore.Mvc.Localization
 
 @*ReSharper disable once UnassignedField.Global*@
-@inject IViewLocalizer Localizer
+@inject IViewLocalizer _localizer
 
-@Localizer["Localize this"]
+@_localizer["Localize this"]
 
 ---------------------------------------------------------
 (0): ReSharper Dead Code: Using directive is not required by the code and can be safely removed

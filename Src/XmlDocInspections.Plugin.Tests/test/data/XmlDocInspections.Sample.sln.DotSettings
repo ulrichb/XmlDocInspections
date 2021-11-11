@@ -5,4 +5,5 @@
 	<s:Boolean x:Key="/Default/CodeInspection/XmlDocInspections/ExcludeMembersOverridingSuperMember/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/CodeInspection/XmlDocInspections/TypeAccessibility/@EntryValue">All</s:String>
 	<s:String x:Key="/Default/CodeInspection/XmlDocInspections/TypeMemberAccessibility/@EntryValue">All</s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/Naming/CSharpNaming/ApplyAutoDetectedRules/@EntryValue">False</s:Boolean>
 </wpf:ResourceDictionary>

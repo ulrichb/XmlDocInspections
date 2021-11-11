@@ -1,4 +1,7 @@
-﻿using JetBrains.Application;
+﻿using System;
+using System.Collections.Generic;
+using JetBrains.Application;
+using JetBrains.Lifetimes;
 using JetBrains.ReSharper.Feature.Services.QuickFixes;
 using JetBrains.ReSharper.Intentions.CSharp.QuickFixes;
 using JetBrains.ReSharper.Psi.CSharp.Tree;
@@ -6,12 +9,14 @@ using JetBrains.ReSharper.Psi.CSharp.Tree;
 namespace XmlDocInspections.Plugin.Highlighting
 {
     [ShellComponent]
-    internal class XmlDocInspectionsQuickFixRegistrarComponent
+    internal class XmlDocInspectionsQuickFixRegistrarComponent : IQuickFixesProvider
     {
-        public XmlDocInspectionsQuickFixRegistrarComponent(IQuickFixes table)
+        public IEnumerable<Type> Dependencies => Array.Empty<Type>();
+
+        public void Register(IQuickFixesRegistrar table)
         {
             table.RegisterQuickFix<MissingXmlDocHighlighting>(
-                default(JetBrains.Lifetimes.Lifetime),
+                Lifetime.Eternal,
                 h => CreateAddDocCommentFix(h.HighlightingNode), typeof(AddDocCommentFix));
         }
 

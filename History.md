@@ -1,3 +1,6 @@
+### 2.15.0 ###
+- ReSharper and Rider 2021.3 support
+
 ### 2.14.0 ###
 - ReSharper and Rider 2021.2 support
 
