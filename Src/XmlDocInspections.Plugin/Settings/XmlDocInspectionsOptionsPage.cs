@@ -1,6 +1,5 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
-using System.Drawing;
 using System.Linq.Expressions;
 using JetBrains.Application.Settings;
 using JetBrains.Application.UI.Options;
@@ -25,7 +24,7 @@ namespace XmlDocInspections.Plugin.Settings
         public const string PageTitle = "XML Doc Inspections";
         private const string PageId = nameof(XmlDocInspectionsOptionsPage);
 
-        private static readonly TextStyle Bold = new TextStyle(FontStyle.Bold);
+        private static readonly TextStyle Bold = new TextStyle(JetFontStyles.Bold);
 
         private readonly Lifetime _lifetime;
         private readonly OptionsSettingsSmartContext _settings;

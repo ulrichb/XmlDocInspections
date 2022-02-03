@@ -17,14 +17,14 @@ $BuildOutputPath = "Build\Output"
 $SolutionFilePath = "XmlDocInspections.sln"
 $NUnitAdditionalArgs = "--x86 --labels=All --agents=1"
 $NUnitTestAssemblyPaths = @(
-    "Src\XmlDocInspections.Plugin.Tests\bin\RD20213\$Configuration\XmlDocInspections.Plugin.Tests.RD20213.dll"
-    "Src\XmlDocInspections.Plugin.Tests\bin\RS20213\$Configuration\XmlDocInspections.Plugin.Tests.RS20213.dll"
+    "Src\XmlDocInspections.Plugin.Tests\bin\RD20221\$Configuration\XmlDocInspections.Plugin.Tests.RD20221.dll"
+    "Src\XmlDocInspections.Plugin.Tests\bin\RS20221\$Configuration\XmlDocInspections.Plugin.Tests.RS20221.dll"
 )
 $NUnitFrameworkVersion = "net-4.5"
 $TestCoverageFilter = "+[XmlDocInspections*]* -[XmlDocInspections*]ReSharperExtensionsShared.*"
 $NuspecPath = "Src\XmlDocInspections.Plugin\XmlDocInspections.nuspec"
 $NugetPackProperties = @(
-    "Version=$(CalcNuGetPackageVersion 20213);Configuration=$Configuration;DependencyVer=[213.0];BinDirInclude=bin\RS20213"
+    "Version=$(CalcNuGetPackageVersion 20221);Configuration=$Configuration;DependencyVer=[221.0];BinDirInclude=bin\RS20221"
 )
 $RiderPluginProject = "Src\RiderPlugin"
 $NugetPushServer = "https://www.myget.org/F/ulrichb/api/v2/package"
