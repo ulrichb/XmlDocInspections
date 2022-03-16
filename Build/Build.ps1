@@ -15,7 +15,6 @@ trap { $error[0] | Format-List -Force; $host.SetShouldExit(1) }
 
 $BuildOutputPath = "Build\Output"
 $SolutionFilePath = "XmlDocInspections.sln"
-$MSBuildPath = (Get-ChildItem "${env:ProgramFiles(x86)}\Microsoft Visual Studio\2019\*\MSBuild\Current\Bin\MSBuild.exe").FullName
 $NUnitAdditionalArgs = "--x86 --labels=All --agents=1"
 $NUnitTestAssemblyPaths = @(
     "Src\XmlDocInspections.Plugin.Tests\bin\RD20213\$Configuration\XmlDocInspections.Plugin.Tests.RD20213.dll"
