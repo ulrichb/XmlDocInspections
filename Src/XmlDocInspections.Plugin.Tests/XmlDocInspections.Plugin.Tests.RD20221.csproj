@@ -4,7 +4,8 @@
     <TargetFramework>net472</TargetFramework>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
-    <DebugType>full</DebugType> <!-- necessary for OpenCover -->
+    <IsTestProject>true</IsTestProject>
+    <RunSettingsFilePath>Test.runsettings</RunSettingsFilePath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,16 +14,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="3.1.*" PrivateAssets="all" />
+    <PackageReference Include="GitHubActionsTestLogger" Version="1.4.1" PrivateAssets="all" />
     <PackageReference Include="JetBrains.Rider.SDK.Tests" Version="2022.1.*-*" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.*" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.*" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.2.*" />
+    <!--<PackageReference Include="TeamCity.VSTest.TestAdapter" Version="1.0.36" />-->
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\XmlDocInspections.Plugin\XmlDocInspections.Plugin.$(ReSharperVersionIdentifier).csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
   </ItemGroup>
 
 </Project>

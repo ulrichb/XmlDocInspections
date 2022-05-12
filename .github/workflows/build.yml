@@ -1,0 +1,43 @@
+name: build
+
+on: [push]
+
+env:
+  BuildConfiguration: Release
+  BuildVersion: 2.16.0.${{ github.run_number }}
+
+jobs:
+  build:
+    name: build
+    runs-on: windows-latest
+
+    steps:
+
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+
+      - name: Run Build.ps1
+        run: ./Build/Build.ps1 -Configuration ${{ env.BuildConfiguration }} -Version "${{ env.BuildVersion }}" -BranchName "${{ github.ref_name }}" -CoverageBadgeUploadToken ${{ secrets.COVERAGE_BADGE_UPLOAD_TOKEN }}
+
+      - name: Upload Packages artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: Packages
+          path: |
+            Build/Output/*.nupkg
+            Build/Output/*.zip
+
+      - name: Upload TestOutput artifacts
+        uses: actions/upload-artifact@v3
+        if: ${{ always() }}
+        with:
+          name: TestOutput
+          path: |
+            Build/Output/TestResults/**
+            Build/Output/TestCoverage/**
