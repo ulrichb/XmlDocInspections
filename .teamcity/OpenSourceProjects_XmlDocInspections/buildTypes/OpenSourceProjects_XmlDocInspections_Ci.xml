@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="5bda253b-451e-4051-9764-5b27be535683" paused="true" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2021.1/project-config.xsd">
+  <name>CI</name>
+  <description />
+  <settings ref="OpenSourceProjects_XmlDocInspections_Build">
+    <parameters>
+      <param name="CoverageBadgeUploadToken" value="credentialsJSON:efcb38e1-9912-41fd-8c39-292484816e4b" />
+    </parameters>
+    <build-runners order="RUNNER_1394" />
+    <vcs-settings />
+    <requirements />
+    <build-triggers>
+      <build-trigger id="vcsTrigger" type="vcsTrigger">
+        <parameters>
+          <param name="branchFilter" value="+:*" />
+          <param name="enableQueueOptimization" value="true" />
+          <param name="quietPeriodMode" value="DO_NOT_USE" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
+    <cleanup />
+  </settings>
+</build-type>
+
