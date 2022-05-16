@@ -5,7 +5,7 @@
 <img src="https://dl.dropbox.com/s/8p9d03ycoy4nf06/master-linecoverage.svg" alt="Line Coverage" title="Line Coverage">
 <img src="https://dl.dropbox.com/s/ywhaxs30rto3ezm/master-branchcoverage.svg" alt="Branch Coverage" title="Branch Coverage">
 
-[ReSharper Gallery Page](https://resharper-plugins.jetbrains.com/packages/ReSharper.XmlDocInspections/)
+Plugin pages: [ReSharper](https://plugins.jetbrains.com/plugin/11648-xml-doc-inspections) / [Rider](https://plugins.jetbrains.com/plugin/10151-xml-doc-inspections)
 
 [History of changes](History.md)
 
