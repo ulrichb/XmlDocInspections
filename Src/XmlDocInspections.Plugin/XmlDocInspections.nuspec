@@ -2,21 +2,21 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>ReSharper.XmlDocInspections</id>
-    <version>$Version$</version>
+    <version>$PackageVersion$</version>
     <title>XML Doc Inspections</title>
     <authors>ulrichb</authors>
-    <licenseUrl>https://github.com/ulrichb/XmlDocInspections/blob/master/LICENSE</licenseUrl>
+    <license type="expression">MIT</license>
     <projectUrl>https://github.com/ulrichb/XmlDocInspections#readme</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/ulrichb/XmlDocInspections/master/Doc/Icons/Xml128.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Configurable warnings for missing XML Doc comments</description>
-    <releaseNotes>$ReleaseNotes$</releaseNotes>
+    <releaseNotes>$PackageReleaseNotes$</releaseNotes>
     <tags>xml doc xmldoc inspection warning</tags>
     <dependencies>
-      <dependency id="Wave" version="$DependencyVer$" />
+      <dependency id="Wave" version="$PackageWaveDependency$" />
     </dependencies>
   </metadata>
   <files>
-    <file src="$BinDirInclude$\$Configuration$\XmlDocInspections.Plugin.*" target="dotFiles" />
+    <file src="XmlDocInspections.Plugin.*" target="dotFiles" />
   </files>
 </package>

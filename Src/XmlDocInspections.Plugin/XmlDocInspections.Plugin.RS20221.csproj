@@ -7,6 +7,18 @@
     <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <NuspecFile>XmlDocInspections.nuspec</NuspecFile>
+    <NuspecBasePath>$(OutputPath)</NuspecBasePath>
+
+    <PackageVersionReSharperVersionPostfix>0221</PackageVersionReSharperVersionPostfix>
+    <PackageVersion>$([System.Text.RegularExpressions.Regex]::Replace("$(Version)", "^(\d+\.\d+\.\d+\.\d+)", "${1}$(PackageVersionReSharperVersionPostfix)"))</PackageVersion>
+
+    <PackageWaveDependency>[221.0]</PackageWaveDependency>
+
+    <NuspecProperties>PackageVersion=$(PackageVersion);PackageWaveDependency=$(PackageWaveDependency);PackageReleaseNotes=$(PackageReleaseNotes)</NuspecProperties>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Include="..\..\Shared\Src\ReSharperExtensionsShared\Highlighting\SimpleTreeNodeHighlightingBase.cs" Link="ReSharperExtensionsShared\SimpleTreeNodeHighlightingBase.cs" />
     <Compile Include="..\..\Shared\Src\ReSharperExtensionsShared\ProblemAnalyzers\SimpleElementProblemAnalyzer.cs" Link="ReSharperExtensionsShared\SimpleElementProblemAnalyzer.cs" />
