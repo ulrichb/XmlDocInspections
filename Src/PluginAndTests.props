@@ -1,9 +1,16 @@
 <Project>
 
   <PropertyGroup>
-    <_ProjectNameRegex>(.*)(?:\.(R.?\d{5}))</_ProjectNameRegex>
+    <_ProjectNameRegex>(.*)(?:\.(R.\d{5}))</_ProjectNameRegex>
     <ProjectNameWithoutVersion>$([System.Text.RegularExpressions.Regex]::Match($(MSBuildProjectName), $(_ProjectNameRegex)).Groups[1].Value)</ProjectNameWithoutVersion>
     <ReSharperVersionIdentifier>$([System.Text.RegularExpressions.Regex]::Match($(MSBuildProjectName), $(_ProjectNameRegex)).Groups[2].Value)</ReSharperVersionIdentifier>
+
+    <_ReSharperVersionIdentifierRegex>^R.(\d{2}(\d{2}))(\d)$</_ReSharperVersionIdentifierRegex>
+    <ReSharperVersionYYYY>$([System.Text.RegularExpressions.Regex]::Match($(ReSharperVersionIdentifier), $(_ReSharperVersionIdentifierRegex)).Groups[1].Value)</ReSharperVersionYYYY>
+    <ReSharperVersionYY>$([System.Text.RegularExpressions.Regex]::Match($(ReSharperVersionIdentifier), $(_ReSharperVersionIdentifierRegex)).Groups[2].Value)</ReSharperVersionYY>
+    <ReSharperVersionMinor>$([System.Text.RegularExpressions.Regex]::Match($(ReSharperVersionIdentifier), $(_ReSharperVersionIdentifierRegex)).Groups[3].Value)</ReSharperVersionMinor>
+
+    <SdkNuGetPackageVersion>$(ReSharperVersionYYYY).$(ReSharperVersionMinor).*-*</SdkNuGetPackageVersion>
   </PropertyGroup>
 
   <PropertyGroup>
