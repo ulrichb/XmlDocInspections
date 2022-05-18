@@ -8,7 +8,6 @@
   <ItemGroup>
     <None Include="*" Exclude="*.csproj*" />
     <None Include=".github\**" />
-    <None Include=".teamcity\**" />
     <None Include="Build\*" />
     <None Include="Doc\**" />
     <None Include="Src\*" />
