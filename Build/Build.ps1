@@ -1,7 +1,7 @@
 [CmdletBinding()]
 Param(
   [Parameter()] [string] $Configuration = "Debug",
-  [Parameter()] [string] $Version = "0.0.0.1-local",
+  [Parameter()] [string] $Version = "0.0.0.1",
   [Parameter()] [string] $BranchName,
   [Parameter()] [string] $CoverageBadgeUploadToken,
   [Parameter()] [string] $NugetPushKey
