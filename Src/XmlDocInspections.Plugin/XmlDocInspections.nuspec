@@ -17,6 +17,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="XmlDocInspections.Plugin.*" target="dotFiles" />
+    <file src="$OutputPath$XmlDocInspections.Plugin.*" target="dotFiles" />
   </files>
 </package>
