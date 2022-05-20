@@ -19,6 +19,7 @@ $NugetPackProjects = gci "Src\XmlDocInspections.Plugin\XmlDocInspections.Plugin.
 $RiderPluginProject = "Src\RiderPlugin"
 $NugetPushServer = "https://www.myget.org/F/ulrichb/api/v2/package"
 
+AppendToGitHubStepSummary "Full Version: $(GetFullVersion)"
 Clean
 PackageRestore
 Build
