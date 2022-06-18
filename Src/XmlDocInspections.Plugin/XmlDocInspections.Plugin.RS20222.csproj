@@ -16,6 +16,8 @@
     <PackageWaveDependency>[$(ReSharperVersionYY)$(ReSharperVersionMinor).0]</PackageWaveDependency>
 
     <NuspecProperties>PackageVersion=$(PackageVersion);OutputPath=$(OutputPath);PackageWaveDependency=$(PackageWaveDependency);PackageReleaseNotes=$(PackageReleaseNotes)</NuspecProperties>
+
+    <NoWarn>$(NoWarn);NU5100</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
