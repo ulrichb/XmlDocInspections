@@ -1,7 +1,7 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.kotlin.jvm' version '1.6.21'  // https://plugins.gradle.org/plugin/org.jetbrains.kotlin.jvm
-    id 'org.jetbrains.intellij' version '1.6.0'     // https://github.com/JetBrains/gradle-intellij-plugin/releases
+    id 'org.jetbrains.kotlin.jvm' version '1.7.10'  // https://plugins.gradle.org/plugin/org.jetbrains.kotlin.jvm
+    id 'org.jetbrains.intellij' version '1.7.0'     // https://github.com/JetBrains/gradle-intellij-plugin/releases
 }
 
 repositories {
