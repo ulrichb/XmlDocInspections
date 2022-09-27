@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace XmlDocInspections.Plugin.Tests.Integrative
 {
     [TestFixture]
-    [TestNetFramework4]
+    [TestNetFramework46]
     public class AddDocCommentFixTest : CSharpQuickFixTestBase<AddDocCommentFix>
     {
         protected override string RelativeTestDataPath => @"QuickFixes\AddDocCommentFix";

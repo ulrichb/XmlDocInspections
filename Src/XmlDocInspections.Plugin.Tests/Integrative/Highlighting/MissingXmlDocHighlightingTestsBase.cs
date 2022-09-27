@@ -10,7 +10,7 @@ using XmlDocInspections.Plugin.Settings;
 
 namespace XmlDocInspections.Plugin.Tests.Integrative.Highlighting
 {
-    [TestNetFramework4]
+    [TestNetFramework46]
     public abstract class MissingXmlDocHighlightingTestsBase : CSharpHighlightingTestBase
     {
         protected override void DoTestSolution([NotNull] params string[] fileSet)

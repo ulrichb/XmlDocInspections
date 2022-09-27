@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\XmlDocInspections.Plugin\XmlDocInspections.Plugin.$(ReSharperVersionIdentifier).csproj" />
+    <ProjectReference Include="..\XmlDocInspections.Plugin\XmlDocInspections.Plugin.RD20223.csproj" />
   </ItemGroup>
 
 </Project>
