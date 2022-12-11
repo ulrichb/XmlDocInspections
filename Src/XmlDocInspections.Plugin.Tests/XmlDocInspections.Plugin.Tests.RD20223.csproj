@@ -17,8 +17,8 @@
     <PackageReference Include="coverlet.collector" Version="3.1.*" PrivateAssets="all" />
     <PackageReference Include="GitHubActionsTestLogger" Version="1.4.1" PrivateAssets="all" />
     <PackageReference Include="JetBrains.Rider.SDK.Tests" Version="$(SdkNuGetPackageVersion)" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.*" />
-    <PackageReference Include="NUnit3TestAdapter" Version="4.2.*" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.*" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.3.*" />
     <!--<PackageReference Include="TeamCity.VSTest.TestAdapter" Version="1.0.36" />-->
   </ItemGroup>
 
