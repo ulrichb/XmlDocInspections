@@ -8,7 +8,7 @@ Param(
 )
 
 Set-StrictMode -Version 2.0; $ErrorActionPreference = "Stop"; $ConfirmPreference = "None"
-trap { $error[0] | Format-List -Force; $host.SetShouldExit(1) }
+trap { $error[0] | Format-List -Force }
 
 . Shared\Build\BuildFunctions
 
