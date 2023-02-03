@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ReportGenerator" Version="5.1.12" />
+    <PackageReference Include="ReportGenerator" Version="5.1.16" />
   </ItemGroup>
 
 </Project>

@@ -73,7 +73,7 @@ namespace XmlDocInspections.Plugin.Settings
         private void AddAccessibilityBoolOption<T>(Expression<Func<T, AccessibilitySettingFlags>> settingsExpression)
         {
             //AddText("Show inspection accessibility:");
-            var flagsProperty = new Property<AccessibilitySettingFlags>(_lifetime, "AccessibilitySettingFlags");
+            var flagsProperty = new Property<AccessibilitySettingFlags>("AccessibilitySettingFlags");
             _settings.SetBinding(_lifetime, settingsExpression, flagsProperty);
 
             AddAccessibilityBoolOption(flagsProperty, "public", AccessibilitySettingFlags.Public);
@@ -88,7 +88,8 @@ namespace XmlDocInspections.Plugin.Settings
             string text,
             AccessibilitySettingFlags accessibilitySettingFlag)
         {
-            var optionBoolProperty = new Property<bool>(_lifetime, text);
+
+            var optionBoolProperty = new Property<bool>(text);
             BindBoolPropertyToAccessibilitySettingFlag(optionBoolProperty, flagsProperty, accessibilitySettingFlag);
 
             var boolOption = AddBoolOption(optionBoolProperty, text);
