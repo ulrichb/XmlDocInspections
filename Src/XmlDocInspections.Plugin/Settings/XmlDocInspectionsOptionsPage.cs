@@ -88,7 +88,6 @@ namespace XmlDocInspections.Plugin.Settings
             string text,
             AccessibilitySettingFlags accessibilitySettingFlag)
         {
-
             var optionBoolProperty = new Property<bool>(text);
             BindBoolPropertyToAccessibilitySettingFlag(optionBoolProperty, flagsProperty, accessibilitySettingFlag);
 
