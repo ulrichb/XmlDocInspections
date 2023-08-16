@@ -6,7 +6,7 @@ on:
 
 env:
   BuildConfiguration: Release
-  BuildVersion: 2.19.0.${{ github.run_number }}
+  BuildVersion: 2.20.0.${{ github.run_number }}
 
 jobs:
   build:
