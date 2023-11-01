@@ -7,7 +7,7 @@ using XmlDocInspections.Plugin.Tests.Integrative.Highlighting;
 namespace XmlDocInspections.Plugin.Tests.Integrative
 {
     [TestFixture]
-    [TestAspNetCore31]
+    [TestAspNetCore6]
     [TestFileExtension(".cshtml")]
     public class SpecialCodeAspNetCoreTests : MissingXmlDocHighlightingTestsBase
     {

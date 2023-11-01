@@ -6,7 +6,7 @@ on:
 
 env:
   BuildConfiguration: Release
-  BuildVersion: 2.20.0.${{ github.run_number }}
+  BuildVersion: 2.21.0.${{ github.run_number }}
 
 jobs:
   build:
@@ -20,7 +20,12 @@ jobs:
           submodules: true
 
       - name: Run Build.ps1
-        run: ./Build/Build.ps1 -Configuration ${{ env.BuildConfiguration }} -Version "${{ env.BuildVersion }}" -BranchName "${{ github.ref_name }}" -CoverageBadgeUploadToken ${{ secrets.COVERAGE_BADGE_UPLOAD_TOKEN }}
+        run: >
+          ./Build/Build.ps1
+          -Configuration "${{ env.BuildConfiguration }}"
+          -Version "${{ env.BuildVersion }}"
+          -BranchName "${{ github.ref_name }}"
+          -CoverageBadgeUploadToken "${{ secrets.COVERAGE_BADGE_UPLOAD_TOKEN }}"
 
       - name: Upload Packages artifacts
         uses: actions/upload-artifact@v3

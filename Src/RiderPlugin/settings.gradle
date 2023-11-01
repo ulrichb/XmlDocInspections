@@ -1,4 +1,4 @@
 rootProject.name = 'rider-XmlDocInspections'
 gradle.ext.resharperPluginProjectName = 'XmlDocInspections.Plugin'
-gradle.ext.productVersion = '2023.2' // https://www.jetbrains.com/intellij-repository/releases
-gradle.ext.reSharperVersionIdentifier = 'RD20232'
+gradle.ext.productVersion = '2023.3' // https://www.jetbrains.com/intellij-repository/releases
+gradle.ext.reSharperVersionIdentifier = 'RD20233'
