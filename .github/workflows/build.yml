@@ -28,7 +28,7 @@ jobs:
           -CoverageBadgeUploadToken "${{ secrets.COVERAGE_BADGE_UPLOAD_TOKEN }}"
 
       - name: Upload Packages artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Packages
           path: |
@@ -36,7 +36,7 @@ jobs:
             Build/Output/*.zip
 
       - name: Upload TestOutput artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: ${{ always() }}
         with:
           name: TestOutput
