@@ -6,6 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="Properties\launchSettings.json" />
+
     <None Include="*" Exclude="*.csproj*" />
     <None Include=".github\**" />
     <None Include="Build\*" />

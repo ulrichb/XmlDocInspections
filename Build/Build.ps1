@@ -3,6 +3,8 @@ Param(
   [Parameter()] [string] $Configuration = "Debug",
   [Parameter()] [string] $Version = "0.0.0.1",
   [Parameter()] [string] $BranchName,
+  [Parameter()] [boolean] $BuildRiderPlugin = $true,
+  [Parameter()] [boolean] $RunTests = $true,
   [Parameter()] [string] $CoverageBadgeUploadToken,
   [Parameter()] [string] $NugetPushKey
 )
@@ -24,9 +26,6 @@ Clean
 PackageRestore
 Build
 NugetPack
-BuildRiderPlugin
-Test
-
-if ($NugetPushKey) {
-    NugetPush
-}
+if ($BuildRiderPlugin) { BuildRiderPlugin }
+if ($RunTests) { Test }
+if ($NugetPushKey) { NugetPush }
