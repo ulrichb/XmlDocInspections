@@ -16,14 +16,14 @@
   <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="6.*" PrivateAssets="all" />
     <PackageReference Include="GitHubActionsTestLogger" Version="1.4.*" PrivateAssets="all" />
-    <PackageReference Include="JetBrains.Rider.SDK.Tests" Version="$(SdkNuGetPackageVersion)" />
+    <PackageReference Include="JetBrains.ReSharper.SDK.Tests" Version="$(SdkNuGetPackageVersion)" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.*" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.5.*" />
     <!--<PackageReference Include="TeamCity.VSTest.TestAdapter" Version="1.0.36" />-->
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\XmlDocInspections.Plugin\XmlDocInspections.Plugin.RD20241.csproj" />
+    <ProjectReference Include="..\XmlDocInspections.Plugin\XmlDocInspections.Plugin.RS20242.csproj" />
   </ItemGroup>
 
 </Project>
