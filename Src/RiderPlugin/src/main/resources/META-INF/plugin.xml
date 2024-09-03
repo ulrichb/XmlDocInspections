@@ -6,7 +6,6 @@
 
 <p>Tags: rider c# xml doc xmldoc inspection warning</p>
 ]]></description>
-  <change-notes>REPLACE ME</change-notes>
   <vendor>ulrichb</vendor>
 
   <depends>com.intellij.modules.rider</depends>
