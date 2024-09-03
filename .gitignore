@@ -19,4 +19,6 @@
 
 /Build/Output/
 
+.intellijPlatform
+
 /Src/InspectCodeTest/RSAT*/*
