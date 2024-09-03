@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.6.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "InspectCode",
+          "organization": "JetBrains, Inc",
+          "fullName": "JetBrains Inspect Code 2024.2.3",
+          "semanticVersion": "242.0.20240829.213636",
+          "informationUri": "http://www.jetbrains.com/resharper/features/command-line.html",
+          "taxa": []
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "versionControlProvenance": [
+        {
+          "repositoryUri": "https://github.com/ulrichb/XmlDocInspections/",
+          "revisionId": "4a6eca00cf91015010b98f8bb6f5bfcf9fbb6d2b",
+          "branch": "master"
+        }
+      ],
+      "originalUriBaseIds": {
+        "solutionDir": {
+          "uri": "file:///C:/Development/3rdP/XmlDocInspections/Src/XmlDocInspections.Plugin.Tests/test/data/",
+          "description": {
+            "text": "Solution Directory"
+          }
+        }
+      },
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}
