@@ -68,7 +68,7 @@ tasks.patchPluginXml {
         val versionTitle = it.groups[1]!!.value
         val versionText = it.groups[2]!!.value.replace("(?s)\r?\n".toRegex(), "<br />\n")
         "<b>$versionTitle</b>$versionText"
-    }.take(10).joinToString()
+    }.take(10).joinToString("")
 }
 
 tasks.prepareSandbox {
