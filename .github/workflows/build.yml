@@ -6,7 +6,7 @@ on:
 
 env:
   BuildConfiguration: Release
-  BuildVersion: 2.23.0.${{ github.run_number }}
+  BuildVersion: 2.24.0.${{ github.run_number }}
 
 jobs:
   build:
@@ -15,31 +15,48 @@ jobs:
 
     steps:
 
-      - uses: actions/checkout@v4
-        with:
-          submodules: true
+    - uses: actions/checkout@v4
+      with:
+        submodules: true
 
-      - name: Run Build.ps1
-        run: >
-          ./Build/Build.ps1
-          -Configuration "${{ env.BuildConfiguration }}"
-          -Version "${{ env.BuildVersion }}"
-          -BranchName "${{ github.ref_name }}"
-          -CoverageBadgeUploadToken "${{ secrets.COVERAGE_BADGE_UPLOAD_TOKEN }}"
+    - uses: actions/cache@v4
+      with:
+        path: ~/.nuget/packages
+        key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-nuget-
 
-      - name: Upload Packages artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: Packages
-          path: |
-            Build/Output/*.nupkg
-            Build/Output/*.zip
+    - uses: actions/cache@v4
+      with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+        restore-keys: |
+          ${{ runner.os }}-gradle-
 
-      - name: Upload TestOutput artifacts
-        uses: actions/upload-artifact@v4
-        if: ${{ always() }}
-        with:
-          name: TestOutput
-          path: |
-            Build/Output/TestResults/**
-            Build/Output/TestCoverage/**
+    - name: Run Build.ps1
+      run: >
+        ./Build/Build.ps1
+        -Configuration "${{ env.BuildConfiguration }}"
+        -Version "${{ env.BuildVersion }}"
+        -BranchName "${{ github.ref_name }}"
+        -CoverageBadgeUploadToken "${{ secrets.COVERAGE_BADGE_UPLOAD_TOKEN }}"
+
+    - name: Upload Packages artifacts
+      if: ${{ always() }}
+      uses: actions/upload-artifact@v4
+      with:
+        name: Packages
+        path: |
+          Build/Output/*.nupkg
+          Build/Output/*.zip
+
+    - name: Upload TestOutput artifacts
+      uses: actions/upload-artifact@v4
+      if: ${{ always() }}
+      with:
+        name: TestOutput
+        path: |
+          Build/Output/TestResults/**
+          Build/Output/TestCoverage/**
