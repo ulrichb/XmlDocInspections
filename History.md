@@ -1,3 +1,6 @@
+### 2.24.0 ###
+- ReSharper and Rider 2024.3 support
+
 ### 2.23.0 ###
 - ReSharper and Rider 2024.2 support
 

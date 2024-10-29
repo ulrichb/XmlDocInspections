@@ -1,18 +1,19 @@
 using System;
 using System.Linq;
+using JetBrains.Application;
 using JetBrains.Application.DataContext;
+using JetBrains.Application.Parts;
 using JetBrains.Application.Settings;
 using JetBrains.Application.Settings.Extentions;
 using JetBrains.Diagnostics;
 using JetBrains.Lifetimes;
 using JetBrains.Metadata.Reader.Impl;
-using JetBrains.ProjectModel;
 using JetBrains.ProjectModel.Settings.Cache;
 using XmlDocInspections.Plugin.Settings;
 
 namespace XmlDocInspections.Plugin
 {
-    [SolutionComponent]
+    [ShellComponent(Instantiation.DemandAnyThreadSafe)] // TODO: Check this out
     public class XmlDocInspectionsSettingsCache : ICachedSettingsReader<CachedXmlDocInspectionsSettings>
     {
         private readonly Lifetime _lifetime;
