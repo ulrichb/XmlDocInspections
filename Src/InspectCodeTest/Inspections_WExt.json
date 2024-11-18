@@ -1043,11 +1043,11 @@
                   "index": 6
                 },
                 "region": {
-                  "startLine": 9,
+                  "startLine": 10,
                   "startColumn": 22,
-                  "endLine": 9,
+                  "endLine": 10,
                   "endColumn": 35,
-                  "charOffset": 255,
+                  "charOffset": 319,
                   "charLength": 13
                 }
               }
@@ -2132,11 +2132,11 @@
                   "index": 6
                 },
                 "region": {
-                  "startLine": 7,
+                  "startLine": 8,
                   "startColumn": 26,
-                  "endLine": 7,
+                  "endLine": 8,
                   "endColumn": 49,
-                  "charOffset": 202,
+                  "charOffset": 266,
                   "charLength": 23
                 }
               }
@@ -2748,8 +2748,8 @@
         "driver": {
           "name": "InspectCode",
           "organization": "JetBrains, Inc",
-          "fullName": "JetBrains Inspect Code 2024.2.3",
-          "semanticVersion": "242.0.20240829.213636",
+          "fullName": "JetBrains Inspect Code 2024.3",
+          "semanticVersion": "243.0.20241111.161023",
           "informationUri": "http://www.jetbrains.com/resharper/features/command-line.html",
           "rules": [
             {
@@ -2807,7 +2807,7 @@
             "guid": "35f5b65d-50bd-5e8c-be38-433c44d12da4",
             "name": "ReSharper.XmlDocInspections",
             "fullName": "ReSharper XmlDocInspections",
-            "version": "0.0.0.10242-local"
+            "version": "0.0.0.10243-local"
           }
         ]
       },
@@ -2819,7 +2819,7 @@
       "versionControlProvenance": [
         {
           "repositoryUri": "https://github.com/ulrichb/XmlDocInspections/",
-          "revisionId": "4a6eca00cf91015010b98f8bb6f5bfcf9fbb6d2b",
+          "revisionId": "8b928a537e0c45ee0d13591eb3a42b8fa0fbb6c6",
           "branch": "master"
         }
       ],
@@ -2904,9 +2904,9 @@
             "uriBaseId": "solutionDir"
           },
           "hashes": {
-            "md5": "70AD6FAE76CF79475F0777FCE86B59B8",
-            "sha-1": "4BA05FA888D27B842193EB009A958EC7AE00688A",
-            "sha-256": "F2379118496DB80318BF9D537DED6FC9CCDF6B9B18C563342DD93EA6BA624F6D"
+            "md5": "4A76A8ABBFE16E29A1EFF3894C45330D",
+            "sha-1": "2FC42AF4FA3BA55A7262E2DD763A9948ACEFF7F9",
+            "sha-256": "718CDDC7C00198CF95751A7DE58638CE8A1DEDAE04D130F0BB69BD573F906C38"
           }
         },
         {

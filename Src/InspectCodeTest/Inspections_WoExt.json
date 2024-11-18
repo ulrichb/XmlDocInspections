@@ -8,8 +8,8 @@
         "driver": {
           "name": "InspectCode",
           "organization": "JetBrains, Inc",
-          "fullName": "JetBrains Inspect Code 2024.2.3",
-          "semanticVersion": "242.0.20240829.213636",
+          "fullName": "JetBrains Inspect Code 2024.3",
+          "semanticVersion": "243.0.20241111.161023",
           "informationUri": "http://www.jetbrains.com/resharper/features/command-line.html",
           "taxa": []
         }
@@ -22,7 +22,7 @@
       "versionControlProvenance": [
         {
           "repositoryUri": "https://github.com/ulrichb/XmlDocInspections/",
-          "revisionId": "4a6eca00cf91015010b98f8bb6f5bfcf9fbb6d2b",
+          "revisionId": "8b928a537e0c45ee0d13591eb3a42b8fa0fbb6c6",
           "branch": "master"
         }
       ],
