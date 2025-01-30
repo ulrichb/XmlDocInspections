@@ -18,7 +18,7 @@
     <DefaultItemExcludes>$(DefaultItemExcludes);obj\**</DefaultItemExcludes>
     <RootNamespace>$(ProjectNameWithoutVersion)</RootNamespace>
     <OutputPath>bin\$(ReSharperVersionIdentifier)\$(Configuration)\</OutputPath>
-    <LangVersion>9.0</LangVersion>
+    <LangVersion>13.0</LangVersion>
 
     <MSBuildWarningsAsMessages>$(MSBuildWarningsAsMessages);MSB3277</MSBuildWarningsAsMessages>
   </PropertyGroup>
