@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\XmlDocInspections.Plugin\XmlDocInspections.Plugin.RD20243.csproj" />
+    <ProjectReference Include="..\XmlDocInspections.Plugin\XmlDocInspections.Plugin.RD20251.csproj" />
   </ItemGroup>
 
 </Project>
