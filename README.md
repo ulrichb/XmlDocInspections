@@ -20,3 +20,7 @@ A simple ReSharper extension which enables to show warnings for missing XML Doc 
 ### Quick Fix
 
 <img src="/Doc/QuickFix.gif" alt="QuickFix" width="520" />
+
+### Powered by
+
+[![JetBrains logo.](https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.svg)](https://jb.gg/OpenSourceSupport)
