@@ -2,14 +2,14 @@
   "profiles": {
     "Build.ps1 w/o Rider and Tests": {
       "commandName": "Executable",
-      "executablePath": "pwsh",
-      "commandLineArgs": "-Command Build\\Build.ps1 -BuildRiderPlugin 0 -RunTests 0; pause",
+      "executablePath": "cmd",
+      "commandLineArgs": "/K pwsh -Command Build\\Build.ps1 -BuildRiderPlugin 0 -RunTests 0",
       "workingDirectory": "$(SolutionDir)"
     },
     "Build.ps1": {
       "commandName": "Executable",
-      "executablePath": "pwsh",
-      "commandLineArgs": "-Command Build\\Build.ps1; pause",
+      "executablePath": "cmd",
+      "commandLineArgs": "/K pwsh -Command Build\\Build.ps1",
       "workingDirectory": "$(SolutionDir)"
     }
   }
