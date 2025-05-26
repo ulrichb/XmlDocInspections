@@ -2,8 +2,8 @@
 
 [![Build status](https://github.com/ulrichb/XmlDocInspections/actions/workflows/build.yml/badge.svg)](https://github.com/ulrichb/XmlDocInspections/actions/workflows/build.yml)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ulrichb/XmlDocInspections?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-<img src="https://dl.dropbox.com/s/8p9d03ycoy4nf06/master-linecoverage.svg" alt="Line Coverage" title="Line Coverage">
-<img src="https://dl.dropbox.com/s/ywhaxs30rto3ezm/master-branchcoverage.svg" alt="Branch Coverage" title="Branch Coverage">
+<!--<img src="https://dl.dropbox.com/s/8p9d03ycoy4nf06/master-linecoverage.svg" alt="Line Coverage" title="Line Coverage">
+<img src="https://dl.dropbox.com/s/ywhaxs30rto3ezm/master-branchcoverage.svg" alt="Branch Coverage" title="Branch Coverage">-->
 
 Plugin pages: [ReSharper](https://plugins.jetbrains.com/plugin/11648-xml-doc-inspections) / [Rider](https://plugins.jetbrains.com/plugin/10151-xml-doc-inspections)
 
