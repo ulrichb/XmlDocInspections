@@ -8,8 +8,8 @@
         "driver": {
           "name": "InspectCode",
           "organization": "JetBrains, Inc",
-          "fullName": "JetBrains Inspect Code 2024.3",
-          "semanticVersion": "243.0.20241111.161023",
+          "fullName": "JetBrains Inspect Code 2025.2",
+          "semanticVersion": "252.0.20250812.71120",
           "informationUri": "http://www.jetbrains.com/resharper/features/command-line.html",
           "taxa": []
         }
@@ -21,14 +21,14 @@
       ],
       "versionControlProvenance": [
         {
-          "repositoryUri": "https://github.com/ulrichb/XmlDocInspections/",
-          "revisionId": "8b928a537e0c45ee0d13591eb3a42b8fa0fbb6c6",
-          "branch": "master"
+          "repositoryUri": "https://github.com/ulrichb/XmlDocInspections",
+          "revisionId": "33ea4f335d3814dd14782e11c1211e2485e4409b",
+          "branch": "main"
         }
       ],
       "originalUriBaseIds": {
         "solutionDir": {
-          "uri": "file:///C:/Development/3rdP/XmlDocInspections/Src/XmlDocInspections.Plugin.Tests/test/data/",
+          "uri": "file:///C:/Users/Ulrich/U/XmlDocInspections/Src/XmlDocInspections.Plugin.Tests/test/data/",
           "description": {
             "text": "Solution Directory"
           }
