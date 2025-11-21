@@ -13,7 +13,7 @@ using XmlDocInspections.Plugin.Settings;
 
 namespace XmlDocInspections.Plugin
 {
-    [ShellComponent(Instantiation.DemandAnyThreadSafe)] // TODO: Check this out
+    [ShellComponent(Instantiation.DemandAnyThreadSafe)]
     public class XmlDocInspectionsSettingsCache : ICachedSettingsReader<CachedXmlDocInspectionsSettings>
     {
         private readonly Lifetime _lifetime;
