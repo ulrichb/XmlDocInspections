@@ -10,7 +10,8 @@
     <ReSharperVersionYY>$([System.Text.RegularExpressions.Regex]::Match($(ReSharperVersionIdentifier), $(_ReSharperVersionIdentifierRegex)).Groups[2].Value)</ReSharperVersionYY>
     <ReSharperVersionMinor>$([System.Text.RegularExpressions.Regex]::Match($(ReSharperVersionIdentifier), $(_ReSharperVersionIdentifierRegex)).Groups[3].Value)</ReSharperVersionMinor>
 
-    <SdkNuGetPackageVersion>$(ReSharperVersionYYYY).$(ReSharperVersionMinor).*-*</SdkNuGetPackageVersion>
+    <!-- TODO: revert to '.*-*' (temporary fix for NuGet resolution issue) -->
+    <SdkNuGetPackageVersion>$(ReSharperVersionYYYY).$(ReSharperVersionMinor).0.1</SdkNuGetPackageVersion>
   </PropertyGroup>
 
   <PropertyGroup>
