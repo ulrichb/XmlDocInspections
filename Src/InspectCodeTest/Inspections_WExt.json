@@ -20,18 +20,18 @@
                   "index": 0
                 },
                 "region": {
-                  "startLine": 83,
-                  "startColumn": 24,
-                  "endLine": 83,
-                  "endColumn": 43,
-                  "charOffset": 1863,
+                  "startLine": 81,
+                  "startColumn": 20,
+                  "endLine": 81,
+                  "endColumn": 39,
+                  "charOffset": 1678,
                   "charLength": 19
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "7CFAD8D36B9B7CFEEADBB8DBA4F22DAF46808C26A3C755A33732AE174BF53E9D"
+            "contextRegionHash/v1": "2126A2B17F7E6155A2C2720A377C618BCCA9072E951EE9F7F5128A83EFA95275"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -54,17 +54,17 @@
                 },
                 "region": {
                   "startLine": 8,
-                  "startColumn": 28,
+                  "startColumn": 24,
                   "endLine": 8,
-                  "endColumn": 55,
-                  "charOffset": 220,
+                  "endColumn": 51,
+                  "charOffset": 212,
                   "charLength": 27
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "5E7DE94EE9335F9453D0E9755FD714145537CE2D9E4818F9AB885224FE4130D0"
+            "contextRegionHash/v1": "612688E731047CBE648D85D9D1E520EFA3CA623E3ABBBA526FA8E1C33AD74226"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -87,17 +87,17 @@
                 },
                 "region": {
                   "startLine": 14,
-                  "startColumn": 24,
+                  "startColumn": 20,
                   "endLine": 14,
-                  "endColumn": 54,
-                  "charOffset": 325,
+                  "endColumn": 50,
+                  "charOffset": 301,
                   "charLength": 30
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "7CDC99BF158223566C0C28466B41A6DEA1D2B598D3341A9378F8970F9B578795"
+            "contextRegionHash/v1": "35FFE07C1DB880055285D658AD0964C07CA73117FD03BC7A6A53AFCA924340C5"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -119,18 +119,18 @@
                   "index": 2
                 },
                 "region": {
-                  "startLine": 28,
-                  "startColumn": 28,
-                  "endLine": 28,
-                  "endColumn": 52,
-                  "charOffset": 640,
+                  "startLine": 26,
+                  "startColumn": 24,
+                  "endLine": 26,
+                  "endColumn": 48,
+                  "charOffset": 559,
                   "charLength": 24
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "3094AE59F45A2660B1AE591C40918E2A43A8E252DFBE723D56BE8C49CE8294A5"
+            "contextRegionHash/v1": "23A8CD4D19E0318F7A672604451178B445D0F4DBD48F1508837F8E3BC5F42782"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -153,17 +153,17 @@
                 },
                 "region": {
                   "startLine": 8,
-                  "startColumn": 20,
+                  "startColumn": 16,
                   "endLine": 8,
-                  "endColumn": 44,
-                  "charOffset": 235,
+                  "endColumn": 40,
+                  "charOffset": 231,
                   "charLength": 24
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "7FDFAB89A6D8B3BF8071E12A83A99F4A5448A50A1C9EBD12A712E9AF50FB6BA6"
+            "contextRegionHash/v1": "21D8074E87D2961F45D1C45BB7633C7E423F6809B547DFA0EEEE980513C1A826"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -186,17 +186,50 @@
                 },
                 "region": {
                   "startLine": 20,
-                  "startColumn": 22,
+                  "startColumn": 18,
                   "endLine": 20,
-                  "endColumn": 39,
-                  "charOffset": 594,
+                  "endColumn": 35,
+                  "charOffset": 562,
                   "charLength": 17
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "BC46EFD7B1AF409A061A134A41347133B477602D9B72E43FA59306E2F8DA3861"
+            "contextRegionHash/v1": "9D32BE83928A4410B6C4226CDA1659F52807B3B578807CAF123905AD2DF5706B"
+          },
+          "properties": {
+            "tags": ["C#",".NETStandard 2.0"]
+          }
+        },
+        {
+          "ruleId": "MissingXmlDoc",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Missing XML Doc comment for internal type"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Highlighting/InternalClassWithoutDocs.cs",
+                  "uriBaseId": "solutionDir",
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 20,
+                  "endLine": 22,
+                  "endColumn": 39,
+                  "charOffset": 603,
+                  "charLength": 19
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "contextRegionHash/v1": "2126A2B17F7E6155A2C2720A377C618BCCA9072E951EE9F7F5128A83EFA95275"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -219,50 +252,17 @@
                 },
                 "region": {
                   "startLine": 24,
-                  "startColumn": 24,
+                  "startColumn": 30,
                   "endLine": 24,
-                  "endColumn": 43,
-                  "charOffset": 660,
-                  "charLength": 19
-                }
-              }
-            }
-          ],
-          "partialFingerprints": {
-            "contextRegionHash/v1": "7CFAD8D36B9B7CFEEADBB8DBA4F22DAF46808C26A3C755A33732AE174BF53E9D"
-          },
-          "properties": {
-            "tags": ["C#",".NETStandard 2.0"]
-          }
-        },
-        {
-          "ruleId": "MissingXmlDoc",
-          "ruleIndex": 0,
-          "level": "warning",
-          "message": {
-            "text": "Missing XML Doc comment for internal type"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "Highlighting/InternalClassWithoutDocs.cs",
-                  "uriBaseId": "solutionDir",
-                  "index": 3
-                },
-                "region": {
-                  "startLine": 28,
-                  "startColumn": 34,
-                  "endLine": 28,
-                  "endColumn": 62,
-                  "charOffset": 738,
+                  "endColumn": 58,
+                  "charOffset": 656,
                   "charLength": 28
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "A9DD5D18B438FEEA93EF42F1EC775DD56A4EE22CC9CFA0790BEA93CE53541803"
+            "contextRegionHash/v1": "193CC0572E65F09D0D81470661FAC184D29C9552AF97AC059BEF35058A133F3D"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -285,17 +285,17 @@
                 },
                 "region": {
                   "startLine": 31,
-                  "startColumn": 21,
+                  "startColumn": 17,
                   "endLine": 31,
-                  "endColumn": 46,
-                  "charOffset": 675,
+                  "endColumn": 42,
+                  "charOffset": 607,
                   "charLength": 25
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "065504DCB3D698C7E4F161753C2B9BDC1F25F418A3544C8ADB2E5A8F2DEFE64A"
+            "contextRegionHash/v1": "BA5960521DE2C99EDBA620CD6329E21F6D8E910353CC3CF01561EA5A7C20E354"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -318,17 +318,17 @@
                 },
                 "region": {
                   "startLine": 23,
-                  "startColumn": 25,
+                  "startColumn": 21,
                   "endLine": 23,
-                  "endColumn": 38,
-                  "charOffset": 702,
+                  "endColumn": 34,
+                  "charOffset": 686,
                   "charLength": 13
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "AF833814C4FB12B9CC480DD799F61E322207CF1C20FD35EABFE263B38812EC45"
+            "contextRegionHash/v1": "1B9BB5149785F1C6CFBA970D882373132128017CCCDEDBD2DF100EE7FF3AF13E"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -351,17 +351,17 @@
                 },
                 "region": {
                   "startLine": 45,
-                  "startColumn": 25,
+                  "startColumn": 21,
                   "endLine": 45,
-                  "endColumn": 41,
-                  "charOffset": 1109,
+                  "endColumn": 37,
+                  "charOffset": 1041,
                   "charLength": 16
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "88E76FA6305DC4234CE46D3D8600E8621E2D49181FFFBE112154B82F0C66E1D6"
+            "contextRegionHash/v1": "1AED9B40227FB0D4661EF1BB060F4C9AC73BE3FDCB69E19805AF459E0DA20F66"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -384,17 +384,17 @@
                 },
                 "region": {
                   "startLine": 63,
-                  "startColumn": 23,
+                  "startColumn": 19,
                   "endLine": 63,
-                  "endColumn": 37,
-                  "charOffset": 1523,
+                  "endColumn": 33,
+                  "charOffset": 1411,
                   "charLength": 14
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "8A6C15FAC2D6AF92B780C44B6911C20AFC981F2B7EC2410BFDE89F30C4E68E6A"
+            "contextRegionHash/v1": "B58EBBF63646BF3DBE21F83F831D76A38531B8DD1FC457C632D9B1AE81C24B60"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -416,18 +416,18 @@
                   "index": 0
                 },
                 "region": {
-                  "startLine": 103,
-                  "startColumn": 37,
-                  "endLine": 103,
-                  "endColumn": 50,
-                  "charOffset": 2231,
+                  "startLine": 93,
+                  "startColumn": 33,
+                  "endLine": 93,
+                  "endColumn": 46,
+                  "charOffset": 1938,
                   "charLength": 13
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "B79E630AB4E2FDEAAF7CD26C8E2DDB193199E8C37726AE275D2F74A0D03C07DC"
+            "contextRegionHash/v1": "70A1D26CE45CC28AD1787407AB92DC06111BF159B606EB254BC1A205B02699F7"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -450,17 +450,17 @@
                 },
                 "region": {
                   "startLine": 16,
-                  "startColumn": 16,
+                  "startColumn": 12,
                   "endLine": 16,
-                  "endColumn": 24,
-                  "charOffset": 379,
+                  "endColumn": 20,
+                  "charOffset": 347,
                   "charLength": 8
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "691B43384ECFE9C1531EA77F6FDB800CAFD5E188BA1D29CBF56D6C8E31F919B4"
+            "contextRegionHash/v1": "9F9AA57343433668F57D18EDBC763C3D3EC58933F51AC22F93329652066B81E3"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -483,17 +483,17 @@
                 },
                 "region": {
                   "startLine": 18,
-                  "startColumn": 14,
+                  "startColumn": 10,
                   "endLine": 18,
-                  "endColumn": 20,
-                  "charOffset": 413,
+                  "endColumn": 16,
+                  "charOffset": 377,
                   "charLength": 6
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "ABC55B563F3E7D6A7155845BB63A88DB7262AECE1946E9B69473BB5BC30D2405"
+            "contextRegionHash/v1": "4E35B50A2973A3574770777AF8490C74067C9BC7633656F823DC26B4720C13F0"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -516,17 +516,17 @@
                 },
                 "region": {
                   "startLine": 10,
-                  "startColumn": 23,
+                  "startColumn": 19,
                   "endLine": 10,
-                  "endColumn": 37,
-                  "charOffset": 290,
+                  "endColumn": 33,
+                  "charOffset": 278,
                   "charLength": 14
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "22362D48A409E45469A8CC73F470E2B68E8DE5016DFAF52C8E5B6E5840834A4D"
+            "contextRegionHash/v1": "78ED36A116A121273F6350BEA29DE52445703ED1FBFFC22980C71214224731FC"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -549,17 +549,17 @@
                 },
                 "region": {
                   "startLine": 12,
-                  "startColumn": 25,
+                  "startColumn": 21,
                   "endLine": 12,
-                  "endColumn": 41,
-                  "charOffset": 346,
+                  "endColumn": 37,
+                  "charOffset": 330,
                   "charLength": 16
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "88E76FA6305DC4234CE46D3D8600E8621E2D49181FFFBE112154B82F0C66E1D6"
+            "contextRegionHash/v1": "1AED9B40227FB0D4661EF1BB060F4C9AC73BE3FDCB69E19805AF459E0DA20F66"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -582,17 +582,17 @@
                 },
                 "region": {
                   "startLine": 14,
-                  "startColumn": 35,
+                  "startColumn": 31,
                   "endLine": 14,
-                  "endColumn": 60,
-                  "charOffset": 414,
+                  "endColumn": 56,
+                  "charOffset": 394,
                   "charLength": 25
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "39ABCF5AF78544E706CC18066169DC7050EA03E1A34FFF5A2E2A7225DFF4176B"
+            "contextRegionHash/v1": "C71BD154383F7060428DE68C4A13DFEDC40B8419C593A010529A77A09D342402"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -615,17 +615,17 @@
                 },
                 "region": {
                   "startLine": 12,
-                  "startColumn": 25,
+                  "startColumn": 21,
                   "endLine": 12,
-                  "endColumn": 41,
-                  "charOffset": 350,
+                  "endColumn": 37,
+                  "charOffset": 334,
                   "charLength": 16
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "88E76FA6305DC4234CE46D3D8600E8621E2D49181FFFBE112154B82F0C66E1D6"
+            "contextRegionHash/v1": "1AED9B40227FB0D4661EF1BB060F4C9AC73BE3FDCB69E19805AF459E0DA20F66"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -648,17 +648,17 @@
                 },
                 "region": {
                   "startLine": 22,
-                  "startColumn": 23,
+                  "startColumn": 19,
                   "endLine": 22,
-                  "endColumn": 37,
-                  "charOffset": 544,
+                  "endColumn": 33,
+                  "charOffset": 504,
                   "charLength": 14
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "8A6C15FAC2D6AF92B780C44B6911C20AFC981F2B7EC2410BFDE89F30C4E68E6A"
+            "contextRegionHash/v1": "B58EBBF63646BF3DBE21F83F831D76A38531B8DD1FC457C632D9B1AE81C24B60"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -681,17 +681,17 @@
                 },
                 "region": {
                   "startLine": 33,
-                  "startColumn": 23,
+                  "startColumn": 19,
                   "endLine": 33,
-                  "endColumn": 37,
-                  "charOffset": 731,
+                  "endColumn": 33,
+                  "charOffset": 655,
                   "charLength": 14
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "22362D48A409E45469A8CC73F470E2B68E8DE5016DFAF52C8E5B6E5840834A4D"
+            "contextRegionHash/v1": "78ED36A116A121273F6350BEA29DE52445703ED1FBFFC22980C71214224731FC"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -714,17 +714,17 @@
                 },
                 "region": {
                   "startLine": 35,
-                  "startColumn": 25,
+                  "startColumn": 21,
                   "endLine": 35,
-                  "endColumn": 41,
-                  "charOffset": 787,
+                  "endColumn": 37,
+                  "charOffset": 707,
                   "charLength": 16
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "011568E807FD98ACE3CD526AB846D87D9ECA0D6F6C88DD6159113A46874120EA"
+            "contextRegionHash/v1": "655C062536C349E022D5A67D7BBB0BC0EF7C86E65C5FC810A5965D2418F8B08C"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -746,18 +746,18 @@
                   "index": 0
                 },
                 "region": {
-                  "startLine": 95,
-                  "startColumn": 23,
-                  "endLine": 95,
-                  "endColumn": 41,
-                  "charOffset": 2087,
+                  "startLine": 87,
+                  "startColumn": 19,
+                  "endLine": 87,
+                  "endColumn": 37,
+                  "charOffset": 1827,
                   "charLength": 18
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "7F5038E681A06794BFA5178A2E441D39D47A84DE8CD8F9FCD9486B0AE683B19A"
+            "contextRegionHash/v1": "AA441892A0FA5ED7B1DF70FEF4C908C1065C15AD2B07EF2F1C6024370382EFA5"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -779,18 +779,18 @@
                   "index": 2
                 },
                 "region": {
-                  "startLine": 36,
-                  "startColumn": 27,
-                  "endLine": 36,
-                  "endColumn": 50,
-                  "charOffset": 795,
+                  "startLine": 30,
+                  "startColumn": 23,
+                  "endLine": 30,
+                  "endColumn": 46,
+                  "charOffset": 664,
                   "charLength": 23
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "4D4FBF6566D1B281A294FF1CF4E9ACC46706AD1E893CB68140B763562B1EB50E"
+            "contextRegionHash/v1": "DDC6B9D70BD461A2F2F423E4086A270D81B9ACE916645E76807F985540E4333D"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -812,18 +812,18 @@
                   "index": 3
                 },
                 "region": {
-                  "startLine": 36,
-                  "startColumn": 23,
-                  "endLine": 36,
-                  "endColumn": 41,
-                  "charOffset": 884,
+                  "startLine": 28,
+                  "startColumn": 19,
+                  "endLine": 28,
+                  "endColumn": 37,
+                  "charOffset": 752,
                   "charLength": 18
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "7F5038E681A06794BFA5178A2E441D39D47A84DE8CD8F9FCD9486B0AE683B19A"
+            "contextRegionHash/v1": "5C2DF5672A5ECF0D9B5652D7D5B6B7DBCE6A144350C37C466996DD07B02535A8"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -846,17 +846,17 @@
                 },
                 "region": {
                   "startLine": 29,
-                  "startColumn": 24,
+                  "startColumn": 20,
                   "endLine": 29,
-                  "endColumn": 36,
-                  "charOffset": 848,
+                  "endColumn": 32,
+                  "charOffset": 820,
                   "charLength": 12
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "0A0C020FF59D894F4F2F1C2930813B2E6493004D33A56D25401B05A253A8822A"
+            "contextRegionHash/v1": "6A49B55AEBD1EA1839A26FB04C12B2509808AF79CFB5AAAC1971269D2045B73A"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -879,17 +879,17 @@
                 },
                 "region": {
                   "startLine": 51,
-                  "startColumn": 24,
+                  "startColumn": 20,
                   "endLine": 51,
-                  "endColumn": 39,
-                  "charOffset": 1303,
+                  "endColumn": 35,
+                  "charOffset": 1223,
                   "charLength": 15
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "836F5D6083BC13B5019CD978C95E3C93D16280A29390517FFC352FA5803457AA"
+            "contextRegionHash/v1": "FFF756C65963B6BD9812DFF3BCE098ACB39CA2319169DDD32EFD5E72FA734CED"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -912,17 +912,17 @@
                 },
                 "region": {
                   "startLine": 75,
-                  "startColumn": 22,
+                  "startColumn": 18,
                   "endLine": 75,
-                  "endColumn": 35,
-                  "charOffset": 1735,
+                  "endColumn": 31,
+                  "charOffset": 1587,
                   "charLength": 13
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "271F62749B46607701DE3E837C3AC6FE0CDFDA53E094A966017FF5001A6FF97A"
+            "contextRegionHash/v1": "E168CBCE07C3ABC422A83BFD48B3B249F9F6CF018EB1B8A8DA958325CFD68AFC"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -944,18 +944,18 @@
                   "index": 0
                 },
                 "region": {
-                  "startLine": 109,
-                  "startColumn": 36,
-                  "endLine": 109,
-                  "endColumn": 48,
-                  "charOffset": 2413,
+                  "startLine": 99,
+                  "startColumn": 32,
+                  "endLine": 99,
+                  "endColumn": 44,
+                  "charOffset": 2108,
                   "charLength": 12
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "0BF0A98AE651D1EA239F23E375C6293AFD3C2A01DAA2CDC63B8F944D10A431BE"
+            "contextRegionHash/v1": "AE93B512862C3C8AA148618848DB7F45DF01E247A9BEF30B6939F31E71E2ED01"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -978,17 +978,17 @@
                 },
                 "region": {
                   "startLine": 18,
-                  "startColumn": 24,
+                  "startColumn": 20,
                   "endLine": 18,
-                  "endColumn": 39,
-                  "charOffset": 540,
+                  "endColumn": 35,
+                  "charOffset": 512,
                   "charLength": 15
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "836F5D6083BC13B5019CD978C95E3C93D16280A29390517FFC352FA5803457AA"
+            "contextRegionHash/v1": "FFF756C65963B6BD9812DFF3BCE098ACB39CA2319169DDD32EFD5E72FA734CED"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1011,17 +1011,17 @@
                 },
                 "region": {
                   "startLine": 9,
-                  "startColumn": 22,
+                  "startColumn": 18,
                   "endLine": 9,
-                  "endColumn": 35,
-                  "charOffset": 255,
+                  "endColumn": 31,
+                  "charOffset": 243,
                   "charLength": 13
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "71D0EAE7EB111FF21CB769A784DA29150B04812DC53226785B956C9EAE20CF36"
+            "contextRegionHash/v1": "47857D4EF75141424E869DBBFA579B919444E0BC40EBDC8A6991E6B09C369A2E"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1044,17 +1044,17 @@
                 },
                 "region": {
                   "startLine": 10,
-                  "startColumn": 22,
+                  "startColumn": 18,
                   "endLine": 10,
-                  "endColumn": 35,
-                  "charOffset": 319,
+                  "endColumn": 31,
+                  "charOffset": 307,
                   "charLength": 13
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "94C21788F5255F2D4CB49FE350A4355D3371A34F32ACDBE8724E85E3936FBE44"
+            "contextRegionHash/v1": "F76245C9B875D5EF6FE873F71B1CF390D96ED7545B68EB9355B788E5C866288F"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1077,17 +1077,17 @@
                 },
                 "region": {
                   "startLine": 14,
-                  "startColumn": 24,
+                  "startColumn": 20,
                   "endLine": 14,
-                  "endColumn": 39,
-                  "charOffset": 407,
+                  "endColumn": 35,
+                  "charOffset": 387,
                   "charLength": 15
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "836F5D6083BC13B5019CD978C95E3C93D16280A29390517FFC352FA5803457AA"
+            "contextRegionHash/v1": "FFF756C65963B6BD9812DFF3BCE098ACB39CA2319169DDD32EFD5E72FA734CED"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1110,17 +1110,17 @@
                 },
                 "region": {
                   "startLine": 26,
-                  "startColumn": 22,
+                  "startColumn": 18,
                   "endLine": 26,
-                  "endColumn": 35,
-                  "charOffset": 607,
+                  "endColumn": 31,
+                  "charOffset": 555,
                   "charLength": 13
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "271F62749B46607701DE3E837C3AC6FE0CDFDA53E094A966017FF5001A6FF97A"
+            "contextRegionHash/v1": "E168CBCE07C3ABC422A83BFD48B3B249F9F6CF018EB1B8A8DA958325CFD68AFC"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1142,18 +1142,18 @@
                   "index": 0
                 },
                 "region": {
-                  "startLine": 87,
-                  "startColumn": 34,
-                  "endLine": 87,
-                  "endColumn": 62,
-                  "charOffset": 1941,
+                  "startLine": 83,
+                  "startColumn": 30,
+                  "endLine": 83,
+                  "endColumn": 58,
+                  "charOffset": 1731,
                   "charLength": 28
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "A9DD5D18B438FEEA93EF42F1EC775DD56A4EE22CC9CFA0790BEA93CE53541803"
+            "contextRegionHash/v1": "193CC0572E65F09D0D81470661FAC184D29C9552AF97AC059BEF35058A133F3D"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1176,17 +1176,17 @@
                 },
                 "region": {
                   "startLine": 25,
-                  "startColumn": 35,
+                  "startColumn": 31,
                   "endLine": 25,
-                  "endColumn": 57,
-                  "charOffset": 754,
+                  "endColumn": 53,
+                  "charOffset": 734,
                   "charLength": 22
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "88D7AF83D5DF5AAC045FCA97C58AD9421107CDE4411302D9C4C7871E993D022F"
+            "contextRegionHash/v1": "9F50374B09ADA60D903198BAE9DD27DFE15EDE3129225E7CA244383A26ECD394"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1209,17 +1209,17 @@
                 },
                 "region": {
                   "startLine": 47,
-                  "startColumn": 35,
+                  "startColumn": 31,
                   "endLine": 47,
-                  "endColumn": 60,
-                  "charOffset": 1177,
+                  "endColumn": 56,
+                  "charOffset": 1105,
                   "charLength": 25
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "39ABCF5AF78544E706CC18066169DC7050EA03E1A34FFF5A2E2A7225DFF4176B"
+            "contextRegionHash/v1": "C71BD154383F7060428DE68C4A13DFEDC40B8419C593A010529A77A09D342402"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1242,17 +1242,17 @@
                 },
                 "region": {
                   "startLine": 71,
-                  "startColumn": 33,
+                  "startColumn": 29,
                   "endLine": 71,
-                  "endColumn": 56,
-                  "charOffset": 1663,
+                  "endColumn": 52,
+                  "charOffset": 1527,
                   "charLength": 23
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "0BF97B4035C678828DED271F1CB9E10F8917D6349C11E1E023048497A6873FDD"
+            "contextRegionHash/v1": "8EBF752A2ACC7445EC678F52F8E9371F1FC7A4C9C3097A272DA8E651B60C03E0"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1274,18 +1274,18 @@
                   "index": 0
                 },
                 "region": {
-                  "startLine": 105,
-                  "startColumn": 47,
-                  "endLine": 105,
-                  "endColumn": 69,
-                  "charOffset": 2295,
+                  "startLine": 95,
+                  "startColumn": 43,
+                  "endLine": 95,
+                  "endColumn": 65,
+                  "charOffset": 1998,
                   "charLength": 22
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "B93F54AFF0EF9FEC364F7D6CF8A5CAB74C49DF35022738F0C35FAC37DC31F8F2"
+            "contextRegionHash/v1": "8E8FD13A858E6B7C8C7D3B09B9696C13B8E0D5F23D41697A83758A104355E3A8"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1307,18 +1307,18 @@
                   "index": 0
                 },
                 "region": {
-                  "startLine": 91,
-                  "startColumn": 25,
-                  "endLine": 91,
-                  "endColumn": 45,
-                  "charOffset": 2019,
+                  "startLine": 85,
+                  "startColumn": 21,
+                  "endLine": 85,
+                  "endColumn": 41,
+                  "charOffset": 1784,
                   "charLength": 20
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "5C240DDDE3D28FF65D0F7E136C648699FA22E30C9D7C993D399C09422CE5E0B5"
+            "contextRegionHash/v1": "B788DB18BE224D0CE63EEFF17393F1698CD77E77D0547E4BA09C553025935425"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1340,18 +1340,18 @@
                   "index": 2
                 },
                 "region": {
-                  "startLine": 32,
-                  "startColumn": 29,
-                  "endLine": 32,
-                  "endColumn": 54,
-                  "charOffset": 718,
+                  "startLine": 28,
+                  "startColumn": 25,
+                  "endLine": 28,
+                  "endColumn": 50,
+                  "charOffset": 612,
                   "charLength": 25
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "09362A1596CE9C3FD88752B3DF6AF4EAEF4E352A57840A1CD62835BE3F6BC865"
+            "contextRegionHash/v1": "ADD943D0D03BA0D2084A9E86223E2E7ABCCABD96E9EA838A77F50C2877A9C6F1"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1373,18 +1373,18 @@
                   "index": 3
                 },
                 "region": {
-                  "startLine": 32,
-                  "startColumn": 25,
-                  "endLine": 32,
-                  "endColumn": 45,
-                  "charOffset": 816,
+                  "startLine": 26,
+                  "startColumn": 21,
+                  "endLine": 26,
+                  "endColumn": 41,
+                  "charOffset": 709,
                   "charLength": 20
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "5C240DDDE3D28FF65D0F7E136C648699FA22E30C9D7C993D399C09422CE5E0B5"
+            "contextRegionHash/v1": "B788DB18BE224D0CE63EEFF17393F1698CD77E77D0547E4BA09C553025935425"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1407,17 +1407,17 @@
                 },
                 "region": {
                   "startLine": 27,
-                  "startColumn": 26,
+                  "startColumn": 22,
                   "endLine": 27,
-                  "endColumn": 40,
-                  "charOffset": 806,
+                  "endColumn": 36,
+                  "charOffset": 782,
                   "charLength": 14
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "554652AA25EEC966A35473F9F0545D3A4336DBCD828CF6521AB9EF651777D157"
+            "contextRegionHash/v1": "CEC9E9C1A1D40554014F777516BCF3E3C6E2EEE0CB6035A979D32FDA5CC161E4"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1440,17 +1440,17 @@
                 },
                 "region": {
                   "startLine": 49,
-                  "startColumn": 26,
+                  "startColumn": 22,
                   "endLine": 49,
-                  "endColumn": 43,
-                  "charOffset": 1245,
+                  "endColumn": 39,
+                  "charOffset": 1169,
                   "charLength": 17
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "35885324DC6DA45E4CA56CDAFDE5ECD603A4CE9C7F308A3C2A7DAC4043C60E48"
+            "contextRegionHash/v1": "430353A31329E86D65EDF01CCC3DEA29351C1E3FE5E92CC080913A5231B320AE"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1473,17 +1473,17 @@
                 },
                 "region": {
                   "startLine": 67,
-                  "startColumn": 24,
+                  "startColumn": 20,
                   "endLine": 67,
-                  "endColumn": 39,
-                  "charOffset": 1588,
+                  "endColumn": 35,
+                  "charOffset": 1464,
                   "charLength": 15
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "AF27F9665445AB892E9EF432DFF01C506BF6E2306F5122A8C4BE363E3D092E4E"
+            "contextRegionHash/v1": "204F14866E3D3909C4B258B49A7944E11112690E33B70670676CC95FD1FE842E"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1505,18 +1505,18 @@
                   "index": 0
                 },
                 "region": {
-                  "startLine": 107,
-                  "startColumn": 38,
-                  "endLine": 107,
-                  "endColumn": 52,
-                  "charOffset": 2359,
+                  "startLine": 97,
+                  "startColumn": 34,
+                  "endLine": 97,
+                  "endColumn": 48,
+                  "charOffset": 2058,
                   "charLength": 14
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "0E0AABAEA616A19809BA5E3841EEA5C4933C0557F947ED26FC3C4502B6125623"
+            "contextRegionHash/v1": "107C8EBFF1D24C4D12536F7EBFD87908D2EECCAFD4380023480C77A6F9328689"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1539,17 +1539,17 @@
                 },
                 "region": {
                   "startLine": 16,
-                  "startColumn": 26,
+                  "startColumn": 22,
                   "endLine": 16,
-                  "endColumn": 43,
-                  "charOffset": 482,
+                  "endColumn": 39,
+                  "charOffset": 458,
                   "charLength": 17
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "35885324DC6DA45E4CA56CDAFDE5ECD603A4CE9C7F308A3C2A7DAC4043C60E48"
+            "contextRegionHash/v1": "430353A31329E86D65EDF01CCC3DEA29351C1E3FE5E92CC080913A5231B320AE"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1572,17 +1572,17 @@
                 },
                 "region": {
                   "startLine": 9,
-                  "startColumn": 18,
+                  "startColumn": 14,
                   "endLine": 9,
-                  "endColumn": 48,
-                  "charOffset": 200,
+                  "endColumn": 44,
+                  "charOffset": 196,
                   "charLength": 30
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "749B19BABC7F8563728FF4E48543074C7BB6B2C1B5DCF27155AD2FCFFB406985"
+            "contextRegionHash/v1": "A53D7E1A66531E125A8F34DE2F600B70ED528D05AD6587BC73B8263195799501"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1604,18 +1604,18 @@
                   "index": 7
                 },
                 "region": {
-                  "startLine": 14,
-                  "startColumn": 18,
-                  "endLine": 14,
-                  "endColumn": 45,
-                  "charOffset": 282,
+                  "startLine": 12,
+                  "startColumn": 14,
+                  "endLine": 12,
+                  "endColumn": 41,
+                  "charOffset": 257,
                   "charLength": 27
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "442C5511F260D325D1A1715F45A813BE7C767A195BFDF04BBE46098680DFA389"
+            "contextRegionHash/v1": "16E6712B02F4379EB5A2F7EA77FACF08CEB868C1FDE74467F866ADFFE69B2512"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1637,18 +1637,18 @@
                   "index": 7
                 },
                 "region": {
-                  "startLine": 33,
-                  "startColumn": 27,
-                  "endLine": 33,
-                  "endColumn": 58,
-                  "charOffset": 669,
+                  "startLine": 29,
+                  "startColumn": 23,
+                  "endLine": 29,
+                  "endColumn": 54,
+                  "charOffset": 579,
                   "charLength": 31
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "014D6E8AAC4B5D19F044F0B2B61149A7A9A3BCEDD6A3A3C199A3CD935ADAE19C"
+            "contextRegionHash/v1": "0FDACB2C37961521923AC43A94D82ADCD0BD2CB1C01117199643ADAFBAE5A121"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1670,18 +1670,18 @@
                   "index": 7
                 },
                 "region": {
-                  "startLine": 42,
-                  "startColumn": 18,
-                  "endLine": 42,
-                  "endColumn": 52,
-                  "charOffset": 967,
+                  "startLine": 38,
+                  "startColumn": 14,
+                  "endLine": 38,
+                  "endColumn": 48,
+                  "charOffset": 849,
                   "charLength": 34
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "9AFC2D06D22C325E4C92B15B13B69108A2CAF687B25F7A437B5E463903614244"
+            "contextRegionHash/v1": "1BA9A6945A113B665AF5AA9774C9D66A43CCAC45208526D8590809DD21A6285D"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1704,17 +1704,17 @@
                 },
                 "region": {
                   "startLine": 19,
-                  "startColumn": 18,
+                  "startColumn": 14,
                   "endLine": 19,
-                  "endColumn": 40,
-                  "charOffset": 571,
+                  "endColumn": 36,
+                  "charOffset": 567,
                   "charLength": 22
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "4CCBDC02E58DDBD236A177B77DEFD7C9B9325EB20B24BFEF2865E60171B6B8E8"
+            "contextRegionHash/v1": "B9CCD6A821E937BCAB9C9C0E19B1F173C00BC0B13734A10A0F5481E12B018704"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1737,17 +1737,17 @@
                 },
                 "region": {
                   "startLine": 79,
-                  "startColumn": 22,
+                  "startColumn": 18,
                   "endLine": 79,
-                  "endColumn": 39,
-                  "charOffset": 1797,
+                  "endColumn": 35,
+                  "charOffset": 1637,
                   "charLength": 17
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "BC46EFD7B1AF409A061A134A41347133B477602D9B72E43FA59306E2F8DA3861"
+            "contextRegionHash/v1": "9D32BE83928A4410B6C4226CDA1659F52807B3B578807CAF123905AD2DF5706B"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1770,17 +1770,50 @@
                 },
                 "region": {
                   "startLine": 6,
-                  "startColumn": 26,
+                  "startColumn": 22,
                   "endLine": 6,
-                  "endColumn": 51,
-                  "charOffset": 161,
+                  "endColumn": 47,
+                  "charOffset": 157,
                   "charLength": 25
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "091FEF4CCC39EDED28A1BAF2A9DEE10A5AB2565B501EE690EB8C49B6FDF1870F"
+            "contextRegionHash/v1": "D8254AA0EEE7BAB5E51FCF06C86B328A74BA5D4E42F65EDBC80526711520AFEC"
+          },
+          "properties": {
+            "tags": ["C#",".NETStandard 2.0"]
+          }
+        },
+        {
+          "ruleId": "MissingXmlDoc",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Missing XML Doc comment for public type"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Highlighting/ExtensionBlocks.cs",
+                  "uriBaseId": "solutionDir",
+                  "index": 8
+                },
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 5,
+                  "endLine": 23,
+                  "endColumn": 14,
+                  "charOffset": 539,
+                  "charLength": 9
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "contextRegionHash/v1": "F720C5BFEF13C954E0D5E1903864E1E67C7683E6A06BD32DB12B3BF1374ADCA5"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1799,21 +1832,21 @@
                 "artifactLocation": {
                   "uri": "Highlighting/Inheritance.cs",
                   "uriBaseId": "solutionDir",
-                  "index": 8
+                  "index": 9
                 },
                 "region": {
                   "startLine": 24,
-                  "startColumn": 18,
+                  "startColumn": 14,
                   "endLine": 24,
-                  "endColumn": 58,
-                  "charOffset": 684,
+                  "endColumn": 54,
+                  "charOffset": 632,
                   "charLength": 40
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "A63BBAA00F13FC54671C6CC701FF3C0E7E28ABE762DB7E6D032A937286E83F9F"
+            "contextRegionHash/v1": "02783089143FD5F7ED9A3F1C5DA2DB38274BAF8CFD44DB417E37E6850437926D"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1832,21 +1865,21 @@
                 "artifactLocation": {
                   "uri": "Highlighting/Inheritance.cs",
                   "uriBaseId": "solutionDir",
-                  "index": 8
+                  "index": 9
                 },
                 "region": {
                   "startLine": 31,
-                  "startColumn": 18,
+                  "startColumn": 14,
                   "endLine": 31,
-                  "endColumn": 46,
-                  "charOffset": 886,
+                  "endColumn": 42,
+                  "charOffset": 810,
                   "charLength": 28
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "A2D5054AA8CF9321DD7F3EEA8E289317D06561F4979D8F879CDFF2E86620ED84"
+            "contextRegionHash/v1": "FF61625AE796AEF175F40ED2D3DAE232D0682FB3492AEC30D11258023B6124A3"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1865,21 +1898,21 @@
                 "artifactLocation": {
                   "uri": "Highlighting/Inheritance.cs",
                   "uriBaseId": "solutionDir",
-                  "index": 8
+                  "index": 9
                 },
                 "region": {
                   "startLine": 44,
-                  "startColumn": 18,
+                  "startColumn": 14,
                   "endLine": 44,
-                  "endColumn": 38,
-                  "charOffset": 1203,
+                  "endColumn": 34,
+                  "charOffset": 1091,
                   "charLength": 20
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "2E326EFBCAC3A2FF99544CEDA3D05561221BA6DF17EFD8DCB14A866AAF983F92"
+            "contextRegionHash/v1": "228D7017F4AD0780BF0C5564B4CFE7CAA60979902735DB936BF4109D463406D0"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1898,21 +1931,21 @@
                 "artifactLocation": {
                   "uri": "Highlighting/Inheritance.cs",
                   "uriBaseId": "solutionDir",
-                  "index": 8
+                  "index": 9
                 },
                 "region": {
                   "startLine": 49,
-                  "startColumn": 18,
+                  "startColumn": 14,
                   "endLine": 49,
-                  "endColumn": 49,
-                  "charOffset": 1316,
+                  "endColumn": 45,
+                  "charOffset": 1188,
                   "charLength": 31
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "AC3CF46CF77FFA466B96DF04A0A06ABB60C4D335C3868875A747C33655A74F9B"
+            "contextRegionHash/v1": "6F82971F172405E2DED244E9C2D4F66E2DD547786443928D8CD42027B70F949A"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1931,21 +1964,21 @@
                 "artifactLocation": {
                   "uri": "Highlighting/Inheritance.cs",
                   "uriBaseId": "solutionDir",
-                  "index": 8
+                  "index": 9
                 },
                 "region": {
                   "startLine": 57,
-                  "startColumn": 22,
+                  "startColumn": 18,
                   "endLine": 57,
-                  "endColumn": 43,
-                  "charOffset": 1599,
+                  "endColumn": 39,
+                  "charOffset": 1447,
                   "charLength": 21
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "F43BB2116290FD31001C88622A41AF6630387D200AD02A9ECAB73808F881377A"
+            "contextRegionHash/v1": "2F969E8D7319D478D7B7563D13E97842C9CB3227F035B586F87EDCDA102222BE"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1964,21 +1997,21 @@
                 "artifactLocation": {
                   "uri": "Highlighting/Inheritance.cs",
                   "uriBaseId": "solutionDir",
-                  "index": 8
+                  "index": 9
                 },
                 "region": {
                   "startLine": 62,
-                  "startColumn": 22,
+                  "startColumn": 18,
                   "endLine": 62,
-                  "endColumn": 68,
-                  "charOffset": 1685,
+                  "endColumn": 64,
+                  "charOffset": 1517,
                   "charLength": 46
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "A50C3F34545CF79E3CF94B74A5F7893D622DE8A37EC842905B7241413FD1D6F6"
+            "contextRegionHash/v1": "F1022603B2B89ADE043B6E14F65F12815CC143F3A2AF8151653B21FFA4E67A2E"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -1997,21 +2030,21 @@
                 "artifactLocation": {
                   "uri": "Highlighting/Inheritance.cs",
                   "uriBaseId": "solutionDir",
-                  "index": 8
+                  "index": 9
                 },
                 "region": {
                   "startLine": 67,
-                  "startColumn": 18,
+                  "startColumn": 14,
                   "endLine": 67,
-                  "endColumn": 49,
-                  "charOffset": 1792,
+                  "endColumn": 45,
+                  "charOffset": 1608,
                   "charLength": 31
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "B5A336260196B270495F3EF6715E29CFD2538F234B008FEB2E1F9788CA2EE720"
+            "contextRegionHash/v1": "293F83002A3D1565671978EF6321B5D662C5C8C3134BB6DAF3FA79906344801F"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -2034,17 +2067,17 @@
                 },
                 "region": {
                   "startLine": 7,
-                  "startColumn": 22,
+                  "startColumn": 18,
                   "endLine": 7,
-                  "endColumn": 50,
-                  "charOffset": 196,
+                  "endColumn": 46,
+                  "charOffset": 192,
                   "charLength": 28
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "FB93E37E388C13330D9B7D3D3332BB46BAA5F932C2E6413B6EF991E4A31CB2CC"
+            "contextRegionHash/v1": "B396474AE44C9F203A84FEF0B5F53CEF5EFD263A2AAC10ACBF4BBC0F0F83E25F"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -2067,17 +2100,17 @@
                 },
                 "region": {
                   "startLine": 24,
-                  "startColumn": 26,
+                  "startColumn": 22,
                   "endLine": 24,
-                  "endColumn": 48,
-                  "charOffset": 565,
+                  "endColumn": 44,
+                  "charOffset": 509,
                   "charLength": 22
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "91B576B987A3A31024A1CC63F0B0B194B92E99F2DD05BC515A995C1910562AC3"
+            "contextRegionHash/v1": "8619679816756DB8ED99AEB4E9791667BB82BF1C120A0A79F24047DBB3BD6612"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -2100,17 +2133,17 @@
                 },
                 "region": {
                   "startLine": 7,
-                  "startColumn": 26,
+                  "startColumn": 22,
                   "endLine": 7,
-                  "endColumn": 49,
-                  "charOffset": 202,
+                  "endColumn": 45,
+                  "charOffset": 198,
                   "charLength": 23
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "E142E450210655B5690BB4D660A429494BB5FAEB364DF63A2C0EE8CE4A9A54BD"
+            "contextRegionHash/v1": "780A6BC1A6FCC86BB4CC492D8C851905A438B215CCBE9D4074BEFC30384E734F"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -2133,17 +2166,17 @@
                 },
                 "region": {
                   "startLine": 8,
-                  "startColumn": 26,
+                  "startColumn": 22,
                   "endLine": 8,
-                  "endColumn": 49,
-                  "charOffset": 266,
+                  "endColumn": 45,
+                  "charOffset": 262,
                   "charLength": 23
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "E142E450210655B5690BB4D660A429494BB5FAEB364DF63A2C0EE8CE4A9A54BD"
+            "contextRegionHash/v1": "780A6BC1A6FCC86BB4CC492D8C851905A438B215CCBE9D4074BEFC30384E734F"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -2166,17 +2199,17 @@
                 },
                 "region": {
                   "startLine": 8,
-                  "startColumn": 19,
+                  "startColumn": 15,
                   "endLine": 8,
-                  "endColumn": 42,
-                  "charOffset": 240,
+                  "endColumn": 38,
+                  "charOffset": 236,
                   "charLength": 23
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "391CDE88F9E8B7DC367022F5318F5A0F0856013054077E3FE2D5ED86DD4BD6D8"
+            "contextRegionHash/v1": "4B35E6E93A1269CB9F59FFB44A811E6C4BCAA4FA3D29E1004C3CC66FE90D5872"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -2198,18 +2231,18 @@
                   "index": 7
                 },
                 "region": {
-                  "startLine": 17,
-                  "startColumn": 21,
-                  "endLine": 17,
-                  "endColumn": 40,
-                  "charOffset": 359,
+                  "startLine": 15,
+                  "startColumn": 17,
+                  "endLine": 15,
+                  "endColumn": 36,
+                  "charOffset": 322,
                   "charLength": 19
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "8A73BE4C19FE3E2B38928DCE9F14F76412CAF1356BEE8AF359AF164332DB215F"
+            "contextRegionHash/v1": "4E1DFDE3EEBF982A9815943B305B1E56DA05ABE733CC6AC27BB2A7F2BD9A35EF"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -2231,18 +2264,18 @@
                   "index": 7
                 },
                 "region": {
-                  "startLine": 21,
-                  "startColumn": 21,
-                  "endLine": 21,
-                  "endColumn": 43,
-                  "charOffset": 426,
+                  "startLine": 19,
+                  "startColumn": 17,
+                  "endLine": 19,
+                  "endColumn": 39,
+                  "charOffset": 377,
                   "charLength": 22
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "FFF149BFFF001C8990282D6BF7DAADF999FD5AF0B3AFCB9F62524C62A2720467"
+            "contextRegionHash/v1": "3114FF1BD409941C17768F57FC4F99209F9AEEDB7BC74B560D7B2CBA0AAC629F"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -2264,18 +2297,18 @@
                   "index": 7
                 },
                 "region": {
-                  "startLine": 36,
-                  "startColumn": 30,
-                  "endLine": 36,
-                  "endColumn": 71,
-                  "charOffset": 798,
+                  "startLine": 32,
+                  "startColumn": 26,
+                  "endLine": 32,
+                  "endColumn": 67,
+                  "charOffset": 696,
                   "charLength": 41
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "7231499F5CD8BC637F0E790EFE4554083C058162E44959D02534015174E7BB36"
+            "contextRegionHash/v1": "4478E250AF65649ED065F161305A1101D23ABD7F12CCF0BFFC85BC8C205B9559"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -2297,18 +2330,18 @@
                   "index": 7
                 },
                 "region": {
-                  "startLine": 39,
-                  "startColumn": 30,
-                  "endLine": 39,
-                  "endColumn": 68,
-                  "charOffset": 898,
+                  "startLine": 35,
+                  "startColumn": 26,
+                  "endLine": 35,
+                  "endColumn": 64,
+                  "charOffset": 788,
                   "charLength": 38
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "4B59F4F1140614BA5AA58C8746679D2F46638916CB250CBA7F7659CE2C67B2C4"
+            "contextRegionHash/v1": "5854E9D2D0D07F34DFDC9EFDA66EB781EED72892F35F3FA60297E1608B55BB47"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -2331,17 +2364,17 @@
                 },
                 "region": {
                   "startLine": 21,
-                  "startColumn": 23,
+                  "startColumn": 19,
                   "endLine": 21,
-                  "endColumn": 34,
-                  "charOffset": 662,
+                  "endColumn": 30,
+                  "charOffset": 650,
                   "charLength": 11
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "45EA66B6F4174A550F9FE9B3F69601A91D162E323B13CD565C78ED24AA9CE8AC"
+            "contextRegionHash/v1": "69F3E1ABAB9018E63DF834BE3A300D7C681DF63C7B439451238050B8064F22E3"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -2364,17 +2397,17 @@
                 },
                 "region": {
                   "startLine": 43,
-                  "startColumn": 23,
+                  "startColumn": 19,
                   "endLine": 43,
-                  "endColumn": 37,
-                  "charOffset": 1053,
+                  "endColumn": 33,
+                  "charOffset": 989,
                   "charLength": 14
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "EDB8E6193354F6D1C9F92276F8DE81C8B683CA13E92397054FC3EF53A364E6FE"
+            "contextRegionHash/v1": "2AE0E2E3280598CC058F4FBAEEDEA1D1314A35ED4D16716BC37EF4A6C781967F"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -2397,17 +2430,17 @@
                 },
                 "region": {
                   "startLine": 55,
-                  "startColumn": 21,
+                  "startColumn": 17,
                   "endLine": 55,
-                  "endColumn": 33,
-                  "charOffset": 1370,
+                  "endColumn": 29,
+                  "charOffset": 1282,
                   "charLength": 12
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "7548E93BB1B51F4EFBD4FD32F8E719D6F8F9D6265EE10A667C72186B88DE8920"
+            "contextRegionHash/v1": "6E5679FE705746E142AE61D97FC35A6597A41034E7A01746C8FB2AD09EB8EACB"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -2429,18 +2462,18 @@
                   "index": 0
                 },
                 "region": {
-                  "startLine": 101,
-                  "startColumn": 35,
-                  "endLine": 101,
-                  "endColumn": 46,
-                  "charOffset": 2179,
+                  "startLine": 91,
+                  "startColumn": 31,
+                  "endLine": 91,
+                  "endColumn": 42,
+                  "charOffset": 1890,
                   "charLength": 11
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "A3FCEBBA9676F7F637F7FF270992872906C476E6279FB07AE9FDEAB65E22BF63"
+            "contextRegionHash/v1": "C00C2AC36C689D882B1AC181B2AC7B37343754DB72F090BBFD22F5E1118C5D5B"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -2462,18 +2495,18 @@
                   "index": 0
                 },
                 "region": {
-                  "startLine": 113,
-                  "startColumn": 46,
-                  "endLine": 113,
-                  "endColumn": 56,
-                  "charOffset": 2489,
+                  "startLine": 103,
+                  "startColumn": 42,
+                  "endLine": 103,
+                  "endColumn": 52,
+                  "charOffset": 2176,
                   "charLength": 10
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "39DFC0360A6148E075E07BA9410D0C9A450B0ABD713D7B72284FF7ECECAF60A9"
+            "contextRegionHash/v1": "F3345B85AE146D476F7DAE600EC7402622A867293D39831EED43637AAD1FD2B3"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -2492,21 +2525,21 @@
                 "artifactLocation": {
                   "uri": "Highlighting/Inheritance.cs",
                   "uriBaseId": "solutionDir",
-                  "index": 8
+                  "index": 9
                 },
                 "region": {
                   "startLine": 37,
-                  "startColumn": 27,
+                  "startColumn": 23,
                   "endLine": 37,
-                  "endColumn": 33,
-                  "charOffset": 1089,
+                  "endColumn": 29,
+                  "charOffset": 993,
                   "charLength": 6
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "F922597BBEFF7D4CA28F4D51E5D19E7CF73CA27939A13E354CCD734BEEAE5B07"
+            "contextRegionHash/v1": "E8D6739FA777514688DBFEED8D11FB72A8C8866F33E166ECD81C8B06DE7C711E"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -2525,21 +2558,21 @@
                 "artifactLocation": {
                   "uri": "Highlighting/Inheritance.cs",
                   "uriBaseId": "solutionDir",
-                  "index": 8
+                  "index": 9
                 },
                 "region": {
                   "startLine": 46,
-                  "startColumn": 31,
+                  "startColumn": 27,
                   "endLine": 46,
-                  "endColumn": 48,
-                  "charOffset": 1262,
+                  "endColumn": 44,
+                  "charOffset": 1142,
                   "charLength": 17
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "BBD7D06EFD6886B9B78DA5248768AAB6F5A4102831F6B089F5C0BAE5DC57ED07"
+            "contextRegionHash/v1": "2DA66F8F4EEF2DD8354D89DB367D1AB0D40C54E85BC7E7ED920E436990DD6068"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -2558,21 +2591,21 @@
                 "artifactLocation": {
                   "uri": "Highlighting/Inheritance.cs",
                   "uriBaseId": "solutionDir",
-                  "index": 8
+                  "index": 9
                 },
                 "region": {
                   "startLine": 59,
-                  "startColumn": 16,
+                  "startColumn": 12,
                   "endLine": 59,
-                  "endColumn": 22,
-                  "charOffset": 1644,
+                  "endColumn": 18,
+                  "charOffset": 1484,
                   "charLength": 6
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "11AA179EDC8ED6054B44A669F2FFD32F0FBC5B490FF5CA1CD7C47BC291FD1A90"
+            "contextRegionHash/v1": "BEB73DEEA3C39B6AC0C1FBD18AB328F504CCAF8F41E8BA3AC0FC1582C2D0783B"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -2591,21 +2624,21 @@
                 "artifactLocation": {
                   "uri": "Highlighting/Inheritance.cs",
                   "uriBaseId": "solutionDir",
-                  "index": 8
+                  "index": 9
                 },
                 "region": {
                   "startLine": 64,
-                  "startColumn": 16,
+                  "startColumn": 12,
                   "endLine": 64,
-                  "endColumn": 22,
-                  "charOffset": 1755,
+                  "endColumn": 18,
+                  "charOffset": 1579,
                   "charLength": 6
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "11AA179EDC8ED6054B44A669F2FFD32F0FBC5B490FF5CA1CD7C47BC291FD1A90"
+            "contextRegionHash/v1": "BEB73DEEA3C39B6AC0C1FBD18AB328F504CCAF8F41E8BA3AC0FC1582C2D0783B"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -2628,17 +2661,17 @@
                 },
                 "region": {
                   "startLine": 9,
-                  "startColumn": 16,
+                  "startColumn": 12,
                   "endLine": 9,
-                  "endColumn": 24,
-                  "charOffset": 248,
+                  "endColumn": 20,
+                  "charOffset": 236,
                   "charLength": 8
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "691B43384ECFE9C1531EA77F6FDB800CAFD5E188BA1D29CBF56D6C8E31F919B4"
+            "contextRegionHash/v1": "9F9AA57343433668F57D18EDBC763C3D3EC58933F51AC22F93329652066B81E3"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -2661,17 +2694,17 @@
                 },
                 "region": {
                   "startLine": 11,
-                  "startColumn": 14,
+                  "startColumn": 10,
                   "endLine": 11,
-                  "endColumn": 20,
-                  "charOffset": 282,
+                  "endColumn": 16,
+                  "charOffset": 266,
                   "charLength": 6
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "ABC55B563F3E7D6A7155845BB63A88DB7262AECE1946E9B69473BB5BC30D2405"
+            "contextRegionHash/v1": "4E35B50A2973A3574770777AF8490C74067C9BC7633656F823DC26B4720C13F0"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -2694,17 +2727,17 @@
                 },
                 "region": {
                   "startLine": 10,
-                  "startColumn": 23,
+                  "startColumn": 19,
                   "endLine": 10,
-                  "endColumn": 37,
-                  "charOffset": 294,
+                  "endColumn": 33,
+                  "charOffset": 282,
                   "charLength": 14
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "22362D48A409E45469A8CC73F470E2B68E8DE5016DFAF52C8E5B6E5840834A4D"
+            "contextRegionHash/v1": "78ED36A116A121273F6350BEA29DE52445703ED1FBFFC22980C71214224731FC"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -2727,17 +2760,17 @@
                 },
                 "region": {
                   "startLine": 18,
-                  "startColumn": 21,
+                  "startColumn": 17,
                   "endLine": 18,
-                  "endColumn": 33,
-                  "charOffset": 474,
+                  "endColumn": 29,
+                  "charOffset": 446,
                   "charLength": 12
                 }
               }
             }
           ],
           "partialFingerprints": {
-            "contextRegionHash/v1": "7548E93BB1B51F4EFBD4FD32F8E719D6F8F9D6265EE10A667C72186B88DE8920"
+            "contextRegionHash/v1": "6E5679FE705746E142AE61D97FC35A6597A41034E7A01746C8FB2AD09EB8EACB"
           },
           "properties": {
             "tags": ["C#",".NETStandard 2.0"]
@@ -2748,8 +2781,8 @@
         "driver": {
           "name": "InspectCode",
           "organization": "JetBrains, Inc",
-          "fullName": "JetBrains Inspect Code 2025.2",
-          "semanticVersion": "252.0.20250812.71120",
+          "fullName": "JetBrains Inspect Code 2025.3.2",
+          "semanticVersion": "253.0.20260127.110037",
           "informationUri": "http://www.jetbrains.com/resharper/features/command-line.html",
           "rules": [
             {
@@ -2807,7 +2840,7 @@
             "guid": "35f5b65d-50bd-5e8c-be38-433c44d12da4",
             "name": "ReSharper.XmlDocInspections",
             "fullName": "ReSharper XmlDocInspections",
-            "version": "0.0.0.10252-local"
+            "version": "0.0.0.10253-local"
           }
         ]
       },
@@ -2818,14 +2851,14 @@
       ],
       "versionControlProvenance": [
         {
-          "repositoryUri": "https://github.com/ulrichb/XmlDocInspections",
-          "revisionId": "33ea4f335d3814dd14782e11c1211e2485e4409b",
+          "repositoryUri": "https://github.com/ulrichb/XmlDocInspections/",
+          "revisionId": "caba11eeb629eb81d7f68aa93499578f9042243c",
           "branch": "main"
         }
       ],
       "originalUriBaseIds": {
         "solutionDir": {
-          "uri": "file:///C:/Users/Ulrich/U/XmlDocInspections/Src/XmlDocInspections.Plugin.Tests/test/data/",
+          "uri": "file:///C:/Development/3rdP/XmlDocInspections/Src/XmlDocInspections.Plugin.Tests/test/data/",
           "description": {
             "text": "Solution Directory"
           }
@@ -2838,9 +2871,9 @@
             "uriBaseId": "solutionDir"
           },
           "hashes": {
-            "md5": "70ABDDB509EF4ED99D2A24CB8E6846FB",
-            "sha-1": "4AB01E19B52E6AB8E24915357FDDC10EE2232122",
-            "sha-256": "60085A8FF9F4B5259D67EE15BF4C5A49DC83AD4CE9C845EE86673FD82061A4AB"
+            "md5": "9E2FC47DFC113EE5B392F17C6E10BE54",
+            "sha-1": "00DAFE18871C0EF3116BA579484CBFD00EF33F81",
+            "sha-256": "24B95745190DA6DCEA1730308B24F94662FC3846EA0F671FF1FA9FF3223F3AF9"
           }
         },
         {
@@ -2849,9 +2882,9 @@
             "uriBaseId": "solutionDir"
           },
           "hashes": {
-            "md5": "30692A595526E13AF0CAAA22343200D8",
-            "sha-1": "FCC9048C7B9D663A0A6C3FB55FE19F41AE223B87",
-            "sha-256": "D27448322E28A0203C3F6D6EC929DD4FF860B3CA0B1C325CB9BAB3F3E0AF44BD"
+            "md5": "A6E72542C42FAD1C5C7E3AA48D596B08",
+            "sha-1": "EFD8EAEBFE28326B6D67EB316F38624354164EC5",
+            "sha-256": "B788EE24A59E83777811441A4F23F6A7EAA5C5B28AC54FF892C67D0D3FC041F3"
           }
         },
         {
@@ -2860,9 +2893,9 @@
             "uriBaseId": "solutionDir"
           },
           "hashes": {
-            "md5": "C8C26904F1D16CDE59EC0D69A40A062E",
-            "sha-1": "77E8EA7B39BE01295B057FBB912BB7506E26D924",
-            "sha-256": "7BB598E46483629DB51946A6B970C55EF495134CB9F8EEDD80EFE95E4C2AA365"
+            "md5": "7F6C3770A357B59EC2FBA33A45FC32C4",
+            "sha-1": "CF46B965C1E4A64824738C0106B175EBB43FDF9F",
+            "sha-256": "C9665210AC265F92151F688EC1212D300C4DA882795160FAE431E78B42092E55"
           }
         },
         {
@@ -2871,9 +2904,9 @@
             "uriBaseId": "solutionDir"
           },
           "hashes": {
-            "md5": "E4E05098BB45D7463743A8854FDB5B88",
-            "sha-1": "C519A0B51F5AF6A7EA9B1E930E72E67417F77134",
-            "sha-256": "70C1A46C40C5BEF16F76D6AF209537FB3AB560E578616CF884FB66236A340F96"
+            "md5": "6406E7BC8670AB6CBAD57F64B2DAA960",
+            "sha-1": "799CD2A1C8E5E05FEA6FA41E379EDE3BF0C9127A",
+            "sha-256": "01052F0CE2889EB15A4DC5349E40AC1FB492935245230CFB210E09095F77148D"
           }
         },
         {
@@ -2882,9 +2915,9 @@
             "uriBaseId": "solutionDir"
           },
           "hashes": {
-            "md5": "FA127E9C9E90A7712985AFD5BB661B6D",
-            "sha-1": "A9F0A1FA96A114AD8A280B3F857FEDEFBE1091AD",
-            "sha-256": "A9F3E77842CADAB16A01A9C45E7C28A2CBC52B9C6D70F9F85BEFF12D24189670"
+            "md5": "980901E37B890B435D0F54DB6705BB61",
+            "sha-1": "10B73311337C47ADF4D1AB5ACB72305DBF82A0DF",
+            "sha-256": "A784EBB9381AAD9C985F598C039F4F5B6BFB2E0242C4D530D97A0B0BD80CBB74"
           }
         },
         {
@@ -2893,9 +2926,9 @@
             "uriBaseId": "solutionDir"
           },
           "hashes": {
-            "md5": "06560CAB7A4CFA845F214C2E5E17EE9F",
-            "sha-1": "C05C39C1A2B0827A7C18BA1D2F9E98758ED1379A",
-            "sha-256": "F7901CC118F13263F2692CF71ED59A742CE631E23F8377DA1C238FCADF85E796"
+            "md5": "78C4D71139FBD7B06D6B9CEF82EBB04A",
+            "sha-1": "63F1442F2562C617F7B837654CB271EE3A8D3AEE",
+            "sha-256": "F56E894AB2C7B40186938279CD9AAB78E4569E720B5467B412D4E0FFFC3EC385"
           }
         },
         {
@@ -2904,9 +2937,9 @@
             "uriBaseId": "solutionDir"
           },
           "hashes": {
-            "md5": "4A76A8ABBFE16E29A1EFF3894C45330D",
-            "sha-1": "2FC42AF4FA3BA55A7262E2DD763A9948ACEFF7F9",
-            "sha-256": "718CDDC7C00198CF95751A7DE58638CE8A1DEDAE04D130F0BB69BD573F906C38"
+            "md5": "930609D67A0A18FCE7013D8634E15354",
+            "sha-1": "BD98BFF3BE0A989031BDA4FF0CC4CF86BE6AD726",
+            "sha-256": "9A922C0ED156F7DC40DF8CF7AFFC0BA13AD60A3981734A93B57390CC7C874FBC"
           }
         },
         {
@@ -2915,9 +2948,20 @@
             "uriBaseId": "solutionDir"
           },
           "hashes": {
-            "md5": "85F21750125405327163AE7C887CF1A7",
-            "sha-1": "A4F849C7119F3596D72D5A475226F5B9445AE2AB",
-            "sha-256": "F06806CA9D4C9B641C0EBBFA709B6D8B4E1F6B48016CEB310649537649E252BC"
+            "md5": "1BB2741D5545CB4290E70B5A54997FE0",
+            "sha-1": "7BF89353BC6CE4D1AE06219BBFB0950347941C32",
+            "sha-256": "D7B3E4B76A0246295E73592E9B8EC32510B6403B38D905BC2011C727371CB6C4"
+          }
+        },
+        {
+          "location": {
+            "uri": "Highlighting/ExtensionBlocks.cs",
+            "uriBaseId": "solutionDir"
+          },
+          "hashes": {
+            "md5": "56849C319E5157FAD8A6CECDC9AAB38B",
+            "sha-1": "7495C17632B05F41ADC9BA3DA56C5B42C6F328C2",
+            "sha-256": "17119166D47446167EF0A21D21DC35C3E145B323F406E565EA974C29B09C3F90"
           }
         },
         {
@@ -2926,9 +2970,9 @@
             "uriBaseId": "solutionDir"
           },
           "hashes": {
-            "md5": "CEA86F4CDBE661F87D5522DF327ED230",
-            "sha-1": "75D680662C391D3678DB376E787343A6D806A0EF",
-            "sha-256": "C201CF955DF6DD6662ACEA16A306DD195DA166756FA480D6ABC96A3A3A3A91CF"
+            "md5": "375DCF8862009CCEDAE77D3625EA6391",
+            "sha-1": "4D40F3AA2BF1D33070C900AFDE208DEC6FE25EE9",
+            "sha-256": "0D038AF6EF6B430D3D223ADE5558C7817735154FE376502CA29DB3B592486E92"
           }
         }
       ],
