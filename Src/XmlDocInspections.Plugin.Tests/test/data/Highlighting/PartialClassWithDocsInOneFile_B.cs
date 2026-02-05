@@ -3,12 +3,11 @@
 // ReSharper disable UnusedType.Global
 // ReSharper disable RedundantPartialMethodEmptyImplementation
 
-namespace XmlDocInspections.Sample.Highlighting
+namespace XmlDocInspections.Sample.Highlighting;
+
+public partial class PartialClassWithDocsInOneFile
 {
-    public partial class PartialClassWithDocsInOneFile
+    partial void PartialMethod()
     {
-        partial void PartialMethod()
-        {
-        }
     }
 }

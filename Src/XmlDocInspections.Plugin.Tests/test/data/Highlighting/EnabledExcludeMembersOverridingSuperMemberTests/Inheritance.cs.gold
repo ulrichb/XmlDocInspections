@@ -4,72 +4,71 @@
 // ReSharper disable MemberCanBeProtected.Global
 // ReSharper disable ConvertToPrimaryConstructor
 
-namespace XmlDocInspections.Sample.Highlighting
+namespace XmlDocInspections.Sample.Highlighting;
+
+/// <summary>Some doc.</summary>
+public class BaseClassWithDocs
 {
     /// <summary>Some doc.</summary>
-    public class BaseClassWithDocs
+    public BaseClassWithDocs(string param)
     {
-        /// <summary>Some doc.</summary>
-        public BaseClassWithDocs(string param)
-        {
-        }
-
-        /// <summary>Some doc.</summary>
-        public string Method() => "";
-
-        /// <summary>Some doc.</summary>
-        public virtual string OverridableMethod() => "";
     }
 
-    public class |IntermediateDerivedFromBaseClassWithDocs|(0) : BaseClassWithDocs
+    /// <summary>Some doc.</summary>
+    public string Method() => "";
+
+    /// <summary>Some doc.</summary>
+    public virtual string OverridableMethod() => "";
+}
+
+public class |IntermediateDerivedFromBaseClassWithDocs|(0) : BaseClassWithDocs
+{
+    public |IntermediateDerivedFromBaseClassWithDocs|(1)(string param) : base(param)
     {
-        public |IntermediateDerivedFromBaseClassWithDocs|(1)(string param) : base(param)
-        {
-        }
+    }
+}
+
+public class |DerivedFromBaseClassWithDocs|(2) : IntermediateDerivedFromBaseClassWithDocs
+{
+    public |DerivedFromBaseClassWithDocs|(3)(string param) : base(param)
+    {
     }
 
-    public class |DerivedFromBaseClassWithDocs|(2) : IntermediateDerivedFromBaseClassWithDocs
-    {
-        public |DerivedFromBaseClassWithDocs|(3)(string param) : base(param)
-        {
-        }
+    public new string |Method|(4)() => "";
 
-        public new string |Method|(4)() => "";
+    public override string OverridableMethod() => "";
+}
 
-        public override string OverridableMethod() => "";
-    }
+//
 
-    //
+public class |BaseClassWithoutDocs|(5)
+{
+    public virtual string |OverridableMethod|(6)() => "";
+}
 
-    public class |BaseClassWithoutDocs|(5)
-    {
-        public virtual string |OverridableMethod|(6)() => "";
-    }
+public class |DerivedFromBaseClassWithoutDocs|(7) : BaseClassWithoutDocs
+{
+    // Here we also expect no warning because it would get out of date, when the docs are added to the base member:
+    public override string OverridableMethod() => "";
+}
 
-    public class |DerivedFromBaseClassWithoutDocs|(7) : BaseClassWithoutDocs
-    {
-        // Here we also expect no warning because it would get out of date, when the docs are added to the base member:
-        public override string OverridableMethod() => "";
-    }
+//
 
-    //
+public interface |IInterfaceWithoutDocs|(8)
+{
+    string |Method|(9)();
+}
 
-    public interface |IInterfaceWithoutDocs|(8)
-    {
-        string |Method|(9)();
-    }
+public interface |IInterfaceWithoutDocsToBeExplicitlyImplemented|(10)
+{
+    string |Method|(11)();
+}
 
-    public interface |IInterfaceWithoutDocsToBeExplicitlyImplemented|(10)
-    {
-        string |Method|(11)();
-    }
+public class |DerivedFromInterfaceWithoutDocs|(12) : IInterfaceWithoutDocs, IInterfaceWithoutDocsToBeExplicitlyImplemented
+{
+    public string Method() => "";
 
-    public class |DerivedFromInterfaceWithoutDocs|(12) : IInterfaceWithoutDocs, IInterfaceWithoutDocsToBeExplicitlyImplemented
-    {
-        public string Method() => "";
-
-        string IInterfaceWithoutDocsToBeExplicitlyImplemented.Method() => "";
-    }
+    string IInterfaceWithoutDocsToBeExplicitlyImplemented.Method() => "";
 }
 
 ---------------------------------------------------------

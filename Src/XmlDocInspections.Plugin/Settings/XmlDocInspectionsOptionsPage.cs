@@ -9,104 +9,103 @@ using JetBrains.Lifetimes;
 using JetBrains.ReSharper.Feature.Services.Daemon.OptionPages;
 using JetBrains.UI.RichText;
 
-namespace XmlDocInspections.Plugin.Settings
-{
-    /// <summary>
-    /// An options page for XML Doc inspections.
-    /// </summary>
-    [ExcludeFromCodeCoverage /* options page user interface is tested manually */]
-    [OptionsPage(PageId, PageTitle, typeof(XmlDocInspectionsIcons.Xml16), ParentId = CodeInspectionPage.PID)]
+namespace XmlDocInspections.Plugin.Settings;
+
+/// <summary>
+/// An options page for XML Doc inspections.
+/// </summary>
+[ExcludeFromCodeCoverage /* options page user interface is tested manually */]
+[OptionsPage(PageId, PageTitle, typeof(XmlDocInspectionsIcons.Xml16), ParentId = CodeInspectionPage.PID)]
 #pragma warning disable 618
-    // TODO: Refactor to BeSimpleOptionsPage
-    public class XmlDocInspectionsOptionsPage : SimpleOptionsPage
+// TODO: Refactor to BeSimpleOptionsPage
+public class XmlDocInspectionsOptionsPage : SimpleOptionsPage
 #pragma warning restore 618
+{
+    public const string PageTitle = "XML Doc Inspections";
+    private const string PageId = nameof(XmlDocInspectionsOptionsPage);
+
+    private static readonly TextStyle Bold = new TextStyle(JetFontStyles.Bold);
+
+    private readonly Lifetime _lifetime;
+    private readonly OptionsSettingsSmartContext _settings;
+
+
+    public XmlDocInspectionsOptionsPage(Lifetime lifetime, OptionsSettingsSmartContext settings)
+        : base(lifetime, settings)
     {
-        public const string PageTitle = "XML Doc Inspections";
-        private const string PageId = nameof(XmlDocInspectionsOptionsPage);
+        _lifetime = lifetime;
+        _settings = settings;
 
-        private static readonly TextStyle Bold = new TextStyle(JetFontStyles.Bold);
+        AddText("The following rules are applied when warning about missing XML Doc comments. " +
+                "Note that the severity level for the warning can be configured on the \"Inspection Severity\" page.");
 
-        private readonly Lifetime _lifetime;
-        private readonly OptionsSettingsSmartContext _settings;
+        AddHeader("Inclusion rules");
 
+        AddText("Types");
+        AddAccessibilityBoolOption((XmlDocInspectionsSettings s) => s.TypeAccessibility);
 
-        public XmlDocInspectionsOptionsPage(Lifetime lifetime, OptionsSettingsSmartContext settings)
-            : base(lifetime, settings)
-        {
-            _lifetime = lifetime;
-            _settings = settings;
+        AddText("Type members");
+        AddAccessibilityBoolOption((XmlDocInspectionsSettings s) => s.TypeMemberAccessibility);
 
-            AddText("The following rules are applied when warning about missing XML Doc comments. " +
-                    "Note that the severity level for the warning can be configured on the \"Inspection Severity\" page.");
+        AddText();
+        AddStringOption((XmlDocInspectionsSettings s) => s.IncludeAttributeFullNames, "Types/members with attributes:\t");
 
-            AddHeader("Inclusion rules");
+        AddHeader("Exclusion rules");
 
-            AddText("Types");
-            AddAccessibilityBoolOption((XmlDocInspectionsSettings s) => s.TypeAccessibility);
+        AddBoolOption((XmlDocInspectionsSettings s) => s.ExcludeExtensionBlocks, "Exclude C#14 extension blocks");
 
-            AddText("Type members");
-            AddAccessibilityBoolOption((XmlDocInspectionsSettings s) => s.TypeMemberAccessibility);
+        AddBoolOption((XmlDocInspectionsSettings s) => s.ExcludeConstructors, "Exclude constructors");
 
-            AddText();
-            AddStringOption((XmlDocInspectionsSettings s) => s.IncludeAttributeFullNames, "Types/members with attributes:\t");
+        AddBoolOption(
+            (XmlDocInspectionsSettings s) => s.ExcludeMembersOverridingSuperMember,
+            "Exclude members which override base members");
 
-            AddHeader("Exclusion rules");
+        AddText("");
 
-            AddBoolOption((XmlDocInspectionsSettings s) => s.ExcludeExtensionBlocks, "Exclude C#14 extension blocks");
+        AddStringOption((XmlDocInspectionsSettings s) => s.ProjectExclusionRegex, "Project exclusion regex:\t");
 
-            AddBoolOption((XmlDocInspectionsSettings s) => s.ExcludeConstructors, "Exclude constructors");
+        AddEmptyLine();
+        AddRichText(
+            new RichText("Warning: ", Bold) + new RichText("After changing these settings, ") +
+            new RichText("cleaning the solution cache (see \"General\" options page) is necessary to update already analyzed code."));
 
-            AddBoolOption(
-                (XmlDocInspectionsSettings s) => s.ExcludeMembersOverridingSuperMember,
-                "Exclude members which override base members");
+        FinishPage();
+    }
 
-            AddText("");
+    private void AddAccessibilityBoolOption<T>(Expression<Func<T, AccessibilitySettingFlags>> settingsExpression)
+    {
+        //AddText("Show inspection accessibility:");
+        var flagsProperty = new Property<AccessibilitySettingFlags>("AccessibilitySettingFlags");
+        _settings.SetBinding(_lifetime, settingsExpression, flagsProperty);
 
-            AddStringOption((XmlDocInspectionsSettings s) => s.ProjectExclusionRegex, "Project exclusion regex:\t");
+        AddAccessibilityBoolOption(flagsProperty, "public", AccessibilitySettingFlags.Public);
+        AddAccessibilityBoolOption(flagsProperty, "internal", AccessibilitySettingFlags.Internal);
+        AddAccessibilityBoolOption(flagsProperty, "protected internal", AccessibilitySettingFlags.ProtectedOrInternal);
+        AddAccessibilityBoolOption(flagsProperty, "protected", AccessibilitySettingFlags.Protected);
+        AddAccessibilityBoolOption(flagsProperty, "private", AccessibilitySettingFlags.Private);
+    }
 
-            AddEmptyLine();
-            AddRichText(
-                new RichText("Warning: ", Bold) + new RichText("After changing these settings, ") +
-                new RichText("cleaning the solution cache (see \"General\" options page) is necessary to update already analyzed code."));
+    private void AddAccessibilityBoolOption(
+        IProperty<AccessibilitySettingFlags> flagsProperty,
+        string text,
+        AccessibilitySettingFlags accessibilitySettingFlag)
+    {
+        var optionBoolProperty = new Property<bool>(text);
+        BindBoolPropertyToAccessibilitySettingFlag(optionBoolProperty, flagsProperty, accessibilitySettingFlag);
 
-            FinishPage();
-        }
+        var boolOption = AddBoolOption(optionBoolProperty, text);
+        SetIndent(boolOption, 1);
+    }
 
-        private void AddAccessibilityBoolOption<T>(Expression<Func<T, AccessibilitySettingFlags>> settingsExpression)
-        {
-            //AddText("Show inspection accessibility:");
-            var flagsProperty = new Property<AccessibilitySettingFlags>("AccessibilitySettingFlags");
-            _settings.SetBinding(_lifetime, settingsExpression, flagsProperty);
+    private void BindBoolPropertyToAccessibilitySettingFlag(
+        IProperty<bool> property,
+        IProperty<AccessibilitySettingFlags> flagsProperty,
+        AccessibilitySettingFlags flagToBindTo)
+    {
+        property.Value = flagsProperty.Value.HasFlag(flagToBindTo);
 
-            AddAccessibilityBoolOption(flagsProperty, "public", AccessibilitySettingFlags.Public);
-            AddAccessibilityBoolOption(flagsProperty, "internal", AccessibilitySettingFlags.Internal);
-            AddAccessibilityBoolOption(flagsProperty, "protected internal", AccessibilitySettingFlags.ProtectedOrInternal);
-            AddAccessibilityBoolOption(flagsProperty, "protected", AccessibilitySettingFlags.Protected);
-            AddAccessibilityBoolOption(flagsProperty, "private", AccessibilitySettingFlags.Private);
-        }
-
-        private void AddAccessibilityBoolOption(
-            IProperty<AccessibilitySettingFlags> flagsProperty,
-            string text,
-            AccessibilitySettingFlags accessibilitySettingFlag)
-        {
-            var optionBoolProperty = new Property<bool>(text);
-            BindBoolPropertyToAccessibilitySettingFlag(optionBoolProperty, flagsProperty, accessibilitySettingFlag);
-
-            var boolOption = AddBoolOption(optionBoolProperty, text);
-            SetIndent(boolOption, 1);
-        }
-
-        private void BindBoolPropertyToAccessibilitySettingFlag(
-            IProperty<bool> property,
-            IProperty<AccessibilitySettingFlags> flagsProperty,
-            AccessibilitySettingFlags flagToBindTo)
-        {
-            property.Value = flagsProperty.Value.HasFlag(flagToBindTo);
-
-            property.Change.Advise_HasNew(
-                _lifetime,
-                x => flagsProperty.Value = x.New ? flagsProperty.Value | flagToBindTo : flagsProperty.Value & ~flagToBindTo);
-        }
+        property.Change.Advise_HasNew(
+            _lifetime,
+            x => flagsProperty.Value = x.New ? flagsProperty.Value | flagToBindTo : flagsProperty.Value & ~flagToBindTo);
     }
 }

@@ -1,9 +1,8 @@
 // ReSharper disable UnusedMember.Global
 // ReSharper disable UnusedType.Global
 
-namespace XmlDocInspections.Sample.Highlighting
-{
-    public delegate void PublicDelegateWithoutDocs();
+namespace XmlDocInspections.Sample.Highlighting;
 
-    internal delegate void InternalDelegateWithoutDocs();
-}
+public delegate void PublicDelegateWithoutDocs();
+
+internal delegate void InternalDelegateWithoutDocs();

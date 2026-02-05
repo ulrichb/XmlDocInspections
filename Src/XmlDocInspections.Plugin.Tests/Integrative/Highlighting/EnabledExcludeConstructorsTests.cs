@@ -2,18 +2,17 @@
 using NUnit.Framework;
 using XmlDocInspections.Plugin.Settings;
 
-namespace XmlDocInspections.Plugin.Tests.Integrative.Highlighting
-{
-    [TestFixture]
-    public class EnabledExcludeConstructorsTests : MissingXmlDocHighlightingDirectoryTestsBase
-    {
-        protected override void MutateSettings(IContextBoundSettingsStore settingsStore)
-        {
-            EnableAllXmlDocOptions(settingsStore);
-            settingsStore.SetValue((XmlDocInspectionsSettings s) => s.ExcludeConstructors, true);
-        }
+namespace XmlDocInspections.Plugin.Tests.Integrative.Highlighting;
 
-        [Test]
-        public void ClassesAndMembersWithoutDocs() => DoNamedTest("IToBeExplicitlyImplementedInterface.cs");
+[TestFixture]
+public class EnabledExcludeConstructorsTests : MissingXmlDocHighlightingDirectoryTestsBase
+{
+    protected override void MutateSettings(IContextBoundSettingsStore settingsStore)
+    {
+        EnableAllXmlDocOptions(settingsStore);
+        settingsStore.SetValue((XmlDocInspectionsSettings s) => s.ExcludeConstructors, true);
     }
+
+    [Test]
+    public void ClassesAndMembersWithoutDocs() => DoNamedTest("IToBeExplicitlyImplementedInterface.cs");
 }

@@ -14,106 +14,105 @@
 // ReSharper disable UnusedParameter.Global
 // ReSharper disable UnusedParameter.Local
 
-namespace XmlDocInspections.Sample.Highlighting
+namespace XmlDocInspections.Sample.Highlighting;
+
+public class |PublicClassWithoutDocs|(0) : IToBeExplicitlyImplementedInterface
 {
-    public class |PublicClassWithoutDocs|(0) : IToBeExplicitlyImplementedInterface
+    public string |PublicField|(1);
+
+    internal string |InternalField|(2);
+
+    protected internal string |ProtectedInternalField|(3);
+
+    protected string |ProtectedField|(4);
+
+    private string |PrivateField|(5);
+
+    //
+
+    public PublicClassWithoutDocs()
     {
-        public string |PublicField|(1);
+    }
 
-        internal string |InternalField|(2);
+    public PublicClassWithoutDocs(string a)
+    {
+    }
 
-        protected internal string |ProtectedInternalField|(3);
+    //
 
-        protected string |ProtectedField|(4);
+    public string |PublicProperty|(6) { get; set; }
 
-        private string |PrivateField|(5);
+    internal string |InternalProperty|(7) { get; set; }
 
-        //
+    protected internal string |ProtectedInternalProperty|(8) { get; set; }
 
-        public PublicClassWithoutDocs()
-        {
-        }
+    protected string |ProtectedProperty|(9) { get; set; }
 
-        public PublicClassWithoutDocs(string a)
-        {
-        }
+    private string |PrivateProperty|(10) { get; set; }
 
-        //
+    //
 
-        public string |PublicProperty|(6) { get; set; }
+    public void |PublicMethod|(11)(string a)
+    {
+    }
 
-        internal string |InternalProperty|(7) { get; set; }
+    void IToBeExplicitlyImplementedInterface.|Method|(12)()
+    {
+    }
 
-        protected internal string |ProtectedInternalProperty|(8) { get; set; }
+    internal void |InternalMethod|(13)()
+    {
+    }
 
-        protected string |ProtectedProperty|(9) { get; set; }
+    protected void |ProtectedMethod|(14)()
+    {
+    }
 
-        private string |PrivateProperty|(10) { get; set; }
+    protected internal void |ProtectedInternalMethod|(15)()
+    {
+    }
 
-        //
+    private void |PrivateMethod|(16)()
+    {
+    }
 
-        public void |PublicMethod|(11)(string a)
-        {
-        }
+    public class |PublicNestedClass|(17)
+    {
+    }
 
-        void IToBeExplicitlyImplementedInterface.|Method|(12)()
-        {
-        }
+    internal class |InternalNestedClass|(18)
+    {
+    }
 
-        internal void |InternalMethod|(13)()
-        {
-        }
+    protected internal class |ProtectedInternalNestedClass|(19)
+    {
+    }
 
-        protected void |ProtectedMethod|(14)()
-        {
-        }
+    protected class |ProtectedNestedClass|(20)
+    {
+    }
 
-        protected internal void |ProtectedInternalMethod|(15)()
-        {
-        }
+    private class |PrivateNestedClass|(21)
+    {
+    }
 
-        private void |PrivateMethod|(16)()
-        {
-        }
+    //
 
-        public class |PublicNestedClass|(17)
-        {
-        }
+    public event EventHandler |PublicEvent|(22);
 
-        internal class |InternalNestedClass|(18)
-        {
-        }
+    internal event EventHandler |InternalEvent|(23);
 
-        protected internal class |ProtectedInternalNestedClass|(19)
-        {
-        }
+    protected internal event EventHandler |ProtectedInternalEvent|(24);
 
-        protected class |ProtectedNestedClass|(20)
-        {
-        }
+    protected event EventHandler |ProtectedEvent|(25);
 
-        private class |PrivateNestedClass|(21)
-        {
-        }
+    private event EventHandler |PrivateEvent|(26);
 
-        //
+    //
 
-        public event EventHandler |PublicEvent|(22);
-
-        internal event EventHandler |InternalEvent|(23);
-
-        protected internal event EventHandler |ProtectedInternalEvent|(24);
-
-        protected event EventHandler |ProtectedEvent|(25);
-
-        private event EventHandler |PrivateEvent|(26);
-
-        //
-
-        public static PublicClassWithoutDocs |operator +|(27)(PublicClassWithoutDocs left, PublicClassWithoutDocs right)
-        {
-            return new PublicClassWithoutDocs();
-        }
+    public static PublicClassWithoutDocs |operator +|(27)(PublicClassWithoutDocs left, PublicClassWithoutDocs right)
+    {
+        return new PublicClassWithoutDocs();
     }
 }
 

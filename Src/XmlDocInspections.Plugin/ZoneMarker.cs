@@ -2,12 +2,11 @@
 using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.ReSharper.Psi.CSharp;
 
-namespace XmlDocInspections.Plugin
+namespace XmlDocInspections.Plugin;
+
+[ZoneMarker]
+public class ZoneMarker :
+    IRequire<ILanguageCSharpZone>,
+    IRequire<DaemonZone>
 {
-    [ZoneMarker]
-    public class ZoneMarker :
-        IRequire<ILanguageCSharpZone>,
-        IRequire<DaemonZone>
-    {
-    }
 }

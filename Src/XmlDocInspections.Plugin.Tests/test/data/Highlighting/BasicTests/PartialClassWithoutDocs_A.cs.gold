@@ -2,12 +2,11 @@
 // ReSharper disable UnusedMember.Local
 // ReSharper disable UnusedType.Global
 
-namespace XmlDocInspections.Sample.Highlighting
+namespace XmlDocInspections.Sample.Highlighting;
+
+public partial class |PartialClassWithoutDocs|(0)
 {
-    public partial class |PartialClassWithoutDocs|(0)
-    {
-        partial void |PartialMethod|(1)();
-    }
+    partial void |PartialMethod|(1)();
 }
 
 ---------------------------------------------------------

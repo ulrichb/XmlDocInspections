@@ -2,33 +2,32 @@
 using NUnit.Framework;
 using XmlDocInspections.Plugin.Settings;
 
-namespace XmlDocInspections.Plugin.Tests.Integrative.Highlighting
+namespace XmlDocInspections.Plugin.Tests.Integrative.Highlighting;
+
+public abstract class ProjectExclusionTests : MissingXmlDocHighlightingDirectoryTestsBase
 {
-    public abstract class ProjectExclusionTests : MissingXmlDocHighlightingDirectoryTestsBase
+    public class ProjectExclusionWithMatchingRegexTests : ProjectExclusionTests
     {
-        public class ProjectExclusionWithMatchingRegexTests : ProjectExclusionTests
-        {
-            protected override string ProjectExclusionRegexValue => "^Excl.*ject$";
+        protected override string ProjectExclusionRegexValue => "^Excl.*ject$";
 
-            [Test]
-            public void ClassesAndMembersWithoutDocs() => DoNamedTest("IToBeExplicitlyImplementedInterface.cs");
-        }
+        [Test]
+        public void ClassesAndMembersWithoutDocs() => DoNamedTest("IToBeExplicitlyImplementedInterface.cs");
+    }
 
-        public class ProjectExclusionWithWhitespaceTests : ProjectExclusionTests
-        {
-            protected override string ProjectExclusionRegexValue => " \t ";
+    public class ProjectExclusionWithWhitespaceTests : ProjectExclusionTests
+    {
+        protected override string ProjectExclusionRegexValue => " \t ";
 
-            [Test]
-            public void ClassesAndMembersWithoutDocs() => DoNamedTest("IToBeExplicitlyImplementedInterface.cs");
-        }
+        [Test]
+        public void ClassesAndMembersWithoutDocs() => DoNamedTest("IToBeExplicitlyImplementedInterface.cs");
+    }
 
-        protected override string ProjectName => "ExcludedProject";
+    protected override string ProjectName => "ExcludedProject";
 
-        protected abstract string ProjectExclusionRegexValue { get; }
+    protected abstract string ProjectExclusionRegexValue { get; }
 
-        protected override void MutateSettings(IContextBoundSettingsStore settingsStore)
-        {
-            settingsStore.SetValue((XmlDocInspectionsSettings s) => s.ProjectExclusionRegex, ProjectExclusionRegexValue);
-        }
+    protected override void MutateSettings(IContextBoundSettingsStore settingsStore)
+    {
+        settingsStore.SetValue((XmlDocInspectionsSettings s) => s.ProjectExclusionRegex, ProjectExclusionRegexValue);
     }
 }

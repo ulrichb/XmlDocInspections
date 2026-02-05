@@ -2,18 +2,17 @@
 using NUnit.Framework;
 using XmlDocInspections.Plugin.Settings;
 
-namespace XmlDocInspections.Plugin.Tests.Integrative.Highlighting
-{
-    [TestFixture]
-    public class EnabledExcludeMembersOverridingSuperMemberTests : MissingXmlDocHighlightingDirectoryTestsBase
-    {
-        protected override void MutateSettings(IContextBoundSettingsStore settingsStore)
-        {
-            EnableAllXmlDocOptions(settingsStore);
-            settingsStore.SetValue((XmlDocInspectionsSettings s) => s.ExcludeMembersOverridingSuperMember, true);
-        }
+namespace XmlDocInspections.Plugin.Tests.Integrative.Highlighting;
 
-        [Test]
-        public void Inheritance() => DoNamedTest();
+[TestFixture]
+public class EnabledExcludeMembersOverridingSuperMemberTests : MissingXmlDocHighlightingDirectoryTestsBase
+{
+    protected override void MutateSettings(IContextBoundSettingsStore settingsStore)
+    {
+        EnableAllXmlDocOptions(settingsStore);
+        settingsStore.SetValue((XmlDocInspectionsSettings s) => s.ExcludeMembersOverridingSuperMember, true);
     }
+
+    [Test]
+    public void Inheritance() => DoNamedTest();
 }

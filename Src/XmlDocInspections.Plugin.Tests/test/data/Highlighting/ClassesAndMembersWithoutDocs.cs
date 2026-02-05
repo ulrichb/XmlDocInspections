@@ -14,105 +14,104 @@
 // ReSharper disable UnusedParameter.Global
 // ReSharper disable UnusedParameter.Local
 
-namespace XmlDocInspections.Sample.Highlighting
+namespace XmlDocInspections.Sample.Highlighting;
+
+public class PublicClassWithoutDocs : IToBeExplicitlyImplementedInterface
 {
-    public class PublicClassWithoutDocs : IToBeExplicitlyImplementedInterface
+    public string PublicField;
+
+    internal string InternalField;
+
+    protected internal string ProtectedInternalField;
+
+    protected string ProtectedField;
+
+    private string PrivateField;
+
+    //
+
+    public PublicClassWithoutDocs()
     {
-        public string PublicField;
+    }
 
-        internal string InternalField;
+    public PublicClassWithoutDocs(string a)
+    {
+    }
 
-        protected internal string ProtectedInternalField;
+    //
 
-        protected string ProtectedField;
+    public string PublicProperty { get; set; }
 
-        private string PrivateField;
+    internal string InternalProperty { get; set; }
 
-        //
+    protected internal string ProtectedInternalProperty { get; set; }
 
-        public PublicClassWithoutDocs()
-        {
-        }
+    protected string ProtectedProperty { get; set; }
 
-        public PublicClassWithoutDocs(string a)
-        {
-        }
+    private string PrivateProperty { get; set; }
 
-        //
+    //
 
-        public string PublicProperty { get; set; }
+    public void PublicMethod(string a)
+    {
+    }
 
-        internal string InternalProperty { get; set; }
+    void IToBeExplicitlyImplementedInterface.Method()
+    {
+    }
 
-        protected internal string ProtectedInternalProperty { get; set; }
+    internal void InternalMethod()
+    {
+    }
 
-        protected string ProtectedProperty { get; set; }
+    protected void ProtectedMethod()
+    {
+    }
 
-        private string PrivateProperty { get; set; }
+    protected internal void ProtectedInternalMethod()
+    {
+    }
 
-        //
+    private void PrivateMethod()
+    {
+    }
 
-        public void PublicMethod(string a)
-        {
-        }
+    public class PublicNestedClass
+    {
+    }
 
-        void IToBeExplicitlyImplementedInterface.Method()
-        {
-        }
+    internal class InternalNestedClass
+    {
+    }
 
-        internal void InternalMethod()
-        {
-        }
+    protected internal class ProtectedInternalNestedClass
+    {
+    }
 
-        protected void ProtectedMethod()
-        {
-        }
+    protected class ProtectedNestedClass
+    {
+    }
 
-        protected internal void ProtectedInternalMethod()
-        {
-        }
+    private class PrivateNestedClass
+    {
+    }
 
-        private void PrivateMethod()
-        {
-        }
+    //
 
-        public class PublicNestedClass
-        {
-        }
+    public event EventHandler PublicEvent;
 
-        internal class InternalNestedClass
-        {
-        }
+    internal event EventHandler InternalEvent;
 
-        protected internal class ProtectedInternalNestedClass
-        {
-        }
+    protected internal event EventHandler ProtectedInternalEvent;
 
-        protected class ProtectedNestedClass
-        {
-        }
+    protected event EventHandler ProtectedEvent;
 
-        private class PrivateNestedClass
-        {
-        }
+    private event EventHandler PrivateEvent;
 
-        //
+    //
 
-        public event EventHandler PublicEvent;
-
-        internal event EventHandler InternalEvent;
-
-        protected internal event EventHandler ProtectedInternalEvent;
-
-        protected event EventHandler ProtectedEvent;
-
-        private event EventHandler PrivateEvent;
-
-        //
-
-        public static PublicClassWithoutDocs operator +(PublicClassWithoutDocs left, PublicClassWithoutDocs right)
-        {
-            return new PublicClassWithoutDocs();
-        }
+    public static PublicClassWithoutDocs operator +(PublicClassWithoutDocs left, PublicClassWithoutDocs right)
+    {
+        return new PublicClassWithoutDocs();
     }
 }

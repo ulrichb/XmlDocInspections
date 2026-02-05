@@ -4,18 +4,17 @@ using JetBrains.ReSharper.TestFramework.Web;
 using NUnit.Framework;
 using XmlDocInspections.Plugin.Tests.Integrative.Highlighting;
 
-namespace XmlDocInspections.Plugin.Tests.Integrative
+namespace XmlDocInspections.Plugin.Tests.Integrative;
+
+[TestFixture]
+[TestAspNetCore6]
+[TestFileExtension(".cshtml")]
+public class SpecialCodeAspNetCoreTests : MissingXmlDocHighlightingTestsBase
 {
-    [TestFixture]
-    [TestAspNetCore6]
-    [TestFileExtension(".cshtml")]
-    public class SpecialCodeAspNetCoreTests : MissingXmlDocHighlightingTestsBase
-    {
-        protected override string RelativeTestDataPath => @"Special\AspNetCore";
+    protected override string RelativeTestDataPath => @"Special\AspNetCore";
 
-        protected override void MutateSettings(IContextBoundSettingsStore settingsStore) => EnableAllXmlDocOptions(settingsStore);
+    protected override void MutateSettings(IContextBoundSettingsStore settingsStore) => EnableAllXmlDocOptions(settingsStore);
 
-        [Test]
-        public void InjectDirective() => DoNamedTest();
-    }
+    [Test]
+    public void InjectDirective() => DoNamedTest();
 }

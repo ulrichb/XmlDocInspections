@@ -2,39 +2,38 @@
 // ReSharper disable UnusedType.Local
 // ReSharper disable UnusedMember.Global
 
-namespace XmlDocInspections.Sample.Highlighting
+namespace XmlDocInspections.Sample.Highlighting;
+
+public interface IPublicInterfacesWithoutDocs
 {
-    public interface IPublicInterfacesWithoutDocs
-    {
-        string Property { get; }
+    string Property { get; }
 
-        void Method();
+    void Method();
+}
+
+internal interface IInternalInterfacesWithoutDocs
+{
+    string Property { get; }
+
+    void Method();
+}
+
+// ReSharper disable once MissingXmlDoc
+public class ClassWithNestedInterfacesWithoutDocs
+{
+    public interface IPublicNestedInterface
+    {
     }
 
-    internal interface IInternalInterfacesWithoutDocs
+    internal interface IInternalNestedInterface
     {
-        string Property { get; }
-
-        void Method();
     }
 
-    // ReSharper disable once MissingXmlDoc
-    public class ClassWithNestedInterfacesWithoutDocs
+    protected interface IProtectedNestedInterface
     {
-        public interface IPublicNestedInterface
-        {
-        }
+    }
 
-        internal interface IInternalNestedInterface
-        {
-        }
-
-        protected interface IProtectedNestedInterface
-        {
-        }
-
-        private interface IPrivateNestedInterface
-        {
-        }
+    private interface IPrivateNestedInterface
+    {
     }
 }

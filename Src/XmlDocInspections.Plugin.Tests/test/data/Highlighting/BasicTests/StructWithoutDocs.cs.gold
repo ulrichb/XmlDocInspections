@@ -3,37 +3,36 @@
 // ReSharper disable UnusedParameter.Global
 // ReSharper disable UnusedType.Global
 
-namespace XmlDocInspections.Sample.Highlighting
+namespace XmlDocInspections.Sample.Highlighting;
+
+public struct |PublicStructWithoutDocs|(0)
 {
-    public struct |PublicStructWithoutDocs|(0)
+    public string |PublicProperty|(1) { get; set; }
+
+    internal string |InternalProperty|(2) { get; set; }
+
+    private string |PrivateProperty|(3) { get; set; }
+
+    //
+
+    public void |PublicMethod|(4)(string a)
     {
-        public string |PublicProperty|(1) { get; set; }
-
-        internal string |InternalProperty|(2) { get; set; }
-
-        private string |PrivateProperty|(3) { get; set; }
-
-        //
-
-        public void |PublicMethod|(4)(string a)
-        {
-        }
-
-        internal void |InternalMethod|(5)()
-        {
-        }
-
-        private void |PrivateMethod|(6)()
-        {
-        }
     }
 
-    internal struct |InternalStructWithoutDocs|(7)
+    internal void |InternalMethod|(5)()
     {
-        public string |PublicProperty|(8) { get; set; }
-
-        internal string |InternalProperty|(9) { get; set; }
     }
+
+    private void |PrivateMethod|(6)()
+    {
+    }
+}
+
+internal struct |InternalStructWithoutDocs|(7)
+{
+    public string |PublicProperty|(8) { get; set; }
+
+    internal string |InternalProperty|(9) { get; set; }
 }
 
 ---------------------------------------------------------

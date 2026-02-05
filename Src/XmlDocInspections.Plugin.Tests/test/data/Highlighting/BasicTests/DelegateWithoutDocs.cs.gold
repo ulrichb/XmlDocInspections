@@ -1,12 +1,11 @@
 ﻿// ReSharper disable UnusedMember.Global
 // ReSharper disable UnusedType.Global
 
-namespace XmlDocInspections.Sample.Highlighting
-{
-    public delegate void |PublicDelegateWithoutDocs|(0)();
+namespace XmlDocInspections.Sample.Highlighting;
 
-    internal delegate void |InternalDelegateWithoutDocs|(1)();
-}
+public delegate void |PublicDelegateWithoutDocs|(0)();
+
+internal delegate void |InternalDelegateWithoutDocs|(1)();
 
 ---------------------------------------------------------
 (0): ReSharper Warning: Missing XML Doc comment for public type
