@@ -1,4 +1,8 @@
-﻿namespace XmlDocInspections.Sample.Highlighting;
+﻿// ReSharper disable UnusedType.Global
+// ReSharper disable UnusedMember.Global
+// ReSharper disable UnusedParameter.Global
+
+namespace XmlDocInspections.Sample.Highlighting;
 
 /// <summary>Some doc.</summary>
 public static class ExtensionBlocksWithDocs
