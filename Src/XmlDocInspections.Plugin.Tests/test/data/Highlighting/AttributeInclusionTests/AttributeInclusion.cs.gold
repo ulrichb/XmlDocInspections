@@ -39,7 +39,7 @@ public abstract class BaseClassWithPublicApiAttribute
     public abstract void |MethodWithInheritedAttributeOnlyInBase|(3)();
 }
 
-public class DeribedClassWithPublicApiAttribute : BaseClassWithPublicApiAttribute
+public class DerivedClassWithPublicApiAttribute : BaseClassWithPublicApiAttribute
 {
     // Prove that the attribute-rule respects the attribute inheritance rule.
 
