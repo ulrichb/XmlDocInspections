@@ -17,25 +17,15 @@ internal class |InternalClassWithoutDocs|(0)
 
     private string |PrivateProperty|(5) { get; set; }
 
-    public class |PublicNestedClass|(6)
-    {
-    }
+    public class |PublicNestedClass|(6);
 
-    internal class |InternalNestedClass|(7)
-    {
-    }
+    internal class |InternalNestedClass|(7);
 
-    protected internal class |ProtectedInternalNestedClass|(8)
-    {
-    }
+    protected internal class |ProtectedInternalNestedClass|(8);
 
-    protected class |ProtectedNestedClass|(9)
-    {
-    }
+    protected class |ProtectedNestedClass|(9);
 
-    private class |PrivateNestedClass|(10)
-    {
-    }
+    private class |PrivateNestedClass|(10);
 }
 
 ---------------------------------------------------------

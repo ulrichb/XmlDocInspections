@@ -6,9 +6,7 @@ using JetBrains.Annotations;
 
 namespace XmlDocInspections.Sample.Highlighting;
 
-public class ClassWithoutPublicApiAttribute
-{
-}
+public class ClassWithoutPublicApiAttribute;
 
 [PublicAPI]
 public class ClassWithPublicApiAttribute
@@ -26,9 +24,7 @@ public class ClassWithPublicApiAttribute
 //
 
 /// <summary>A sample "RequireDocs" attribute (which is inherited).</summary>
-public class RequireDocsAttribute : Attribute
-{
-}
+public class RequireDocsAttribute : Attribute;
 
 public abstract class BaseClassWithPublicApiAttribute
 {
@@ -39,7 +35,7 @@ public abstract class BaseClassWithPublicApiAttribute
     public abstract void MethodWithInheritedAttributeOnlyInBase();
 }
 
-public class DeribedClassWithPublicApiAttribute : BaseClassWithPublicApiAttribute
+public class DerivedClassWithPublicApiAttribute : BaseClassWithPublicApiAttribute
 {
     // Prove that the attribute-rule respects the attribute inheritance rule.
 

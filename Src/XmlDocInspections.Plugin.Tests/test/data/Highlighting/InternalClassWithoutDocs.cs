@@ -17,23 +17,13 @@ internal class InternalClassWithoutDocs
 
     private string PrivateProperty { get; set; }
 
-    public class PublicNestedClass
-    {
-    }
+    public class PublicNestedClass;
 
-    internal class InternalNestedClass
-    {
-    }
+    internal class InternalNestedClass;
 
-    protected internal class ProtectedInternalNestedClass
-    {
-    }
+    protected internal class ProtectedInternalNestedClass;
 
-    protected class ProtectedNestedClass
-    {
-    }
+    protected class ProtectedNestedClass;
 
-    private class PrivateNestedClass
-    {
-    }
+    private class PrivateNestedClass;
 }

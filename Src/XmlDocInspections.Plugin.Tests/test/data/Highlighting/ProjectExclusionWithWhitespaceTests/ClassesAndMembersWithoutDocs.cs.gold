@@ -76,25 +76,15 @@ public class |PublicClassWithoutDocs|(0) : IToBeExplicitlyImplementedInterface
     {
     }
 
-    public class |PublicNestedClass|(12)
-    {
-    }
+    public class |PublicNestedClass|(12);
 
-    internal class InternalNestedClass
-    {
-    }
+    internal class InternalNestedClass;
 
-    protected internal class |ProtectedInternalNestedClass|(13)
-    {
-    }
+    protected internal class |ProtectedInternalNestedClass|(13);
 
-    protected class |ProtectedNestedClass|(14)
-    {
-    }
+    protected class |ProtectedNestedClass|(14);
 
-    private class PrivateNestedClass
-    {
-    }
+    private class PrivateNestedClass;
 
     //
 

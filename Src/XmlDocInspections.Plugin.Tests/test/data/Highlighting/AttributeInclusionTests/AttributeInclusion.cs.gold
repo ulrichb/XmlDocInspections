@@ -6,9 +6,7 @@ using JetBrains.Annotations;
 
 namespace XmlDocInspections.Sample.Highlighting;
 
-public class ClassWithoutPublicApiAttribute
-{
-}
+public class ClassWithoutPublicApiAttribute;
 
 [PublicAPI]
 public class |ClassWithPublicApiAttribute|(0)
@@ -26,9 +24,7 @@ public class |ClassWithPublicApiAttribute|(0)
 //
 
 /// <summary>A sample "RequireDocs" attribute (which is inherited).</summary>
-public class RequireDocsAttribute : Attribute
-{
-}
+public class RequireDocsAttribute : Attribute;
 
 public abstract class BaseClassWithPublicApiAttribute
 {

@@ -145,37 +145,27 @@ public class PublicClassWithDocs : IToBeExplicitlyImplementedInterface
     /// <summary>
     /// Some doc.
     /// </summary>
-    public class PublicNestedClass
-    {
-    }
+    public class PublicNestedClass;
 
     /// <summary>
     /// Some doc.
     /// </summary>
-    internal class InternalNestedClass
-    {
-    }
+    internal class InternalNestedClass;
 
     /// <summary>
     /// Some doc.
     /// </summary>
-    protected internal class ProtectedInternalNestedClass
-    {
-    }
+    protected internal class ProtectedInternalNestedClass;
 
     /// <summary>
     /// Some doc.
     /// </summary>
-    protected class ProtectedNestedClass
-    {
-    }
+    protected class ProtectedNestedClass;
 
     /// <summary>
     /// Some doc.
     /// </summary>
-    private class PrivateNestedClass
-    {
-    }
+    private class PrivateNestedClass;
 
     //
 
