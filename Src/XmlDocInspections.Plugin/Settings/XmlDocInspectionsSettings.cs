@@ -24,6 +24,9 @@ namespace XmlDocInspections.Plugin.Settings
         [SettingsEntry("JetBrains.Annotations.PublicAPIAttribute", "Include types/members with attributes (comma separated full names)")]
         public readonly string IncludeAttributeFullNames;
 
+        [SettingsEntry(false, "Exclude extension blocks")]
+        public readonly bool ExcludeExtensionBlocks;
+
         [SettingsEntry(false, "Exclude constructors")]
         public readonly bool ExcludeConstructors;
 

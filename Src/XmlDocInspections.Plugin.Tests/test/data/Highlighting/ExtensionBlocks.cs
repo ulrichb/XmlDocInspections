@@ -1,0 +1,27 @@
+﻿namespace XmlDocInspections.Sample.Highlighting
+{
+    /// <summary>Some doc.</summary>
+    public static class ExtensionBlocksWithDocs
+    {
+        /// <summary>Some doc.</summary>
+        extension(string @this)
+        {
+            /// <summary>Some doc.</summary>
+            public void SomeExtension()
+            {
+            }
+        }
+    }
+
+    /// <summary>Some doc.</summary>
+    public static class ExtensionBlocksWithoutDocs
+    {
+        extension(string @this)
+        {
+            /// <summary>Some doc.</summary>
+            public void SomeExtension()
+            {
+            }
+        }
+    }
+}

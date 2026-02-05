@@ -1,3 +1,6 @@
+### 2.28.0 ###
+- Added new exclusion rule for C#14 extension blocks
+
 ### 2.27.0 ###
 - ReSharper and Rider 2025.3 support
 

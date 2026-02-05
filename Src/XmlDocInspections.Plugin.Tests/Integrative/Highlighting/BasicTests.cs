@@ -40,5 +40,8 @@ namespace XmlDocInspections.Plugin.Tests.Integrative.Highlighting
 
         [Test]
         public void DelegateWithoutDocs() => DoNamedTest();
+
+        [Test]
+        public void ExtensionBlocks() => DoNamedTest();
     }
 }

@@ -52,6 +52,8 @@ namespace XmlDocInspections.Plugin.Settings
 
             AddHeader("Exclusion rules");
 
+            AddBoolOption((XmlDocInspectionsSettings s) => s.ExcludeExtensionBlocks, "Exclude C#14 extension blocks");
+
             AddBoolOption((XmlDocInspectionsSettings s) => s.ExcludeConstructors, "Exclude constructors");
 
             AddBoolOption(

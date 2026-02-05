@@ -63,7 +63,8 @@ namespace XmlDocInspections.Plugin
         private bool IsTypeMemberExcluded(ITypeMember typeMember, CachedXmlDocInspectionsSettings settings)
         {
             return settings.Value.ExcludeMembersOverridingSuperMember && IsOverridingSuperMember(typeMember) ||
-                   settings.Value.ExcludeConstructors && typeMember is IConstructor;
+                   settings.Value.ExcludeConstructors && typeMember is IConstructor ||
+                   settings.Value.ExcludeExtensionBlocks && typeMember is ITypeExtension;
         }
 
         private bool IsOverridingSuperMember(ITypeMember typeMember)
