@@ -1,8 +1,8 @@
 plugins {
     id("java")
     alias(libs.plugins.kotlinJvm)
-    id("org.jetbrains.intellij.platform") version "2.7.2"   // https://github.com/JetBrains/intellij-platform-gradle-plugin/releases
-    id("me.filippov.gradle.jvm.wrapper") version "0.14.0"   // https://plugins.gradle.org/plugin/me.filippov.gradle.jvm.wrapper
+    id("org.jetbrains.intellij.platform") version "2.11.0"  // https://github.com/JetBrains/intellij-platform-gradle-plugin/releases
+    id("me.filippov.gradle.jvm.wrapper") version "0.15.0"   // https://plugins.gradle.org/plugin/me.filippov.gradle.jvm.wrapper
 }
 
 val ResharperPluginProjectName: String by project
@@ -43,13 +43,11 @@ sourceSets {
     }
 }
 
-tasks.compileKotlin {
-    kotlinOptions { jvmTarget = "17" }
-}
-
 dependencies {
     intellijPlatform {
-        rider(ProductVersion, useInstaller = false)
+        rider(ProductVersion) {
+            useInstaller = false
+        }
         jetbrainsRuntime()
     }
 }
