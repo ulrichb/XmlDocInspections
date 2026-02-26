@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.0.11217.181 d18.0
+VisualStudioVersion = 18.0.11217.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{26B55A35-CCB1-4635-871A-EE770850A5F2}"
 EndProject
@@ -9,13 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolutionItems", "SolutionIt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDocInspections.Sample", "Src\XmlDocInspections.Plugin.Tests\test\data\XmlDocInspections.Sample.csproj", "{4AF4FFEC-2FAC-426A-B8B2-06F4D9F52392}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDocInspections.Plugin.RS20253", "Src\XmlDocInspections.Plugin\XmlDocInspections.Plugin.RS20253.csproj", "{B911381A-0D32-4D8C-A47A-D1E684FD7589}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDocInspections.Plugin.RS20261", "Src\XmlDocInspections.Plugin\XmlDocInspections.Plugin.RS20261.csproj", "{B911381A-0D32-4D8C-A47A-D1E684FD7589}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDocInspections.Plugin.Tests.RS20253", "Src\XmlDocInspections.Plugin.Tests\XmlDocInspections.Plugin.Tests.RS20253.csproj", "{E3DD348A-4F6B-4660-9D3F-18BFC5F2FDB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDocInspections.Plugin.Tests.RS20261", "Src\XmlDocInspections.Plugin.Tests\XmlDocInspections.Plugin.Tests.RS20261.csproj", "{E3DD348A-4F6B-4660-9D3F-18BFC5F2FDB1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDocInspections.Plugin.RD20253", "Src\XmlDocInspections.Plugin\XmlDocInspections.Plugin.RD20253.csproj", "{68FD44BA-7BD7-432C-B70F-8EA851A4FD06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDocInspections.Plugin.RD20261", "Src\XmlDocInspections.Plugin\XmlDocInspections.Plugin.RD20261.csproj", "{68FD44BA-7BD7-432C-B70F-8EA851A4FD06}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDocInspections.Plugin.Tests.RD20253", "Src\XmlDocInspections.Plugin.Tests\XmlDocInspections.Plugin.Tests.RD20253.csproj", "{F0AC23E0-5905-4A51-8FCE-96F87D8CF8B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDocInspections.Plugin.Tests.RD20261", "Src\XmlDocInspections.Plugin.Tests\XmlDocInspections.Plugin.Tests.RD20261.csproj", "{F0AC23E0-5905-4A51-8FCE-96F87D8CF8B3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlDocInspections.Sample.AspNetCore", "Src\XmlDocInspections.Plugin.Tests\test\data\Special\AspNetCore\XmlDocInspections.Sample.AspNetCore.csproj", "{83BBF7BC-8BBA-4C4F-8143-DD3D7CDE68B1}"
 EndProject
