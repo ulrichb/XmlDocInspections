@@ -1797,42 +1797,9 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "Highlighting/ExtensionBlocks.cs",
-                  "uriBaseId": "solutionDir",
-                  "index": 8
-                },
-                "region": {
-                  "startLine": 23,
-                  "startColumn": 5,
-                  "endLine": 23,
-                  "endColumn": 14,
-                  "charOffset": 539,
-                  "charLength": 9
-                }
-              }
-            }
-          ],
-          "partialFingerprints": {
-            "contextRegionHash/v1": "F720C5BFEF13C954E0D5E1903864E1E67C7683E6A06BD32DB12B3BF1374ADCA5"
-          },
-          "properties": {
-            "tags": ["C#",".NETStandard 2.0"]
-          }
-        },
-        {
-          "ruleId": "MissingXmlDoc",
-          "ruleIndex": 0,
-          "level": "warning",
-          "message": {
-            "text": "Missing XML Doc comment for public type"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
                   "uri": "Highlighting/Inheritance.cs",
                   "uriBaseId": "solutionDir",
-                  "index": 9
+                  "index": 8
                 },
                 "region": {
                   "startLine": 24,
@@ -1865,7 +1832,7 @@
                 "artifactLocation": {
                   "uri": "Highlighting/Inheritance.cs",
                   "uriBaseId": "solutionDir",
-                  "index": 9
+                  "index": 8
                 },
                 "region": {
                   "startLine": 31,
@@ -1898,7 +1865,7 @@
                 "artifactLocation": {
                   "uri": "Highlighting/Inheritance.cs",
                   "uriBaseId": "solutionDir",
-                  "index": 9
+                  "index": 8
                 },
                 "region": {
                   "startLine": 44,
@@ -1931,7 +1898,7 @@
                 "artifactLocation": {
                   "uri": "Highlighting/Inheritance.cs",
                   "uriBaseId": "solutionDir",
-                  "index": 9
+                  "index": 8
                 },
                 "region": {
                   "startLine": 49,
@@ -1964,7 +1931,7 @@
                 "artifactLocation": {
                   "uri": "Highlighting/Inheritance.cs",
                   "uriBaseId": "solutionDir",
-                  "index": 9
+                  "index": 8
                 },
                 "region": {
                   "startLine": 57,
@@ -1997,7 +1964,7 @@
                 "artifactLocation": {
                   "uri": "Highlighting/Inheritance.cs",
                   "uriBaseId": "solutionDir",
-                  "index": 9
+                  "index": 8
                 },
                 "region": {
                   "startLine": 62,
@@ -2030,7 +1997,7 @@
                 "artifactLocation": {
                   "uri": "Highlighting/Inheritance.cs",
                   "uriBaseId": "solutionDir",
-                  "index": 9
+                  "index": 8
                 },
                 "region": {
                   "startLine": 67,
@@ -2525,7 +2492,7 @@
                 "artifactLocation": {
                   "uri": "Highlighting/Inheritance.cs",
                   "uriBaseId": "solutionDir",
-                  "index": 9
+                  "index": 8
                 },
                 "region": {
                   "startLine": 37,
@@ -2558,7 +2525,7 @@
                 "artifactLocation": {
                   "uri": "Highlighting/Inheritance.cs",
                   "uriBaseId": "solutionDir",
-                  "index": 9
+                  "index": 8
                 },
                 "region": {
                   "startLine": 46,
@@ -2591,7 +2558,7 @@
                 "artifactLocation": {
                   "uri": "Highlighting/Inheritance.cs",
                   "uriBaseId": "solutionDir",
-                  "index": 9
+                  "index": 8
                 },
                 "region": {
                   "startLine": 59,
@@ -2624,7 +2591,7 @@
                 "artifactLocation": {
                   "uri": "Highlighting/Inheritance.cs",
                   "uriBaseId": "solutionDir",
-                  "index": 9
+                  "index": 8
                 },
                 "region": {
                   "startLine": 64,
@@ -2781,8 +2748,8 @@
         "driver": {
           "name": "InspectCode",
           "organization": "JetBrains, Inc",
-          "fullName": "JetBrains Inspect Code 2025.3.2",
-          "semanticVersion": "253.0.20260127.110037",
+          "fullName": "JetBrains Inspect Code 2026.1",
+          "semanticVersion": "261.0.20260327.174026",
           "informationUri": "http://www.jetbrains.com/resharper/features/command-line.html",
           "rules": [
             {
@@ -2840,7 +2807,7 @@
             "guid": "35f5b65d-50bd-5e8c-be38-433c44d12da4",
             "name": "ReSharper.XmlDocInspections",
             "fullName": "ReSharper XmlDocInspections",
-            "version": "0.0.0.10253-local"
+            "version": "0.0.0.10261-local"
           }
         ]
       },
@@ -2852,7 +2819,7 @@
       "versionControlProvenance": [
         {
           "repositoryUri": "https://github.com/ulrichb/XmlDocInspections/",
-          "revisionId": "caba11eeb629eb81d7f68aa93499578f9042243c",
+          "revisionId": "b9ba64105b18440a02d479484dd2959244710828",
           "branch": "main"
         }
       ],
@@ -2951,17 +2918,6 @@
             "md5": "1BB2741D5545CB4290E70B5A54997FE0",
             "sha-1": "7BF89353BC6CE4D1AE06219BBFB0950347941C32",
             "sha-256": "D7B3E4B76A0246295E73592E9B8EC32510B6403B38D905BC2011C727371CB6C4"
-          }
-        },
-        {
-          "location": {
-            "uri": "Highlighting/ExtensionBlocks.cs",
-            "uriBaseId": "solutionDir"
-          },
-          "hashes": {
-            "md5": "56849C319E5157FAD8A6CECDC9AAB38B",
-            "sha-1": "7495C17632B05F41ADC9BA3DA56C5B42C6F328C2",
-            "sha-256": "17119166D47446167EF0A21D21DC35C3E145B323F406E565EA974C29B09C3F90"
           }
         },
         {
