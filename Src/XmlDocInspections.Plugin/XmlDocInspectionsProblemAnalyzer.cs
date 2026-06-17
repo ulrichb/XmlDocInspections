@@ -44,7 +44,7 @@ public class XmlDocInspectionsProblemAnalyzer : SimpleElementProblemAnalyzer<ICS
 
         if (IsAccessibilityIncluded(typeMember, settings) || IsIncludedByAttribute(typeMember, settings))
         {
-            if (typeMember.GetXMLDoc(inherit: false) == null)
+            if (typeMember.GetXMLDoc(expand: false) == null)
                 consumer.AddHighlighting(new MissingXmlDocHighlighting(declaration));
         }
     }
