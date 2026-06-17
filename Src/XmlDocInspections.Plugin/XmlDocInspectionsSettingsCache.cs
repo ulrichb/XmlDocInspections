@@ -33,7 +33,7 @@ public class XmlDocInspectionsSettingsCache : ICachedSettingsReader<CachedXmlDoc
         _settingsKey = settingsStore.Schema.GetKey<XmlDocInspectionsSettings>();
     }
 
-    public CachedXmlDocInspectionsSettings GetCachedSettings(Func<Lifetime, DataContexts, IDataContext> dataContext)
+    public CachedXmlDocInspectionsSettings GetCachedSettings(DataContextFactory dataContext)
     {
         // Note that at the moment SettingsCacheManager seems to only support solution-specific caches, not project-specific.
 

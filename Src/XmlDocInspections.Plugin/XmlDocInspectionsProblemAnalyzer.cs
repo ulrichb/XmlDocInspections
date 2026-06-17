@@ -37,7 +37,7 @@ public class XmlDocInspectionsProblemAnalyzer : SimpleElementProblemAnalyzer<ICS
         if (declaration.IsSynthetic() || declaration.GetContainingTypeDeclaration()?.IsSynthetic() == true)
             return;
 
-        var settings = _xmlDocInspectionsSettingsCache.GetCachedSettings(declaration.ToDataContext());
+        var settings = _xmlDocInspectionsSettingsCache.GetCachedSettings(declaration.ToDataContext2());
 
         if (IsProjectExcluded(declaration, settings) || IsTypeMemberExcluded(typeMember, settings))
             return;
