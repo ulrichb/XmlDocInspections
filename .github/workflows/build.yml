@@ -15,7 +15,7 @@ jobs:
 
     steps:
 
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
       with:
         submodules: true
 
@@ -45,7 +45,7 @@ jobs:
 
     - name: Upload Packages artifacts
       if: ${{ always() }}
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: Packages
         path: |
@@ -53,7 +53,7 @@ jobs:
           Build/Output/*.zip
 
     - name: Upload TestOutput artifacts
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       if: ${{ always() }}
       with:
         name: TestOutput
