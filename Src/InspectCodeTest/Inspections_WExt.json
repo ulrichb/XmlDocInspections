@@ -2748,8 +2748,8 @@
         "driver": {
           "name": "InspectCode",
           "organization": "JetBrains, Inc",
-          "fullName": "JetBrains Inspect Code 2026.1",
-          "semanticVersion": "261.0.20260327.174026",
+          "fullName": "JetBrains Inspect Code 2026.2",
+          "semanticVersion": "262.0.20260721.215807",
           "informationUri": "http://www.jetbrains.com/resharper/features/command-line.html",
           "rules": [
             {
@@ -2807,7 +2807,7 @@
             "guid": "35f5b65d-50bd-5e8c-be38-433c44d12da4",
             "name": "ReSharper.XmlDocInspections",
             "fullName": "ReSharper XmlDocInspections",
-            "version": "0.0.0.10261-local"
+            "version": "0.0.0.10262-local"
           }
         ]
       },
@@ -2819,7 +2819,7 @@
       "versionControlProvenance": [
         {
           "repositoryUri": "https://github.com/ulrichb/XmlDocInspections/",
-          "revisionId": "b9ba64105b18440a02d479484dd2959244710828",
+          "revisionId": "a905098ef056ba8fcf1e746c41dbc61955ed1fc3",
           "branch": "main"
         }
       ],
