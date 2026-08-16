@@ -1,8 +1,8 @@
 plugins {
     id("java")
     alias(libs.plugins.kotlinJvm)
-    id("org.jetbrains.intellij.platform") version "2.16.0"  // https://github.com/JetBrains/intellij-platform-gradle-plugin/releases
-    id("me.filippov.gradle.jvm.wrapper") version "0.16.0"   // https://plugins.gradle.org/plugin/me.filippov.gradle.jvm.wrapper
+    id("org.jetbrains.intellij.platform") version "2.18.1"  // https://github.com/JetBrains/intellij-platform-gradle-plugin/releases
+    id("me.filippov.gradle.jvm.wrapper") version "0.15.0"   // https://plugins.gradle.org/plugin/me.filippov.gradle.jvm.wrapper
 }
 
 val ResharperPluginProjectName: String by project
@@ -21,12 +21,6 @@ repositories {
         defaultRepositories()
         jetbrainsRuntime()
     }
-}
-
-tasks.wrapper {
-    gradleVersion = "8.8"
-    distributionType = Wrapper.DistributionType.ALL
-    distributionUrl = "https://cache-redirector.jetbrains.com/services.gradle.org/distributions/gradle-${gradleVersion}-all.zip"
 }
 
 version = extra["PluginVersion"] as String
@@ -49,7 +43,17 @@ dependencies {
             useInstaller = false
         }
         jetbrainsRuntime()
+
+        // Required for SimpleOptionsPage and other Rider frontend/.NET bridge APIs (split out in 2026.2):
+        bundledModule("intellij.rider.rdclient.dotnet")
+
+        // Required for com.jetbrains.rdclient.actions.base.* (Frontend/BackendActionTrait), supertypes of RiderUnitTestAnActionBase (split out in 2026.2):
+        bundledModule("intellij.rd.client")
     }
+}
+
+intellijPlatform {
+    buildSearchableOptions = false
 }
 
 tasks.runIde {
