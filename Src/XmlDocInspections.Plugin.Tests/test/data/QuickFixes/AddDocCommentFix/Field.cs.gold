@@ -2,9 +2,9 @@
 {
     public class Field
     {
-        /// <summary>
-        /// {caret}
-        /// </summary>
-        public string SomeField;
+      /// <summary>
+      /// {caret}
+      /// </summary>
+      public string SomeField;
     }
 }

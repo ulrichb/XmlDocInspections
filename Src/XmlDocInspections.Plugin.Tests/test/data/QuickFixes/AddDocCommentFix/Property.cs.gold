@@ -2,9 +2,9 @@
 {
     public class Property
     {
-        /// <summary>
-        /// {caret}
-        /// </summary>
-        public string SomeProperty { get; set; }
+      /// <summary>
+      /// {caret}
+      /// </summary>
+      public string SomeProperty { get; set; }
     }
 }
