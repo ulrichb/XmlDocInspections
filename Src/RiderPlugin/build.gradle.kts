@@ -1,8 +1,8 @@
 plugins {
     id("java")
     alias(libs.plugins.kotlinJvm)
-    id("org.jetbrains.intellij.platform") version "2.18.1"  // https://github.com/JetBrains/intellij-platform-gradle-plugin/releases
-    id("me.filippov.gradle.jvm.wrapper") version "0.15.0"   // https://plugins.gradle.org/plugin/me.filippov.gradle.jvm.wrapper
+    id("org.jetbrains.intellij.platform") version "2.20.1"  // https://github.com/JetBrains/intellij-platform-gradle-plugin/releases
+    id("me.filippov.gradle.jvm.wrapper") version "0.16.0"   // https://plugins.gradle.org/plugin/me.filippov.gradle.jvm.wrapper
 }
 
 val ResharperPluginProjectName: String by project
